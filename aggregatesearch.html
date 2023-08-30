@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>聚合搜索</title>
+<link rel="stylesheet" type="text/css" href="./style.css">
+<script>
+document.onkeydown=function(e){    
+var keyNum=window.event ? e.keyCode :e.which;
+var keyword = document.getElementById("keyword").value;       
+if(keyNum==13 && keyword !=''){  
+     search();
+}  
+};
+function search(){
+    var keyword = document.getElementById("keyword").value;
+    window.open('https://search.njau.cf/extdomains/www.google.com.hk/search?q=' + keyword,'_blank','');
+    window.open('https://www.bing.com/search?q=' + keyword,'_blank','');
+    window.open('https://www.baidu.com/s?wd=' + keyword,'_blank','');
+    window.open('https://search.bilibili.com/all?keyword=' + keyword,'_blank','');
+}
+</script>
+</head>
+<body>
+    <input id="keyword" name="keyword" type="text" style="outline-style: none ;border: 1px solid #ccc; border-radius: 3px;padding: 13px 14px;width: 620px;font-size: 14px;font-weight: 700;font-family: "Microsoft soft";"/>
+<button onclick="search()" class="btn">搜索</button> 
+</body>
+</html>
