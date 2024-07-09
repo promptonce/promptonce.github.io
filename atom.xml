@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-07-01T07:53:38.037Z</updated>
+  <updated>2024-07-09T16:06:47.801Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>浏览器跨域</title>
+    <link href="http://example.com/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/"/>
+    <id>http://example.com/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/</id>
+    <published>2024-07-09T16:06:47.000Z</published>
+    <updated>2024-07-09T16:06:47.801Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。"><a href="#服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。" class="headerlink" title="服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。"></a>服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。</h3><h4 id="浏览器不允许跨域的原因？"><a href="#浏览器不允许跨域的原因？" class="headerlink" title="浏览器不允许跨域的原因？"></a>浏览器不允许跨域的原因？</h4><p>防止黑客入侵</p><h4 id="为啥html标签可以跨域？"><a href="#为啥html标签可以跨域？" class="headerlink" title="为啥html标签可以跨域？"></a>为啥html标签可以跨域？</h4><p>html标签只能调用get方法</p><h4 id="在有服务器权限的情况下"><a href="#在有服务器权限的情况下" class="headerlink" title="在有服务器权限的情况下"></a>在有服务器权限的情况下</h4><ol><li>服务器配置CROS实现跨域</li><li>JSONP（利用script标签和后端配合）</li><li>设置本地代理服务器</li><li>Nginx代理</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。&quot;&gt;&lt;a href=&quot;#服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。&quot; class=&quot;headerlink&quot; title=&quot;服务器与服务器通信不受跨域的影响，解决跨域也就可以从</summary>
+      
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>mmsegmentation框架可视化训练指标</title>
