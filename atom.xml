@@ -3,11 +3,11 @@
   <title>PromptOnce</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://promptonce.github.io/"/>
   <updated>2024-07-12T16:23:01.879Z</updated>
-  <id>http://example.com/</id>
+  <id>https://promptonce.github.io/</id>
   
   <author>
     <name>penggan</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>self attention机制</title>
-    <link href="http://example.com/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/"/>
-    <id>http://example.com/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/</id>
+    <link href="https://promptonce.github.io/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/"/>
+    <id>https://promptonce.github.io/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/</id>
     <published>2024-07-12T16:23:01.000Z</published>
     <updated>2024-07-12T16:23:01.879Z</updated>
     
@@ -38,8 +38,8 @@
   
   <entry>
     <title>编程学习观点</title>
-    <link href="http://example.com/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/"/>
-    <id>http://example.com/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/</id>
+    <link href="https://promptonce.github.io/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/"/>
+    <id>https://promptonce.github.io/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/</id>
     <published>2024-07-12T07:58:33.000Z</published>
     <updated>2024-07-12T07:58:33.553Z</updated>
     
@@ -59,8 +59,8 @@
   
   <entry>
     <title>浏览器跨域</title>
-    <link href="http://example.com/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/"/>
-    <id>http://example.com/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/</id>
+    <link href="https://promptonce.github.io/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/"/>
+    <id>https://promptonce.github.io/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/</id>
     <published>2024-07-09T16:06:47.000Z</published>
     <updated>2024-07-09T16:06:47.801Z</updated>
     
@@ -75,14 +75,14 @@
     
     
     
-    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    <category term="前端" scheme="https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
   <entry>
     <title>mmsegmentation框架可视化训练指标</title>
-    <link href="http://example.com/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/"/>
-    <id>http://example.com/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/</id>
+    <link href="https://promptonce.github.io/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/"/>
+    <id>https://promptonce.github.io/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/</id>
     <published>2024-07-01T07:44:22.000Z</published>
     <updated>2024-07-01T07:53:38.037Z</updated>
     
@@ -97,14 +97,14 @@
     
     
     
-    <category term="深度学习" scheme="http://example.com/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    <category term="深度学习" scheme="https://promptonce.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
   <entry>
     <title>测试文章</title>
-    <link href="http://example.com/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
-    <id>http://example.com/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</id>
+    <link href="https://promptonce.github.io/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <id>https://promptonce.github.io/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</id>
     <published>2024-06-30T14:34:19.000Z</published>
     <updated>2024-06-30T14:47:15.117Z</updated>
     
@@ -120,17 +120,17 @@
     
     
     
-    <category term="Java" scheme="http://example.com/categories/Java/"/>
+    <category term="Java" scheme="https://promptonce.github.io/categories/Java/"/>
     
     
-    <category term="原创" scheme="http://example.com/tags/%E5%8E%9F%E5%88%9B/"/>
+    <category term="原创" scheme="https://promptonce.github.io/tags/%E5%8E%9F%E5%88%9B/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2024/06/30/hello-world/"/>
-    <id>http://example.com/2024/06/30/hello-world/</id>
+    <link href="https://promptonce.github.io/2024/06/30/hello-world/"/>
+    <id>https://promptonce.github.io/2024/06/30/hello-world/</id>
     <published>2024-06-30T13:54:31.908Z</published>
     <updated>2024-06-30T13:54:31.908Z</updated>
     
