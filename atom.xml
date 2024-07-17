@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-07-12T16:23:01.879Z</updated>
+  <updated>2024-07-17T15:35:44.706Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="https://promptonce.github.io/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/"/>
     <id>https://promptonce.github.io/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/</id>
     <published>2024-07-12T16:23:01.000Z</published>
-    <updated>2024-07-12T16:23:01.879Z</updated>
+    <updated>2024-07-17T15:35:44.706Z</updated>
     
-    <content type="html"><![CDATA[<p>self attention模块输入输出都可以看作是向量<br>每个向量都要和其他向量在self attention模块中进行交互<br>以下是两种两个向量之间交互的方法<br><img src="/./self-attention%E6%9C%BA%E5%88%B6/%E4%B8%A4%E4%B8%AA%E5%90%91%E9%87%8F%E8%AE%A1%E7%AE%97%E7%9B%B8%E5%85%B3%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95.png" alt="两个向量计算相关度的方法" title="两个向量计算相关度的方法"><br>一个向量和sequence中其他向量交互（两个向量之间交互的拓展），输出即为相关度<br><img src="/./self-attention%E6%9C%BA%E5%88%B6/%E4%B8%80%E4%B8%AA%E5%90%91%E9%87%8F%E5%92%8Csequence%E4%B8%AD%E5%85%B6%E4%BB%96%E5%90%91%E9%87%8F%E4%BA%A4%E4%BA%92%E7%9A%84%E6%96%B9%E6%B3%95.png" alt="一个向量和sequence中其他向量交互的方法" title="一个向量和sequence中其他向量交互的方法"><br>计算与输入位置对应的输出向量（考虑了其他所有向量的信息，在这里哪个向量的alpha更大，即相关性强，计算输出向量的求和那里对相关性强的输入向量对应的V矩阵系数乘的也越多）<br><img src="/./self-attention%E6%9C%BA%E5%88%B6/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%88%86%E6%95%B0%E6%8F%90%E5%8F%96%E4%BF%A1%E6%81%AF.png" alt="基于注意力分数提取信息" title="基于注意力分数提取信息"><br>这个self attention模块充分利用了GPU的并行能力，所有的操作都可以整合到矩阵计算中并行计算。<br><img src="/./self-attention%E6%9C%BA%E5%88%B6/%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%A8%A1%E5%9D%97%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3.png" alt="自注意力模块矩阵计算过程图解" title="自注意力模块矩阵计算过程图解"></p>]]></content>
+    <content type="html"><![CDATA[<p>self attention模块输入输出都可以看作是向量<br>每个向量都要和其他向量在self attention模块中进行交互<br>以下是两种两个向量之间交互的方法</p><img src="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/%E4%B8%A4%E4%B8%AA%E5%90%91%E9%87%8F%E8%AE%A1%E7%AE%97%E7%9B%B8%E5%85%B3%E5%BA%A6%E7%9A%84%E6%96%B9%E6%B3%95.png" class="" title="两个向量计算相关度的方法"><p>一个向量和sequence中其他向量交互（两个向量之间交互的拓展），输出即为相关度</p><img src="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/%E4%B8%80%E4%B8%AA%E5%90%91%E9%87%8F%E5%92%8Csequence%E4%B8%AD%E5%85%B6%E4%BB%96%E5%90%91%E9%87%8F%E4%BA%A4%E4%BA%92%E7%9A%84%E6%96%B9%E6%B3%95.png" class="" title="一个向量和sequence中其他向量交互的方法"><p>计算与输入位置对应的输出向量（考虑了其他所有向量的信息，在这里哪个向量的alpha更大，即相关性强，计算输出向量的求和那里对相关性强的输入向量对应的V矩阵系数乘的也越多）</p><img src="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%88%86%E6%95%B0%E6%8F%90%E5%8F%96%E4%BF%A1%E6%81%AF.png" class="" title="基于注意力分数提取信息"><p>这个self attention模块充分利用了GPU的并行能力，所有的操作都可以整合到矩阵计算中并行计算。</p><img src="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/%E8%87%AA%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%A8%A1%E5%9D%97%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E8%BF%87%E7%A8%8B%E5%9B%BE%E8%A7%A3.png" class="" title="自注意力模块矩阵计算过程图解">]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;self attention模块输入输出都可以看作是向量&lt;br&gt;每个向量都要和其他向量在self attention模块中进行交互&lt;br&gt;以下是两种两个向量之间交互的方法&lt;br&gt;&lt;img src=&quot;/./self-attention%E6%9C%BA%E5%88%B6/%E</summary>
+    <summary type="html">&lt;p&gt;self attention模块输入输出都可以看作是向量&lt;br&gt;每个向量都要和其他向量在self attention模块中进行交互&lt;br&gt;以下是两种两个向量之间交互的方法&lt;/p&gt;
+&lt;img src=&quot;/2024/07/13/self-attention%E6%9C%BA%E</summary>
       
     
     
