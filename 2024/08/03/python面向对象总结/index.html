@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
-  <meta name="robots" content="none">
+  
   <meta name="generator" content="Hexo 7.2.0">
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   
@@ -17,14 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>PromptOnce</title>
+  <title>python面向对象总结 - PromptOnce</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="PromptOnce">
-<meta property="og:url" content="https://promptonce.github.io/404.html">
+    <meta name="description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车 继承：python中子类会继承父类的方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python面向对象总结">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
+<meta property="og:description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车 继承：python中子类会继承父类的方法">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-03T14:37:40.000Z">
+<meta property="article:modified_time" content="2024-08-03T14:37:40.125Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -47,7 +51,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="404" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
@@ -59,28 +63,56 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"><span class="title">python面向对象总结</span></a><a class="item title" href="/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"><span class="title">使用MMSegmentation进行语义分割</span></a><a class="item title" href="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/"><span class="title">self attention机制</span></a><a class="item title" href="/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/"><span class="title">编程学习观点</span></a><a class="item title" href="/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/"><span class="title">浏览器跨域</span></a><a class="item title" href="/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/"><span class="title">mmsegmentation框架可视化训练指标</span></a><a class="item title" href="/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"><span class="title">测试文章</span></a><a class="item title" href="/2024/06/30/hello-world/"><span class="title">Hello World</span></a></div></widget>
-
-
 </div>
 
 </div></aside><div class="l_main" id="main">
 
 
 
-<article class='md-text error-page'>
-  <h1><img id='error' src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/404/1c830bfcd517d.svg' alt='404'></h1>
-  <p class='what'>
-    <strong>
-      很抱歉，您访问的页面不存在
-    </strong>
-  </p>
-  <p class='why'>
-    可能是输入地址有误或该地址已被删除
-  </p>
-  <br><br>
-  <a class='button' id='back' href="/">返回主页</a>
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-03T14:37:40.000Z">2024-08-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-03T14:37:40.125Z">2024-08-03</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>python面向对象总结</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="何为面向对象？"><a href="#何为面向对象？" class="headerlink" title="何为面向对象？"></a>何为面向对象？</h2><h3 id="类：图纸"><a href="#类：图纸" class="headerlink" title="类：图纸"></a>类：图纸</h3><p>父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础<br>子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性<br>注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念</p>
+<h3 id="对象："><a href="#对象：" class="headerlink" title="对象："></a>对象：</h3><p>根据图纸造出来的车</p>
+<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>python中子类会继承父类的方法和属性，包括私有属性和私有方法，但通常不建议使用它们</p>
+<h3 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h3><p>主要利用私有属性和私有方法实现封装，好处就是修改这个类的内部方法而不影响使用这个类的代码（比如有更优的算法可以实现排序，那就可以直接替换封装好的类的排序方法而不用改动调用这个类的代码）</p>
+<h3 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h3><p>多态允许使用一个单一类型的实体（如变量，函数，接口）来代表多种类型的对象，简单来说，多态就是“一个接口，多种实现”。  </p>
+<p>代码例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">class Animal:</span><br><span class="line">    def speak(self):</span><br><span class="line">        pass</span><br><span class="line"></span><br><span class="line">class Dog(Animal):</span><br><span class="line">    def speak(self):</span><br><span class="line">        return &quot;Woof!&quot;</span><br><span class="line"></span><br><span class="line">class Cat(Animal):</span><br><span class="line">    def speak(self):</span><br><span class="line">        return &quot;Meow!&quot;</span><br><span class="line"></span><br><span class="line">class Duck(Animal):</span><br><span class="line">    def speak(self):</span><br><span class="line">        return &quot;Quack!&quot;</span><br><span class="line"></span><br><span class="line">def animal_sound(animal):</span><br><span class="line">    print(animal.speak())</span><br><span class="line"></span><br><span class="line"># 创建不同的动物对象</span><br><span class="line">dog = Dog()</span><br><span class="line">cat = Cat()</span><br><span class="line">duck = Duck()</span><br><span class="line"></span><br><span class="line"># 使用相同的函数调用不同对象的方法</span><br><span class="line">animal_sound(dog)  # 输出: Woof!</span><br><span class="line">animal_sound(cat)  # 输出: Meow!</span><br><span class="line">animal_sound(duck)  # 输出: Quack!</span><br><span class="line"></span><br><span class="line"># 多态性在集合中的应用</span><br><span class="line">animals = [Dog(), Cat(), Duck()]</span><br><span class="line">for animal in animals:</span><br><span class="line">    animal_sound(animal)</span><br></pre></td></tr></table></figure>
+<p>可以看到多态的几个关键特点:</p>
+<p>方法重写: 每个子类(Dog, Cat, Duck)都重写了父类Animal的speak()方法。这允许每个子类提供自己的实现。<br>统一接口: 所有的动物类都有一个speak()方法,这提供了一个统一的接口。<br>运行时多态: animal_sound()函数接受一个Animal类型的参数,但它可以处理任何Animal的子类。在运行时,Python会调用对象实际类型的speak()方法。<br>灵活性: 我们可以轻松地添加新的动物类(如Cow),只要它实现了speak()方法,就可以无缝地与现有代码工作。  </p>
+<h2 id="如何理解多态？"><a href="#如何理解多态？" class="headerlink" title="如何理解多态？"></a>如何理解多态？</h2><p>通过编写处理父类对象的代码，这些代码可以用于所有的子类对象，即通过父类就可以实现（批量&#x2F;统一）管理不同的子类对象，这些子类对象继承父类有多种实现，差不多等于多态的子类对象。</p>
+<h2 id="如何理解对象和类class的关系？"><a href="#如何理解对象和类class的关系？" class="headerlink" title="如何理解对象和类class的关系？"></a>如何理解对象和类class的关系？</h2><p>图纸和图纸造出来的东西的关系</p>
+<h2 id="设计类class的原则"><a href="#设计类class的原则" class="headerlink" title="设计类class的原则"></a>设计类class的原则</h2><p>单一职责原则（SRP）：一个类应该只有一个引起变化的原因。这意味着一个类应该只负责一项功能或一组紧密相关的功能。<br>开放&#x2F;关闭原则（OCP）：类应该对扩展开放，对修改关闭。这意味着你应当能够扩展一个类的行为，而不需要修改其源代码。<br>里氏替换原则（LSP）：派生类必须能够替换其基类。这意味着基类和派生类应该能够互相替换，而不影响程序的正确性。<br>接口隔离原则（ISP）：不应该强迫客户依赖于它们不使用的接口。这意味着一个类不应该实现它不需要的方法。<br>依赖倒置原则（DIP）：高层模块不应该依赖于低层模块，它们都应该依赖于抽象。抽象不应该依赖于细节，细节应该依赖于抽象。<br>封装：隐藏内部实现细节，只暴露必要的接口。这有助于减少系统各部分之间的依赖关系。<br>重用：尽可能重用代码。这可以通过创建可重用的类和模块来实现。<br>灵活性：设计时要考虑未来可能的变化，使类和模块易于修改和扩展。<br>简洁性：避免不必要的复杂性。类应该简单、直接，易于理解。<br>可测试性：类应该易于测试。这通常意味着它们应该具有清晰的职责，并且应该尽量减少依赖关系。  </p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
 </article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/">使用MMSegmentation进行语义分割</a></div></section></div>
+
+
 
 
 
@@ -88,7 +120,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">何为面向对象？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%EF%BC%9A%E5%9B%BE%E7%BA%B8"><span class="toc-text">类：图纸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-text">对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-text">继承：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%EF%BC%9A"><span class="toc-text">封装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%EF%BC%9A"><span class="toc-text">多态：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%A4%9A%E6%80%81%EF%BC%9F"><span class="toc-text">如何理解多态？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BBclass%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">如何理解对象和类class的关系？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%B1%BBclass%E7%9A%84%E5%8E%9F%E5%88%99"><span class="toc-text">设计类class的原则</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
