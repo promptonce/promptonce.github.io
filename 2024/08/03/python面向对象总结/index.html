@@ -20,15 +20,15 @@
   <title>python面向对象总结 - PromptOnce</title>
 
   
-    <meta name="description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车 继承：python中子类会继承父类的方法">
+    <meta name="description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车继承：python中子类会继承父类的方法和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python面向对象总结">
 <meta property="og:url" content="https://promptonce.github.io/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车 继承：python中子类会继承父类的方法">
+<meta property="og:description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车继承：python中子类会继承父类的方法和">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-08-03T14:37:40.000Z">
-<meta property="article:modified_time" content="2024-08-03T14:37:40.125Z">
+<meta property="article:modified_time" content="2024-08-03T14:41:55.460Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,7 +78,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-03T14:37:40.000Z">2024-08-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-03T14:37:40.125Z">2024-08-03</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-03T14:37:40.000Z">2024-08-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-03T14:41:55.460Z">2024-08-03</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -90,8 +90,7 @@
     
   </div>
   </div><article class="md-text content"><h2 id="何为面向对象？"><a href="#何为面向对象？" class="headerlink" title="何为面向对象？"></a>何为面向对象？</h2><h3 id="类：图纸"><a href="#类：图纸" class="headerlink" title="类：图纸"></a>类：图纸</h3><p>父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础<br>子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性<br>注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念</p>
-<h3 id="对象："><a href="#对象：" class="headerlink" title="对象："></a>对象：</h3><p>根据图纸造出来的车</p>
-<h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>python中子类会继承父类的方法和属性，包括私有属性和私有方法，但通常不建议使用它们</p>
+<h3 id="对象：根据图纸造出来的车"><a href="#对象：根据图纸造出来的车" class="headerlink" title="对象：根据图纸造出来的车"></a>对象：根据图纸造出来的车</h3><h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>python中子类会继承父类的方法和属性，包括私有属性和私有方法，但通常不建议使用它们</p>
 <h3 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h3><p>主要利用私有属性和私有方法实现封装，好处就是修改这个类的内部方法而不影响使用这个类的代码（比如有更优的算法可以实现排序，那就可以直接替换封装好的类的排序方法而不用改动调用这个类的代码）</p>
 <h3 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h3><p>多态允许使用一个单一类型的实体（如变量，函数，接口）来代表多种类型的对象，简单来说，多态就是“一个接口，多种实现”。  </p>
 <p>代码例子：</p>
@@ -124,7 +123,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">何为面向对象？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%EF%BC%9A%E5%9B%BE%E7%BA%B8"><span class="toc-text">类：图纸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A"><span class="toc-text">对象：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-text">继承：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%EF%BC%9A"><span class="toc-text">封装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%EF%BC%9A"><span class="toc-text">多态：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%A4%9A%E6%80%81%EF%BC%9F"><span class="toc-text">如何理解多态？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BBclass%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">如何理解对象和类class的关系？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%B1%BBclass%E7%9A%84%E5%8E%9F%E5%88%99"><span class="toc-text">设计类class的原则</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">何为面向对象？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%EF%BC%9A%E5%9B%BE%E7%BA%B8"><span class="toc-text">类：图纸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%9B%BE%E7%BA%B8%E9%80%A0%E5%87%BA%E6%9D%A5%E7%9A%84%E8%BD%A6"><span class="toc-text">对象：根据图纸造出来的车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-text">继承：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%EF%BC%9A"><span class="toc-text">封装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%EF%BC%9A"><span class="toc-text">多态：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%A4%9A%E6%80%81%EF%BC%9F"><span class="toc-text">如何理解多态？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BBclass%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">如何理解对象和类class的关系？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%BE%E8%AE%A1%E7%B1%BBclass%E7%9A%84%E5%8E%9F%E5%88%99"><span class="toc-text">设计类class的原则</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
