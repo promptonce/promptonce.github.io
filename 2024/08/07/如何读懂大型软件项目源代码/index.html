@@ -17,14 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>PromptOnce</title>
+  <title>如何读懂大型软件项目源代码? - PromptOnce</title>
 
   
-    <meta property="og:type" content="website">
-<meta property="og:title" content="PromptOnce">
-<meta property="og:url" content="https://promptonce.github.io/index.html">
+    <meta name="description" content="用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。 运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。 利用好visio这类软件表示更多的逻辑关系。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何读懂大型软件项目源代码?">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="PromptOnce">
+<meta property="og:description" content="用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。 运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。 利用好visio这类软件表示更多的逻辑关系。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-07T14:33:14.000Z">
+<meta property="article:modified_time" content="2024-08-07T14:36:54.765Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -47,7 +51,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
@@ -59,52 +63,60 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
+
+
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/"><span class="title">如何读懂大型软件项目源代码?</span></a><a class="item title" href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"><span class="title">python面向对象总结</span></a><a class="item title" href="/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"><span class="title">使用MMSegmentation进行语义分割</span></a><a class="item title" href="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/"><span class="title">self attention机制</span></a><a class="item title" href="/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/"><span class="title">编程学习观点</span></a><a class="item title" href="/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/"><span class="title">浏览器跨域</span></a><a class="item title" href="/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/"><span class="title">mmsegmentation框架可视化训练指标</span></a><a class="item title" href="/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"><span class="title">测试文章</span></a><a class="item title" href="/2024/06/30/hello-world/"><span class="title">Hello World</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
 
 
 
 
-<div class="navbar top"><nav class="post"><a class="active" href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/">
-<article class="md-text"><h2 class="post-title">如何读懂大型软件项目源代码?</h2><div class="excerpt"><p>
-用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。
-运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加pri...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-07T14:33:14.000Z">2024-08-07</time></span></div></article>
-</a><a class="post-card post" href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">
-<article class="md-text"><h2 class="post-title">python面向对象总结</h2><div class="excerpt"><p>何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-03T14:37:40.000Z">2024-08-03</time></span></div></article>
-</a><a class="post-card post" href="/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/">
-<article class="md-text"><h2 class="post-title">使用MMSegmentation进行语义分割</h2><div class="excerpt"><p>文章来源：https://zhuanlan.zhihu.com/p/393070556
-一、前言本实例将通过使用语义分割，将道路在实际场景中分割出来，从而为无人驾驶小车提供道路信息和前进方向信息。
-语义分割作为计算机视觉中一项基础任务，同时在自动驾驶...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-21T04:36:15.000Z">2024-07-21</time></span></div></article>
-</a><a class="post-card post" href="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/">
-<article class="md-text"><h2 class="post-title">self attention机制</h2><div class="excerpt"><p>self attention模块输入输出都可以看作是向量每个向量都要和其他向量在self attention模块中进行交互以下是两种两个向量之间交互的方法
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-07T14:33:14.000Z">2024-08-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-07T14:36:54.765Z">2024-08-07</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>如何读懂大型软件项目源代码?</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><ol>
+<li>用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。</li>
+<li>运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。</li>
+<li>利用好visio这类软件表示更多的逻辑关系。还可以使用 UML 图（如类图、时序图）来表示系统的静态结构和动态行为，这可以帮助更好地理解面向对象设计。</li>
+<li>分清楚影响理解框架代码的原因是啥，如果是各个小的模块理解错误，那就需要逐个击破来理解整体。在理解小模块时，可以结合单元测试。编写和运行单元测试不仅能验证模块功能，还能帮助理解模块的输入输出和依赖关系。</li>
+<li>对大的目录进行归纳总结，最好是记录在Notion上，记录关键模块、类、函数的作用和关系，以便日后查阅，因为代码较多，后续如果再来看可能忘记了，忘记了就需要再看一遍，相当于思维不集中会影响效率，有些时候可能总结的内容（也就是压缩过的内容）就足以理解了</li>
+<li>需要高度集中，最好进入心流状态，最好用一整段时间去理解，下次理解相当于需要再从代码和文档中找到当时的理解水平。</li>
+<li>IDE的全局关键字检索功能很有用，比如vscode可以显示所有包含指定关键字的文件引用，可以帮助构建代码框架逻辑。除了 VSCode，还可以使用更专业的代码搜索工具，如 Sourcegraph 或 Opengrok，支持跨项目搜索和代码导航。</li>
+<li>面向对象思维，通过对象，模块，组件来构建系统的认识。可以学习设计模式（Design Patterns），如《设计模式：可复用面向对象软件的基础》一书中提到的23种经典设计模式，帮助理解和应用面向对象思想。</li>
+<li>明确改动哪些地方对系统运行有影响，哪些地方改动对系统没有影响及如何在系统上增加功能，如何在增加功能的同时不破坏原有系统的优良设计，如何重构原来系统中不合理的逻辑设计。在进行代码改动前，可以使用代码覆盖率工具（如 Coverage.py）和静态代码分析工具（如 SonarQube），评估改动的潜在影响和风险。</li>
+<li>阅读官方文档，理解开发者的设计思路。还可以查阅社区文档、技术博客和开发者论坛，获取更多实战经验和最佳实践。</li>
+<li>算法能力的学习，大型软件项目一般开发人员水平较高，用到了大量数据结构与算法的思想，如果算法能力不足再看到相关代码实现会觉得理解不足或觉得这些算法是框架本身的创新。建议系统学习算法与数据结构，可以参考《算法导论》（CLRS）这本书，并在 LeetCode、HackerRank 等平台上实践。</li>
+<li>如果能问原开发者还是要先问，理解框架的目的就是应用框架，如何快速的掌握一个框架的能力是追求的目标，然后再谈框架的进阶理解，否则进阶学习也是低效的。在问原开发者时，可以提前准备好问题，并尝试提出一些自己的理解和解决方案，展示你的思考过程，往往能得到更有针对性的指导。</li>
+</ol>
 
-一个向量和sequence中其他向量交互（两个向量之间交互的拓展），输出即为相关度
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">python面向对象总结</a></div></section></div>
 
-计算与...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-12T16:23:01.000Z">2024-07-13</time></span></div></article>
-</a><a class="post-card post" href="/2024/07/12/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%A7%82%E7%82%B9/">
-<article class="md-text"><h2 class="post-title">编程学习观点</h2><div class="excerpt"><p>培养对酷的编程项目如何构建的热情，尝试阅读理解消化源码，不要只停留在应用层。
-QBX理论Q:需求量大B:基础X:稀缺性
-</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-12T07:58:33.000Z">2024-07-12</time></span></div></article>
-</a><a class="post-card post" href="/2024/07/10/%E6%B5%8F%E8%A7%88%E5%99%A8%E8%B7%A8%E5%9F%9F/">
-<article class="md-text"><h2 class="post-title">浏览器跨域</h2><div class="excerpt"><p>服务器与服务器通信不受跨域的影响，解决跨域也就可以从这个角度入手。浏览器不允许跨域的原因？防止黑客入侵
-为啥html标签可以跨域？html标签只能调用get方法
-在有服务器权限的情况下
-服务器配置CROS实现跨域
-JSONP（利用script标签和后...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-09T16:06:47.000Z">2024-07-10</time></span></div></article>
-</a><a class="post-card post" href="/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/">
-<article class="md-text"><h2 class="post-title">mmsegmentation框架可视化训练指标</h2><div class="excerpt"><p>12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-01T07:44:22.000Z">2024-07-01</time></span></div></article>
-</a><a class="post-card post" href="/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/">
-<article class="md-text"><h2 class="post-title">测试文章</h2><div class="excerpt"><p>这是一篇测试文章
 
-</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-30T14:34:19.000Z">2024-06-30</time></span><span class="cap breadcrumb"><svg style="margin-bottom:1px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M2 6.95c0-.883 0-1.324.07-1.692A4 4 0 0 1 5.257 2.07C5.626 2 6.068 2 6.95 2c.386 0 .58 0 .766.017a4 4 0 0 1 2.18.904c.144.119.28.255.554.529L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .848.352C14.098 6 14.675 6 15.828 6h.374c2.632 0 3.949 0 4.804.77c.079.07.154.145.224.224c.77.855.77 2.172.77 4.804V14c0 3.771 0 5.657-1.172 6.828C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.172C2 19.657 2 17.771 2 14z" opacity=".5"/><path fill="currentColor" d="M20 6.238c0-.298-.005-.475-.025-.63a3 3 0 0 0-2.583-2.582C17.197 3 16.965 3 16.5 3H9.988c.116.104.247.234.462.45L11 4c.816.816 1.224 1.224 1.712 1.495a4 4 0 0 0 .849.352C14.098 6 14.675 6 15.829 6h.373c1.78 0 2.957 0 3.798.238"/><path fill="currentColor" fill-rule="evenodd" d="M12.25 10a.75.75 0 0 1 .75-.75h5a.75.75 0 0 1 0 1.5h-5a.75.75 0 0 1-.75-.75" clip-rule="evenodd"/></svg><span>Java</span></span></div></article>
-</a><a class="post-card post" href="/2024/06/30/hello-world/">
-<article class="md-text"><h2 class="post-title">Hello World</h2><div class="excerpt"><p>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, yo...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-06-30T13:54:31.908Z">2024-06-30</time></span></div></article>
-</a></div>
+
+
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
