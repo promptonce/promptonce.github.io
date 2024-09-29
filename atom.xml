@@ -188,15 +188,16 @@
     <link href="https://promptonce.github.io/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
     <id>https://promptonce.github.io/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
     <published>2024-09-24T16:41:28.000Z</published>
-    <updated>2024-09-24T16:47:12.163Z</updated>
+    <updated>2024-09-29T15:38:20.727Z</updated>
     
-    <content type="html"><![CDATA[<p>hexo d失败可以用git clone github仓库地址然后用hexo public目录替换后使用授权github仓库账号执行git push操作替代hexo d</p>]]></content>
+    <content type="html"><![CDATA[<p>hexo d失败可以用git clone github仓库地址然后用hexo public目录替换后使用授权github仓库账号执行git push操作替代hexo d</p><blockquote><p>fatal: bad tree object 76efcae7c5c88277bd54626c763b790961115445<br>fatal: the remote end hung up unexpectedly<br>send-pack: unexpected disconnect while reading sideband packet<br>fatal: the remote end hung up unexpectedly<br>error: failed to push some refs to ‘<a href="https://xxx.git/">https://xxx.git</a>‘<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="https://hexo.io/docs/troubleshooting.html">https://hexo.io/docs/troubleshooting.html</a><br>Error: Spawn failed<br>    at ChildProcess.<anonymous> (D:\promptonce-blog\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)<br>    at ChildProcess.emit (node:events:519:28)<br>    at cp.emit (D:\promptonce-blog\node_modules\cross-spawn\lib\enoent.js:34:29)<br>    at ChildProcess._handle.onexit (node:internal&#x2F;child_process:294:12)</p></blockquote><p>清空public目录下的文件<br>克隆托管hexo博客的github仓库，将除.git的文件及目录复制到public目录中<br>将原来根目录的.git目录删掉<br>将克隆下来的目录的.git移动到根目录<br>执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;hexo d失败可以用git clone github仓库地址然后用hexo public目录替换后使用授权github仓库账号执行git push操作替代hexo d&lt;/p&gt;
-</summary>
+&lt;blockquote&gt;
+&lt;p&gt;fatal: bad tree object 76efcae7c</summary>
       
     
     
