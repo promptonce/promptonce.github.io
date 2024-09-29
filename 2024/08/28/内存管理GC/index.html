@@ -1,0 +1,583 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
+  
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>内存管理GC - PromptOnce</title>
+
+  
+    <meta name="description" content="栈中JS引擎自动清除栈内存中变量一般在它的当前执行环境结束就会被销毁被垃圾回收制回收，而堆内存中的变量则不会，因为不确定其他的地方是不是还有一些对它的引用。堆内存中的变量只有在所有对它的引用都结束的时候才会被回收。JS引擎可以通过逃逸分析辨别出哪些变量需要存储在堆上，哪些需要存储在栈上。自动垃圾回收机制：找出不使用的值，释放内存。函数运行结束，没有闭包或引用，局部变量被标记清除全局变量：浏览器卸载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="内存管理GC">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86GC/index.html">
+<meta property="og:site_name" content="PromptOnce">
+<meta property="og:description" content="栈中JS引擎自动清除栈内存中变量一般在它的当前执行环境结束就会被销毁被垃圾回收制回收，而堆内存中的变量则不会，因为不确定其他的地方是不是还有一些对它的引用。堆内存中的变量只有在所有对它的引用都结束的时候才会被回收。JS引擎可以通过逃逸分析辨别出哪些变量需要存储在堆上，哪些需要存储在栈上。自动垃圾回收机制：找出不使用的值，释放内存。函数运行结束，没有闭包或引用，局部变量被标记清除全局变量：浏览器卸载">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-28T08:13:56.000Z">
+<meta property="article:modified_time" content="2024-09-10T06:29:55.665Z">
+<meta property="article:author" content="penggan">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="PromptOnce" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"><span class="title">Segformer技术分析</span></a><a class="item title" href="/2024/08/28/Vue-router/"><span class="title">Vue-router</span></a><a class="item title" href="/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"><span class="title">Vue的生命周期</span></a><a class="item title" href="/2024/08/28/Vue%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%89%B9%E7%82%B9/"><span class="title">Vue的优点和特点</span></a><a class="item title" href="/2024/08/28/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/"><span class="title">前端路由</span></a><a class="item title" href="/2024/09/29/%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BE%93%E5%85%A5%E7%BD%91%E5%9D%80%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/"><span class="title">在浏览器中输入网址后发生了什么</span></a><a class="item title" href="/2024/08/28/%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/"><span class="title">继承方式</span></a><a class="item title" href="/2024/09/29/cookie%E5%92%8Csession/"><span class="title">cookie和session</span></a><a class="item title" href="/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"><span class="title">TCP三次握手四次挥手</span></a><a class="item title" href="/2024/09/28/OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/"><span class="title">OSI七层模型</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:13:56.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-10T06:29:55.665Z">2024-09-10</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>内存管理GC</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>栈中JS引擎自动清除<br>栈内存中变量一般在它的当前执行环境结束就会被销毁被垃圾回收制回收，而堆内存中的变量则不会，因为不确定<br>其他的地方是不是还有一些对它的引用。堆内存中的变量只有在所有对它的引用都结束的时候才会被回收。<br>JS引擎可以通过逃逸分析辨别出哪些变量需要存储在堆上，哪些需要存储在栈上。<br>自动垃圾回收机制：找出不使用的值，释放内存。<br>函数运行结束，没有闭包或引用，局部变量被标记清除<br>全局变量：浏览器卸载页面被清除<br>垃圾回收算法<br>不论哪个垃圾回收算法，都有一套共同的流程：<br>1.标记内存空间中的活动对象（在使用中的对象）和非活动对象（可以回收的对象）。<br>2.删除非活动对象，释放内存空间。<br>3.整理内存空间，避免频繁回收后产生的大量内存碎片（不连续内存空间）。<br>引用计数<br>一个对象是否有被引用（循环引用导致内存泄露）<br>策略：跟踪每个变量被使用的次数<br>1.当声明了一个变量且将一个引用类型赋值给该变量时，这个值的引用次数为1<br>2.若同一个值又被赋给另一个值，引用数+1<br>3.如果该变量的值被其他的值覆盖了，则引用次数减1<br>4.当这个值的引用次数变为0的时候，说明没有变量在使用，这个值没法被访问了，回收空间，垃圾回收器会在运<br>行的时候清理掉引用次数为0的值占用的内存<br>缺点：<br>·需要一个计数器，所占内存空间大，因为我们也不知道被引用数量的上限。<br>·解决不了循环引用导致的无法回收问题。<br>标记清除<br>将“不再使用的对象”定义为“无法到达的对象”<br>工作流程：<br>1.垃圾收集器在运行时给内存变量加上标记，假设内存汇总所有对象都是垃圾，全标记为0<br>2.从根部出发，寻找可到达的变量，并将其标记清除，改为1<br>3.留有标记的变量就是待删除的，即标记为0，销毁并回收它们占用的内存<br>4.把所有内存中对象标记修改为0，等待下一轮垃圾回收<br>优点：实现简单，一位二进制位就可以为其标记<br>缺点：<br>内存碎片化，空闲内存块不连续<br>·分配速度慢，因为即使使用first-fit策略，其操作仍是一个O(n)的操作，最坏情况是每次都要遍历到最后，因为碎片化，<br>大对象的分配速率会更慢<br>复制算法<br>为了解决上述问题，复制算法出现了。<br>1.将整个空间平均分成from和to两部分。<br>2.先在from空间进行内存分配，当空间被占满时，标记活动对象，并将其复制到to空间。<br>3.复制完成后，将from和to空间互换。<br>由于直接将活动对象复制到另一半空间，没有了清除阶段的开销，所以能在较短时间内完成回收操作，并且每次复<br>制的时候，对象都会集中到一起，相当于同时做了整理操作，避免了内存碎片的产生。<br>优点：吞吐量高、没有碎片<br>缺点：首先，复制操作需要时间成本的，若堆空间很大且活动对象很多，则每次清理时间会很久；其次，将空间二<br>等分的操作，让可用的内存空间直接减少了一半。<br>标记整理<br>也叫做标记压缩算法。结合了标记-清除和复制算法的优点。<br>1.从一个GC root集合出发，标记所有活动对象。<br>2.将所有活动对象移到内存的一端，集中到一起。<br>3.直接清理掉边界以外的内存，释放连续空间。<br>该算法既避免了标记-清除法产生内存碎片的问题，又避免了复制算法导致可用内存空间减少的问题。当然，该算法<br>也不是没有缺点的，由于其清除和整理的操作很麻烦，甚至需要对整个堆做多次搜索，故而堆越大，耗时越多。<br>识别内存泄露<br>经验法则是，如果连续五次垃圾回收之后，内存占用一次比一次大，就有内存泄漏。<br>这就要求实时查看内存的占用情况。<br>在Chrome浏览器中，我们可以这样查看内存占用情况<br>1.打开开发者工具，选择Performance面板<br>2.在J顶部勾选Memory<br>3.点击左上角的record按钮<br>4在页面上进行各种操作，模拟用户的使用情况<br>5.一段时间后，点击对话框的stop按钮，面板上就会显示这段时间的内存占用情况<br>造成内存泄露<br>1.意外的全局变量<br>2.被遗忘的定时器和回调函数<br>3.事件监听没有移除<br>4.没有清理的DOM引用<br>5.子元素存在的内存泄漏</p>
+<blockquote>
+<p>V8对GC优化</p>
+</blockquote>
+<p>·栈中数据回收：执行状态指针ESP在执行栈中移动，移过某执行上下文，就会被销毁；<br>·堆中数据回收：V8引擎采用标记清除算法；<br>·V8把堆分为两个区域一新生代和老生代，分别使用副、主垃圾回收器；<br>·副垃圾回收器负责新生代垃圾回收，小对象(1~8M)会被分配到该区域处理；<br>·新生代采用scavenge算法处理：将新生代空间分为两半，一半空闲，一半存对象，对对象区域做标记，存活对<br>象复制排列到空闲区域，没有内存碎片，完成后，清理对象区域，角色反转；<br>·新生代区域两次垃圾回收还存活的对象晋升至老生代区域；<br>·主垃圾回收器负责老生区垃圾回收，大对象，存活时间长；<br>·新生代区域采用标记-清除算法回收垃圾：从根元素开始，递归，可到达的元素活动元素，否则是垃圾数据；<br>n<br>为了不造成卡顿，标记过程被切分为一个个子标记，交替进行。<br>分代式垃圾回收<br>以上所说的垃圾清理算法每次垃圾回收时都要检查内存中所有的对象，酱紫对一些大，老，存活时间长的对象来说，同<br>新，小，存活时间短的对象一个频率的检查很不好，因为前者需要时间长且不需要频繁进行清理，后者恰恰相反，如何<br>优化？<br>分代式<br>分代式机制把一些新、小、存活时间短的对象作为新生代，采用一小块内存频率较高的快速清理，而一些大、老、<br>存活时间长的对象作为老生代，使其很少接受检查，新老生代的回收机制及频率是不同的，可以说此机制的出现很<br>大程度提高了垃圾回收机制的效率<br>新老生代<br>V8的GC策略基于分代式垃圾回收机制，将堆内存分为新生代和老生代两区域，采用不同的垃圾回收策略进行垃圾回收<br>新生代的对象是存活时间较短的对象，简单来说就是新产生的对象，通常只支持1-8M的容量，而老生代的对象为存活时<br>间较长或常驻内存的对象，</p>
+<p>新生代垃圾回收<br>新生代中对象一般存活时间较短，采用scavenge算法处理，在Scavenge算法具体实现中，主要采用一种复制式的方法<br>及Cheney.算法：<br>其将新生代空间对半分为from-space和to-space两个区域。新创建的对象都被存放到from-space,当空间快被写<br>满时触发垃圾回收。先对from-space中的对象进行标记，完成后将标记对象复制到to-space的一端，然后将两个<br>区域角色反转，就完成了回收操作。<br>由于每次执行清理操作都需要复制对象，而复制对象需要时间成本，所以新生代空间会设置得比较小(1~8M)。<br>当一个对象经过多次复制后依然存活，它将会被认为是生命周期较长的对象，随后会被移动到老生代中，采用老生<br>代的垃圾回收策略进行管理<br>另外还有一种情况，如果复制一个对象到空闲区时，空闲区空间占用超过了25%，那么这个对象会被直接晋升到老<br>生代空间中，设置为25%的比例的原因是，当完成Scavenge回收后，空闲区将翻转成使用区，继续进行对象内存<br>的分配，若占比过大，将会影响后续内存分配</p>
+<p>老生代垃圾回收<br>老生代中的对象一般存活时间较长且数量也多，使用了两个算法，分别是标记清除算法和标记压缩算法。<br>什么情况下对象会出现在老生代空间中：<br>。<br>新生代中的对象是否已经经历过一次Scavenge算法，如果经历过的话，会将对象从新生代空间移到老生代空间<br>中。<br>·To空间的对象占比大小超过25%。在这种情况下，为了不影响到内存分配，会将对象从新生代空间移到老生代<br>空间中。<br>首先是标记阶段，从一组根元素开始，递归遍历这组根元素，遍历过程中能到达的元素称为活动对象，没有到达的<br>元素就可以判断为非活动对象<br>清除阶段老生代垃圾回收器会直接将非活动对象清理掉<br>前面我们也提过，标记清除算法在清除后会产生大量不连续的内存碎片，过多的碎片会导致大对象无法分配到足够<br>的连续内存，而V8中就采用了我们上文中说的标记整理算法来解决这一问题来优化空间<br>在老生代中，以下情况会先启动标记清除算法：<br>·某一个空间没有分块的时候<br>·空间中被对象超过一定限制<br>·空间不能保证新生代中的对象移动到老生代中<br>由于S是单线程运行的，意味着垃圾回收算法和脚本任务在同一线程内运行，在执行垃圾回收时，后续脚本任<br>务需要等垃圾回收完成后才能继续执行。若堆中的数据量非常大，一次完整垃圾回收的时间会非常长，导致应<br>用的性能和响应能力直线下降。为了避免垃圾回收影响应用的性能，V8将标记的过程拆分成多个子标记，让<br>垃圾回收标记和应用逻辑交替执行，避免脚本任务等待较长时间。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E9%97%AD%E5%8C%85%E5%92%8C%E5%86%85%E5%AD%98%E6%B3%84%E6%BC%8F/">闭包和内存泄漏</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/28/%E5%93%AA%E4%BA%9B%E4%BA%8B%E4%BB%B6%E6%94%AF%E6%8C%81%E5%86%92%E6%B3%A1/">哪些事件支持冒泡</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+</aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
