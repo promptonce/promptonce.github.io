@@ -28,7 +28,7 @@
 <meta property="og:description" content="computed和watch的区别一、这两者解决的问题当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需要相关的方法和交互来实现调用执行的。二、computed和watch以及methods的区别1、性质上methods:定义函数，手动调用computed:计算属性，return返回结果，自动调用watch:观察，监听，发生改变就调用2、使用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-12T06:21:39.000Z">
-<meta property="article:modified_time" content="2024-09-12T06:21:39.013Z">
+<meta property="article:modified_time" content="2024-10-03T07:56:53.930Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -65,7 +65,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a><a class="item title" href="/2024/09/13/Vue%E4%B8%AD%E7%9A%84ref/"><span class="title">Vue中的ref</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/"><span class="title">Vue中Scoped原理</span></a><a class="item title" href="/2024/09/06/Vue%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F/"><span class="title">Vue中实现组件通信的方式</span></a><a class="item title" href="/2024/09/30/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/"><span class="title">Vue过滤器</span></a><a class="item title" href="/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"><span class="title">Vue路由传参</span></a><a class="item title" href="/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">hexo部署静态资源到github服务器</span></a><a class="item title" href="/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"><span class="title">Segformer技术分析</span></a><a class="item title" href="/2024/08/28/Vue-router/"><span class="title">Vue-router</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">computed和watch的区别</span></a><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a><a class="item title" href="/2024/09/13/Vue%E4%B8%AD%E7%9A%84ref/"><span class="title">Vue中的ref</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/"><span class="title">Vue中Scoped原理</span></a><a class="item title" href="/2024/09/06/Vue%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F/"><span class="title">Vue中实现组件通信的方式</span></a><a class="item title" href="/2024/09/30/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/"><span class="title">Vue过滤器</span></a><a class="item title" href="/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"><span class="title">Vue路由传参</span></a><a class="item title" href="/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">hexo部署静态资源到github服务器</span></a><a class="item title" href="/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"><span class="title">Segformer技术分析</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -78,7 +78,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-12T06:21:39.000Z">2024-09-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-12T06:21:39.013Z">2024-09-12</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-12T06:21:39.000Z">2024-09-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-03T07:56:53.930Z">2024-10-03</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -89,7 +89,7 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>computed和watch的区别<br>一、这两者解决的问题<br>当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需<br>要相关的方法和交互来实现调用执行的。<br>二、computed和watch以及methods的区别<br>1、性质上<br>methods:定义函数，手动调用<br>computed:计算属性，return返回结果，自动调用<br>watch:<br>观察，监听，发生改变就调用<br>2、使用场景<br>methods：一般不处理数据的逻辑，用于获取数据，和改变状态等情况<br>computed：多用于一个数据受多个数据影响的情况，具有缓存的特性，避免每次重新计算<br>watch：多用于一个数据影响多个数据的情况，且类似异步等情况的时候建议使用<br>3、执行时间<br>computed和methods的初始化是在beforeCreated和created之间完成的。（以及Props,data都是）<br>4、缓存<br>computed:有缓存，重新渲染时，要是值没有改变，会直接返回之前的<br>watch:无缓存，重新渲染时，要是值没有改变，也会执行<br>5、是否异步<br>computed:不支持异步，但异步监听的时候，无法监听数据变化<br>watch:支持异步监听<br>三、computed和methods的区别<br>无论是定义为一个计算属性还是一个函数方法，对于结果来说都是一样的，不同点在于，计算属性是根据依赖值变<br>化才发生改变，而函数方法需要调用执行。</p>
+  </div><article class="md-text content"><p>computed和watch的区别<br>一、这两者解决的问题<br>当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需要相关的方法和交互来实现调用执行的。<br>二、computed和watch以及methods的区别<br>1、性质上<br>methods:定义函数，手动调用<br>computed:计算属性，return返回结果，自动调用<br>watch:观察，监听，发生改变就调用<br>2、使用场景<br>methods：一般不处理数据的逻辑，用于获取数据，和改变状态等情况<br>computed：多用于一个数据受多个数据影响的情况，<strong>具有缓存的特性，避免每次重新计算</strong><br>watch：多用于一个数据影响多个数据的情况，且类似异步等情况的时候建议使用<br>3、执行时间<br>computed和methods的初始化是在beforeCreated和created之间完成的。（以及Props,data都是）<br>4、缓存<br>computed:有缓存，重新渲染时，要是值没有改变，会直接返回之前的<br>watch:无缓存，重新渲染时，要是值没有改变，也会执行<br>5、是否异步<br>computed:不支持异步，但异步监听的时候，无法监听数据变化<br>watch:支持异步监听<br>三、computed和methods的区别<br>无论是定义为一个计算属性还是一个函数方法，对于结果来说都是一样的，不同点在于，计算属性是根据依赖值变<br>化才发生改变，而函数方法需要调用执行。  </p>
 
 <div class="article-footer fs14">
     <section id="license">
