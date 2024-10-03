@@ -28,7 +28,7 @@
 <meta property="og:description" content="在VUE中实现通信有很多种的方式，每一种都有其对应的使用情况。首先我们看看有哪些方式：  props emit v-model refs provide&#x2F;inject eventBus uex&#x2F;pinia(状态管理工具)  常见的是上面的这几种，少见的其实还可以算上插槽slot,混入，路由携带参数，localStorage,$parent&#x2F;$children等  pr">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-06T05:24:45.000Z">
-<meta property="article:modified_time" content="2024-09-11T05:24:13.957Z">
+<meta property="article:modified_time" content="2024-10-02T07:31:26.760Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -65,7 +65,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/30/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/"><span class="title">Vue过滤器</span></a><a class="item title" href="/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"><span class="title">Vue路由传参</span></a><a class="item title" href="/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">hexo部署静态资源到github服务器</span></a><a class="item title" href="/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"><span class="title">Segformer技术分析</span></a><a class="item title" href="/2024/08/28/Vue-router/"><span class="title">Vue-router</span></a><a class="item title" href="/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"><span class="title">Vue的生命周期</span></a><a class="item title" href="/2024/08/28/Vue%E7%9A%84%E4%BC%98%E7%82%B9%E5%92%8C%E7%89%B9%E7%82%B9/"><span class="title">Vue的优点和特点</span></a><a class="item title" href="/2024/08/28/%E5%89%8D%E7%AB%AF%E8%B7%AF%E7%94%B1/"><span class="title">前端路由</span></a><a class="item title" href="/2024/09/29/%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BE%93%E5%85%A5%E7%BD%91%E5%9D%80%E5%90%8E%E5%8F%91%E7%94%9F%E4%BA%86%E4%BB%80%E4%B9%88/"><span class="title">在浏览器中输入网址后发生了什么</span></a><a class="item title" href="/2024/08/28/%E7%BB%A7%E6%89%BF%E6%96%B9%E5%BC%8F/"><span class="title">继承方式</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a><a class="item title" href="/2024/09/13/Vue%E4%B8%AD%E7%9A%84ref/"><span class="title">Vue中的ref</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/"><span class="title">Vue中Scoped原理</span></a><a class="item title" href="/2024/09/06/Vue%E4%B8%AD%E5%AE%9E%E7%8E%B0%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1%E7%9A%84%E6%96%B9%E5%BC%8F/"><span class="title">Vue中实现组件通信的方式</span></a><a class="item title" href="/2024/09/30/Vue%E8%BF%87%E6%BB%A4%E5%99%A8/"><span class="title">Vue过滤器</span></a><a class="item title" href="/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/"><span class="title">Vue路由传参</span></a><a class="item title" href="/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="title">hexo部署静态资源到github服务器</span></a><a class="item title" href="/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"><span class="title">Segformer技术分析</span></a><a class="item title" href="/2024/08/28/Vue-router/"><span class="title">Vue-router</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -78,7 +78,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-06T05:24:45.000Z">2024-09-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-11T05:24:13.957Z">2024-09-11</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-06T05:24:45.000Z">2024-09-06</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-02T07:31:26.760Z">2024-10-02</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -101,10 +101,13 @@
 </ul>
 <p>常见的是上面的这几种，少见的其实还可以算上插槽slot,混入，路由携带参数，localStorage,$parent&#x2F;$children等</p>
 <ol>
-<li><p>props<br>常常使用在父组件传递給子组件通信的过程中，首先在子组件中使用props,来接收对应的属性，而在父组件中使<br>用子组件的地方，添加上面定义的属性。</p>
+<li><p>props<br>常常使用在父组件传递給子组件通信的过程中，首先在子组件中使用props,来接收对应的属性，而在父组件中使<br>用子组件的地方，添加上面定义的属性。（就是通过:props&#x3D;’xxx’来传递变量，子组件有一个和data并列的props属性，用来接收变量）</p>
 </li>
-<li><p>emit<br>这个就和上面的相反，是使用在子组件给父组件传递值的中。子组件中声明对应的事件，当子组件触发事件，就会<br>通过this.$emit(‘事件’，数据)传递到，而在父组件中使用子组件的地方，添加上面定义的事件，这个可以获取子组件传来的值。</p>
-</li>
+<li><p>emit<br>这个就和上面的相反，是使用在子组件给父组件传递值的中。子组件中声明对应的事件，当子组件触发事件，就会<br>通过this.$emit(‘事件’，数据)传递到，而在父组件中使用子组件的地方，添加上面定义的事件，这个可以获取子组件传来的值。（emit相反，用于子组件向父组件传递消息，子组件：this.$emit(‘updateMessage’, this.localMessage); 父组件：&lt;ChildComponentA @updateMessage&#x3D;”handleMessageUpdate” &#x2F;&gt;，父组件编写handleMessageUpdate函数接收子组件传来的值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">methods</span>: &#123;</span><br><span class="line">    <span class="comment">// 处理从子组件发来的事件</span></span><br><span class="line">    <span class="title function_">handleMessageUpdate</span>(<span class="params">newMessage</span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">xxx</span> = newMessage;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p>）</p>
+<ol start="3">
 <li><p>provide&#x2F;inject<br>这对组合往往使用在层级比较深的时候，比如A组件下可能还有B组件，B组件下有C组件..E组件而使用这对<br>API,就能无论层级有多深都能获取到</p>
 </li>
 <li><p>eventBus<br>也就是事件总线，简单粗暴，可以到处飞。可以不管你是不是父子关系，通过新建一个Vue事件bus对象，然后通过<br>bus.emit触发事件，bus.on监听触发的事件。但不建议乱用，不好维护。</p>
