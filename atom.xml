@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-03T08:42:00.743Z</updated>
+  <updated>2024-10-03T10:18:10.339Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>DIFF算法</title>
+    <link href="https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"/>
+    <id>https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/</id>
+    <published>2024-10-03T10:15:33.000Z</published>
+    <updated>2024-10-03T10:18:10.339Z</updated>
+    
+    <content type="html"><![CDATA[<p>DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？<br>一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的帙） M ，最后会判断是改变&#x2F;新增&#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一看出总共遍历了三回、如果有一千个节点．那么就湖发生了十亿次的计算。<br>二. diff 算法的优化diff 算法的优化也就是这个算法的核心部分了，简单来说就是针对具有相同父节点的同层新旧子节点进行比较，不相同的话就会新增或者删除，而不是使用逐层搜索递归遍历的方式。时间复杂度为 O(n)。</p><ol><li>只比较同一层级，不跨级比较</li><li>标签不同，直接删除，不继续比较</li><li>标签名相同， key相同，就认为是相同节点，不继续深度比较</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？&lt;br&gt;一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的帙） M ，最后会判断是改变&amp;#x2F;新增&amp;#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Vuex</title>
@@ -410,26 +430,6 @@
     <summary type="html">&lt;img src=&quot;/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82.png&quot; class=&quot;&quot; title=&quot;Vue路由传参&quot;&gt;  
 
 &lt;p&gt;路</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>网站配置https</title>
-    <link href="https://promptonce.github.io/2024/09/20/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AEhttps/"/>
-    <id>https://promptonce.github.io/2024/09/20/%E7%BD%91%E7%AB%99%E9%85%8D%E7%BD%AEhttps/</id>
-    <published>2024-09-20T05:34:11.000Z</published>
-    <updated>2024-09-20T08:47:22.781Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-什么是-HTTPS？"><a href="#1-什么是-HTTPS？" class="headerlink" title="1. 什么是 HTTPS？"></a>1. 什么是 HTTPS？</h2><p>HTTPS（超文本传输安全协议）是 HTTP 的加密版本，通过 SSL&#x2F;TLS 协议来确保数据传输的安全性。也就是说，别人不能轻易地偷看你们之间的通信内容啦！</p><h2 id="2-HTTPS-配置流程"><a href="#2-HTTPS-配置流程" class="headerlink" title="2. HTTPS 配置流程"></a>2. HTTPS 配置流程</h2><h3 id="步骤-1-获取-SSL-证书"><a href="#步骤-1-获取-SSL-证书" class="headerlink" title="步骤 1: 获取 SSL 证书"></a>步骤 1: 获取 SSL 证书</h3><p>首先你需要一个 SSL 证书。这个证书就像是网站的“身份证”，能保证访问者正在访问的确实是你的网站哦！你有两个选择：</p><ul><li><strong>购买 SSL 证书</strong>：许多域名提供商（如 Namecheap、GoDaddy）都有提供。</li><li><strong>使用免费 SSL 证书</strong>：推荐使用 <a href="https://letsencrypt.org/">Let’s Encrypt</a>，这是一个免费的证书颁发机构（CA），超棒的！</li></ul><h3 id="步骤-2-安装-SSL-证书"><a href="#步骤-2-安装-SSL-证书" class="headerlink" title="步骤 2: 安装 SSL 证书"></a>步骤 2: 安装 SSL 证书</h3><p>获得证书后，要把它安装到你的服务器上。安装的具体方法取决于你的网站服务器种类，我们来看常见的两种情况。</p><h4 id="a-Nginx-服务器"><a href="#a-Nginx-服务器" class="headerlink" title="a. Nginx 服务器"></a><strong>a. Nginx 服务器</strong></h4><ol><li>将 SSL 证书和私钥上传到服务器。</li><li>修改 Nginx 配置文件（通常在 <code>/etc/nginx/sites-available/</code> 里面）：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    server_name example.com www.example.com;</span><br><span class="line">    <span class="built_in">return</span> 301 https://$host<span class="variable">$request_uri</span>;  <span class="comment"># 重定向到 https</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 443 ssl;</span><br><span class="line">    server_name example.com www.example.com;</span><br><span class="line"></span><br><span class="line">    ssl_certificate /path/to/ssl/certificate.crt;</span><br><span class="line">    ssl_certificate_key /path/to/private/key.key;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 启用 HTTPS 的一些推荐配置</span></span><br><span class="line">    ssl_protocols TLSv1.2 TLSv1.3;</span><br><span class="line">    ssl_ciphers HIGH:!aNULL:!MD5;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        <span class="comment"># 网站的根目录</span></span><br><span class="line">        root /var/www/html;</span><br><span class="line">        index index.html;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="3"><li>保存配置，然后重启 Nginx：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl restart nginx</span><br></pre></td></tr></table></figure><h4 id="b-Apache-服务器"><a href="#b-Apache-服务器" class="headerlink" title="b. Apache 服务器"></a><strong>b. Apache 服务器</strong></h4><ol><li>打开 Apache 配置文件（通常在 <code>/etc/apache2/sites-available/</code> 里面）：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">    ServerName example.com</span><br><span class="line">    Redirect permanent / https://example.com/</span><br><span class="line">&lt;/VirtualHost&gt;</span><br><span class="line"></span><br><span class="line">&lt;VirtualHost *:443&gt;</span><br><span class="line">    ServerName example.com</span><br><span class="line"></span><br><span class="line">    SSLEngine on</span><br><span class="line">    SSLCertificateFile /path/to/ssl/certificate.crt</span><br><span class="line">    SSLCertificateKeyFile /path/to/private/key.key</span><br><span class="line">    SSLCertificateChainFile /path/to/ca_bundle.crt</span><br><span class="line"></span><br><span class="line">    DocumentRoot /var/www/html</span><br><span class="line">    &lt;Directory /var/www/html&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride All</span><br><span class="line">        Require all granted</span><br><span class="line">    &lt;/Directory&gt;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure><ol start="2"><li>启用 SSL 模块并重启 Apache：</li></ol><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo a2enmod ssl</span><br><span class="line">sudo systemctl restart apache2</span><br></pre></td></tr></table></figure><h3 id="步骤-3-强制-HTTPS"><a href="#步骤-3-强制-HTTPS" class="headerlink" title="步骤 3: 强制 HTTPS"></a>步骤 3: 强制 HTTPS</h3><p>虽然你已经配置好 HTTPS 了，但是还需要确保所有用户都通过 HTTPS 来访问你的站点呢~ 最简单的方法就是在 Nginx 或 Apache 里设置 301 重定向，前面我们已经有提到啦，就是那个把 HTTP 重定向到 HTTPS 的部分。</p><h3 id="步骤-4-测试你的-HTTPS"><a href="#步骤-4-测试你的-HTTPS" class="headerlink" title="步骤 4: 测试你的 HTTPS"></a>步骤 4: 测试你的 HTTPS</h3><p>哇，终于配置好了！接下来打开浏览器，访问你的网站 <code>https://your-domain.com</code>，看看是不是成功显示一个小锁头🔒啦？如果有小锁头，恭喜你，HTTPS 配置成功！</p><p>别忘了用在线工具 <a href="https://www.ssllabs.com/ssltest/">SSL Labs</a> 来测试你的 SSL 证书是否配置得完美哦~</p><h2 id="tomcat配置证书和Nginx配置https证书有何区别？"><a href="#tomcat配置证书和Nginx配置https证书有何区别？" class="headerlink" title="tomcat配置证书和Nginx配置https证书有何区别？"></a>tomcat配置证书和Nginx配置https证书有何区别？</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;1-什么是-HTTPS？&quot;&gt;&lt;a href=&quot;#1-什么是-HTTPS？&quot; class=&quot;headerlink&quot; title=&quot;1. 什么是 HTTPS？&quot;&gt;&lt;/a&gt;1. 什么是 HTTPS？&lt;/h2&gt;&lt;p&gt;HTTPS（超文本传输安全协议）是 HTTP 的加密版本</summary>
       
     
     
