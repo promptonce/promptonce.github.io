@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-03T10:18:10.339Z</updated>
+  <updated>2024-10-03T10:20:25.211Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"/>
     <id>https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/</id>
     <published>2024-10-03T10:15:33.000Z</published>
-    <updated>2024-10-03T10:18:10.339Z</updated>
+    <updated>2024-10-03T10:20:25.211Z</updated>
     
-    <content type="html"><![CDATA[<p>DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？<br>一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的帙） M ，最后会判断是改变&#x2F;新增&#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一看出总共遍历了三回、如果有一千个节点．那么就湖发生了十亿次的计算。<br>二. diff 算法的优化diff 算法的优化也就是这个算法的核心部分了，简单来说就是针对具有相同父节点的同层新旧子节点进行比较，不相同的话就会新增或者删除，而不是使用逐层搜索递归遍历的方式。时间复杂度为 O(n)。</p><ol><li>只比较同一层级，不跨级比较</li><li>标签不同，直接删除，不继续比较</li><li>标签名相同， key相同，就认为是相同节点，不继续深度比较</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？<br>一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的DOM，最后会判断是改变&#x2F;新增&#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一看出总共遍历了三回、如果有一千个节点．那么就湖发生了十亿次的计算。<br>二. diff 算法的优化diff 算法的优化也就是这个算法的核心部分了，简单来说就是针对具有相同父节点的同层新旧子节点进行比较，不相同的话就会新增或者删除，而不是使用逐层搜索递归遍历的方式。时间复杂度为 O(n)。</p><ol><li>只比较同一层级，不跨级比较</li><li>标签不同，直接删除，不继续比较</li><li>标签名相同， key相同，就认为是相同节点，不继续深度比较</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？&lt;br&gt;一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的帙） M ，最后会判断是改变&amp;#x2F;新增&amp;#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们</summary>
+    <summary type="html">&lt;p&gt;DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？&lt;br&gt;一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的DOM，最后会判断是改变&amp;#x2F;新增&amp;#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一</summary>
       
     
     
