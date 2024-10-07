@@ -20,17 +20,19 @@
   <title>原型 - PromptOnce</title>
 
   
-    <meta name="description" content="实例是类的具象化产品对象是一个具有多种属性的内容结构实例都是对象，对象不一定是实例（如Dbject.prototype是对象但不是实例），构造函数也是对象prototype,是构造函数的属性proto是对象的属性  Object也是Function的实例，那Function是谁的实例呢？ 12Function._proto_&#x3D;&#x3D;&#x3D;Function.prototype;&#x2F;&#x2F;true Functio">
+    <meta name="description" content="任何函数都可以作为构造函数，当该函数通过new关键字调用时，就可以称这个函数为构造函数。 prototype是函数特有的属性一句话概括prototype的作用：让某一个构造函数实例化的所有对象可以找到公共的方法和属性 1234567891011var Parent &#x3D; function()&#123;&#125;Parent.prototype.name &#x3D; &quot;所有Parent的实例都可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原型">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B/index.html">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="实例是类的具象化产品对象是一个具有多种属性的内容结构实例都是对象，对象不一定是实例（如Dbject.prototype是对象但不是实例），构造函数也是对象prototype,是构造函数的属性proto是对象的属性  Object也是Function的实例，那Function是谁的实例呢？ 12Function._proto_&#x3D;&#x3D;&#x3D;Function.prototype;&#x2F;&#x2F;true Functio">
+<meta property="og:description" content="任何函数都可以作为构造函数，当该函数通过new关键字调用时，就可以称这个函数为构造函数。 prototype是函数特有的属性一句话概括prototype的作用：让某一个构造函数实例化的所有对象可以找到公共的方法和属性 1234567891011var Parent &#x3D; function()&#123;&#125;Parent.prototype.name &#x3D; &quot;所有Parent的实例都可">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
 <meta property="article:published_time" content="2024-08-28T08:00:18.000Z">
-<meta property="article:modified_time" content="2024-09-18T05:35:29.102Z">
+<meta property="article:modified_time" content="2024-10-07T08:01:44.117Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
   
   
   
@@ -65,7 +67,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="title">css提高性能的方法</span></a><a class="item title" href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/"><span class="title">缓存总结</span></a><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/13/%E8%99%9A%E6%8B%9FDOM/"><span class="title">虚拟DOM</span></a><a class="item title" href="/2024/10/03/Vuex/"><span class="title">Vuex</span></a><a class="item title" href="/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">computed和watch的区别</span></a><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型</span></a><a class="item title" href="/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/"><span class="title">JS中判断数组的方式有哪些?</span></a><a class="item title" href="/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="title">css提高性能的方法</span></a><a class="item title" href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/"><span class="title">缓存总结</span></a><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/13/%E8%99%9A%E6%8B%9FDOM/"><span class="title">虚拟DOM</span></a><a class="item title" href="/2024/10/03/Vuex/"><span class="title">Vuex</span></a><a class="item title" href="/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">computed和watch的区别</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -78,7 +80,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-18T05:35:29.102Z">2024-09-18</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-07T08:01:44.117Z">2024-10-07</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -89,7 +91,20 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><blockquote>
+  </div><article class="md-text content"><p>任何函数都可以作为构造函数，当该函数通过new关键字调用时，就可以称这个函数为构造函数。</p>
+<p>prototype是函数特有的属性<br>一句话概括prototype的作用：让某一个构造函数实例化的所有对象可以找到公共的方法和属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">Parent</span> = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">name</span> = <span class="string">&quot;所有Parent的实例都可以读取到我&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="keyword">let</span> p2 = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line">p1.<span class="property">name</span> <span class="comment">// &quot;所有Parent的实例都可以读取到我&quot;</span></span><br><span class="line">p2.<span class="property">name</span> <span class="comment">// &quot;所有Parent的实例都可以读取到我&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>__proto__属性是对象特有的属性。 它表示当前对象的原型对象是谁<br>对象的__proto__就是构造函数的prototype</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">p1.<span class="property">__proto__</span> === <span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>; <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E9%93%BE.png" class="lazy" title="原型链">
+
+<p><strong>原型链的基本概念</strong></p>
+<blockquote>
+<p>每个对象都有一个原型（prototype）,并从原型上继承属性和方法。原型本身也是一个对象，它也有自己的原型，形成一个链式结构。这种链式结构就被称为原型链。</p>
+</blockquote>
+<blockquote>
 <p>实例是类的具象化产品<br>对象是一个具有多种属性的内容结构<br><strong>实例都是对象，对象不一定是实例（如Dbject.prototype是对象但不是实例），构造函数也是对象</strong><br>prototype,是构造函数的属性<br>proto是对象的属性</p>
 </blockquote>
 <p>Object也是Function的实例，那Function是谁的实例呢？</p>
