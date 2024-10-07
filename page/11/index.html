@@ -59,7 +59,7 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/13/%E8%99%9A%E6%8B%9FDOM/"><span class="title">虚拟DOM</span></a><a class="item title" href="/2024/10/03/Vuex/"><span class="title">Vuex</span></a><a class="item title" href="/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">computed和watch的区别</span></a><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a><a class="item title" href="/2024/09/13/Vue%E4%B8%AD%E7%9A%84ref/"><span class="title">Vue中的ref</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/"><span class="title">Vue中Scoped原理</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="title">css提高性能的方法</span></a><a class="item title" href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/"><span class="title">缓存总结</span></a><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/13/%E8%99%9A%E6%8B%9FDOM/"><span class="title">虚拟DOM</span></a><a class="item title" href="/2024/10/03/Vuex/"><span class="title">Vuex</span></a><a class="item title" href="/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">computed和watch的区别</span></a><a class="item title" href="/2024/09/11/v-show%E5%92%8Cv-if%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">v-show和v-if的区别</span></a><a class="item title" href="/2024/10/02/Vue%E4%B8%AD%E7%9A%84keep-alive/"><span class="title">Vue中的keep-alive</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -70,7 +70,44 @@
 
 
 <div class="navbar top"><nav class="post"><a class="active" href="/">近期发布</a><a href="/categories">分类</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
-<div class="post-list post"><a class="post-card post" href="/2024/08/28/%E6%A8%A1%E5%9D%97%E5%8C%96/">
+<div class="post-list post"><a class="post-card post" href="/2024/08/28/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86GC/">
+<article class="md-text"><h2 class="post-title">内存管理GC</h2><div class="excerpt"><p>栈中JS引擎自动清除栈内存中变量一般在它的当前执行环境结束就会被销毁被垃圾回收制回收，而堆内存中的变量则不会，因为不确定其他的地方是不是还有一些对它的引用。堆内存中的变量只有在所有对它的引用都结束的时候才会被回收。JS引擎可以通过逃逸分析辨别出哪些变...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:13:56.000Z">2024-08-28</time></span></div></article>
+</a><a class="post-card post" href="/2024/08/28/%E5%93%AA%E4%BA%9B%E4%BA%8B%E4%BB%B6%E6%94%AF%E6%8C%81%E5%86%92%E6%B3%A1/">
+<article class="md-text"><h2 class="post-title">哪些事件支持冒泡</h2><div class="excerpt"><p>可以通过event.bubbles属性判断该事件是否可以冒泡：
+
+
+
+事件
+是否冒泡
+
+
+
+click
+可以
+
+
+dbclick
+可以
+
+
+keydown
+可以
+
+
+keyup
+可以
+
+
+mousedown
+可以
+
+
+mousemove
+可以
+
+
+m...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:12:04.000Z">2024-08-28</time></span></div></article>
+</a><a class="post-card post" href="/2024/08/28/%E6%A8%A1%E5%9D%97%E5%8C%96/">
 <article class="md-text"><h2 class="post-title">模块化</h2><div class="excerpt"><p>特点1.解决命名污染，全局污染，变量冲突等2.内聚私有，变量不能被外部访问3.更好的分离，按需加载4.引入其他模块可能存在循环引用问题5.代码抽象，封装，复用和管理6.避免通过script标签从上至下加载资源7.大型项目资源难以维护，特别是多人合作的...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:11:13.000Z">2024-08-28</time></span></div></article>
 </a><a class="post-card post" href="/2024/08/28/%E4%BA%8B%E4%BB%B6%E6%B5%81/">
 <article class="md-text"><h2 class="post-title">事件流</h2><div class="excerpt"><p>事件流描述从页面接收事件的顺序事件发生时会在元素节点和根节点之间按照特定的顺序传播，路径所经过的节点都会收到该事件一DOM事件流。两种事件流模型：1捕获：触发元素的事件时，该事件从该元素的祖先元素传递下去（不太具体的节点应该更早接收到事件，而最具体的...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:10:54.000Z">2024-08-28</time></span></div></article>
@@ -101,14 +138,6 @@
 对象转换为字符串
 
 1234567891011//模拟toString返回的不是基本...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:04:36.000Z">2024-08-28</time></span></div></article>
-</a><a class="post-card post" href="/2024/08/28/%E4%B8%8D%E5%90%8C%E7%AD%89%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">
-<article class="md-text"><h2 class="post-title">不同等号的区别</h2><div class="excerpt"><p>&#x3D;&#x3D;&#x3D;这个比较简单。下面的规则用来判断两个值是否&#x3D;&#x3D;&#x3D;相等：  
-
-如果类型不同，就不相等
-如果两个都是数值，并且是同一个值，那么相等；(！例外)的是，如果其中至少一个是NaN,那么不相等。...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:03:41.000Z">2024-08-28</time></span></div></article>
-</a><a class="post-card post" href="/2024/08/28/for-in%E5%92%8Cfor-of%E7%9A%84%E5%8C%BA%E5%88%AB/">
-<article class="md-text"><h2 class="post-title">for_in和for_of的区别</h2><div class="excerpt"><p>一句话总结：for.,.in是为遍历对象属性而构建的，遍历的是index,而for,,,of是为了遍历数组的，遍历的是value
-12345678910111213141516171819202122232425const arobj =  100:...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-08-28T08:02:30.000Z">2024-08-28</time></span></div></article>
 </a></div>
 
   <div class='paginator-wrap dis-select'>
