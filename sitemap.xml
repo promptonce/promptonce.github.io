@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://promptonce.github.io/2024/09/04/151-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D-%E5%8D%A1%E7%A0%81%E7%BD%91-55-%E5%8F%B3%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
+    
+    <lastmod>2024-10-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://promptonce.github.io/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
+    
+    <lastmod>2024-10-09</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://promptonce.github.io/2024/08/28/%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3null%E5%92%8Cundefined/</loc>
+    
+    <lastmod>2024-10-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://promptonce.github.io/2024/08/28/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</loc>
     
     <lastmod>2024-10-07</lastmod>
@@ -884,15 +911,6 @@
   </url>
   
   <url>
-    <loc>https://promptonce.github.io/2024/09/04/151-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D-%E5%8D%A1%E7%A0%81%E7%BD%91-55-%E5%8F%B3%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</loc>
-    
-    <lastmod>2024-09-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://promptonce.github.io/2024/09/04/203-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0-707-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8-206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/</loc>
     
     <lastmod>2024-09-04</lastmod>
@@ -1136,15 +1154,6 @@
   </url>
   
   <url>
-    <loc>https://promptonce.github.io/2024/08/28/%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3null%E5%92%8Cundefined/</loc>
-    
-    <lastmod>2024-09-03</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://promptonce.github.io/2024/08/28/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/</loc>
     
     <lastmod>2024-09-03</lastmod>
@@ -1361,15 +1370,6 @@
   </url>
   
   <url>
-    <loc>https://promptonce.github.io/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
-    
-    <lastmod>2024-07-22</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://promptonce.github.io/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/</loc>
     
     <lastmod>2024-07-17</lastmod>
@@ -1417,7 +1417,7 @@
 
   <url>
     <loc>https://promptonce.github.io/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -1425,49 +1425,49 @@
   
   <url>
     <loc>https://promptonce.github.io/tags/leetcode/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/MMSegmentation/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://promptonce.github.io/tags/%E5%8E%9F%E5%88%9B/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -1476,7 +1476,7 @@
   
   <url>
     <loc>https://promptonce.github.io/categories/Java/</loc>
-    <lastmod>2024-10-07</lastmod>
+    <lastmod>2024-10-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -28,7 +28,7 @@
 <meta property="og:description" content="​151.翻转字符串里的单词  感觉需要用到反转字符串操作，但空格不知道如何处理。  先反转整个字符串，然后对单词进行反转，需要注意空格的处理。   3.坚持循环不变量原则，while循环中尽量将循环变量自增操作放置在最后，这样可以让循环变量自增后有一次判断，带入测试用例推导花了一些时间。主要是涉及到对末尾空格的处理，可能有多个空格或一个空格，这个空格需要删除。 4.用了一个小时左右。 卡码网：5">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-04T03:33:57.000Z">
-<meta property="article:modified_time" content="2024-09-04T04:05:59.051Z">
+<meta property="article:modified_time" content="2024-10-09T05:22:56.288Z">
 <meta property="article:author" content="penggan">
 <meta property="article:tag" content="leetcode">
 <meta name="twitter:card" content="summary">
@@ -66,7 +66,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"><span class="title">类型转换</span></a><a class="item title" href="/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/"><span class="title">JS中判断数组的方式有哪些?</span></a><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型</span></a><a class="item title" href="/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="title">css提高性能的方法</span></a><a class="item title" href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/"><span class="title">缓存总结</span></a><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/13/%E8%99%9A%E6%8B%9FDOM/"><span class="title">虚拟DOM</span></a><a class="item title" href="/2024/10/03/Vuex/"><span class="title">Vuex</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/09/04/151-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D-%E5%8D%A1%E7%A0%81%E7%BD%91-55-%E5%8F%B3%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/"><span class="title">151.翻转字符串里的单词,卡码网:55.右旋转字符串</span></a><a class="item title" href="/2024/07/21/%E4%BD%BF%E7%94%A8MMSegmentation%E8%BF%9B%E8%A1%8C%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/"><span class="title">使用MMSegmentation进行语义分割</span></a><a class="item title" href="/2024/08/28/%E7%AE%80%E5%8D%95%E4%BA%86%E8%A7%A3null%E5%92%8Cundefined/"><span class="title">简单了解null和undefined</span></a><a class="item title" href="/2024/08/28/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"><span class="title">类型转换</span></a><a class="item title" href="/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/"><span class="title">JS中判断数组的方式有哪些?</span></a><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型</span></a><a class="item title" href="/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"><span class="title">css提高性能的方法</span></a><a class="item title" href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/"><span class="title">缓存总结</span></a><a class="item title" href="/2024/10/06/%E8%BF%9B%E5%88%B6%E6%80%BB%E7%BB%93/"><span class="title">进制总结</span></a><a class="item title" href="/2024/08/16/%E8%8B%B1%E8%AF%AD/"><span class="title">英语</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -79,7 +79,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:33:57.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-04T04:05:59.051Z">2024-09-04</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:33:57.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-09T05:22:56.288Z">2024-10-09</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -105,6 +105,8 @@
 </ol>
 <p>2.先反转整个字符串，然后分段进行反转拼接即可。</p>
 <p>3.javascript如何处理输入操作，输入处理的代码是网上找的，还没有掌握, 在concat那里少写了一个reverse函数导致结果顺序不对。</p>
+<p>reverse函数是原地操作</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</span><br><span class="line"><span class="keyword">let</span> b = a.<span class="title function_">reverse</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(a, b)<span class="comment">//[ 3, 2, 1 ] [ 3, 2, 1 ]</span></span><br></pre></td></tr></table></figure>
 <p>4.用了半个小时左右。</p>
 
 <div class="article-footer fs14">
