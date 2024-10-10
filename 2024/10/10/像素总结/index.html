@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>div居中的几种方式 - PromptOnce</title>
+  <title>像素总结 - PromptOnce</title>
 
   
-    <meta name="description" content="方式一 123456position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;  方式二可以给父元素添加下面的属性，利用lex布局来实现 123display:flex;align-items:center;flex-direction:column  方式三通过定位和变形来实现给父元素添加position:relative;相对定位。">
+    <meta name="description" content="512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上 电子图像的PPI1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。 打印机的DPI表示打印机的信息转化能力（一英寸输出多少个像素点且不损失信息） 高ppi如果人眼离的较远，且图像较小时可能无法区分相邻像素点，从而降低人眼的信息获取质量 PPI与DPI的对应：  如果这张512x512">
 <meta property="og:type" content="article">
-<meta property="og:title" content="div居中的几种方式">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/28/div%E5%B1%85%E4%B8%AD%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:title" content="像素总结">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/10/%E5%83%8F%E7%B4%A0%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="方式一 123456position:absolute;top:0;bottom:0;left:0;right:0;margin:auto;  方式二可以给父元素添加下面的属性，利用lex布局来实现 123display:flex;align-items:center;flex-direction:column  方式三通过定位和变形来实现给父元素添加position:relative;相对定位。">
+<meta property="og:description" content="512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上 电子图像的PPI1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。 打印机的DPI表示打印机的信息转化能力（一英寸输出多少个像素点且不损失信息） 高ppi如果人眼离的较远，且图像较小时可能无法区分相邻像素点，从而降低人眼的信息获取质量 PPI与DPI的对应：  如果这张512x512">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-28T07:51:16.000Z">
-<meta property="article:modified_time" content="2024-09-15T07:18:28.758Z">
+<meta property="article:published_time" content="2024-10-10T02:24:33.000Z">
+<meta property="article:modified_time" content="2024-10-10T03:17:34.704Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,28 +78,32 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T07:51:16.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-15T07:18:28.758Z">2024-09-15</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-10T02:24:33.000Z">2024-10-10</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-10T03:17:34.704Z">2024-10-10</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>div居中的几种方式</span></h1>
+        <h1 class="text title"><span>像素总结</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>方式一</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">top:0;</span><br><span class="line">bottom:0;</span><br><span class="line">left:0;</span><br><span class="line">right:0;</span><br><span class="line">margin:auto;</span><br></pre></td></tr></table></figure>
-
-<p>方式二<br>可以给父元素添加下面的属性，利用lex布局来实现</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display:flex;</span><br><span class="line">align-items:center;</span><br><span class="line">flex-direction:column</span><br></pre></td></tr></table></figure>
-
-<p>方式三<br>通过定位和变形来实现<br>给父元素添加position:relative;相对定位。<br>给自身元素添加position:absolute,绝对定位。<br>top:50%;使自身元素距离上方”父元素的50%高度”的高度。<br>1eft:50%;使自身元素距离上方”父元素的50%宽度”的宽度。<br>transform:translate(-50%,-50%):使自身元素再往左，往上平移自身元素的50%宽度和高度。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">top:50%;</span><br><span class="line">left:50%;</span><br><span class="line">transform:translate(-50%,-50%);</span><br></pre></td></tr></table></figure>
-
-<p>方式四<br>这个是实现内容文本居中的，坑死了，之前没留意在一个全局的文件加了，后面很多组件里面的内容都居中了，还<br>一时没发现，虽然想到会不会是全局文件的问题，但一下子眼拙没看到，结果捣鼓半天</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">body&#123;text-align:center&#125;</span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><p>512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上</p>
+<p>电子图像的PPI<br>1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。</p>
+<p>打印机的DPI<br>表示打印机的信息转化能力（一英寸输出多少个像素点且不损失信息）</p>
+<p>高ppi如果人眼离的较远，且图像较小时可能无法区分相邻像素点，从而降低人眼的信息获取质量</p>
+<p>PPI与DPI的对应：</p>
+<ul>
+<li>如果这张512x512的图片被定义为1英寸x1英寸，那么它的PPI就是512。（将512x512x3的数据表示在1英寸x1英寸的空间上）</li>
+<li>当我们把这张图片打印出来时，如果打印机的DPI也是512，那么理论上，打印出来的图像每个像素点会对应一个墨点，效果会比较理想。</li>
+</ul>
+<p>假设我们有一张512x512像素的照片，想要打印成一张4英寸x4英寸的照片。</p>
+<ul>
+<li>计算PPI： 512像素 &#x2F; 4英寸 &#x3D; 128 PPI。</li>
+<li>选择打印机： 如果我们的打印机最大支持1200 DPI，那么我们可以将图像的尺寸调整为4英寸x4英寸，分辨率设置为128 PPI进行打印，这样可以充分利用打印机的性能。</li>
+<li>如果打印机只有300 DPI： 那么打印出来的图像会有一些模糊，因为每个墨点要对应多个像素。</li>
+</ul>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -109,7 +113,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/">响应式布局</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/28/%E9%87%8D%E6%8E%92%EF%BC%8C%E9%87%8D%E7%BB%98%E5%92%8C%E5%90%88%E6%88%90/">重排，重绘和合成</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/">JS中判断数组的方式有哪些?</a></div></section></div>
 
 
 

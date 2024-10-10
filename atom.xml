@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-07T08:13:44.931Z</updated>
+  <updated>2024-10-10T03:17:34.704Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>像素总结</title>
+    <link href="https://promptonce.github.io/2024/10/10/%E5%83%8F%E7%B4%A0%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/10/%E5%83%8F%E7%B4%A0%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-10T02:24:33.000Z</published>
+    <updated>2024-10-10T03:17:34.704Z</updated>
+    
+    <content type="html"><![CDATA[<p>512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上</p><p>电子图像的PPI<br>1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。</p><p>打印机的DPI<br>表示打印机的信息转化能力（一英寸输出多少个像素点且不损失信息）</p><p>高ppi如果人眼离的较远，且图像较小时可能无法区分相邻像素点，从而降低人眼的信息获取质量</p><p>PPI与DPI的对应：</p><ul><li>如果这张512x512的图片被定义为1英寸x1英寸，那么它的PPI就是512。（将512x512x3的数据表示在1英寸x1英寸的空间上）</li><li>当我们把这张图片打印出来时，如果打印机的DPI也是512，那么理论上，打印出来的图像每个像素点会对应一个墨点，效果会比较理想。</li></ul><p>假设我们有一张512x512像素的照片，想要打印成一张4英寸x4英寸的照片。</p><ul><li>计算PPI： 512像素 &#x2F; 4英寸 &#x3D; 128 PPI。</li><li>选择打印机： 如果我们的打印机最大支持1200 DPI，那么我们可以将图像的尺寸调整为4英寸x4英寸，分辨率设置为128 PPI进行打印，这样可以充分利用打印机的性能。</li><li>如果打印机只有300 DPI： 那么打印出来的图像会有一些模糊，因为每个墨点要对应多个像素。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上&lt;/p&gt;
+&lt;p&gt;电子图像的PPI&lt;br&gt;1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。&lt;/p&gt;
+&lt;p&gt;打印机的DPI&lt;br&gt;表示打印机的信息转化能力（一英寸</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JS中判断数组的方式有哪些?</title>
@@ -405,27 +427,6 @@
       
       
     <summary type="html">&lt;p&gt;日期_模型名_骨干网络_其他重要参数_训练步骤_批次大小_目标尺寸&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>GPT时代的程序员生存之道</title>
-    <link href="https://promptonce.github.io/2024/09/22/GPT%E6%97%B6%E4%BB%A3%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/"/>
-    <id>https://promptonce.github.io/2024/09/22/GPT%E6%97%B6%E4%BB%A3%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/</id>
-    <published>2024-09-22T11:07:41.000Z</published>
-    <updated>2024-09-22T11:08:28.754Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://developer.aliyun.com/article/1205402">GPT时代的程序员生存之道</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://developer.aliyun.com/article/1205402&quot;&gt;GPT时代的程序员生存之道&lt;/a&gt;&lt;/p&gt;
 </summary>
       
     
