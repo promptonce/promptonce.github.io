@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>webpack - PromptOnce</title>
+  <title>docker总结 - PromptOnce</title>
 
   
-    <meta name="description" content="Webpack 是一个强大的 模块打包工具，广泛应用于前端项目中。它的主要作用是将各种资源（JavaScript、CSS、图片等）当作模块进行处理，最后生成优化后的静态文件，提升项目的加载性能和开发体验。 简单来说，Webpack 可以将多个文件合并为一个或者多个打包文件，减少请求次数，提高性能，同时还能进行代码拆分、按需加载等优化。 Webpack 的核心概念： Entry（入口）：Webpac">
+    <meta name="description" content="Docker容器：结合虚拟机隔离与高效资源利用的最佳实践在现代软件开发和部署中，容器技术正逐渐取代传统的虚拟机解决方案。Docker作为其中最流行的容器平台，凭借其高效的资源利用和灵活的环境隔离性，成为了开发者和运维人员的必备工具。那么，Docker容器到底是如何在保持隔离的同时提升效率的呢？它真的能取代虚拟机吗？让我们深入探讨。  虚拟机与Docker的区别1. 虚拟机的隔离性与开销虚拟机技术通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webpack">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/20/webpack/index.html">
+<meta property="og:title" content="docker总结">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/12/docker%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="Webpack 是一个强大的 模块打包工具，广泛应用于前端项目中。它的主要作用是将各种资源（JavaScript、CSS、图片等）当作模块进行处理，最后生成优化后的静态文件，提升项目的加载性能和开发体验。 简单来说，Webpack 可以将多个文件合并为一个或者多个打包文件，减少请求次数，提高性能，同时还能进行代码拆分、按需加载等优化。 Webpack 的核心概念： Entry（入口）：Webpac">
+<meta property="og:description" content="Docker容器：结合虚拟机隔离与高效资源利用的最佳实践在现代软件开发和部署中，容器技术正逐渐取代传统的虚拟机解决方案。Docker作为其中最流行的容器平台，凭借其高效的资源利用和灵活的环境隔离性，成为了开发者和运维人员的必备工具。那么，Docker容器到底是如何在保持隔离的同时提升效率的呢？它真的能取代虚拟机吗？让我们深入探讨。  虚拟机与Docker的区别1. 虚拟机的隔离性与开销虚拟机技术通">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-20T05:38:02.000Z">
-<meta property="article:modified_time" content="2024-09-20T05:38:02.325Z">
+<meta property="article:published_time" content="2024-10-12T15:18:58.000Z">
+<meta property="article:modified_time" content="2024-10-12T15:52:25.350Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,65 +78,46 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-20T05:38:02.000Z">2024-09-20</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-20T05:38:02.325Z">2024-09-20</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-12T15:18:58.000Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-12T15:52:25.350Z">2024-10-12</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>webpack</span></h1>
+        <h1 class="text title"><span>docker总结</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>Webpack 是一个强大的 <strong>模块打包工具</strong>，广泛应用于前端项目中。它的主要作用是将各种资源（JavaScript、CSS、图片等）当作模块进行处理，最后生成优化后的静态文件，提升项目的加载性能和开发体验。</p>
-<p>简单来说，Webpack 可以将多个文件合并为一个或者多个<strong>打包文件</strong>，减少请求次数，提高性能，同时还能进行代码拆分、按需加载等优化。</p>
-<h3 id="Webpack-的核心概念："><a href="#Webpack-的核心概念：" class="headerlink" title="Webpack 的核心概念："></a>Webpack 的核心概念：</h3><ol>
-<li><p><strong>Entry（入口）</strong>：Webpack 从哪个文件开始进行打包。通常是你应用的主文件（例如 <code>index.js</code>），Webpack 会根据依赖关系递归解析所有依赖的模块。</p>
-</li>
-<li><p><strong>Output（输出）</strong>：打包后的文件输出到哪里，通常是一个目录下的某个文件，比如 <code>dist/main.js</code>。</p>
-</li>
-<li><p><strong>Loaders（加载器）</strong>：Webpack 本身只理解 JavaScript 文件，但通过加载器，你可以让它处理其他类型的文件，比如 CSS、图片、甚至 Sass 或 TypeScript 文件。</p>
-</li>
-<li><p><strong>Plugins（插件）</strong>：插件用于扩展 Webpack 的功能，比如压缩打包后的文件、注入环境变量、分离 CSS 等。</p>
-</li>
-<li><p><strong>Mode（模式）</strong>：Webpack 有 <code>development</code>（开发模式） 和 <code>production</code>（生产模式） 两种模式，开发模式注重调试和快速编译，而生产模式则侧重于优化性能，比如压缩代码、移除无用代码等。</p>
-</li>
-</ol>
-<h3 id="Webpack-的使用流程："><a href="#Webpack-的使用流程：" class="headerlink" title="Webpack 的使用流程："></a>Webpack 的使用流程：</h3><ol>
-<li><p><strong>安装 Webpack</strong>：在项目中通过 <code>npm</code> 安装 Webpack 和它的 CLI 工具。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev webpack webpack-cli</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>**创建 <code>webpack.config.js</code>**：这是 Webpack 的配置文件，用于定义入口、输出、加载器和插件等。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">    <span class="attr">entry</span>: <span class="string">&#x27;./src/index.js&#x27;</span>,  <span class="comment">// 入口文件</span></span><br><span class="line">    <span class="attr">output</span>: &#123;</span><br><span class="line">        <span class="attr">filename</span>: <span class="string">&#x27;bundle.js&#x27;</span>,  <span class="comment">// 打包后的文件名</span></span><br><span class="line">        <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;dist&#x27;</span>),  <span class="comment">// 输出路径</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">module</span>: &#123;</span><br><span class="line">        <span class="attr">rules</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,  <span class="comment">// 匹配所有的 CSS 文件</span></span><br><span class="line">                <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>, <span class="string">&#x27;css-loader&#x27;</span>],  <span class="comment">// 使用两个加载器来处理 CSS</span></span><br><span class="line">            &#125;,</span><br><span class="line">        ],</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">mode</span>: <span class="string">&#x27;development&#x27;</span>,  <span class="comment">// 开发模式</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p><strong>运行打包命令</strong>：在终端中运行 <code>npx webpack</code>，Webpack 会根据配置文件进行打包，输出最终文件到指定目录。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="Webpack-的主要功能："><a href="#Webpack-的主要功能：" class="headerlink" title="Webpack 的主要功能："></a>Webpack 的主要功能：</h3><ol>
-<li><p><strong>代码拆分（Code Splitting）</strong>：Webpack 支持将代码拆分成多个包（chunks），只在需要时加载，提升应用的加载速度。</p>
-</li>
-<li><p><strong>按需加载（Lazy Loading）</strong>：通过动态 <code>import()</code>，可以让某些模块在用户实际需要时才加载，这对大型应用非常有用。</p>
-</li>
-<li><p><strong>模块热替换（Hot Module Replacement, HMR）</strong>：在开发过程中，当代码修改时，Webpack 能让你不刷新整个页面而只替换修改的模块，从而提升开发效率。</p>
-</li>
-<li><p><strong>Tree Shaking</strong>：Webpack 能在打包时移除没有用到的代码（通常是未使用的 ES6 模块），从而减少打包文件的大小。</p>
-</li>
-<li><p><strong>兼容各种模块化方案</strong>：Webpack 支持 AMD、CommonJS、ES6 模块等各种模块化标准，并能将这些模块统一打包为一个文件。</p>
-</li>
-</ol>
-<h3 id="Webpack-例子："><a href="#Webpack-例子：" class="headerlink" title="Webpack 例子："></a>Webpack 例子：</h3><p>假如你有一个项目使用了 CSS 和图片，你可以这样配置 Webpack 来处理这些资源：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = &#123;</span><br><span class="line">   <span class="attr">entry</span>: <span class="string">&#x27;./src/index.js&#x27;</span>,</span><br><span class="line">   <span class="attr">output</span>: &#123;</span><br><span class="line">       <span class="attr">filename</span>: <span class="string">&#x27;bundle.js&#x27;</span>,</span><br><span class="line">       <span class="attr">path</span>: path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;dist&#x27;</span>),</span><br><span class="line">   &#125;,</span><br><span class="line">   <span class="attr">module</span>: &#123;</span><br><span class="line">       <span class="attr">rules</span>: [</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,  <span class="comment">// 处理 CSS 文件</span></span><br><span class="line">               <span class="attr">use</span>: [<span class="string">&#x27;style-loader&#x27;</span>, <span class="string">&#x27;css-loader&#x27;</span>],</span><br><span class="line">           &#125;,</span><br><span class="line">           &#123;</span><br><span class="line">               <span class="attr">test</span>: <span class="regexp">/\.(png|jpg|gif)$/</span>,  <span class="comment">// 处理图片文件</span></span><br><span class="line">               <span class="attr">use</span>: [</span><br><span class="line">                   &#123;</span><br><span class="line">                       <span class="attr">loader</span>: <span class="string">&#x27;file-loader&#x27;</span>,</span><br><span class="line">                       <span class="attr">options</span>: &#123;</span><br><span class="line">                           <span class="attr">name</span>: <span class="string">&#x27;[name].[hash].[ext]&#x27;</span>,  <span class="comment">// 输出文件名格式</span></span><br><span class="line">                           <span class="attr">outputPath</span>: <span class="string">&#x27;images&#x27;</span>,  <span class="comment">// 输出路径</span></span><br><span class="line">                       &#125;,</span><br><span class="line">                   &#125;,</span><br><span class="line">               ],</span><br><span class="line">           &#125;,</span><br><span class="line">       ],</span><br><span class="line">   &#125;,</span><br><span class="line">   <span class="attr">mode</span>: <span class="string">&#x27;production&#x27;</span>,  <span class="comment">// 生产模式</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Webpack-的优点："><a href="#Webpack-的优点：" class="headerlink" title="Webpack 的优点："></a>Webpack 的优点：</h3><ol>
-<li><p><strong>强大的模块打包能力</strong>：Webpack 支持将所有资源视作模块，统一进行管理，极大简化了前端开发流程。</p>
-</li>
-<li><p><strong>灵活的配置</strong>：无论是简单的单页面应用，还是复杂的多页面应用，Webpack 都可以通过配置来满足不同的需求。</p>
-</li>
-<li><p><strong>丰富的插件生态</strong>：通过 Webpack 插件，你可以扩展它的功能，比如压缩文件、生成 HTML 文件、分析打包结果等。</p>
-</li>
-</ol>
-<h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>Webpack 是现代前端开发中最常用的构建工具之一，它可以将项目中的各种资源（JS、CSS、图片等）进行打包、优化，提升项目的性能和开发体验。它的强大之处在于高度可配置性和丰富的插件生态，能够满足从小型项目到大型复杂项目的各种需求。</p>
+  </div><article class="md-text content"><h3 id="Docker容器：结合虚拟机隔离与高效资源利用的最佳实践"><a href="#Docker容器：结合虚拟机隔离与高效资源利用的最佳实践" class="headerlink" title="Docker容器：结合虚拟机隔离与高效资源利用的最佳实践"></a><strong>Docker容器：结合虚拟机隔离与高效资源利用的最佳实践</strong></h3><p>在现代软件开发和部署中，容器技术正逐渐取代传统的虚拟机解决方案。Docker作为其中最流行的容器平台，凭借其高效的资源利用和灵活的环境隔离性，成为了开发者和运维人员的必备工具。那么，Docker容器到底是如何在保持隔离的同时提升效率的呢？它真的能取代虚拟机吗？让我们深入探讨。</p>
+<hr>
+<h3 id="虚拟机与Docker的区别"><a href="#虚拟机与Docker的区别" class="headerlink" title="虚拟机与Docker的区别"></a><strong>虚拟机与Docker的区别</strong></h3><h4 id="1-虚拟机的隔离性与开销"><a href="#1-虚拟机的隔离性与开销" class="headerlink" title="1. 虚拟机的隔离性与开销"></a>1. <strong>虚拟机的隔离性与开销</strong></h4><p>虚拟机技术通过虚拟化，将一台物理服务器分割成多个虚拟的“机器”，每个虚拟机都运行在独立的操作系统上，包括完整的内核和用户空间。这种方式提供了非常强的隔离性：每个虚拟机之间完全独立，宛如多台真实的物理服务器。</p>
+<p>但是，这种隔离的代价是<strong>较高的资源开销</strong>。每个虚拟机都需要加载自己的操作系统内核，这不仅使得启动时间长，而且消耗大量的计算、存储和内存资源。这对于一些场景（如微服务架构、持续集成&#x2F;持续部署）来说，显得过于笨重和低效。</p>
+<h4 id="2-Docker的轻量级容器"><a href="#2-Docker的轻量级容器" class="headerlink" title="2. Docker的轻量级容器"></a>2. <strong>Docker的轻量级容器</strong></h4><p>Docker容器则提供了一种更高效的方式：<strong>容器共享宿主机的操作系统内核</strong>，不再为每个实例加载独立的操作系统。每个Docker容器运行在一个轻量级的、独立的用户空间中，它通过Docker镜像定义应用程序和依赖库，保持了独立的文件系统和运行环境。</p>
+<p>这意味着Docker容器能够像虚拟机一样提供隔离效果，但<strong>不需要虚拟化整个操作系统内核</strong>。这极大地降低了资源消耗，使容器的启动和停止非常迅速，可以在几秒内完成。</p>
+<hr>
+<h3 id="Docker容器的核心优势"><a href="#Docker容器的核心优势" class="headerlink" title="Docker容器的核心优势"></a><strong>Docker容器的核心优势</strong></h3><h4 id="1-独立文件系统与应用环境隔离"><a href="#1-独立文件系统与应用环境隔离" class="headerlink" title="1. 独立文件系统与应用环境隔离"></a>1. <strong>独立文件系统与应用环境隔离</strong></h4><p>Docker容器提供了一个独立的文件系统，应用程序及其依赖库都封装在镜像里。即使宿主机环境不同，容器内的应用运行效果也始终如一。这种用户空间的隔离让开发者可以放心地在不同环境中部署应用，而不必担心系统配置或依赖冲突的问题。</p>
+<h4 id="2-共享宿主机内核"><a href="#2-共享宿主机内核" class="headerlink" title="2. 共享宿主机内核"></a>2. <strong>共享宿主机内核</strong></h4><p>Docker容器的轻量化设计源于其<strong>共享宿主机的操作系统内核</strong>。容器不需要加载自己的内核，而是直接利用宿主机的内核进行系统调用和资源管理。与虚拟机需要额外的硬件虚拟化和完整的操作系统开销不同，容器直接与宿主系统交互，这让它更加高效。</p>
+<h4 id="3-启动迅速，资源开销小"><a href="#3-启动迅速，资源开销小" class="headerlink" title="3. 启动迅速，资源开销小"></a>3. <strong>启动迅速，资源开销小</strong></h4><p>由于容器不需要启动一个完整的操作系统，它的启动时间非常短，可以在几秒钟内完成。相比虚拟机需要几分钟才能完全启动，Docker容器更加适合频繁的启动和销毁操作，这对于微服务架构和自动化CI&#x2F;CD管道尤为重要。</p>
+<h4 id="4-隔离与安全性"><a href="#4-隔离与安全性" class="headerlink" title="4. 隔离与安全性"></a>4. <strong>隔离与安全性</strong></h4><p>虽然容器共享内核，但通过Linux的命名空间（namespaces）和控制组（cgroups）机制，Docker实现了资源、进程和网络等方面的隔离，保证了容器之间的独立性和安全性。虽然这种隔离性不如虚拟机那么彻底，但在大多数应用场景下，已经足够安全和高效。</p>
+<hr>
+<h3 id="Docker是否能取代虚拟机？"><a href="#Docker是否能取代虚拟机？" class="headerlink" title="Docker是否能取代虚拟机？"></a><strong>Docker是否能取代虚拟机？</strong></h3><p>从上面的分析可以看出，<strong>Docker并不是虚拟机的完全替代品</strong>，但它在许多场景下具有更大的优势：</p>
+<ul>
+<li><strong>高效资源利用</strong>：Docker容器通过共享内核，避免了虚拟机加载整个操作系统的资源开销，显得更加轻量化。</li>
+<li><strong>灵活部署和扩展</strong>：容器启动迅速，支持快速扩容和缩容，非常适合微服务架构和大规模的分布式系统。</li>
+<li><strong>环境一致性</strong>：通过容器化，开发、测试和生产环境可以保持高度一致，解决了传统部署中的“环境不一致”问题。</li>
+</ul>
+<p>但是，Docker并不完全替代虚拟机，尤其是在某些<strong>高隔离</strong>和<strong>硬件依赖性高</strong>的场景中，虚拟机依然有其独特的优势。例如，虚拟机可以在不同的内核上运行，提供更严格的安全隔离。而Docker容器由于共享宿主机的内核，隔离强度不如虚拟机，存在内核级别的安全隐患。</p>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><p>Docker容器在结合虚拟机隔离优势的同时，避免了虚拟机的资源浪费。它通过共享宿主机内核，提供了一个轻量级、高效的运行环境，特别适合现代的云原生应用和微服务架构。虽然它不完全取代虚拟机，但在资源消耗、启动速度和环境一致性等方面，Docker无疑是更好的选择。</p>
+<p>对于大多数开发者和运维人员来说，Docker已经成为部署和管理应用的标准工具。而在那些对安全隔离要求极高的场景下，虚拟机依然是不可替代的解决方案。未来的趋势可能是两者结合，既享受容器的灵活性，又兼顾虚拟机的高隔离性。</p>
+<hr>
+<p><strong>参考文献：</strong></p>
+<ul>
+<li>Docker官方文档</li>
+<li>虚拟化与容器技术的对比分析</li>
+</ul>
+<p>通过合理选择和组合这两种技术，可以在不同的场景中取得最佳的性能和灵活性。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -146,7 +127,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/20/%E4%B8%BA%E4%BD%95%E8%A6%81%E5%B0%86%E4%BA%A7%E5%93%81%E5%BD%93%E6%88%90%E8%87%AA%E5%B7%B1%E7%9A%84%E5%AD%A9%E5%AD%90%EF%BC%9F/">为何要将产品当成自己的孩子？</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/20/Vue%E8%B7%AF%E7%94%B1%E4%BC%A0%E5%8F%82/">Vue路由传参</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/12/%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E4%BF%9D%E6%8C%81latest-version-release%E7%9A%84%E6%84%8F%E4%B9%89/">让自己开发的软件产品保持latest_version_release的意义</a></div></section></div>
 
 
 
@@ -160,7 +141,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-%E7%9A%84%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5%EF%BC%9A"><span class="toc-text">Webpack 的核心概念：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-%E7%9A%84%E4%BD%BF%E7%94%A8%E6%B5%81%E7%A8%8B%EF%BC%9A"><span class="toc-text">Webpack 的使用流程：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%9A"><span class="toc-text">Webpack 的主要功能：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-%E4%BE%8B%E5%AD%90%EF%BC%9A"><span class="toc-text">Webpack 例子：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Webpack-%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="toc-text">Webpack 的优点：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93%EF%BC%9A"><span class="toc-text">总结：</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8%EF%BC%9A%E7%BB%93%E5%90%88%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9A%94%E7%A6%BB%E4%B8%8E%E9%AB%98%E6%95%88%E8%B5%84%E6%BA%90%E5%88%A9%E7%94%A8%E7%9A%84%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-text">Docker容器：结合虚拟机隔离与高效资源利用的最佳实践</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8EDocker%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-text">虚拟机与Docker的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E9%9A%94%E7%A6%BB%E6%80%A7%E4%B8%8E%E5%BC%80%E9%94%80"><span class="toc-text">1. 虚拟机的隔离性与开销</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-Docker%E7%9A%84%E8%BD%BB%E9%87%8F%E7%BA%A7%E5%AE%B9%E5%99%A8"><span class="toc-text">2. Docker的轻量级容器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E5%AE%B9%E5%99%A8%E7%9A%84%E6%A0%B8%E5%BF%83%E4%BC%98%E5%8A%BF"><span class="toc-text">Docker容器的核心优势</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%8B%AC%E7%AB%8B%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%B8%8E%E5%BA%94%E7%94%A8%E7%8E%AF%E5%A2%83%E9%9A%94%E7%A6%BB"><span class="toc-text">1. 独立文件系统与应用环境隔离</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%85%B1%E4%BA%AB%E5%AE%BF%E4%B8%BB%E6%9C%BA%E5%86%85%E6%A0%B8"><span class="toc-text">2. 共享宿主机内核</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%90%AF%E5%8A%A8%E8%BF%85%E9%80%9F%EF%BC%8C%E8%B5%84%E6%BA%90%E5%BC%80%E9%94%80%E5%B0%8F"><span class="toc-text">3. 启动迅速，资源开销小</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%9A%94%E7%A6%BB%E4%B8%8E%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">4. 隔离与安全性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker%E6%98%AF%E5%90%A6%E8%83%BD%E5%8F%96%E4%BB%A3%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%9F"><span class="toc-text">Docker是否能取代虚拟机？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
