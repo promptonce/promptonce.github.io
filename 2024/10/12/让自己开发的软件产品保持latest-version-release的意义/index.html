@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>px_em_rem_vh_vw的区别及使用场景 - PromptOnce</title>
+  <title>让自己开发的软件产品保持latest_version_release的意义 - PromptOnce</title>
 
   
-    <meta name="description" content="px也就是像素，是基于屏幕分辨率来说的，一旦设置了，就无法适应页面大小的变化。 emem：是相对单位，相对于当前对象内文本的字体大小（也就是它的父元素），如果当前对象内文本的字体没有设置大小，就会相对于浏览器默认字体大小也就是16px。所以在没有设置的情况下1em&#x3D;16px。  为了便于运算你可以在body选择器中声明Font-size-62.5%;这就使em值变为16px*62.5%&amp;">
+    <meta name="description" content="有助于不断加深自己对技术的理解热启动站在高位思考">
 <meta property="og:type" content="article">
-<meta property="og:title" content="px_em_rem_vh_vw的区别及使用场景">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/28/px-em-rem-vh-vw%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/index.html">
+<meta property="og:title" content="让自己开发的软件产品保持latest_version_release的意义">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/12/%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E4%BF%9D%E6%8C%81latest-version-release%E7%9A%84%E6%84%8F%E4%B9%89/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="px也就是像素，是基于屏幕分辨率来说的，一旦设置了，就无法适应页面大小的变化。 emem：是相对单位，相对于当前对象内文本的字体大小（也就是它的父元素），如果当前对象内文本的字体没有设置大小，就会相对于浏览器默认字体大小也就是16px。所以在没有设置的情况下1em&#x3D;16px。  为了便于运算你可以在body选择器中声明Font-size-62.5%;这就使em值变为16px*62.5%&amp;">
+<meta property="og:description" content="有助于不断加深自己对技术的理解热启动站在高位思考">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-28T05:17:14.000Z">
-<meta property="article:modified_time" content="2024-09-06T09:25:03.368Z">
+<meta property="article:published_time" content="2024-10-12T14:31:27.000Z">
+<meta property="article:modified_time" content="2024-10-12T14:42:45.059Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,30 +78,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T05:17:14.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-06T09:25:03.368Z">2024-09-06</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-12T14:31:27.000Z">2024-10-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-12T14:42:45.059Z">2024-10-12</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>px_em_rem_vh_vw的区别及使用场景</span></h1>
+        <h1 class="text title"><span>让自己开发的软件产品保持latest_version_release的意义</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><h2 id="px"><a href="#px" class="headerlink" title="px"></a>px</h2><p>也就是像素，是基于屏幕分辨率来说的，一旦设置了，就无法适应页面大小的变化。</p>
-<h2 id="em"><a href="#em" class="headerlink" title="em"></a>em</h2><p>em：是相对单位，相对于当前对象内文本的字体大小（也就是它的父元素），如果当前对象内文本的字体没有设置<br>大小，就会相对于浏览器默认字体大小也就是16px。所以在没有设置的情况下1em&#x3D;16px。</p>
-<blockquote>
-<p>为了便于运算你可以在body选择器中声明Font-size-62.5%;这就使em值变为16px*62.5%&#x3D;10px,这样<br>12px&#x3D;1.2em,10px&#x3D;1em,也就是说只需要将你的原来的px数值除以10，然后换上em作为单位就行了。</p>
-</blockquote>
-<h2 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h2><p>rem的出现是为了解决em的问题的，em是相对于父元素来说的，这就要求我们进行任何元素设置的时候，都需要知道它的父元素字体的大小。而rem是相对于根元素，这样就意味着，我们只需要在根元素确定一个参考值，<br>就可以了，同时还能做到只修改根元素就成比例地调整所有字体大小。</p>
-<h2 id="vh-vw"><a href="#vh-vw" class="headerlink" title="vh,vw"></a>vh,vw</h2><p>vh、vw是根据窗口的宽度。会把窗口的大小分为100份，所以50w代表窗口大小的一半。并且这个值是相对的，当窗口大小发生改变也会跟着改变，同理，则为窗口的高度</p>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><p>px是固定的大小，em是相对于父元素字体的大小，rem是相对于根元素字体的大小，vh、w是相对可是窗口的大小</p>
-<h2 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h2><ul>
-<li>一般我们在设置边框和边距的时候用px比较好  </li>
-<li>而在一些需要做响应式的页面用rem比较便捷  </li>
-<li>但是具体还是得看你的业务来定的</li>
-</ul>
+  </div><article class="md-text content"><p>有助于不断加深自己对技术的理解<br>热启动<br>站在高位思考</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -111,7 +99,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E8%84%B1%E7%A6%BB%E6%96%87%E6%A1%A3%E6%B5%81/">脱离文档流</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/27/position%E5%B1%9E%E6%80%A7/">position属性</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/12/%E6%95%B0%E7%BB%84%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/">数组的浅拷贝</a></div></section></div>
 
 
 
@@ -121,14 +109,7 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#px"><span class="toc-text">px</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#em"><span class="toc-text">em</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#rem"><span class="toc-text">rem</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vh-vw"><span class="toc-text">vh,vw</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%BA%E5%88%AB"><span class="toc-text">区别</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">使用场景</span></a></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
+</aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>

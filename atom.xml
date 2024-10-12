@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-12T06:48:52.323Z</updated>
+  <updated>2024-10-12T14:42:45.059Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让自己开发的软件产品保持latest_version_release的意义</title>
+    <link href="https://promptonce.github.io/2024/10/12/%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E4%BF%9D%E6%8C%81latest-version-release%E7%9A%84%E6%84%8F%E4%B9%89/"/>
+    <id>https://promptonce.github.io/2024/10/12/%E8%AE%A9%E8%87%AA%E5%B7%B1%E5%BC%80%E5%8F%91%E7%9A%84%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E4%BF%9D%E6%8C%81latest-version-release%E7%9A%84%E6%84%8F%E4%B9%89/</id>
+    <published>2024-10-12T14:31:27.000Z</published>
+    <updated>2024-10-12T14:42:45.059Z</updated>
+    
+    <content type="html"><![CDATA[<p>有助于不断加深自己对技术的理解<br>热启动<br>站在高位思考</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;有助于不断加深自己对技术的理解&lt;br&gt;热启动&lt;br&gt;站在高位思考&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数组的浅拷贝</title>
@@ -402,28 +423,6 @@
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://blog.csdn.net/HappyRocking/article/details/83619392&quot;&gt;字典序算法详解&lt;/a&gt;&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>TCP三次握手四次挥手</title>
-    <link href="https://promptonce.github.io/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"/>
-    <id>https://promptonce.github.io/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/</id>
-    <published>2024-09-27T16:11:18.000Z</published>
-    <updated>2024-09-28T16:39:33.851Z</updated>
-    
-    <content type="html"><![CDATA[<p>TCP的三次握手和四次挥手就是为确保数据可靠传输的一种机制。我们来简单讲一下：</p><h3 id="三次握手："><a href="#三次握手：" class="headerlink" title="三次握手："></a>三次握手：</h3><ol><li><strong>第一次握手</strong>：客户端发送一个SYN（同步序列编号）包，告诉服务器“我要开始连接，准备好了吗？”。</li><li><strong>第二次握手</strong>：服务器收到后，回复一个SYN（synchronize）+ACK（Acknowledgment）包，表示“我准备好了，咱们可以开始连接，但你要确认一下”。</li><li><strong>第三次握手</strong>：客户端收到后，回一个ACK包，表示“好的，我确认了，正式连接”。</li></ol><p>这样，三次握手后，双方建立了可靠连接，开始数据传输。</p><h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><ol><li><strong>第一次挥手</strong>：客户端发送FIN（finish）包，表示“我不再传数据了，你准备断开吧”。</li><li><strong>第二次挥手</strong>：服务器收到后，回复ACK包，表示“我知道了，但我还有数据要发”。</li><li><strong>第三次挥手</strong>：服务器发FIN包，表示“我数据发完了，可以断开了”。</li><li><strong>第四次挥手</strong>：客户端收到后，发ACK包，表示“好的，断开吧”。</li></ol><p>这四次挥手确保数据完全发送并成功断开连接，避免信息丢失。</p><p>简单来说，三次握手建立连接，四次挥手安全断开，都是为确保数据传输完整性和可靠性。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;TCP的三次握手和四次挥手就是为确保数据可靠传输的一种机制。我们来简单讲一下：&lt;/p&gt;
-&lt;h3 id=&quot;三次握手：&quot;&gt;&lt;a href=&quot;#三次握手：&quot; class=&quot;headerlink&quot; title=&quot;三次握手：&quot;&gt;&lt;/a&gt;三次握手：&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;stro</summary>
       
     
     
