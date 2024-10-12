@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-12T05:58:55.023Z</updated>
+  <updated>2024-10-12T06:41:48.050Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对象的浅拷贝</title>
+    <link href="https://promptonce.github.io/2024/10/12/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
+    <id>https://promptonce.github.io/2024/10/12/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/</id>
+    <published>2024-10-12T06:41:36.000Z</published>
+    <updated>2024-10-12T06:41:48.050Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;a : <span class="number">1</span>, b : <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;a : <span class="number">1</span>, b : <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;...obj1&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">c</span>:&#123;<span class="attr">d</span>:<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj1) &#123;</span><br><span class="line">  <span class="keyword">if</span>(obj1.<span class="title function_">hasOwnProperty</span>(key))&#123;<span class="comment">// for in 会遍历原型上的属性，所以需要判断是否为自身的属性</span></span><br><span class="line">    obj2[key] = obj1[key];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2, c: &#123; d: 4 &#125; &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">c</span>:&#123;<span class="attr">d</span>:<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">keys</span>(obj1).<span class="title function_">forEach</span>(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  obj2[key] = obj1[key];<span class="comment">// Object.keys()只会遍历对象自身的可枚举属性，所以不需要判断是否为自身的属性</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2, c: &#123; d: 4 &#125; &#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>深拷贝与浅拷贝的区别</title>
+    <link href="https://promptonce.github.io/2024/10/12/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://promptonce.github.io/2024/10/12/%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2024-10-12T06:23:00.000Z</published>
+    <updated>2024-10-12T06:41:17.626Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> originalObject = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>,</span><br><span class="line">  <span class="attr">age</span>: <span class="number">30</span>,</span><br><span class="line">  <span class="attr">hobbies</span>: [<span class="string">&quot;reading&quot;</span>, <span class="string">&quot;coding&quot;</span>],</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//浅拷贝对象</span></span><br><span class="line"><span class="keyword">const</span> shallowCopyObj = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, originalObject);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 修改拷贝对象的属性</span></span><br><span class="line">shallowCopyObj.<span class="property">name</span> = <span class="string">&quot;Alice&quot;</span>;</span><br><span class="line">shallowCopyObj.<span class="property">hobbies</span>.<span class="title function_">push</span>(<span class="string">&quot;painting&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(originalObject);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(shallowCopyObj);</span><br><span class="line"><span class="comment">//&#123; name: &#x27;John&#x27;, age: 30, hobbies: [ &#x27;reading&#x27;, &#x27;coding&#x27;, &#x27;painting&#x27; ] &#125;</span></span><br><span class="line"><span class="comment">//&#123;</span></span><br><span class="line"><span class="comment">//  name: &#x27;Alice&#x27;,</span></span><br><span class="line"><span class="comment">//  age: 30,</span></span><br><span class="line"><span class="comment">//  hobbies: [ &#x27;reading&#x27;, &#x27;coding&#x27;, &#x27;painting&#x27; ]</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br></pre></td></tr></table></figure><p>如果对象的属性为引用类型或复杂类型，修改拷贝对象的属性，会影响到原对象，修改原对象的属性，也会影响到拷贝对象。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数组索引背后隐藏了哪些类型转换？</title>
@@ -384,49 +424,6 @@
       
       
     <summary type="html">&lt;p&gt;在 JavaScript 中，&lt;code&gt;this&lt;/code&gt; 是一个非常重要但也容易引起混淆的概念。特别是在普通函数和箭头函数之间，&lt;code&gt;this&lt;/code&gt; 的行为有着显著的区别。在这篇文章中，我们将通过一个代码示例，深入理解 &lt;code&gt;this&lt;/code</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>PNG图片格式总结</title>
-    <link href="https://promptonce.github.io/2024/09/26/PNG%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/09/26/PNG%E5%9B%BE%E7%89%87%E6%A0%BC%E5%BC%8F%E6%80%BB%E7%BB%93/</id>
-    <published>2024-09-26T11:25:28.000Z</published>
-    <updated>2024-09-27T16:12:44.072Z</updated>
-    
-    <content type="html"><![CDATA[<p>PNG有RGBA模式和RGB模式，灰度模式和调色板索引模式<br>PNG可以实现无损压缩</p><h3 id="1-灰度模式（Grayscale-Mode）"><a href="#1-灰度模式（Grayscale-Mode）" class="headerlink" title="1. 灰度模式（Grayscale Mode）"></a>1. <strong>灰度模式（Grayscale Mode）</strong></h3><p>灰度模式表示图像中的每个像素只有亮度信息，而没有颜色信息。简单来说，灰度图像只有黑白两种颜色的不同程度，从完全黑到完全白，中间有多个灰色渐变。</p><ul><li><p><strong>灰度模式的特点</strong>：</p><ul><li>每个像素只使用一个数值（通常是 8 位，范围从 0 到 255）来表示亮度。值为 0 表示完全黑，255 表示完全白。</li><li>与彩色图像相比，灰度图像占用的存储空间更少，因为它不需要存储红、绿、蓝三种颜色信息。</li></ul></li><li><p><strong>应用场景</strong>：灰度模式常用于黑白照片、扫描的文本图像，以及不需要颜色信息的其他图像。</p></li></ul><h3 id="2-调色板索引模式（Palette-Indexed-Mode）"><a href="#2-调色板索引模式（Palette-Indexed-Mode）" class="headerlink" title="2. 调色板索引模式（Palette-Indexed Mode）"></a>2. <strong>调色板索引模式（Palette-Indexed Mode）</strong></h3><p>调色板索引模式（有时也叫索引颜色模式）是一种节省存储空间的颜色表示方式，尤其适用于颜色数量有限的图像。在这种模式下，图像并不直接存储每个像素的颜色值，而是存储一个“索引”，这个索引指向调色板中的具体颜色。</p><ul><li><p><strong>调色板索引模式的特点</strong>：</p><ul><li>图像的颜色信息被限制在一个调色板中，调色板通常最多包含 256 种颜色（8 位索引），每个颜色索引对应具体的 RGB 颜色。</li><li>每个像素只保存颜色索引，而不是直接的颜色值。这种方式可以极大地减少图像文件的大小，尤其是在图像颜色数量较少的情况下。</li></ul></li><li><p><strong>应用场景</strong>：调色板索引模式常用于网页图像、简单的图标、GIF 动画等场景，特别是颜色变化不多的图像。例如，简单的卡通画、徽标或按钮图像。</p></li></ul><h3 id="灰度模式-vs-调色板索引模式："><a href="#灰度模式-vs-调色板索引模式：" class="headerlink" title="灰度模式 vs 调色板索引模式："></a><strong>灰度模式 vs 调色板索引模式</strong>：</h3><ul><li><strong>灰度模式</strong>：适合只有亮度变化的黑白图像，每个像素记录的是亮度信息。</li><li><strong>调色板索引模式</strong>：适合颜色有限的图像，通过索引值指向调色板中的颜色，节省存储空间。</li></ul><p>总的来说，这两种模式都是为了减少图像的存储需求而设计的，但应用场景有所不同。灰度模式用于单色图像，而调色板索引模式则用于有限颜色的彩色图像。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;PNG有RGBA模式和RGB模式，灰度模式和调色板索引模式&lt;br&gt;PNG可以实现无损压缩&lt;/p&gt;
-&lt;h3 id=&quot;1-灰度模式（Grayscale-Mode）&quot;&gt;&lt;a href=&quot;#1-灰度模式（Grayscale-Mode）&quot; class=&quot;headerlink&quot; tit</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo部署静态资源到github服务器</title>
-    <link href="https://promptonce.github.io/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
-    <id>https://promptonce.github.io/2024/09/25/hexo%E9%83%A8%E7%BD%B2%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90%E5%88%B0github%E6%9C%8D%E5%8A%A1%E5%99%A8/</id>
-    <published>2024-09-24T16:41:28.000Z</published>
-    <updated>2024-09-29T15:38:20.727Z</updated>
-    
-    <content type="html"><![CDATA[<p>hexo d失败可以用git clone github仓库地址然后用hexo public目录替换后使用授权github仓库账号执行git push操作替代hexo d</p><blockquote><p>fatal: bad tree object 76efcae7c5c88277bd54626c763b790961115445<br>fatal: the remote end hung up unexpectedly<br>send-pack: unexpected disconnect while reading sideband packet<br>fatal: the remote end hung up unexpectedly<br>error: failed to push some refs to ‘<a href="https://xxx.git/">https://xxx.git</a>‘<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="https://hexo.io/docs/troubleshooting.html">https://hexo.io/docs/troubleshooting.html</a><br>Error: Spawn failed<br>    at ChildProcess.<anonymous> (D:\promptonce-blog\node_modules\hexo-deployer-git\node_modules\hexo-util\lib\spawn.js:51:21)<br>    at ChildProcess.emit (node:events:519:28)<br>    at cp.emit (D:\promptonce-blog\node_modules\cross-spawn\lib\enoent.js:34:29)<br>    at ChildProcess._handle.onexit (node:internal&#x2F;child_process:294:12)</p></blockquote><p>清空public目录下的文件<br>克隆托管hexo博客的github仓库，将除.git的文件及目录复制到public目录中<br>将原来根目录的.git目录删掉<br>将克隆下来的目录的.git移动到根目录<br>执行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;hexo d失败可以用git clone github仓库地址然后用hexo public目录替换后使用授权github仓库账号执行git push操作替代hexo d&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;fatal: bad tree object 76efcae7c</summary>
       
     
     
