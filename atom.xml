@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-13T06:22:21.469Z</updated>
+  <updated>2024-10-13T06:37:57.677Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>javascript_map对象总结</title>
+    <link href="https://promptonce.github.io/2024/10/13/javascript-map%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/13/javascript-map%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-13T06:35:24.000Z</published>
+    <updated>2024-10-13T06:37:57.677Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fruits = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"></span><br><span class="line">fruits.<span class="title function_">set</span>(<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">fruits.<span class="title function_">set</span>(<span class="string">&quot;banana&quot;</span>, <span class="string">&quot;yellow&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(fruits.<span class="title function_">get</span>(<span class="string">&quot;apple&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(fruits.<span class="title function_">has</span>(<span class="string">&quot;lemon&quot;</span>));</span><br><span class="line"><span class="comment">// red</span></span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>手写实现深拷贝一解决循环引用问题</title>
+    <link href="https://promptonce.github.io/2024/10/13/%E6%89%8B%E5%86%99%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%80%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/"/>
+    <id>https://promptonce.github.io/2024/10/13/%E6%89%8B%E5%86%99%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%80%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/</id>
+    <published>2024-10-13T06:27:34.000Z</published>
+    <updated>2024-10-13T06:47:33.481Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepClone</span>(<span class="params">source, clonedMap = <span class="keyword">new</span> <span class="built_in">Map</span>()</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> source !== <span class="string">&quot;object&quot;</span> || source == <span class="literal">null</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> source;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果这个对象已经被拷贝过，直接从Map中返回</span></span><br><span class="line">  <span class="keyword">if</span>(clonedMap.<span class="title function_">has</span>(source))&#123;</span><br><span class="line">    <span class="keyword">return</span> clonedMap.<span class="title function_">get</span>(source);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> target = <span class="title class_">Array</span>.<span class="title function_">isArray</span>(source) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 在Map中记录这个对象</span></span><br><span class="line">  clonedMap.<span class="title function_">set</span>(source, target);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> key <span class="keyword">in</span> source)&#123;</span><br><span class="line">    <span class="keyword">if</span>( <span class="keyword">typeof</span> source[key] === <span class="string">&quot;object&quot;</span> &amp;&amp; source[key] !== <span class="literal">null</span>)&#123;</span><br><span class="line">      target[key] = <span class="title function_">deepClone</span>(source[key], clonedMap);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      target[key] = source[key];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> target;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: &#123;<span class="attr">c</span>: <span class="number">2</span>&#125;&#125;</span><br><span class="line">obj.<span class="property">self</span> = obj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> copy = <span class="title function_">deepClone</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(copy);</span><br><span class="line"><span class="comment">//&#123; a: 1, b: &#123; c: 2 &#125;, self: [Circular] &#125;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>手写实现深拷贝一基础版</title>
@@ -379,47 +419,6 @@
       
     <summary type="html">&lt;p&gt;Vue 过滤器的功能就是对数据进行格式化处理。它提供了两种常见的方式：一个是在双花括号插值中使用管道符号“|”来进行过滤，比如将消息首字母大写；另一个是在 &lt;code&gt;v-bind&lt;/code&gt; 中使用过滤器来对绑定的值进行格式化，比如格式化 ID。&lt;/p&gt;
 &lt;p&gt;开发者可</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Segformer技术分析</title>
-    <link href="https://promptonce.github.io/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/"/>
-    <id>https://promptonce.github.io/2024/09/29/Segformer%E6%8A%80%E6%9C%AF%E5%88%86%E6%9E%90/</id>
-    <published>2024-09-29T09:24:15.000Z</published>
-    <updated>2024-09-29T14:20:08.394Z</updated>
-    
-    <content type="html"><![CDATA[<p>SegFormer避免了使用显式位置编码，所以在处理不同分辨率的图像时，不需要进行复杂的插值操作，原因主要是它通过<strong>卷积操作</strong>和<strong>层次结构</strong>来隐式地捕捉位置信息，而不是依赖于固定的、与图像分辨率相关的位置编码。</p><p>在传统的Transformer模型（例如ViT）中，位置编码是为每个输入特征（如图像的每个patch）明确指定的位置信息。当分辨率改变时，patch的数量也会随之变化，模型无法直接理解新分辨率下的位置信息，因此需要对位置编码进行插值，让它适应新的patch数量和图像分辨率。这是一个复杂的过程，容易引入误差。</p><p>而<strong>SegFormer</strong>通过以下方式避免了这一问题：</p><ol><li><p><strong>卷积的局部感知特性</strong>：SegFormer在编码阶段使用了<strong>卷积</strong>来生成<strong>Overlap Patch Embeddings</strong>。卷积操作自带局部的空间感知能力，因此它能在不同分辨率下自动调整，依旧保持对邻近像素关系的理解，不需要显式位置编码来帮助模型识别位置。</p></li><li><p><strong>层次化的特征提取</strong>：SegFormer通过层次结构逐级缩减特征图，提取不同分辨率的特征，从而保留了多尺度的空间信息。这种方式让模型在不依赖固定位置编码的情况下，也能从全局和局部两个层面理解图像的空间结构。</p></li></ol><p>因此，当图像的分辨率改变时，SegFormer可以自适应地调整，而不用像ViT那样需要重新插值位置编码。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;SegFormer避免了使用显式位置编码，所以在处理不同分辨率的图像时，不需要进行复杂的插值操作，原因主要是它通过&lt;strong&gt;卷积操作&lt;/strong&gt;和&lt;strong&gt;层次结构&lt;/strong&gt;来隐式地捕捉位置信息，而不是依赖于固定的、与图像分辨率相关的位置编码。&lt;/</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>cookie和session</title>
-    <link href="https://promptonce.github.io/2024/09/29/cookie%E5%92%8Csession/"/>
-    <id>https://promptonce.github.io/2024/09/29/cookie%E5%92%8Csession/</id>
-    <published>2024-09-28T16:46:21.000Z</published>
-    <updated>2024-09-28T16:55:39.607Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>Cookie</strong> 和 <strong>Session</strong> 是两种在网络请求中用来存储用户数据的机制。</p><h3 id="Cookie"><a href="#Cookie" class="headerlink" title="Cookie"></a>Cookie</h3><ul><li>当你第一次访问某个网站时，服务器会把一些数据（叫做 Cookie）发到你的浏览器。</li><li>之后，每次你访问这个网站时，浏览器都会把这些 Cookie 发回给服务器。</li><li>Cookie 主要存储在本地电脑中，并且有大小限制，一般不能超过 4KB。</li><li>Cookie的保存形式分为会话Cookie和持久Cookie</li></ul><p><strong>会话 Cookie</strong> 和 <strong>持久 Cookie</strong> 的区别就在于它们的<strong>有效期</strong>和<strong>存储位置</strong>。</p><ol><li><p><strong>会话 Cookie</strong>（Session Cookie）：</p><ul><li>只在<strong>当前会话</strong>（即浏览器打开的这段时间）内有效。</li><li>当你关闭浏览器后，会话 Cookie 就会被自动删除。</li><li>会话 Cookie 主要用于临时信息存储，比如登录状态，关掉浏览器后就不再保存这些信息了。</li></ul></li><li><p><strong>持久 Cookie</strong>（Persistent Cookie）：</p><ul><li>它有明确的<strong>过期时间</strong>，可以在浏览器关闭后仍然保留，直到到达设定的过期时间或用户手动删除它。</li><li>持久 Cookie 常用于存储长期信息，比如网站的自动登录功能、用户偏好设置等。</li></ul></li></ol><p>总结就是：<strong>会话 Cookie</strong> 随浏览器关闭而消失，而 <strong>持久 Cookie</strong> 会保留到指定时间或被用户手动删除。</p><h3 id="Session"><a href="#Session" class="headerlink" title="Session"></a>Session</h3><ul><li>Session 是一种存储在服务器端的机制，它保存的是用户的会话信息。</li><li>当你登录某个网站后，服务器会生成一个 Session，保存你的登录状态等信息。之后每次你访问网站，服务器会根据你带上的 Cookie 来识别你，并找到对应的 Session 来确认你是谁。</li><li>Session 没有大小限制，但它会占用服务器的资源。</li></ul><h3 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h3><ul><li>Cookie 存在你的浏览器里，而 Session 存在服务器端。</li><li>Cookie 有大小和存储时间的限制，而 Session 通常没有这些限制。</li></ul><h3 id="优点与缺点"><a href="#优点与缺点" class="headerlink" title="优点与缺点"></a>优点与缺点</h3><ul><li><strong>Cookie</strong> 比较方便，因为它存储在本地。但不太安全，容易被恶意利用。</li><li><strong>Session</strong> 更安全，但需要服务器资源。</li></ul><h3 id="SSO（单点登录）"><a href="#SSO（单点登录）" class="headerlink" title="SSO（单点登录）"></a>SSO（单点登录）</h3><ul><li>SSO 就是让你只需要登录一次，就能访问多个系统。这对于使用多个系统的环境非常方便。</li></ul><p>SSO的优点<br>降低访问第三⽅⽹站风险（⽤户密码不存储或外部管理）；<br>从不同的⽤户名和密码的组合减少密码疲劳；<br>减少花费的时间重新输⼊密码相同的⾝份；<br>降低IT成本适当降低⼀些IT帮助台调⽤有关密码；<br>SSO集中的所有其他应⽤程序和系统，⽤于⾝份验证服务器的⾝份验证，并与技术相结合是为了确保⽤户不必主动输⼊凭据⼀次以上</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;strong&gt;Cookie&lt;/strong&gt; 和 &lt;strong&gt;Session&lt;/strong&gt; 是两种在网络请求中用来存储用户数据的机制。&lt;/p&gt;
-&lt;h3 id=&quot;Cookie&quot;&gt;&lt;a href=&quot;#Cookie&quot; class=&quot;headerlink&quot; title=&quot;</summary>
       
     
     
