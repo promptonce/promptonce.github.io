@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>computed和watch的区别 - PromptOnce</title>
+  <title>JavaScript组合继承 - PromptOnce</title>
 
   
-    <meta name="description" content="computed和watch的区别一、这两者解决的问题当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需要相关的方法和交互来实现调用执行的。二、computed和watch以及methods的区别1、性质上methods:定义函数，手动调用computed:计算属性，return返回结果，自动调用watch:观察，监听，发生改变就调用2、使用">
+    <meta name="description" content="123456789101112131415161718192021222324&#x2F;&#x2F; 父类function Parent() &#123;  this.sayHello &#x3D; function () &#123;    console.log(&quot;Hello&quot;);  &#125;&#125;Parent.prototype.a &#x3D; &quot;我是父类prototype上的属性&amp;q">
 <meta property="og:type" content="article">
-<meta property="og:title" content="computed和watch的区别">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/12/computed%E5%92%8Cwatch%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">
+<meta property="og:title" content="JavaScript组合继承">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/14/JavaScript%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="computed和watch的区别一、这两者解决的问题当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需要相关的方法和交互来实现调用执行的。二、computed和watch以及methods的区别1、性质上methods:定义函数，手动调用computed:计算属性，return返回结果，自动调用watch:观察，监听，发生改变就调用2、使用">
+<meta property="og:description" content="123456789101112131415161718192021222324&#x2F;&#x2F; 父类function Parent() &#123;  this.sayHello &#x3D; function () &#123;    console.log(&quot;Hello&quot;);  &#125;&#125;Parent.prototype.a &#x3D; &quot;我是父类prototype上的属性&amp;q">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-12T06:21:39.000Z">
-<meta property="article:modified_time" content="2024-10-03T07:56:53.930Z">
+<meta property="article:published_time" content="2024-10-14T05:26:21.000Z">
+<meta property="article:modified_time" content="2024-10-14T05:32:14.372Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,18 +78,27 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-12T06:21:39.000Z">2024-09-12</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-03T07:56:53.930Z">2024-10-03</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-14T05:26:21.000Z">2024-10-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-14T05:32:14.372Z">2024-10-14</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>computed和watch的区别</span></h1>
+        <h1 class="text title"><span>JavaScript组合继承</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>computed和watch的区别<br>一、这两者解决的问题<br>当我们的数据发生改变的时候，所有和该数据有关的数据都自动更新，执行我们定义的方法。不同于methods是需要相关的方法和交互来实现调用执行的。<br>二、computed和watch以及methods的区别<br>1、性质上<br>methods:定义函数，手动调用<br>computed:计算属性，return返回结果，自动调用<br>watch:观察，监听，发生改变就调用<br>2、使用场景<br>methods：一般不处理数据的逻辑，用于获取数据，和改变状态等情况<br>computed：多用于一个数据受多个数据影响的情况，<strong>具有缓存的特性，避免每次重新计算</strong><br>watch：多用于一个数据影响多个数据的情况，且类似异步等情况的时候建议使用<br>3、执行时间<br>computed和methods的初始化是在beforeCreated和created之间完成的。（以及Props,data都是）<br>4、缓存<br>computed:有缓存，重新渲染时，要是值没有改变，会直接返回之前的<br>watch:无缓存，重新渲染时，要是值没有改变，也会执行<br>5、是否异步<br>computed:不支持异步，但异步监听的时候，无法监听数据变化<br>watch:支持异步监听<br>三、computed和methods的区别<br>无论是定义为一个计算属性还是一个函数方法，对于结果来说都是一样的，不同点在于，计算属性是根据依赖值变<br>化才发生改变，而函数方法需要调用执行。  </p>
+  </div><article class="md-text content"><hr>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">sayHello</span> === child2.<span class="property">sayHello</span>);<span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parentObj = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parentObj.<span class="property">a</span>);<span class="comment">//我是父类prototype上的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">a</span>)<span class="comment">//我是父类prototype上的属性</span></span><br></pre></td></tr></table></figure>
+
+<p>优点：</p>
+<ol>
+<li>原型属性不会被共享。</li>
+<li>可以继承父类的原型链上的属性和方法。<br>缺点：</li>
+<li>调用了 2 次 Parent()。</li>
+<li>它在 child 的 prototype 上添加了父类的属性和方法。</li>
+</ol>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -99,7 +108,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/12/Vue%E4%B8%AD%E7%9A%84key/">Vue中的key</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/11/IEEE%E8%AE%BA%E6%96%87%E6%A8%A1%E6%9D%BF%E6%80%BB%E7%BB%93/">IEEE论文模板总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/14/JavaScript%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF/">JavaScript构造函数继承</a></div></section></div>
 
 
 

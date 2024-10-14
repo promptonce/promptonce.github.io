@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-14T05:22:54.129Z</updated>
+  <updated>2024-10-14T05:32:14.372Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript组合继承</title>
+    <link href="https://promptonce.github.io/2024/10/14/JavaScript%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/"/>
+    <id>https://promptonce.github.io/2024/10/14/JavaScript%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/</id>
+    <published>2024-10-14T05:26:21.000Z</published>
+    <updated>2024-10-14T05:32:14.372Z</updated>
+    
+    <content type="html"><![CDATA[<hr><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">sayHello</span> === child2.<span class="property">sayHello</span>);<span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parentObj = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parentObj.<span class="property">a</span>);<span class="comment">//我是父类prototype上的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">a</span>)<span class="comment">//我是父类prototype上的属性</span></span><br></pre></td></tr></table></figure><p>优点：</p><ol><li>原型属性不会被共享。</li><li>可以继承父类的原型链上的属性和方法。<br>缺点：</li><li>调用了 2 次 Parent()。</li><li>它在 child 的 prototype 上添加了父类的属性和方法。</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript构造函数继承</title>
@@ -396,26 +417,6 @@
       
     <summary type="html">&lt;p&gt;进制（Number Base）是表示数值的方式之一，用不同的数字和符号来表示不同的数值。最常见的进制有二进制、十进制、八进制和十六进制等。接下来，详细介绍这些不同的进制及它们之间的转换。&lt;/p&gt;
 &lt;h3 id=&quot;1-什么是进制？&quot;&gt;&lt;a href=&quot;#1-什么是进制？&quot; c</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>DIFF算法</title>
-    <link href="https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"/>
-    <id>https://promptonce.github.io/2024/10/03/DIFF%E7%AE%97%E6%B3%95/</id>
-    <published>2024-10-03T10:15:33.000Z</published>
-    <updated>2024-10-03T10:20:25.211Z</updated>
-    
-    <content type="html"><![CDATA[<p>DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？<br>一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的DOM，最后会判断是改变&#x2F;新增&#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一看出总共遍历了三回、如果有一千个节点．那么就湖发生了十亿次的计算。<br>二. diff 算法的优化diff 算法的优化也就是这个算法的核心部分了，简单来说就是针对具有相同父节点的同层新旧子节点进行比较，不相同的话就会新增或者删除，而不是使用逐层搜索递归遍历的方式。时间复杂度为 O(n)。</p><ol><li>只比较同一层级，不跨级比较</li><li>标签不同，直接删除，不继续比较</li><li>标签名相同， key相同，就认为是相同节点，不继续深度比较</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;DIFF 算法的作用：同层树节点比较的算法那么 DIFF 算法是如何工作的？&lt;br&gt;一、首先是先计算新老 DOM 的最小变化该算法会先遍历一遍老的 DOM. 然后在遍历新的DOM，最后会判断是改变&amp;#x2F;新增&amp;#x2F;删除来重新排序。这样无疑是非常耗费计算的，我们看一</summary>
       
     
     
