@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-13T08:46:48.082Z</updated>
+  <updated>2024-10-14T02:59:38.715Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>论文参考文献总结</title>
+    <link href="https://promptonce.github.io/2024/10/14/%E8%AE%BA%E6%96%87%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/14/%E8%AE%BA%E6%96%87%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-14T02:56:30.000Z</published>
+    <updated>2024-10-14T02:59:38.715Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="论文参考文献的主要格式"><a href="#论文参考文献的主要格式" class="headerlink" title="论文参考文献的主要格式"></a>论文参考文献的主要格式</h3><p>在学术写作中，最常用的参考文献格式包括APA（美国心理学会）、MLA（现代语言协会）、Chicago（芝加哥格式）和IEEE（主要用于工程和计算机科学）。以下是这几种常见格式的说明和示例。</p><hr><h3 id="1-APA格式-American-Psychological-Association"><a href="#1-APA格式-American-Psychological-Association" class="headerlink" title="1. APA格式 (American Psychological Association)"></a>1. <strong>APA格式 (American Psychological Association)</strong></h3><p>通常用于社会科学和心理学领域。它的特点是以作者的姓氏和出版年份为主。</p><h4 id="书籍示例："><a href="#书籍示例：" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 姓名首字母. (出版年份). <em>书名</em>. 出版地: 出版商.</p><p><strong>示例</strong>:<br>Smith, J. (2020). <em>Cognitive Psychology</em>. New York: Academic Press.</p><h4 id="期刊文章示例："><a href="#期刊文章示例：" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 姓名首字母. (出版年份). 文章标题. <em>期刊名称</em>, 卷号(期号), 页码.</p><p><strong>示例</strong>:<br>Brown, L. (2019). The impact of stress on memory. <em>Journal of Experimental Psychology</em>, 45(3), 123-145.</p><hr><h3 id="2-MLA格式-Modern-Language-Association"><a href="#2-MLA格式-Modern-Language-Association" class="headerlink" title="2. MLA格式 (Modern Language Association)"></a>2. <strong>MLA格式 (Modern Language Association)</strong></h3><p>通常用于人文学科，尤其是文学、语言学等。MLA格式更注重作者和作品的标题。</p><h4 id="书籍示例：-1"><a href="#书籍示例：-1" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. <em>书名</em>. 出版社, 出版年份.</p><p><strong>示例</strong>:<br>Smith, John. <em>Understanding Poetry</em>. Oxford University Press, 2018.</p><h4 id="期刊文章示例：-1"><a href="#期刊文章示例：-1" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. “文章标题.” <em>期刊名称</em>, 卷号, 期号, 出版年份, 页码.</p><p><strong>示例</strong>:<br>Brown, Lisa. “Cultural Approaches to Modern Poetry.” <em>Literary Review</em>, vol. 45, no. 2, 2020, pp. 34-56.</p><hr><h3 id="3-Chicago格式-芝加哥格式"><a href="#3-Chicago格式-芝加哥格式" class="headerlink" title="3. Chicago格式 (芝加哥格式)"></a>3. <strong>Chicago格式 (芝加哥格式)</strong></h3><p>适用于历史学和一些人文学科，有两种主要风格：注释-书目制和作者-日期制。这里介绍的是注释-书目制。</p><h4 id="书籍示例：-2"><a href="#书籍示例：-2" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. <em>书名</em>. 出版地: 出版社, 出版年份.</p><p><strong>示例</strong>:<br>Smith, John. <em>History of the Roman Empire</em>. Chicago: University of Chicago Press, 2017.</p><h4 id="期刊文章示例：-2"><a href="#期刊文章示例：-2" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. “文章标题.” <em>期刊名称</em> 卷号, 期号 (出版年份): 页码.</p><p><strong>示例</strong>:<br>Brown, Lisa. “The Role of Women in Roman Politics.” <em>Classical Studies Journal</em> 35, no. 4 (2019): 45-67.</p><hr><h3 id="4-IEEE格式"><a href="#4-IEEE格式" class="headerlink" title="4. IEEE格式"></a>4. <strong>IEEE格式</strong></h3><p>主要用于工程、计算机科学等技术领域。IEEE采用编号系统来标示参考文献。</p><h4 id="书籍示例：-3"><a href="#书籍示例：-3" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>[编号] 作者姓名, <em>书名</em>, 版本 (如果有). 出版地: 出版社, 出版年份, 页码.</p><p><strong>示例</strong>:<br>[1] J. Smith, <em>Introduction to Robotics</em>, 2nd ed. New York: McGraw-Hill, 2019, pp. 100-120.</p><h4 id="期刊文章示例：-3"><a href="#期刊文章示例：-3" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>[编号] 作者姓名, “文章标题,” <em>期刊名称</em>, 卷号, 期号, 页码, 出版年份.</p><p><strong>示例</strong>:<br>[2] L. Brown, “Network security challenges,” <em>IEEE Transactions on Computers</em>, vol. 68, no. 3, pp. 45-58, 2018.</p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;论文参考文献的主要格式&quot;&gt;&lt;a href=&quot;#论文参考文献的主要格式&quot; class=&quot;headerlink&quot; title=&quot;论文参考文献的主要格式&quot;&gt;&lt;/a&gt;论文参考文献的主要格式&lt;/h3&gt;&lt;p&gt;在学术写作中，最常用的参考文献格式包括APA（美国心理学会）、MLA</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前端防抖</title>
@@ -398,26 +418,6 @@
       
       
     <summary type="html">&lt;p&gt;Vue 中的 keep-alive用 keep-alive 包裏组件时．会缓存不活动的组件实例，而不是销毁．使得我们返回的时候能重新激活。 keep-alive主要用于保存组件状态或避免重复创建。避免重复渲染导致的性能间题。常见场景页面的缓存，如上面的保存浏览商品页的滚动条</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue中Scoped原理</title>
-    <link href="https://promptonce.github.io/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/"/>
-    <id>https://promptonce.github.io/2024/10/02/Vue%E4%B8%ADScoped%E5%8E%9F%E7%90%86/</id>
-    <published>2024-10-02T08:39:36.000Z</published>
-    <updated>2024-10-02T08:40:21.671Z</updated>
-    
-    <content type="html"><![CDATA[<p>Vue 中的 scoped 样式的作用是为了让组件的样式只在该组件的范围内生效，避免影响全局或其他组件。它的实现通过给每个组件生成一个唯一的标识符（如 data-v-xxxxxx），并将这个标识符附加到组件内的 DOM 元素和样式上。这样一来，样式表中的选择器只会影响带有相应标识符的 DOM 元素，而不会污染其他组件的样式。 总结特点： 1. 局部样式作用域：组件内的样式只能作用于组件自身的标签，且不会影响外部或其他组件。 2. 自动添加标识：Vue 会自动为组件的 DOM 和样式添加特定的 data-v- 属性，确保样式的唯一性和作用范围。  这个机制有效地解决了样式冲突问题，尤其在大型应用中，它可以确保不同组件的样式独立。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Vue 中的 scoped 样式的作用是为了让组件的样式只在该组件的范围内生效，避免影响全局或其他组件。它的实现通过给每个组件生成一个唯一的标识符（如 data-v-xxxxxx），并将这个标识符附加到组件内的 DOM 元素和样式上。这样一来，样式表中的选择器只会影响带有相</summary>
       
     
     
