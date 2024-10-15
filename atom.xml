@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-15T08:05:17.065Z</updated>
+  <updated>2024-10-15T08:16:13.132Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>隐式绑定</title>
+    <link href="https://promptonce.github.io/2024/10/15/%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A/"/>
+    <id>https://promptonce.github.io/2024/10/15/%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A/</id>
+    <published>2024-10-15T08:11:12.000Z</published>
+    <updated>2024-10-15T08:16:13.132Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj1&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj2&quot;</span>,</span><br><span class="line">  <span class="attr">obj1</span>: obj1,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj2.<span class="property">obj1</span>.<span class="title function_">foo</span>();<span class="comment">// &#123;name: &quot;obj1&quot;, foo: foo()&#125;</span></span><br></pre></td></tr></table></figure><p>谁直接调用foo（换而言之，谁离foo更近），那么foo()中的this就指向谁。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>this在运行时绑定还是编译时绑定</title>
@@ -393,28 +413,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>css提高性能的方法</title>
-    <link href="https://promptonce.github.io/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    <id>https://promptonce.github.io/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</id>
-    <published>2024-10-07T07:00:37.000Z</published>
-    <updated>2024-10-07T07:03:15.360Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><strong>压缩 CSS 文件</strong>：减少文件大小，去掉不必要的空格和注释，这样文件体积更小，加载速度更快。</li><li><strong>移除未使用的样式</strong>：很多时候，写了样式没用上，导致 CSS 文件臃肿，清理掉没用的部分，减少体积。</li><li><strong>合并和分割 CSS 文件</strong>：合并多个 CSS 文件减少 HTTP 请求；也可以按需加载，只在需要时加载特定页面的样式。</li><li><strong>简化选择器</strong>：选择器不要太复杂，层级太深会增加计算负担，影响性能。尽量用类选择器，少用通配符和属性选择器。</li><li><strong>避免 @import</strong>：<code>@import</code> 导入 CSS 会增加额外请求，加载速度慢。尽量用 <code>&lt;link&gt;</code> 直接引入外部文件。</li><li><strong>减少重绘和回流</strong>：避免频繁使用会引起回流的属性，比如 <code>width</code>、<code>height</code>，动画时多用 <code>transform</code> 和 <code>opacity</code> 这种对性能影响小的属性。</li><li><strong>优化字体加载</strong>：Web 字体加载会影响页面渲染速度，尽量少用字体，设置 <code>font-display: swap</code>，让文字先显示，再加载字体。</li><li><strong>使用关键 CSS</strong>：首屏显示的 CSS 放在 <code>&lt;head&gt;</code> 里，确保页面先渲染出来，剩下的样式可以延迟加载。</li><li><strong>使用现代布局方式</strong>：像 CSS Grid 和 Flexbox 这些布局方式，比传统的 float 布局性能更好、代码更简洁。</li><li><strong>利用 CSS 变量</strong>：减少重复定义，提高代码的可维护性和简洁性。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;压缩 CSS 文件&lt;/strong&gt;：减少文件大小，去掉不必要的空格和注释，这样文件体积更小，加载速度更快。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;移除未使用的样式&lt;/strong&gt;：很多时候，写了样式没用上，导致 CSS 文件臃肿，清理掉没用的部分</summary>
       
     
     
