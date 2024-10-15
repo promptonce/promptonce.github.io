@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-15T08:52:41.982Z</updated>
+  <updated>2024-10-15T15:22:09.111Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>new关键字绑定</title>
+    <link href="https://promptonce.github.io/2024/10/15/new%E5%85%B3%E9%94%AE%E5%AD%97%E7%BB%91%E5%AE%9A/"/>
+    <id>https://promptonce.github.io/2024/10/15/new%E5%85%B3%E9%94%AE%E5%AD%97%E7%BB%91%E5%AE%9A/</id>
+    <published>2024-10-15T15:06:50.000Z</published>
+    <updated>2024-10-15T15:22:09.111Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Student</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>); <span class="comment">// Student &#123;&#125;</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name; <span class="comment">// Student &#123;name : &quot;codereasy&quot;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过new关键字创建一个新对象的步骤是什么、构造函数是如何创建新对象的？</span></span><br><span class="line"><span class="keyword">var</span> xiaoming = <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;codereasy&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(xiaoming);</span><br></pre></td></tr></table></figure><p>在构造函数中添加return，如果return的是对象，则直接返回该对象，如果return的是基本类型，则return语句无效，仍然返回我们创建的新对象。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>显式绑定</title>
     <link href="https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/"/>
     <id>https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/</id>
     <published>2024-10-15T08:34:18.000Z</published>
-    <updated>2024-10-15T08:52:41.982Z</updated>
+    <updated>2024-10-15T13:14:48.119Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="variable language_">window</span>); <span class="comment">// window</span></span><br><span class="line">foo.<span class="title function_">call</span>(&#123;<span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span>&#125;); <span class="comment">// &#123;name: &quot;codereasy&quot;&#125;</span></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="number">666</span>); <span class="comment">// Object( empty )</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bar = foo.<span class="title function_">bind</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="title function_">bar</span>(); <span class="comment">// obj对象</span></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -391,28 +411,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>像素总结</title>
-    <link href="https://promptonce.github.io/2024/10/10/%E5%83%8F%E7%B4%A0%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/10/10/%E5%83%8F%E7%B4%A0%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-10T02:24:33.000Z</published>
-    <updated>2024-10-10T03:17:34.704Z</updated>
-    
-    <content type="html"><![CDATA[<p>512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上</p><p>电子图像的PPI<br>1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。</p><p>打印机的DPI<br>表示打印机的信息转化能力（一英寸输出多少个像素点且不损失信息）</p><p>高ppi如果人眼离的较远，且图像较小时可能无法区分相邻像素点，从而降低人眼的信息获取质量</p><p>PPI与DPI的对应：</p><ul><li>如果这张512x512的图片被定义为1英寸x1英寸，那么它的PPI就是512。（将512x512x3的数据表示在1英寸x1英寸的空间上）</li><li>当我们把这张图片打印出来时，如果打印机的DPI也是512，那么理论上，打印出来的图像每个像素点会对应一个墨点，效果会比较理想。</li></ul><p>假设我们有一张512x512像素的照片，想要打印成一张4英寸x4英寸的照片。</p><ul><li>计算PPI： 512像素 &#x2F; 4英寸 &#x3D; 128 PPI。</li><li>选择打印机： 如果我们的打印机最大支持1200 DPI，那么我们可以将图像的尺寸调整为4英寸x4英寸，分辨率设置为128 PPI进行打印，这样可以充分利用打印机的性能。</li><li>如果打印机只有300 DPI： 那么打印出来的图像会有一些模糊，因为每个墨点要对应多个像素。</li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上&lt;/p&gt;
-&lt;p&gt;电子图像的PPI&lt;br&gt;1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。&lt;/p&gt;
-&lt;p&gt;打印机的DPI&lt;br&gt;表示打印机的信息转化能力（一英寸</summary>
       
     
     
