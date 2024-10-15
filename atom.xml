@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-15T08:16:13.132Z</updated>
+  <updated>2024-10-15T08:52:41.982Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>显式绑定</title>
+    <link href="https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/"/>
+    <id>https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/</id>
+    <published>2024-10-15T08:34:18.000Z</published>
+    <updated>2024-10-15T08:52:41.982Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="variable language_">window</span>); <span class="comment">// window</span></span><br><span class="line">foo.<span class="title function_">call</span>(&#123;<span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span>&#125;); <span class="comment">// &#123;name: &quot;codereasy&quot;&#125;</span></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="number">666</span>); <span class="comment">// Object( empty )</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bar = foo.<span class="title function_">bind</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="title function_">bar</span>(); <span class="comment">// obj对象</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>隐式绑定</title>
@@ -393,26 +413,6 @@
     <summary type="html">&lt;p&gt;512x512RGB图像可以理解为由512x512x3个逻辑上的编码,计算机来决定如何渲染到屏幕上&lt;/p&gt;
 &lt;p&gt;电子图像的PPI&lt;br&gt;1英寸x1英寸的电子图片在某一行取一英寸，这一英寸有多少个像素点。&lt;/p&gt;
 &lt;p&gt;打印机的DPI&lt;br&gt;表示打印机的信息转化能力（一英寸</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JS中判断数组的方式有哪些?</title>
-    <link href="https://promptonce.github.io/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/"/>
-    <id>https://promptonce.github.io/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/</id>
-    <published>2024-10-07T07:18:24.000Z</published>
-    <updated>2024-10-07T08:13:44.931Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;对象的类型是&quot;</span>, <span class="keyword">typeof</span> obj);<span class="comment">// 对象的类型是 object</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数组的类型是&quot;</span>, <span class="keyword">typeof</span> arr);<span class="comment">// 数组的类型是 object</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> objType = <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(obj);</span><br><span class="line"><span class="keyword">let</span> arrType = <span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(arr);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;对象的类型是&quot;</span>, objType);<span class="comment">// 对象的类型是 [object Object]</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;数组的类型是&quot;</span>, arrType);<span class="comment">// 数组的类型是 [object Array]</span></span><br></pre></td></tr></table></figure><h2 id="通过原型链判断"><a href="#通过原型链判断" class="headerlink" title="通过原型链判断"></a>通过原型链判断</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj.<span class="property">__proto__</span> === <span class="title class_">Array</span>.<span class="property"><span class="keyword">prototype</span></span>)</span><br></pre></td></tr></table></figure><h2 id="通过Array-isArray-判断"><a href="#通过Array-isArray-判断" class="headerlink" title="通过Array.isArray()判断"></a>通过Array.isArray()判断</h2><p>ES6语法，如需运行在低版本浏览器上需要使用babel转换</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj =[];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Array</span>.<span class="title function_">isArray</span>(obj));</span><br></pre></td></tr></table></figure><h2 id="通过-instanceof-判断"><a href="#通过-instanceof-判断" class="headerlink" title="通过 instanceof 判断"></a>通过 instanceof 判断</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = [];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj <span class="keyword">instanceof</span> <span class="title class_">Array</span>)</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
