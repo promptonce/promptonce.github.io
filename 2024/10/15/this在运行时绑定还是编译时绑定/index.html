@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>SPA首屏优化 - PromptOnce</title>
+  <title>this在运行时绑定还是编译时绑定 - PromptOnce</title>
 
   
-    <meta name="description" content="浏览器从响应用户输入网址地址，到首屏内容渲染完成时间，整个网页不一定要完全渲染完成，但需要展示当前视窗内容加载慢的原因  网络延时 资源文件体积过大 资源加载重复发送请求 加载脚本时，渲染内容阻塞  解决  减少入口文件体积 静态资源本地缓存 UI框架按需加载 图片资源压缩 组件重复打包 开启GZip压缩 使用SSR  减少入口文件体积 路由懒加载，将不同路由对应组件分割成不同代码块，待路由被请求">
+    <meta name="description" content="1234567891011121314151617&#x2F;&#x2F; 定义一个函数function foo() &#123;  console.log(this);&#125;&#x2F;&#x2F; 1.调用方式一： 直接调用foo(); &#x2F;&#x2F; window&#x2F;&#x2F; 2.调用方式二：将foo放到一个对象中，再调用var obj &#x3D; &#123;  name: &quot;codereasy&quot;,  foo: foo,&amp;#12">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SPA首屏优化">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/28/SPA%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="this在运行时绑定还是编译时绑定">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/15/this%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%91%E5%AE%9A%E8%BF%98%E6%98%AF%E7%BC%96%E8%AF%91%E6%97%B6%E7%BB%91%E5%AE%9A/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="浏览器从响应用户输入网址地址，到首屏内容渲染完成时间，整个网页不一定要完全渲染完成，但需要展示当前视窗内容加载慢的原因  网络延时 资源文件体积过大 资源加载重复发送请求 加载脚本时，渲染内容阻塞  解决  减少入口文件体积 静态资源本地缓存 UI框架按需加载 图片资源压缩 组件重复打包 开启GZip压缩 使用SSR  减少入口文件体积 路由懒加载，将不同路由对应组件分割成不同代码块，待路由被请求">
+<meta property="og:description" content="1234567891011121314151617&#x2F;&#x2F; 定义一个函数function foo() &#123;  console.log(this);&#125;&#x2F;&#x2F; 1.调用方式一： 直接调用foo(); &#x2F;&#x2F; window&#x2F;&#x2F; 2.调用方式二：将foo放到一个对象中，再调用var obj &#x3D; &#123;  name: &quot;codereasy&quot;,  foo: foo,&amp;#12">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-28T08:37:33.000Z">
-<meta property="article:modified_time" content="2024-09-11T06:23:09.958Z">
+<meta property="article:published_time" content="2024-10-15T07:49:31.000Z">
+<meta property="article:modified_time" content="2024-10-15T08:05:17.065Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,48 +78,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:37:33.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-11T06:23:09.958Z">2024-09-11</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-15T07:49:31.000Z">2024-10-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-15T08:05:17.065Z">2024-10-15</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>SPA首屏优化</span></h1>
+        <h1 class="text title"><span>this在运行时绑定还是编译时绑定</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>浏览器从响应用户输入网址地址，到首屏内容渲染完成时间，整个网页不一定要完全渲染完成，但需要展示当前视窗内容<br>加载慢的原因</p>
-<ol>
-<li>网络延时</li>
-<li>资源文件体积过大</li>
-<li>资源加载重复发送请求</li>
-<li>加载脚本时，渲染内容阻塞</li>
-</ol>
-<p>解决</p>
-<ol>
-<li>减少入口文件体积</li>
-<li>静态资源本地缓存</li>
-<li>UI框架按需加载</li>
-<li>图片资源压缩</li>
-<li>组件重复打包</li>
-<li>开启GZip压缩</li>
-<li>使用SSR</li>
-</ol>
-<p><strong>减少入口文件体积</strong></p>
-<p>路由懒加载，将不同路由对应组件分割成不同代码块，待路由被请求时单独打包路由，使得入口文件变小<br>以函数形式动态加载路由，可以把各自的路由文件分别打包，只在解析给定路由时，才会加载路由组件</p>
-<p><strong>静态资源本地缓存</strong></p>
-<p>HTTP缓存和localStorage</p>
-<p><strong>按需加载</strong></p>
-<p>对UI库按需引用</p>
-<p><strong>图片资源压缩</strong></p>
-<p>对icon,使用在线字体图标</p>
-<p><strong>组件重复打包</strong></p>
-<p>若A.js是一个常用库，多个路由使用它会造成重复下载</p>
-<p>在webpack的config中，修改CommonChunkPlugint的配置</p>
-<p>minChunks为3表示会把使用3次及以上的包抽离，放进公共依赖文件</p>
-<p><strong>使用SSR</strong></p>
-<p>服务端渲染，Server Side,组件或页面通过服务器生成html字符串，发送到浏览器</p>
+  </div><article class="md-text content"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.调用方式一： 直接调用</span></span><br><span class="line"><span class="title function_">foo</span>(); <span class="comment">// window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.调用方式二：将foo放到一个对象中，再调用</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line">obj.<span class="title function_">foo</span>();<span class="comment">// object对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.调用方式三： 通过call或者apply调用</span></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="string">&quot;ctgu&quot;</span>);<span class="comment">// string &#123;ctgu对象&#125;</span></span><br></pre></td></tr></table></figure>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -129,7 +99,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E5%89%8D%E7%AB%AF%E5%AE%89%E5%85%A8/">前端安全</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/28/%E5%85%B6%E4%BB%96%E6%96%87%E4%BB%B6%E4%BC%98%E5%8C%96/">其他文件优化</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/14/JavaScript%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/">JavaScript寄生组合继承</a></div></section></div>
 
 
 
