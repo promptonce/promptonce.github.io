@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-15T17:36:58.078Z</updated>
+  <updated>2024-10-16T07:12:25.248Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>双指针</title>
+    <link href="https://promptonce.github.io/2024/10/16/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
+    <id>https://promptonce.github.io/2024/10/16/%E5%8F%8C%E6%8C%87%E9%92%88/</id>
+    <published>2024-10-16T06:48:09.000Z</published>
+    <updated>2024-10-16T07:12:25.248Z</updated>
+    
+    <content type="html"><![CDATA[<p>有序并不是双指针使用的必要前提，但在某些情况下，<strong>有序数组</strong>确实可以帮助我们充分发挥双指针的优势，特别是在减少搜索空间和提高效率方面。双指针是一种灵活的算法技巧，可以根据具体场景应用于有序或无序的场景。下面将详细讨论。</p><h3 id="1-有序数组中的双指针"><a href="#1-有序数组中的双指针" class="headerlink" title="1. 有序数组中的双指针"></a>1. <strong>有序数组中的双指针</strong></h3><p>在有序数组或序列中使用双指针，可以利用排序的特性来快速定位解。这类问题通常依赖于数据的有序性来实现更高效的算法。例如，前面提到的 <strong>“Two Sum II”</strong> 问题，因为数组是有序的，双指针可以通过移动指针快速缩小搜索范围。如果数组是无序的，那么双指针这种方式在查找和筛选时会失去优势。</p><ul><li><strong>例子</strong>：<ul><li><strong>查找两数之和问题</strong>：利用双指针，从两端向中间靠拢，根据和与目标值的比较，决定移动哪一个指针。</li></ul></li></ul><h3 id="2-无序数组中的双指针"><a href="#2-无序数组中的双指针" class="headerlink" title="2. 无序数组中的双指针"></a>2. <strong>无序数组中的双指针</strong></h3><p>虽然有序数组能让双指针更高效，但双指针同样可以在<strong>无序数组</strong>中使用。常见的应用场景包括处理<strong>特定条件的子数组</strong>、<strong>滑动窗口问题</strong>、<strong>快慢指针遍历链表</strong>等。这些问题不依赖有序性，而是基于特定的逻辑条件来移动指针。</p><ul><li><strong>例子</strong>：<ul><li><strong>快慢指针（Floyd’s Tortoise and Hare Algorithm）</strong>：该算法常用于检测链表中的环，并且链表不需要有序。一个指针每次走一步（慢指针），另一个指针每次走两步（快指针），最终两个指针会相遇。</li><li><strong>滑动窗口</strong>：在处理动态长度的子数组问题时，双指针可以用来动态调整窗口的大小，维护窗口的边界。</li></ul></li></ul><h3 id="3-滑动窗口问题"><a href="#3-滑动窗口问题" class="headerlink" title="3. 滑动窗口问题"></a>3. <strong>滑动窗口问题</strong></h3><p>滑动窗口（Sliding Window）是一类经典的双指针应用，通常用于处理<strong>无序数组</strong>或字符串。在这些问题中，一个指针（左指针）固定窗口的起点，另一个指针（右指针）扩展窗口或收缩窗口，直到满足某个条件。</p><ul><li><strong>例子</strong>：<ul><li><strong>最长子数组问题</strong>：寻找一个数组中满足某些条件的最长子数组。双指针可以用来动态调整子数组的起始和结束位置，以优化解的查找。</li></ul></li></ul><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>双指针并不依赖数据有序与否，而是依赖问题的具体要求和性质。在有序数组中，双指针通常可以更加高效地解决问题，因为排序提供了一个明确的规则（例如大小关系）来指导指针的移动；在无序数组或其他数据结构中，双指针也可以用于解决子数组、链表问题等。主要的前提是问题能够通过调整两个位置来逐步缩小搜索范围或满足特定条件。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;有序并不是双指针使用的必要前提，但在某些情况下，&lt;strong&gt;有序数组&lt;/strong&gt;确实可以帮助我们充分发挥双指针的优势，特别是在减少搜索空间和提高效率方面。双指针是一种灵活的算法技巧，可以根据具体场景应用于有序或无序的场景。下面将详细讨论。&lt;/p&gt;
+&lt;h3 id=&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript正则表达式</title>
+    <link href="https://promptonce.github.io/2024/10/16/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
+    <id>https://promptonce.github.io/2024/10/16/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
+    <published>2024-10-16T06:36:10.000Z</published>
+    <updated>2024-10-16T06:36:50.776Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">isCharacter</span>(<span class="params">c</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="regexp">/[a-zA-Z0-9]/</span>.<span class="title function_">test</span>(c);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>npm配置代理</title>
@@ -371,46 +412,6 @@
       
     <summary type="html">&lt;p&gt;有助于不断加深自己对技术的理解&lt;br&gt;热启动&lt;br&gt;站在高位思考&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数组的浅拷贝</title>
-    <link href="https://promptonce.github.io/2024/10/12/%E6%95%B0%E7%BB%84%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
-    <id>https://promptonce.github.io/2024/10/12/%E6%95%B0%E7%BB%84%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/</id>
-    <published>2024-10-12T06:44:35.000Z</published>
-    <updated>2024-10-12T06:48:52.323Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.<span class="title function_">slice</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2); <span class="comment">//[ 1, 2, 3 ]</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = arr1.<span class="title function_">slice</span>(<span class="number">2</span>, <span class="number">3</span>);<span class="comment">// 左闭右开</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2); <span class="comment">//[ 3 ]</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [<span class="number">0</span>,<span class="number">1</span>,<span class="number">2</span>].<span class="title function_">concat</span>(arr1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2); <span class="comment">//[ 0, 1, 2, 1, 2, 3 ]</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr1 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">const</span> arr2 = [].<span class="title function_">concat</span>(arr1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2);<span class="comment">// [ 1, 2, 3 ]</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>对象的浅拷贝</title>
-    <link href="https://promptonce.github.io/2024/10/12/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/"/>
-    <id>https://promptonce.github.io/2024/10/12/%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%B5%85%E6%8B%B7%E8%B4%9D/</id>
-    <published>2024-10-12T06:41:36.000Z</published>
-    <updated>2024-10-12T06:41:48.050Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;a : <span class="number">1</span>, b : <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, obj1);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;a : <span class="number">1</span>, b : <span class="number">2</span>&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;...obj1&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2 &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">c</span>:&#123;<span class="attr">d</span>:<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> obj1) &#123;</span><br><span class="line">  <span class="keyword">if</span>(obj1.<span class="title function_">hasOwnProperty</span>(key))&#123;<span class="comment">// for in 会遍历原型上的属性，所以需要判断是否为自身的属性</span></span><br><span class="line">    obj2[key] = obj1[key];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2, c: &#123; d: 4 &#125; &#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;<span class="attr">a</span>:<span class="number">1</span>,<span class="attr">b</span>:<span class="number">2</span>,<span class="attr">c</span>:&#123;<span class="attr">d</span>:<span class="number">4</span>&#125;&#125;;</span><br><span class="line"><span class="keyword">const</span> obj2 = &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">keys</span>(obj1).<span class="title function_">forEach</span>(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">  obj2[key] = obj1[key];<span class="comment">// Object.keys()只会遍历对象自身的可枚举属性，所以不需要判断是否为自身的属性</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj2); <span class="comment">//&#123; a: 1, b: 2, c: &#123; d: 4 &#125; &#125;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
