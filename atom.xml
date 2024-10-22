@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-17T16:22:47.720Z</updated>
+  <updated>2024-10-22T08:01:11.838Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,47 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>动态规划算法</title>
+    <link href="https://promptonce.github.io/2024/10/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/"/>
+    <id>https://promptonce.github.io/2024/10/22/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E7%AE%97%E6%B3%95/</id>
+    <published>2024-10-22T07:59:58.000Z</published>
+    <updated>2024-10-22T08:01:11.838Z</updated>
+    
+    <content type="html"><![CDATA[<p>动态规划是一种将复杂问题分解为更小的子问题并通过缓存子问题的解来避免重复计算的算法设计方法。它适用于具有<strong>重叠子问题</strong>和<strong>最优子结构</strong>性质的问题。动态规划通常用于优化问题，目的是通过构建递归关系和记忆化中间结果，找到全局最优解。</p><h4 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h4><p>动态规划的核心思想是将一个复杂的问题分解为若干个子问题，然后通过递推的方式逐步解决这些子问题。它的基本步骤如下：</p><ol><li><strong>定义状态</strong>：确定问题的状态，也就是用哪些变量来描述当前子问题的状态。</li><li><strong>状态转移方程</strong>：找到子问题之间的递推关系（即状态转移方程），描述如何从已解决的子问题得到当前问题的解。</li><li><strong>边界条件</strong>：确定初始状态的值，通常是最小规模的问题的解。</li><li><strong>计算顺序</strong>：根据状态转移方程的依赖关系，从小到大计算每个子问题的解。</li></ol><p>动态规划常用来解决最优化问题，如最短路径问题、最大子序列和问题、背包问题等。</p><h4 id="动态规划的特性"><a href="#动态规划的特性" class="headerlink" title="动态规划的特性"></a>动态规划的特性</h4><ol><li><p><strong>重叠子问题</strong>：动态规划问题通常具有重叠子问题，即原问题可以分解成若干个相同的子问题。不同的子问题可能会在递归求解中被重复计算。如果使用简单的递归方法，会导致大量的重复计算，因此通过记忆化技术（如数组或表）存储子问题的解，可以避免重复计算。</p></li><li><p><strong>最优子结构</strong>：如果问题的最优解可以由其子问题的最优解构造而成，称为最优子结构。例如，求解最短路径时，如果最短路径经过某个点，那么从该点到终点的子路径也一定是最短路径。</p></li></ol><h4 id="动态规划的两种实现方式"><a href="#动态规划的两种实现方式" class="headerlink" title="动态规划的两种实现方式"></a>动态规划的两种实现方式</h4><ol><li><p><strong>自顶向下（记忆化搜索）</strong>：使用递归的方式自顶向下解决问题，同时将子问题的解存储在数组或哈希表中（称为“记忆化”），以便下次遇到相同的子问题时直接返回之前计算的结果，而不是重新计算。</p></li><li><p><strong>自底向上（迭代法）</strong>：先解决最简单的子问题，然后通过迭代的方式解决规模逐渐增大的问题。自底向上通常表现为使用一个数组或表，按照状态转移方程逐步填充表中的值。</p></li></ol><h4 id="动态规划的经典例题"><a href="#动态规划的经典例题" class="headerlink" title="动态规划的经典例题"></a>动态规划的经典例题</h4><h5 id="1-斐波那契数列"><a href="#1-斐波那契数列" class="headerlink" title="1. 斐波那契数列"></a>1. 斐波那契数列</h5><p>这是动态规划最简单的例子，斐波那契数列的递归公式为：<br>[<br>F(n) &#x3D; F(n-1) + F(n-2)<br>]<br>使用动态规划，可以避免递归的重复计算。</p><p><strong>状态定义</strong>：令 <code>dp[i]</code> 表示斐波那契数列第 <code>i</code> 项的值。</p><p><strong>状态转移方程</strong>：<br>[<br>dp[i] &#x3D; dp[i-1] + dp[i-2]<br>]</p><p><strong>边界条件</strong>：<br>[<br>dp[0] &#x3D; 0, \ dp[1] &#x3D; 1<br>]</p><p><strong>自底向上代码实现</strong>：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">fibonacci</span>(<span class="params">n</span>):</span><br><span class="line">    <span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line">    <span class="keyword">elif</span> n == <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    dp = [<span class="number">0</span>] * (n + <span class="number">1</span>)</span><br><span class="line">    dp[<span class="number">0</span>], dp[<span class="number">1</span>] = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>, n + <span class="number">1</span>):</span><br><span class="line">        dp[i] = dp[i - <span class="number">1</span>] + dp[i - <span class="number">2</span>]</span><br><span class="line">    <span class="keyword">return</span> dp[n]</span><br></pre></td></tr></table></figure><h5 id="2-背包问题"><a href="#2-背包问题" class="headerlink" title="2. 背包问题"></a>2. 背包问题</h5><p>背包问题是经典的动态规划问题，描述如下：有一个背包容量为 <code>W</code>，有 <code>n</code> 个物品，每个物品有重量 <code>w_i</code> 和价值 <code>v_i</code>，问如何选择物品装入背包，使得装入背包的物品总价值最大。</p><p><strong>状态定义</strong>：<code>dp[i][j]</code> 表示前 <code>i</code> 个物品在背包容量为 <code>j</code> 时的最大价值。</p><p><strong>状态转移方程</strong>：<br>[<br>dp[i][j] &#x3D; \max(dp[i-1][j], dp[i-1][j-w_i] + v_i)<br>]<br>如果不选择第 <code>i</code> 个物品，则 <code>dp[i][j] = dp[i-1][j]</code>；如果选择，则 <code>dp[i][j] = dp[i-1][j-w_i] + v_i</code>。</p><p><strong>边界条件</strong>：<code>dp[0][j] = 0</code>（没有物品时最大价值为0）。</p><h5 id="3-最长公共子序列（LCS）"><a href="#3-最长公共子序列（LCS）" class="headerlink" title="3. 最长公共子序列（LCS）"></a>3. 最长公共子序列（LCS）</h5><p>给定两个序列，求它们的最长公共子序列。其状态转移方程为：</p><p>[<br>dp[i][j] &#x3D;<br>\begin{cases}<br>dp[i-1][j-1] + 1, &amp; \text{if } s1[i] &#x3D; s2[j] \<br>\max(dp[i-1][j], dp[i][j-1]), &amp; \text{if } s1[i] \neq s2[j]<br>\end{cases}<br>]</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>动态规划通过记忆化子问题的解，可以极大地提高算法的效率。掌握动态规划的关键在于能识别问题的<strong>重叠子问题</strong>和<strong>最优子结构</strong>，并合理地定义状态和状态转移方程。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;动态规划是一种将复杂问题分解为更小的子问题并通过缓存子问题的解来避免重复计算的算法设计方法。它适用于具有&lt;strong&gt;重叠子问题&lt;/strong&gt;和&lt;strong&gt;最优子结构&lt;/strong&gt;性质的问题。动态规划通常用于优化问题，目的是通过构建递归关系和记忆化中间结果，找</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>tomcat和nginx总结</title>
+    <link href="https://promptonce.github.io/2024/10/20/nginx%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/20/nginx%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-20T10:13:54.000Z</published>
+    <updated>2024-10-20T11:31:03.667Z</updated>
+    
+    <content type="html"><![CDATA[<p>nginx是一个高效的静态内容 Web 服务器，同时也是反向代理服务器，擅长处理静态资源、负载均衡和反向代理功能。</p><h2 id="vue发布的网站非根域名刷新404的错误"><a href="#vue发布的网站非根域名刷新404的错误" class="headerlink" title="vue发布的网站非根域名刷新404的错误"></a>vue发布的网站非根域名刷新404的错误</h2><p>*<em>解决方法：配置一个重定向规则，使得所有请求都指向Vue应用的入口文件 <code>index.html</code>。</em></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    listen <span class="number">80</span>;</span><br><span class="line">    server_name your_domain.com;  <span class="comment"># 替换为你的域名或IP地址</span></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        root /path/to/your/vue/app;  <span class="comment"># Vue应用打包后的文件存放目录</span></span><br><span class="line">        try_files $uri $uri/ /index.html;  <span class="comment"># 如果找不到文件，则返回index.html</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    index index.html;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;nginx是一个高效的静态内容 Web 服务器，同时也是反向代理服务器，擅长处理静态资源、负载均衡和反向代理功能。&lt;/p&gt;
+&lt;h2 id=&quot;vue发布的网站非根域名刷新404的错误&quot;&gt;&lt;a href=&quot;#vue发布的网站非根域名刷新404的错误&quot; class=&quot;header</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript 标记清除法总结</title>
@@ -373,46 +414,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;前端防抖（Debounce）详解及应用&quot;&gt;&lt;a href=&quot;#前端防抖（Debounce）详解及应用&quot; class=&quot;headerlink&quot; title=&quot;前端防抖（Debounce）详解及应用&quot;&gt;&lt;/a&gt;前端防抖（Debounce）详解及应用&lt;/h3&gt;&lt;p&gt;在前</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>javascript_map对象总结</title>
-    <link href="https://promptonce.github.io/2024/10/13/javascript-map%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/10/13/javascript-map%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-13T06:35:24.000Z</published>
-    <updated>2024-10-13T06:37:57.677Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> fruits = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"></span><br><span class="line">fruits.<span class="title function_">set</span>(<span class="string">&quot;apple&quot;</span>, <span class="string">&quot;red&quot;</span>);</span><br><span class="line">fruits.<span class="title function_">set</span>(<span class="string">&quot;banana&quot;</span>, <span class="string">&quot;yellow&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(fruits.<span class="title function_">get</span>(<span class="string">&quot;apple&quot;</span>));</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(fruits.<span class="title function_">has</span>(<span class="string">&quot;lemon&quot;</span>));</span><br><span class="line"><span class="comment">// red</span></span><br><span class="line"><span class="comment">// false</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>手写实现深拷贝一解决循环引用问题</title>
-    <link href="https://promptonce.github.io/2024/10/13/%E6%89%8B%E5%86%99%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%80%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/"/>
-    <id>https://promptonce.github.io/2024/10/13/%E6%89%8B%E5%86%99%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%80%E8%A7%A3%E5%86%B3%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8%E9%97%AE%E9%A2%98/</id>
-    <published>2024-10-13T06:27:34.000Z</published>
-    <updated>2024-10-13T06:47:33.481Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">deepClone</span>(<span class="params">source, clonedMap = <span class="keyword">new</span> <span class="built_in">Map</span>()</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="keyword">typeof</span> source !== <span class="string">&quot;object&quot;</span> || source == <span class="literal">null</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> source;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 如果这个对象已经被拷贝过，直接从Map中返回</span></span><br><span class="line">  <span class="keyword">if</span>(clonedMap.<span class="title function_">has</span>(source))&#123;</span><br><span class="line">    <span class="keyword">return</span> clonedMap.<span class="title function_">get</span>(source);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> target = <span class="title class_">Array</span>.<span class="title function_">isArray</span>(source) ? [] : &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 在Map中记录这个对象</span></span><br><span class="line">  clonedMap.<span class="title function_">set</span>(source, target);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">const</span> key <span class="keyword">in</span> source)&#123;</span><br><span class="line">    <span class="keyword">if</span>( <span class="keyword">typeof</span> source[key] === <span class="string">&quot;object&quot;</span> &amp;&amp; source[key] !== <span class="literal">null</span>)&#123;</span><br><span class="line">      target[key] = <span class="title function_">deepClone</span>(source[key], clonedMap);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      target[key] = source[key];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> target;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj = &#123;<span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: &#123;<span class="attr">c</span>: <span class="number">2</span>&#125;&#125;</span><br><span class="line">obj.<span class="property">self</span> = obj;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> copy = <span class="title function_">deepClone</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(copy);</span><br><span class="line"><span class="comment">//&#123; a: 1, b: &#123; c: 2 &#125;, self: [Circular] &#125;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
