@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-23T05:01:20.618Z</updated>
+  <updated>2024-10-23T05:51:30.471Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>yarn&amp;npm常见命令总结</title>
+    <link href="https://promptonce.github.io/2024/10/23/yarn&amp;npm%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/23/yarn&amp;npm%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-23T05:49:22.000Z</published>
+    <updated>2024-10-23T05:51:30.471Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"># ==========================================================</span><br><span class="line"># <span class="variable constant_">NPM</span></span><br><span class="line"># ==========================================================</span><br><span class="line"></span><br><span class="line">npm set registry <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com # 注册模块镜像</span></span><br><span class="line">npm set disturl <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/node # node-gyp 编译依赖的 node 源码镜像</span></span><br><span class="line"></span><br><span class="line">## 以下选择添加</span><br><span class="line">npm set sass_binary_site <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/node-sass # node-sass 二进制包镜像</span></span><br><span class="line">npm set electron_mirror <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/electron/ # electron 二进制包镜像</span></span><br><span class="line">npm set puppeteer_download_host <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors # puppeteer 二进制包镜像</span></span><br><span class="line">npm set chromedriver_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/chromedriver # chromedriver 二进制包镜像</span></span><br><span class="line">npm set operadriver_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/operadriver # operadriver 二进制包镜像</span></span><br><span class="line">npm set phantomjs_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/phantomjs # phantomjs 二进制包镜像</span></span><br><span class="line">npm set selenium_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/selenium # selenium 二进制包镜像</span></span><br><span class="line">npm set node_inspector_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/node-inspector # node-inspector 二进制包镜像</span></span><br><span class="line">npm set sentrycli_cdnurl <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/sentry-cli/ # sentry-cli</span></span><br><span class="line"></span><br><span class="line">npm cache clean --force # 清空缓存</span><br><span class="line"></span><br><span class="line"># ==========================================================</span><br><span class="line"># <span class="variable constant_">YARN</span></span><br><span class="line"># ==========================================================</span><br><span class="line"></span><br><span class="line">yarn config set registry <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com # 注册模块镜像</span></span><br><span class="line">yarn config set disturl <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/node # node-gyp 编译依赖的 node 源码镜像</span></span><br><span class="line"></span><br><span class="line">## 以下选择添加</span><br><span class="line">yarn config set sass_binary_site <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/node-sass # node-sass 二进制包镜像</span></span><br><span class="line">yarn config set electron_mirror <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/electron/ # electron 二进制包镜像</span></span><br><span class="line">yarn config set puppeteer_download_host <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors # puppeteer 二进制包镜像</span></span><br><span class="line">yarn config set chromedriver_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/chromedriver # chromedriver 二进制包镜像</span></span><br><span class="line">yarn config set operadriver_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/operadriver # operadriver 二进制包镜像</span></span><br><span class="line">yarn config set phantomjs_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/phantomjs # phantomjs 二进制包镜像</span></span><br><span class="line">yarn config set selenium_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/selenium # selenium 二进制包镜像</span></span><br><span class="line">yarn config set node_inspector_cdnurl <span class="attr">https</span>:<span class="comment">//registry.npmmirror.com/mirrors/node-inspector # node-inspector 二进制包镜像</span></span><br><span class="line">yarn config set sentrycli_cdnurl <span class="attr">https</span>:<span class="comment">//npmmirror.com/mirrors/sentry-cli/ # sentry-cli</span></span><br><span class="line"></span><br><span class="line">yarn cache clean # 清空缓存</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>开源项目配置到服务器总结</title>
@@ -395,26 +415,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>论文参考文献总结</title>
-    <link href="https://promptonce.github.io/2024/10/14/%E8%AE%BA%E6%96%87%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/10/14/%E8%AE%BA%E6%96%87%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-14T02:56:30.000Z</published>
-    <updated>2024-10-14T02:59:38.715Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="论文参考文献的主要格式"><a href="#论文参考文献的主要格式" class="headerlink" title="论文参考文献的主要格式"></a>论文参考文献的主要格式</h3><p>在学术写作中，最常用的参考文献格式包括APA（美国心理学会）、MLA（现代语言协会）、Chicago（芝加哥格式）和IEEE（主要用于工程和计算机科学）。以下是这几种常见格式的说明和示例。</p><hr><h3 id="1-APA格式-American-Psychological-Association"><a href="#1-APA格式-American-Psychological-Association" class="headerlink" title="1. APA格式 (American Psychological Association)"></a>1. <strong>APA格式 (American Psychological Association)</strong></h3><p>通常用于社会科学和心理学领域。它的特点是以作者的姓氏和出版年份为主。</p><h4 id="书籍示例："><a href="#书籍示例：" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 姓名首字母. (出版年份). <em>书名</em>. 出版地: 出版商.</p><p><strong>示例</strong>:<br>Smith, J. (2020). <em>Cognitive Psychology</em>. New York: Academic Press.</p><h4 id="期刊文章示例："><a href="#期刊文章示例：" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 姓名首字母. (出版年份). 文章标题. <em>期刊名称</em>, 卷号(期号), 页码.</p><p><strong>示例</strong>:<br>Brown, L. (2019). The impact of stress on memory. <em>Journal of Experimental Psychology</em>, 45(3), 123-145.</p><hr><h3 id="2-MLA格式-Modern-Language-Association"><a href="#2-MLA格式-Modern-Language-Association" class="headerlink" title="2. MLA格式 (Modern Language Association)"></a>2. <strong>MLA格式 (Modern Language Association)</strong></h3><p>通常用于人文学科，尤其是文学、语言学等。MLA格式更注重作者和作品的标题。</p><h4 id="书籍示例：-1"><a href="#书籍示例：-1" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. <em>书名</em>. 出版社, 出版年份.</p><p><strong>示例</strong>:<br>Smith, John. <em>Understanding Poetry</em>. Oxford University Press, 2018.</p><h4 id="期刊文章示例：-1"><a href="#期刊文章示例：-1" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. “文章标题.” <em>期刊名称</em>, 卷号, 期号, 出版年份, 页码.</p><p><strong>示例</strong>:<br>Brown, Lisa. “Cultural Approaches to Modern Poetry.” <em>Literary Review</em>, vol. 45, no. 2, 2020, pp. 34-56.</p><hr><h3 id="3-Chicago格式-芝加哥格式"><a href="#3-Chicago格式-芝加哥格式" class="headerlink" title="3. Chicago格式 (芝加哥格式)"></a>3. <strong>Chicago格式 (芝加哥格式)</strong></h3><p>适用于历史学和一些人文学科，有两种主要风格：注释-书目制和作者-日期制。这里介绍的是注释-书目制。</p><h4 id="书籍示例：-2"><a href="#书籍示例：-2" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. <em>书名</em>. 出版地: 出版社, 出版年份.</p><p><strong>示例</strong>:<br>Smith, John. <em>History of the Roman Empire</em>. Chicago: University of Chicago Press, 2017.</p><h4 id="期刊文章示例：-2"><a href="#期刊文章示例：-2" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>作者姓氏, 名字. “文章标题.” <em>期刊名称</em> 卷号, 期号 (出版年份): 页码.</p><p><strong>示例</strong>:<br>Brown, Lisa. “The Role of Women in Roman Politics.” <em>Classical Studies Journal</em> 35, no. 4 (2019): 45-67.</p><hr><h3 id="4-IEEE格式"><a href="#4-IEEE格式" class="headerlink" title="4. IEEE格式"></a>4. <strong>IEEE格式</strong></h3><p>主要用于工程、计算机科学等技术领域。IEEE采用编号系统来标示参考文献。</p><h4 id="书籍示例：-3"><a href="#书籍示例：-3" class="headerlink" title="书籍示例："></a>书籍示例：</h4><p><strong>格式</strong>:<br>[编号] 作者姓名, <em>书名</em>, 版本 (如果有). 出版地: 出版社, 出版年份, 页码.</p><p><strong>示例</strong>:<br>[1] J. Smith, <em>Introduction to Robotics</em>, 2nd ed. New York: McGraw-Hill, 2019, pp. 100-120.</p><h4 id="期刊文章示例：-3"><a href="#期刊文章示例：-3" class="headerlink" title="期刊文章示例："></a>期刊文章示例：</h4><p><strong>格式</strong>:<br>[编号] 作者姓名, “文章标题,” <em>期刊名称</em>, 卷号, 期号, 页码, 出版年份.</p><p><strong>示例</strong>:<br>[2] L. Brown, “Network security challenges,” <em>IEEE Transactions on Computers</em>, vol. 68, no. 3, pp. 45-58, 2018.</p><hr>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;论文参考文献的主要格式&quot;&gt;&lt;a href=&quot;#论文参考文献的主要格式&quot; class=&quot;headerlink&quot; title=&quot;论文参考文献的主要格式&quot;&gt;&lt;/a&gt;论文参考文献的主要格式&lt;/h3&gt;&lt;p&gt;在学术写作中，最常用的参考文献格式包括APA（美国心理学会）、MLA</summary>
       
     
     
