@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-23T06:05:19.119Z</updated>
+  <updated>2024-10-23T08:06:51.280Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在vue项目中，一个组件如何区分是放到pages目录还是components目录</title>
+    <link href="https://promptonce.github.io/2024/10/23/%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%EF%BC%8C%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E6%98%AF%E6%94%BE%E5%88%B0pages%E7%9B%AE%E5%BD%95%E8%BF%98%E6%98%AFcomponents%E7%9B%AE%E5%BD%95/"/>
+    <id>https://promptonce.github.io/2024/10/23/%E5%9C%A8vue%E9%A1%B9%E7%9B%AE%E4%B8%AD%EF%BC%8C%E4%B8%80%E4%B8%AA%E7%BB%84%E4%BB%B6%E5%A6%82%E4%BD%95%E5%8C%BA%E5%88%86%E6%98%AF%E6%94%BE%E5%88%B0pages%E7%9B%AE%E5%BD%95%E8%BF%98%E6%98%AFcomponents%E7%9B%AE%E5%BD%95/</id>
+    <published>2024-10-23T08:06:33.000Z</published>
+    <updated>2024-10-23T08:06:51.280Z</updated>
+    
+    <content type="html"><![CDATA[<p>在Vue项目中，通常将页面级别的组件放置在pages目录下，而将可复用的组件放置在components目录下。这样的组织结构有助于代码的可维护性和可读性。</p><p>Pages目录：用于存放整个应用的页面组件，每个页面通常对应着应用中的一个路由。这些页面组件通常是独立的，不太可能在其他地方被复用。它们负责组织和呈现其他组件，通常包含了数据获取、状态管理等逻辑。</p><p>Components目录：用于存放可复用的组件，这些组件可以在应用的多个页面中使用。它们通常被设计成独立的、高度可定制的组件，例如按钮、导航栏、卡片等等。这样做可以提高代码的重用性，并且有助于保持应用的一致性和可维护性。</p><p>当你在开发Vue项目时，如果一个组件是整个页面的核心部分，那么它应该放在pages目录下；如果一个组件是可以被多个页面复用的，那么它应该放在components目录下。这样做有助于组织你的代码并且使其易于理解和维护。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在Vue项目中，通常将页面级别的组件放置在pages目录下，而将可复用的组件放置在components目录下。这样的组织结构有助于代码的可维护性和可读性。&lt;/p&gt;
+&lt;p&gt;Pages目录：用于存放整个应用的页面组件，每个页面通常对应着应用中的一个路由。这些页面组件通常是独立的</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>WMTS（Web Map Tile Service）</title>
+    <link href="https://promptonce.github.io/2024/10/23/WMTS%EF%BC%88Web-Map-Tile-Service%EF%BC%89/"/>
+    <id>https://promptonce.github.io/2024/10/23/WMTS%EF%BC%88Web-Map-Tile-Service%EF%BC%89/</id>
+    <published>2024-10-23T08:05:28.000Z</published>
+    <updated>2024-10-23T08:06:03.389Z</updated>
+    
+    <content type="html"><![CDATA[<p>本来一个服务器存放瓦片信息就可以了，但是人们发现和地图相关的style和切片方案和服务元数据都可以放在WMTS中</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本来一个服务器存放瓦片信息就可以了，但是人们发现和地图相关的style和切片方案和服务元数据都可以放在WMTS中&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>yarn&amp;npm常见命令总结</title>
@@ -375,46 +417,6 @@
       
     <summary type="html">&lt;hr&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript构造函数继承</title>
-    <link href="https://promptonce.github.io/2024/10/14/JavaScript%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF/"/>
-    <id>https://promptonce.github.io/2024/10/14/JavaScript%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF/</id>
-    <published>2024-10-14T05:11:32.000Z</published>
-    <updated>2024-10-14T05:22:54.129Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">sayHello</span> === child2.<span class="property">sayHello</span>);<span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parentObj = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parentObj.<span class="property">a</span>);<span class="comment">//我是父类prototype上的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">a</span>)<span class="comment">//undefined</span></span><br></pre></td></tr></table></figure><p>优点：这种继承方式的好处是，原型属性不会被共享。<br>缺点：它不能继承父类prototype上的属性</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>原型链继承</title>
-    <link href="https://promptonce.github.io/2024/10/14/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF/"/>
-    <id>https://promptonce.github.io/2024/10/14/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF/</id>
-    <published>2024-10-14T04:58:43.000Z</published>
-    <updated>2024-10-14T05:18:47.604Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>)  &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;parent&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">getName</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;child&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="title function_">getName</span>());<span class="comment">// &quot;child&quot;</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">arr</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类继承父类，这里是关键，实现原型链继承</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化子类</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title function_">child</span>();</span><br><span class="line"></span><br><span class="line">child1.<span class="property">arr</span>.<span class="title function_">push</span>(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">arr</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child2.<span class="property">arr</span>)</span><br></pre></td></tr></table></figure><p>原型链继承的一个主要问题是包含引用类型值的原型属性会被所有实例共享。换而言之，如果一个实例改变了该属性，那么其他实例的该属性也会被改变</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
