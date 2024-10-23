@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-22T08:01:11.838Z</updated>
+  <updated>2024-10-23T05:01:20.618Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>开源项目配置到服务器总结</title>
+    <link href="https://promptonce.github.io/2024/10/23/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/23/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-23T04:58:46.000Z</published>
+    <updated>2024-10-23T05:01:20.618Z</updated>
+    
+    <content type="html"><![CDATA[<p>在本地设备打包好所有依赖，通过服务器连接工具上传整个安装包，相当于执行离线安装。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在本地设备打包好所有依赖，通过服务器连接工具上传整个安装包，相当于执行离线安装。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>动态规划算法</title>
@@ -394,26 +415,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;论文参考文献的主要格式&quot;&gt;&lt;a href=&quot;#论文参考文献的主要格式&quot; class=&quot;headerlink&quot; title=&quot;论文参考文献的主要格式&quot;&gt;&lt;/a&gt;论文参考文献的主要格式&lt;/h3&gt;&lt;p&gt;在学术写作中，最常用的参考文献格式包括APA（美国心理学会）、MLA</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>前端防抖</title>
-    <link href="https://promptonce.github.io/2024/10/13/%E5%89%8D%E7%AB%AF%E9%98%B2%E6%8A%96/"/>
-    <id>https://promptonce.github.io/2024/10/13/%E5%89%8D%E7%AB%AF%E9%98%B2%E6%8A%96/</id>
-    <published>2024-10-13T08:38:38.000Z</published>
-    <updated>2024-10-13T08:46:48.082Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前端防抖（Debounce）详解及应用"><a href="#前端防抖（Debounce）详解及应用" class="headerlink" title="前端防抖（Debounce）详解及应用"></a>前端防抖（Debounce）详解及应用</h3><p>在前端开发中，用户的操作可能会频繁触发事件，如输入框输入、窗口大小调整、按钮点击等。如果每次事件都立即触发相应的处理逻辑，可能会导致性能问题，甚至让用户体验变差。为了解决这些问题，我们可以使用<strong>防抖（Debounce）</strong>技术。防抖可以有效减少高频事件的处理次数，提高页面性能。</p><p>本文将从防抖的定义、实现、应用场景等多个方面进行详细讲解。</p><hr><h3 id="一、什么是防抖？"><a href="#一、什么是防抖？" class="headerlink" title="一、什么是防抖？"></a>一、什么是防抖？</h3><p><strong>防抖</strong>的基本概念是：<strong>在事件触发后，等待一定时间才执行回调函数，如果在等待时间内事件再次触发，则重新计时</strong>。防抖的主要目的在于减少不必要的高频触发，确保函数仅在一段时间后且没有其他触发事件时才执行。</p><h4 id="防抖的典型例子："><a href="#防抖的典型例子：" class="headerlink" title="防抖的典型例子："></a>防抖的典型例子：</h4><p>用户在搜索框中输入时，可能每个字符输入都会触发搜索请求。如果用户连续输入多个字符，就会发起多次请求。但实际上我们只希望用户停止输入时，再触发一次搜索。这时候，防抖就可以派上用场了。</p><h3 id="二、防抖的原理及实现"><a href="#二、防抖的原理及实现" class="headerlink" title="二、防抖的原理及实现"></a>二、防抖的原理及实现</h3><h4 id="1-核心原理"><a href="#1-核心原理" class="headerlink" title="1. 核心原理"></a>1. 核心原理</h4><p>防抖的核心原理是利用<strong>定时器</strong>，在事件触发时，不立即执行回调函数，而是延迟执行。如果在延迟期间事件再次触发，则清除之前的定时器，重新开始计时。只有当设定的延迟时间结束且没有新事件触发时，才会执行回调函数。</p><h4 id="2-防抖的基本实现"><a href="#2-防抖的基本实现" class="headerlink" title="2. 防抖的基本实现"></a>2. 防抖的基本实现</h4><p>我们可以通过 <code>setTimeout</code> 和 <code>clearTimeout</code> 来实现防抖功能：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, delay</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer;  <span class="comment">// 用于保存定时器的ID</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (timer) <span class="built_in">clearTimeout</span>(timer);  <span class="comment">// 如果定时器存在，先清除</span></span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);        <span class="comment">// 在指定延迟后执行函数</span></span><br><span class="line">        &#125;, delay);</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这个 <code>debounce</code> 函数接受两个参数：</p><ul><li><code>fn</code>：需要防抖的函数。</li><li><code>delay</code>：延迟时间（毫秒）。</li></ul><p><strong>关键点</strong>在于：每次调用返回的函数时，都会重置定时器，只有在最后一次触发后的延迟时间过去，才会执行传入的函数。</p><h4 id="3-防抖函数的使用"><a href="#3-防抖函数的使用" class="headerlink" title="3. 防抖函数的使用"></a>3. 防抖函数的使用</h4><p>我们可以将防抖应用在用户的输入事件中，比如搜索框：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">search</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;搜索请求发起&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> debouncedSearch = <span class="title function_">debounce</span>(search, <span class="number">300</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>).<span class="title function_">addEventListener</span>(<span class="string">&#x27;input&#x27;</span>, debouncedSearch);</span><br></pre></td></tr></table></figure><p>在上面的例子中，每次用户在输入框中输入字符时，都会触发 <code>input</code> 事件。由于 <code>search</code> 函数被防抖处理，只有用户停止输入并且超过300毫秒后，搜索请求才会真正发出。</p><h3 id="三、防抖的应用场景"><a href="#三、防抖的应用场景" class="headerlink" title="三、防抖的应用场景"></a>三、防抖的应用场景</h3><h4 id="1-搜索框输入"><a href="#1-搜索框输入" class="headerlink" title="1. 搜索框输入"></a>1. <strong>搜索框输入</strong></h4><p>在用户输入时，避免每次字符变化都发起请求。防抖可以确保只在用户停止输入后的一段时间触发搜索请求。</p><h4 id="2-窗口调整大小"><a href="#2-窗口调整大小" class="headerlink" title="2. 窗口调整大小"></a>2. <strong>窗口调整大小</strong></h4><p>当用户调整浏览器窗口大小时，频繁触发 <code>resize</code> 事件，可能会导致页面性能下降。防抖可以保证在用户停止调整窗口大小后一段时间再执行相关操作。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">debounce</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;窗口大小调整后处理逻辑&#x27;</span>);</span><br><span class="line">&#125;, <span class="number">300</span>));</span><br></pre></td></tr></table></figure><h4 id="3-按钮点击"><a href="#3-按钮点击" class="headerlink" title="3. 按钮点击"></a>3. <strong>按钮点击</strong></h4><p>有时我们需要防止按钮被短时间内重复点击，如避免表单多次提交。通过防抖，可以防止按钮被频繁点击触发事件。</p><h4 id="4-滚动事件"><a href="#4-滚动事件" class="headerlink" title="4. 滚动事件"></a>4. <strong>滚动事件</strong></h4><p>滚动页面时，会触发 <code>scroll</code> 事件，如果绑定了复杂的处理逻辑，可能会导致性能问题。防抖可以减少滚动时触发处理函数的频率。</p><h3 id="四、防抖和节流的区别"><a href="#四、防抖和节流的区别" class="headerlink" title="四、防抖和节流的区别"></a>四、防抖和节流的区别</h3><p>在前端优化中，防抖（Debounce）和节流（Throttle）是常用的两种技术。虽然它们都用于限制函数的触发频率，但原理和应用场景有所不同。</p><ul><li><strong>防抖（Debounce）</strong>：在连续事件触发的情况下，只执行最后一次触发后的函数。例如：用户输入完成后的搜索请求。</li><li><strong>节流（Throttle）</strong>：确保在一定时间间隔内，函数只执行一次。例如：滚动条滚动时，控制每100ms执行一次滚动逻辑。</li></ul><p>两者的区别可以简单理解为：</p><ul><li><strong>防抖</strong>：电梯等人，如果有新乘客进入，电梯门重新打开，直到没有人进入才开始运行。</li><li><strong>节流</strong>：定时发车，公交车无论人是否已到齐，每隔固定时间发车一次。</li></ul><h3 id="五、带立即执行的防抖"><a href="#五、带立即执行的防抖" class="headerlink" title="五、带立即执行的防抖"></a>五、带立即执行的防抖</h3><p>在某些情况下，我们可能希望函数在首次触发时立即执行，而不是等到延迟结束后才执行。例如：在用户开始输入时立即发起一个搜索请求，然后在后续输入时使用防抖。</p><p>为此，我们可以在防抖函数中增加一个<code>immediate</code>参数来实现：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span>(<span class="params">fn, delay, immediate = <span class="literal">false</span></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> timer;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> callNow = immediate &amp;&amp; !timer;  <span class="comment">// 判断是否立即执行</span></span><br><span class="line">        <span class="keyword">if</span> (timer) <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">        timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">            timer = <span class="literal">null</span>;</span><br><span class="line">            <span class="keyword">if</span> (!immediate) fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">        &#125;, delay);</span><br><span class="line">        <span class="keyword">if</span> (callNow) fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);  <span class="comment">// 立即执行</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>在这种实现中，如果 <code>immediate</code> 参数为 <code>true</code>，则函数在第一次事件触发时立即执行，然后在延迟时间内不会再次触发。</p><h3 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a>六、总结</h3><p>防抖（Debounce）是一种常用的前端优化手段，用于处理高频事件，通过延迟执行回调函数来减少不必要的操作，提升性能。它适用于输入框搜索、窗口调整、按钮点击等场景。</p><p>通过本文的讲解，相信你已经掌握了防抖的概念、原理以及实际应用。防抖技术简单而高效，合理使用防抖可以显著提升页面性能并改善用户体验。在开发中根据不同的场景选择合适的优化方式（防抖或节流），能让应用更加高效和顺畅。</p><hr><p><strong>最后一点小建议</strong>：在复杂应用中，防抖技术需要和业务逻辑合理搭配。例如，在输入框防抖的场景中，可能还需要考虑到用户的快速输入与响应速度间的平衡。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;前端防抖（Debounce）详解及应用&quot;&gt;&lt;a href=&quot;#前端防抖（Debounce）详解及应用&quot; class=&quot;headerlink&quot; title=&quot;前端防抖（Debounce）详解及应用&quot;&gt;&lt;/a&gt;前端防抖（Debounce）详解及应用&lt;/h3&gt;&lt;p&gt;在前</summary>
       
     
     
