@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-23T08:06:51.280Z</updated>
+  <updated>2024-10-24T14:05:36.497Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ps中新建图层分辨率，像素，厘米总结</title>
+    <link href="https://promptonce.github.io/2024/10/24/ps%E4%B8%AD%E6%96%B0%E5%BB%BA%E5%9B%BE%E5%B1%82%E5%88%86%E8%BE%A8%E7%8E%87%EF%BC%8C%E5%83%8F%E7%B4%A0%EF%BC%8C%E5%8E%98%E7%B1%B3%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/24/ps%E4%B8%AD%E6%96%B0%E5%BB%BA%E5%9B%BE%E5%B1%82%E5%88%86%E8%BE%A8%E7%8E%87%EF%BC%8C%E5%83%8F%E7%B4%A0%EF%BC%8C%E5%8E%98%E7%B1%B3%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-24T12:47:51.000Z</published>
+    <updated>2024-10-24T14:05:36.497Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="如何理解-Photoshop-中的分辨率、像素与物理尺寸：打印时的最佳实践"><a href="#如何理解-Photoshop-中的分辨率、像素与物理尺寸：打印时的最佳实践" class="headerlink" title="如何理解 Photoshop 中的分辨率、像素与物理尺寸：打印时的最佳实践"></a><strong>如何理解 Photoshop 中的分辨率、像素与物理尺寸：打印时的最佳实践</strong></h3><p>在设计或打印图像时，我们常常会遇到一些技术细节，比如<strong>像素</strong>、<strong>PPI（像素每英寸）</strong>、和<strong>物理尺寸</strong>。这些概念看似简单，但它们之间的关系决定了图像的质量和打印效果。如果你曾经想要打印一张图片，并发现打印出来的效果与预期不同，图像可能模糊或尺寸不对，那么你可能需要更好地理解它们之间的联系。本文将详细解析这些概念，并教你如何在 Photoshop 中使用这些参数进行正确的设置，确保打印出高质量的图像。</p><hr><h3 id="像素-vs-PPI-vs-物理尺寸：它们的区别是什么？"><a href="#像素-vs-PPI-vs-物理尺寸：它们的区别是什么？" class="headerlink" title="像素 vs. PPI vs. 物理尺寸：它们的区别是什么？"></a><strong>像素 vs. PPI vs. 物理尺寸：它们的区别是什么？</strong></h3><h4 id="1-像素（Pixel）"><a href="#1-像素（Pixel）" class="headerlink" title="1. 像素（Pixel）"></a>1. <strong>像素（Pixel）</strong></h4><p>像素是图像的基本单位。任何数字图像都是由一个个小像素点组成的，每个像素都有不同的颜色和亮度。当你在 Photoshop 中看到一个512×512像素的图片，意味着这个图片在屏幕上是由512个宽度和512个高度的像素点构成。</p><p>像素本身没有物理尺寸的概念，它是纯粹的数字单位，主要影响图像在屏幕上的显示大小。</p><h4 id="2-PPI（像素每英寸，Pixel-Per-Inch）"><a href="#2-PPI（像素每英寸，Pixel-Per-Inch）" class="headerlink" title="2. PPI（像素每英寸，Pixel Per Inch）"></a>2. <strong>PPI（像素每英寸，Pixel Per Inch）</strong></h4><p>PPI 表示每英寸包含多少个像素，它主要影响图像的打印质量和清晰度。较高的PPI意味着每英寸包含更多的像素，图像看起来更精细；较低的PPI则意味着图像在物理尺寸上变大，但像素分布较稀疏，可能导致图像变得模糊。</p><p>常见的PPI值：</p><ul><li><strong>72 PPI</strong>：适用于屏幕显示，如网页设计。</li><li><strong>300 PPI</strong>：用于高质量的打印输出，能确保清晰细腻的图像效果。</li></ul><h4 id="3-物理尺寸"><a href="#3-物理尺寸" class="headerlink" title="3. 物理尺寸"></a>3. <strong>物理尺寸</strong></h4><p>物理尺寸是图像在现实世界中的实际大小，如厘米或英寸。它与像素数和PPI直接相关。举个例子，如果你有一张分辨率为300 PPI的图片，并且宽度是1000像素，那么打印出来的物理宽度就是：<br>[<br>\frac{1000 , \text{像素}}{300 , \text{PPI}} &#x3D; 3.33 , \text{英寸} , (约 8.46 , \text{厘米})<br>]<br>这表明在300 PPI的分辨率下，1000像素宽的图像打印尺寸为3.33英寸。</p><hr><h3 id="PPI-与物理尺寸的关系"><a href="#PPI-与物理尺寸的关系" class="headerlink" title="PPI 与物理尺寸的关系"></a><strong>PPI 与物理尺寸的关系</strong></h3><p>PPI与物理尺寸之间的关系可以总结为：<strong>PPI越高，打印的物理尺寸越小；PPI越低，打印的物理尺寸越大</strong>。然而，较低的PPI会导致图像在打印时失去清晰度，因为每个像素对应的物理面积变大，像素被拉伸。</p><h4 id="例子："><a href="#例子：" class="headerlink" title="例子："></a>例子：</h4><p>假设你有一张512×512像素的图片，并想打印成不同的尺寸：</p><ul><li><strong>300 PPI</strong>：打印出的尺寸约为 <strong>1.71×1.71英寸</strong>（4.35×4.35厘米），图像非常清晰。</li><li><strong>100 PPI</strong>：打印出的尺寸变为 <strong>5.12×5.12英寸</strong>（13×13厘米），图像变大，但清晰度下降。</li><li><strong>72 PPI</strong>：打印尺寸增至 <strong>7.11×7.11英寸</strong>（约18×18厘米），但细节变得模糊，适合屏幕显示，不适合高质量打印。</li></ul><hr><h3 id="如何在-Photoshop-中设置物理尺寸与分辨率"><a href="#如何在-Photoshop-中设置物理尺寸与分辨率" class="headerlink" title="如何在 Photoshop 中设置物理尺寸与分辨率"></a><strong>如何在 Photoshop 中设置物理尺寸与分辨率</strong></h3><p>当你准备打印图片时，以下是你在 Photoshop 中的操作步骤：</p><ol><li><strong>打开图像后，选择“图像 &gt; 图像大小”</strong>。</li><li>在弹出的对话框中，你可以调整图像的<strong>物理尺寸（宽度和高度）</strong>，并设置<strong>分辨率（PPI）</strong>。</li><li>勾选“重采样”选项，如果你希望 Photoshop 通过增加或减少像素数来适应你的物理尺寸和分辨率要求。</li><li>Photoshop 会根据你设定的PPI和物理尺寸，自动计算合适的像素数，或者调整现有的像素来满足你的需求。</li></ol><p><strong>重要提示</strong>：如果你不调整PPI而仅仅修改物理尺寸，Photoshop仍然会打印出你指定的尺寸，但图片可能会模糊。如果你想确保图像在指定的物理尺寸下保持高质量，建议使用300 PPI的分辨率。</p><hr><h3 id="为什么指定物理尺寸时要关注PPI？"><a href="#为什么指定物理尺寸时要关注PPI？" class="headerlink" title="为什么指定物理尺寸时要关注PPI？"></a><strong>为什么指定物理尺寸时要关注PPI？</strong></h3><p>在打印图像时，<strong>像素数</strong>是固定的，不能任意放大或缩小。当你指定了物理尺寸，PPI 决定了图像在这个物理尺寸下的清晰度。如果像素数不足，强行将图像打印到过大的物理尺寸上，图像会变得模糊。这就是为什么打印时要调整 PPI 来匹配图像的物理尺寸。</p><p><strong>换句话说，任意物理尺寸并不总是合适的。你需要确保图片的像素数和PPI值能够适应你所希望的打印大小和清晰度要求。</strong></p><hr><h3 id="总结：如何选择合适的-PPI-和打印尺寸"><a href="#总结：如何选择合适的-PPI-和打印尺寸" class="headerlink" title="总结：如何选择合适的 PPI 和打印尺寸"></a><strong>总结：如何选择合适的 PPI 和打印尺寸</strong></h3><p>在 Photoshop 中，物理尺寸、PPI 和像素数三者紧密相关。为了确保打印质量：</p><ul><li>如果你需要一个高质量的打印图像，通常建议使用 <strong>300 PPI</strong> 或更高的分辨率。</li><li>低于 <strong>100 PPI</strong> 的图像可能会在打印时显得模糊，尤其当你要求较大的物理尺寸时。</li><li>在打印前，确保根据图像的实际像素数和分辨率设置合理的物理尺寸。</li></ul><p>通过设定正确的 PPI 和尺寸，Photoshop 可以帮助你实现精确的打印效果，避免不清晰或不合适的尺寸问题。</p><hr><p>通过理解 PPI 和物理尺寸的关系，你可以更好地控制图像的输出质量，确保最终打印效果符合你的期望。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;如何理解-Photoshop-中的分辨率、像素与物理尺寸：打印时的最佳实践&quot;&gt;&lt;a href=&quot;#如何理解-Photoshop-中的分辨率、像素与物理尺寸：打印时的最佳实践&quot; class=&quot;headerlink&quot; title=&quot;如何理解 Photoshop 中的分</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>在vue项目中，一个组件如何区分是放到pages目录还是components目录</title>
@@ -396,27 +416,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript组合继承</title>
-    <link href="https://promptonce.github.io/2024/10/14/JavaScript%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/"/>
-    <id>https://promptonce.github.io/2024/10/14/JavaScript%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/</id>
-    <published>2024-10-14T05:26:21.000Z</published>
-    <updated>2024-10-14T05:32:14.372Z</updated>
-    
-    <content type="html"><![CDATA[<hr><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">sayHello</span> === child2.<span class="property">sayHello</span>);<span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parentObj = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parentObj.<span class="property">a</span>);<span class="comment">//我是父类prototype上的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">a</span>)<span class="comment">//我是父类prototype上的属性</span></span><br></pre></td></tr></table></figure><p>优点：</p><ol><li>原型属性不会被共享。</li><li>可以继承父类的原型链上的属性和方法。<br>缺点：</li><li>调用了 2 次 Parent()。</li><li>它在 child 的 prototype 上添加了父类的属性和方法。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;hr&gt;
-&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;</summary>
       
     
     
