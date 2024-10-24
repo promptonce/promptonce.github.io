@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-24T14:05:36.497Z</updated>
+  <updated>2024-10-24T17:38:12.040Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从二叉树遍历视角看递归思想</title>
+    <link href="https://promptonce.github.io/2024/10/25/%E4%BB%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E8%A7%86%E8%A7%92%E7%9C%8B%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3/"/>
+    <id>https://promptonce.github.io/2024/10/25/%E4%BB%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E8%A7%86%E8%A7%92%E7%9C%8B%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3/</id>
+    <published>2024-10-24T17:13:24.000Z</published>
+    <updated>2024-10-24T17:38:12.040Z</updated>
+    
+    <content type="html"><![CDATA[<p>比如中序遍历左中右（适用于一棵仅有三个节点的小二叉树和由无数小的二叉树构成的大二叉树，区别在与小二叉树的子树是一个节点（最小的树），大二叉树的是一棵较大的树，都是符合二叉树的定义）</p><p>二叉树是一个抽象的概念，不要被名字误导，二叉树存储的信息包括二叉树的节点值和节点与节点之间的关系，理解了这层逻辑，叫二叉啥都无所谓。</p><p>中序遍历就是对二叉树中存储的信息进行读取的一种方式。读取的原则是先读取左子树的信息，再读取根节点的信息，再读取右子树的信息，这个简称逻辑A（如果子树中还有更小的子树-左子树或右子树, 根节点就是自身，不存在多态现象，根节点起连接节点关系的作用，这个子树中也执行同样的逻辑A，那么就可以将整棵树的信息按照中序遍历这种信息提取方式进行读取），其他遍历顺序同理。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;比如中序遍历左中右（适用于一棵仅有三个节点的小二叉树和由无数小的二叉树构成的大二叉树，区别在与小二叉树的子树是一个节点（最小的树），大二叉树的是一棵较大的树，都是符合二叉树的定义）&lt;/p&gt;
+&lt;p&gt;二叉树是一个抽象的概念，不要被名字误导，二叉树存储的信息包括二叉树的节点值和节</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>回溯算法总结</title>
+    <link href="https://promptonce.github.io/2024/10/24/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2024/10/24/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</id>
+    <published>2024-10-24T15:28:21.000Z</published>
+    <updated>2024-10-24T17:41:57.923Z</updated>
+    
+    <content type="html"><![CDATA[<p>有递归就有回溯，因为如果递归进去如果没有找到结果就需要回到之前的位置往另一个方向递归（比如遍历树的情况），有的递归不容易看出回溯可能是没有用完全体的递归。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;有递归就有回溯，因为如果递归进去如果没有找到结果就需要回到之前的位置往另一个方向递归（比如遍历树的情况），有的递归不容易看出回溯可能是没有用完全体的递归。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>ps中新建图层分辨率，像素，厘米总结</title>
@@ -371,46 +413,6 @@
     <updated>2024-10-15T08:16:13.132Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj1&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj2&quot;</span>,</span><br><span class="line">  <span class="attr">obj1</span>: obj1,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj2.<span class="property">obj1</span>.<span class="title function_">foo</span>();<span class="comment">// &#123;name: &quot;obj1&quot;, foo: foo()&#125;</span></span><br></pre></td></tr></table></figure><p>谁直接调用foo（换而言之，谁离foo更近），那么foo()中的this就指向谁。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>this在运行时绑定还是编译时绑定</title>
-    <link href="https://promptonce.github.io/2024/10/15/this%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%91%E5%AE%9A%E8%BF%98%E6%98%AF%E7%BC%96%E8%AF%91%E6%97%B6%E7%BB%91%E5%AE%9A/"/>
-    <id>https://promptonce.github.io/2024/10/15/this%E5%9C%A8%E8%BF%90%E8%A1%8C%E6%97%B6%E7%BB%91%E5%AE%9A%E8%BF%98%E6%98%AF%E7%BC%96%E8%AF%91%E6%97%B6%E7%BB%91%E5%AE%9A/</id>
-    <published>2024-10-15T07:49:31.000Z</published>
-    <updated>2024-10-15T08:05:17.065Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义一个函数</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.调用方式一： 直接调用</span></span><br><span class="line"><span class="title function_">foo</span>(); <span class="comment">// window</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2.调用方式二：将foo放到一个对象中，再调用</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line">obj.<span class="title function_">foo</span>();<span class="comment">// object对象</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3.调用方式三： 通过call或者apply调用</span></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="string">&quot;ctgu&quot;</span>);<span class="comment">// string &#123;ctgu对象&#125;</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript寄生组合继承</title>
-    <link href="https://promptonce.github.io/2024/10/14/JavaScript%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/"/>
-    <id>https://promptonce.github.io/2024/10/14/JavaScript%E5%AF%84%E7%94%9F%E7%BB%84%E5%90%88%E7%BB%A7%E6%89%BF/</id>
-    <published>2024-10-14T05:34:20.000Z</published>
-    <updated>2024-10-14T05:49:10.115Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个没有实例方法的父类实例作为子类的原型</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line"><span class="comment">// 修复构造函数的指向</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> = <span class="title class_">Child</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">sayHello</span> === child2.<span class="property">sayHello</span>);<span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> parentObj = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(parentObj.<span class="property">a</span>);<span class="comment">//我是父类prototype上的属性</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">a</span>)<span class="comment">//我是父类prototype上的属性</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 父类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">sayHello</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">a</span> = <span class="string">&quot;我是父类prototype上的属性&quot;</span>;</span><br><span class="line"><span class="comment">// 子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="title class_">Parent</span>.<span class="title function_">call</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">childFunction</span> = <span class="function">()=&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我是child方法&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建一个没有实例方法的父类实例作为子类的原型</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>);</span><br><span class="line"><span class="comment">// 修复构造函数的指向</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">constructor</span> = <span class="title class_">Child</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建两个Child实例</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line">child1.<span class="title function_">childFunction</span>();</span><br><span class="line"><span class="comment">// TypeError: child1.childFunction is not a function</span></span><br><span class="line"><span class="comment">//     at &lt;anonymous&gt;:25:8</span></span><br><span class="line"><span class="comment">//     at mn (&lt;anonymous&gt;:16:5455)</span></span><br></pre></td></tr></table></figure><p>优点：<br>1 ，原型属性不会被共享<br>2 ，可以继承父类的原型链上的属性和方法<br>3 ．只调用了 1 次 Parent(), 因此，它不会在 Child 的prototype 上添加 Parent 的属性和方法。<br>缺点：<br> Child.prototype的原始属性和方法会丢失。</p>]]></content>
     
     
       
