@@ -42,7 +42,7 @@
     <link href="https://promptonce.github.io/2024/10/24/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/"/>
     <id>https://promptonce.github.io/2024/10/24/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/</id>
     <published>2024-10-24T15:28:21.000Z</published>
-    <updated>2024-10-24T17:41:57.923Z</updated>
+    <updated>2024-10-25T04:50:32.326Z</updated>
     
     <content type="html"><![CDATA[<p>有递归就有回溯，因为如果递归进去如果没有找到结果就需要回到之前的位置往另一个方向递归（比如遍历树的情况），有的递归不容易看出回溯可能是没有用完全体的递归。</p>]]></content>
     
