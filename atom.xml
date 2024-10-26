@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-24T17:38:12.040Z</updated>
+  <updated>2024-10-26T14:41:32.675Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>itopmap网站首页UI分析</title>
+    <link href="https://promptonce.github.io/2024/10/26/itopmap%E7%BD%91%E7%AB%99%E9%A6%96%E9%A1%B5UI%E5%88%86%E6%9E%90/"/>
+    <id>https://promptonce.github.io/2024/10/26/itopmap%E7%BD%91%E7%AB%99%E9%A6%96%E9%A1%B5UI%E5%88%86%E6%9E%90/</id>
+    <published>2024-10-26T14:26:47.000Z</published>
+    <updated>2024-10-26T14:41:32.675Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-地图的居中对齐和填充布局"><a href="#1-地图的居中对齐和填充布局" class="headerlink" title="1. 地图的居中对齐和填充布局"></a>1. <strong>地图的居中对齐和填充布局</strong></h3><ul><li>地图区域在整个页面中被居中显示，填充整个屏幕的可视区域。这通常是通过 <strong>flex布局</strong> 或 <strong>CSS grid布局</strong> 实现的，结合 <code>justify-content: center</code> 和 <code>align-items: center</code> 来水平和垂直居中。</li><li>地图本身会自动填满可用空间，保持响应性，可能使用了 <code>position: relative</code> 配合 <code>width: 100%</code> 和 <code>height: 100vh</code> 的设置，以确保地图在浏览器窗口大小变化时仍能适应。</li></ul><h3 id="2-浮动的工具栏和按钮"><a href="#2-浮动的工具栏和按钮" class="headerlink" title="2. 浮动的工具栏和按钮"></a>2. <strong>浮动的工具栏和按钮</strong></h3><ul><li>页面左侧和底部的几个按钮（放大镜、回退按钮、层级选择按钮等）是独立浮动的。它们的位置可能是通过 <strong>绝对定位</strong>（<code>position: absolute</code>）实现的，以便于将它们固定在地图上某个具体的坐标。</li><li><code>z-index</code> 可能用于这些工具栏按钮，以确保它们始终显示在地图之上，而不被地图或其他元素覆盖。</li></ul><h3 id="3-按钮组的相对布局和排列"><a href="#3-按钮组的相对布局和排列" class="headerlink" title="3. 按钮组的相对布局和排列"></a>3. <strong>按钮组的相对布局和排列</strong></h3><ul><li>底部的 Esri、BingMap、OSM 按钮看起来是成组显示的，应该是一个<strong>水平排列的 flexbox 容器</strong>。可能使用了 <code>display: flex</code> 和 <code>justify-content: space-around</code> 或 <code>justify-content: center</code> 来让按钮均匀分布，且保持在页面底部。</li><li>它们的位置可能通过 <code>position: absolute</code> 或 <code>position: fixed</code> 与底部对齐（例如 <code>bottom: 20px</code>），确保这些按钮在页面滚动时保持固定位置。</li></ul><h3 id="4-顶部菜单的相对和绝对布局"><a href="#4-顶部菜单的相对和绝对布局" class="headerlink" title="4. 顶部菜单的相对和绝对布局"></a>4. <strong>顶部菜单的相对和绝对布局</strong></h3><ul><li>顶部菜单（“提交订单”、“开启&#x2F;关闭Roi”）是悬浮在地图顶部的，通常是使用 <strong>绝对定位</strong> 或 <strong>固定定位</strong>（<code>position: fixed</code>），使其在页面滚动时也保持在视窗顶部不动。</li><li><code>top</code> 和 <code>left</code> 属性可以用来精确控制这些按钮的位置，而 <code>z-index</code> 则用于确保它们位于地图之上，始终可见。</li></ul><h3 id="5-图标和按钮的对齐"><a href="#5-图标和按钮的对齐" class="headerlink" title="5. 图标和按钮的对齐"></a>5. <strong>图标和按钮的对齐</strong></h3><ul><li>左侧一列工具栏图标的排列方式可以通过 <strong>垂直 flexbox</strong> 布局或 <strong>垂直对齐的 CSS 样式</strong> 实现，使所有按钮按顺序纵向排列。</li><li>这些按钮的位置可能是通过 <code>position: fixed</code> 或 <code>position: absolute</code> 实现的，与地图内容相对布局，不会在地图移动时发生变化。</li></ul><h3 id="6-z-index-的应用"><a href="#6-z-index-的应用" class="headerlink" title="6. z-index 的应用"></a>6. <strong>z-index 的应用</strong></h3><ul><li><code>z-index</code> 在此页面中起着重要作用，确保悬浮按钮（如工具栏按钮和底部地图切换按钮）总是显示在地图之上。通常 z-index 值较高的元素会覆盖值较低的元素，确保了用户交互性和可视性。</li></ul><h3 id="7-响应式设计"><a href="#7-响应式设计" class="headerlink" title="7. 响应式设计"></a>7. <strong>响应式设计</strong></h3><ul><li>地图本身具有响应性，在不同屏幕尺寸上会自动缩放。可能使用了媒体查询（<code>@media</code>）或者相对单位（如 <code>%</code> 或 <code>vh/vw</code>）来确保在不同设备和分辨率上都能自适应。</li></ul><h3 id="8-CSS-动画效果"><a href="#8-CSS-动画效果" class="headerlink" title="8. CSS 动画效果"></a>8. <strong>CSS 动画效果</strong></h3><ul><li>这些按钮在点击时可能有动画效果，比如放大、缩小或阴影变化，可以通过 <strong>CSS transitions</strong> 或 <strong>animations</strong> 实现。例如 <code>transform: scale(1.1)</code> 可以用来实现按钮点击后的轻微放大效果。</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这个页面布局运用了多种前端布局技术，包括 <code>flexbox</code>、<code>absolute positioning</code>、<code>z-index</code>、<code>relative positioning</code> 和响应式布局等，确保了地图和悬浮工具栏按钮的交互性和可视性。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-地图的居中对齐和填充布局&quot;&gt;&lt;a href=&quot;#1-地图的居中对齐和填充布局&quot; class=&quot;headerlink&quot; title=&quot;1. 地图的居中对齐和填充布局&quot;&gt;&lt;/a&gt;1. &lt;strong&gt;地图的居中对齐和填充布局&lt;/strong&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>itopmap网站首页图层切换点击部分失效问题</title>
+    <link href="https://promptonce.github.io/2024/10/26/itopmap%E7%BD%91%E7%AB%99%E9%A6%96%E9%A1%B5%E5%9B%BE%E5%B1%82%E5%88%87%E6%8D%A2%E7%82%B9%E5%87%BB%E9%83%A8%E5%88%86%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/"/>
+    <id>https://promptonce.github.io/2024/10/26/itopmap%E7%BD%91%E7%AB%99%E9%A6%96%E9%A1%B5%E5%9B%BE%E5%B1%82%E5%88%87%E6%8D%A2%E7%82%B9%E5%87%BB%E9%83%A8%E5%88%86%E5%A4%B1%E6%95%88%E9%97%AE%E9%A2%98/</id>
+    <published>2024-10-26T14:08:22.000Z</published>
+    <updated>2024-10-26T14:08:22.954Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>从二叉树遍历视角看递归思想</title>
@@ -373,46 +407,6 @@
     <updated>2024-10-15T15:22:09.111Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Student</span>(<span class="params">name</span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>); <span class="comment">// Student &#123;&#125;</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = name; <span class="comment">// Student &#123;name : &quot;codereasy&quot;&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 通过new关键字创建一个新对象的步骤是什么、构造函数是如何创建新对象的？</span></span><br><span class="line"><span class="keyword">var</span> xiaoming = <span class="keyword">new</span> <span class="title class_">Student</span>(<span class="string">&quot;codereasy&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(xiaoming);</span><br></pre></td></tr></table></figure><p>在构造函数中添加return，如果return的是对象，则直接返回该对象，如果return的是基本类型，则return语句无效，仍然返回我们创建的新对象。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>显式绑定</title>
-    <link href="https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/"/>
-    <id>https://promptonce.github.io/2024/10/15/%E6%98%BE%E5%BC%8F%E7%BB%91%E5%AE%9A/</id>
-    <published>2024-10-15T08:34:18.000Z</published>
-    <updated>2024-10-15T13:14:48.119Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="variable language_">window</span>); <span class="comment">// window</span></span><br><span class="line">foo.<span class="title function_">call</span>(&#123;<span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span>&#125;); <span class="comment">// &#123;name: &quot;codereasy&quot;&#125;</span></span><br><span class="line">foo.<span class="title function_">call</span>(<span class="number">666</span>); <span class="comment">// Object( empty )</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;codereasy&quot;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> bar = foo.<span class="title function_">bind</span>(obj);</span><br><span class="line"></span><br><span class="line"><span class="title function_">bar</span>(); <span class="comment">// obj对象</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>隐式绑定</title>
-    <link href="https://promptonce.github.io/2024/10/15/%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A/"/>
-    <id>https://promptonce.github.io/2024/10/15/%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A/</id>
-    <published>2024-10-15T08:11:12.000Z</published>
-    <updated>2024-10-15T08:16:13.132Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj1&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj2&quot;</span>,</span><br><span class="line">  <span class="attr">obj1</span>: obj1,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">obj2.<span class="property">obj1</span>.<span class="title function_">foo</span>();<span class="comment">// &#123;name: &quot;obj1&quot;, foo: foo()&#125;</span></span><br></pre></td></tr></table></figure><p>谁直接调用foo（换而言之，谁离foo更近），那么foo()中的this就指向谁。</p>]]></content>
     
     
       
