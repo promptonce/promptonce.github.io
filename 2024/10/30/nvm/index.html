@@ -17,26 +17,20 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>积分图像编程实现 - PromptOnce</title>
+  <title>nvm - PromptOnce</title>
 
   
-    <meta name="description" content="维基百科：积分图原图：      积分图：        积分图的每一点（x, y）的值是原图中对应位置的左上角区域的所有值得和      而且，积分图可以只遍历一次图像即可有效的计算出来，因为积分图每一点的（x, y）值是：      一旦积分图计算完毕，对任意矩形区域的和的计算就可以在常数时间内完成。如右图中，阴影矩形区域的值：">
+    <meta name="description" content="nvm 是 “Node Version Manager” 的缩写，用于管理 Node.js 的版本。对于 Node.js 开发者来说，有时候在不同的项目中需要不同的 Node.js 版本，而手动切换和管理这些版本会比较麻烦。nvm 能帮助用户轻松地安装、管理和切换不同的 Node.js 版本。 1. 安装 nvmmacOS 和 Linux在 macOS 和 Linux 系统上可以使用以下命令安装">
 <meta property="og:type" content="article">
-<meta property="og:title" content="积分图像编程实现">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/index.html">
+<meta property="og:title" content="nvm">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/30/nvm/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="维基百科：积分图原图：      积分图：        积分图的每一点（x, y）的值是原图中对应位置的左上角区域的所有值得和      而且，积分图可以只遍历一次图像即可有效的计算出来，因为积分图每一点的（x, y）值是：      一旦积分图计算完毕，对任意矩形区域的和的计算就可以在常数时间内完成。如右图中，阴影矩形区域的值：">
+<meta property="og:description" content="nvm 是 “Node Version Manager” 的缩写，用于管理 Node.js 的版本。对于 Node.js 开发者来说，有时候在不同的项目中需要不同的 Node.js 版本，而手动切换和管理这些版本会比较麻烦。nvm 能帮助用户轻松地安装、管理和切换不同的 Node.js 版本。 1. 安装 nvmmacOS 和 Linux在 macOS 和 Linux 系统上可以使用以下命令安装">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%8E%9F%E5%9B%BE.png">
-<meta property="og:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E7%A7%AF%E5%88%86%E5%9B%BE.png">
-<meta property="og:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F1.svg">
-<meta property="og:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F2.svg">
-<meta property="og:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F3.svg">
-<meta property="article:published_time" content="2024-08-20T16:37:07.000Z">
-<meta property="article:modified_time" content="2024-08-20T17:06:17.452Z">
+<meta property="article:published_time" content="2024-10-29T17:08:05.000Z">
+<meta property="article:modified_time" content="2024-10-29T17:08:27.550Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://promptonce.github.io/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%8E%9F%E5%9B%BE.png">
   
   
   
@@ -84,27 +78,67 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-20T16:37:07.000Z">2024-08-21</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-20T17:06:17.452Z">2024-08-21</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-29T17:08:05.000Z">2024-10-30</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-29T17:08:27.550Z">2024-10-30</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>积分图像编程实现</span></h1>
+        <h1 class="text title"><span>nvm</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>维基百科：<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E7%A7%AF%E5%88%86%E5%9B%BE">积分图</a><br>原图：  </p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%8E%9F%E5%9B%BE.png" class="lazy" title="原图">  
-<p>积分图：   </p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E7%A7%AF%E5%88%86%E5%9B%BE.png" class="lazy" title="积分图">   
-<p>积分图的每一点（x, y）的值是原图中对应位置的左上角区域的所有值得和  </p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F1.svg" class="lazy" title="公式1">  
-<p>而且，积分图可以只遍历一次图像即可有效的计算出来，因为积分图每一点的（x, y）值是：  </p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F2.svg" class="lazy" title="公式2">  
-<p>一旦积分图计算完毕，对任意矩形区域的和的计算就可以在常数时间内完成。如右图中，阴影矩形区域的值：  </p>
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/%E5%85%AC%E5%BC%8F3.svg" class="lazy" title="公式3">  
+  </div><article class="md-text content"><p><code>nvm</code> 是 “Node Version Manager” 的缩写，用于管理 Node.js 的版本。对于 Node.js 开发者来说，有时候在不同的项目中需要不同的 Node.js 版本，而手动切换和管理这些版本会比较麻烦。<code>nvm</code> 能帮助用户轻松地安装、管理和切换不同的 Node.js 版本。</p>
+<h3 id="1-安装-nvm"><a href="#1-安装-nvm" class="headerlink" title="1. 安装 nvm"></a>1. 安装 <code>nvm</code></h3><h4 id="macOS-和-Linux"><a href="#macOS-和-Linux" class="headerlink" title="macOS 和 Linux"></a>macOS 和 Linux</h4><p>在 macOS 和 Linux 系统上可以使用以下命令安装 <code>nvm</code>：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，重启终端或运行以下命令，让 <code>nvm</code> 生效：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc   <span class="comment"># 或者 source ~/.zshrc，根据使用的终端而定</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="Windows"><a href="#Windows" class="headerlink" title="Windows"></a>Windows</h4><p>在 Windows 上可以使用 <a target="_blank" rel="noopener" href="https://github.com/coreybutler/nvm-windows"><code>nvm-windows</code></a> 版本，它是专门为 Windows 系统开发的 Node 版本管理器，与 Linux&#x2F;macOS 的版本稍有不同，但功能类似。下载并按照安装向导进行安装。</p>
+<h3 id="2-常用命令"><a href="#2-常用命令" class="headerlink" title="2. 常用命令"></a>2. 常用命令</h3><ul>
+<li><p><strong>安装特定版本的 Node.js</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install &lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，安装 Node.js 14：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 14</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>列出已安装的 Node.js 版本</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm list</span><br></pre></td></tr></table></figure>
+
+<p>或者可以用 <code>nvm ls</code> 查看本地已安装的版本列表。</p>
+</li>
+<li><p><strong>切换 Node.js 版本</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use &lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，切换到 Node.js 14：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use 14</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>查看可用的远程版本</strong></p>
+<p>使用以下命令可以查看所有可安装的远程 Node.js 版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls-remote</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>卸载某个版本的 Node.js</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall &lt;版本号&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如，卸载 Node.js 14：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm uninstall 14</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>设置默认版本</strong></p>
+<p>如果希望在每次新打开终端时使用某个默认版本，可以使用以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="built_in">alias</span> default &lt;版本号&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-使用场景"><a href="#3-使用场景" class="headerlink" title="3. 使用场景"></a>3. 使用场景</h3><p><code>nvm</code> 特别适用于以下场景：</p>
+<ul>
+<li><strong>不同项目的依赖</strong>：如果某个项目使用 Node.js 14 而另一个项目依赖 Node.js 16，可以使用 <code>nvm</code> 快速切换版本。</li>
+<li><strong>测试兼容性</strong>：需要测试代码在多个 Node.js 版本上的表现，可以通过 <code>nvm</code> 安装多个版本并来回切换。</li>
+<li><strong>方便升级或降级</strong>：<code>nvm</code> 让升级到最新版本、或临时降级到旧版本变得很容易。</li>
+</ul>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li><code>nvm</code> 只在当前用户的 shell 环境中生效，不会修改系统级的 Node.js 版本。</li>
+<li>如果安装了 <code>nvm</code>，尽量不要再使用其他方式（如直接从官网安装）来安装 Node.js，以免发生冲突。</li>
+</ul>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -114,7 +148,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/22/JavaScript/">JavaScript</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/21/vue%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6%E6%A6%82%E8%BF%B0/">vue前端开发框架概述</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/27/itopmap%E7%BD%91%E7%AB%99%E4%B8%93%E9%A2%98%E9%A1%B5%E9%9D%A2%E5%88%86%E6%9E%90/">itopmap网站专题页面分析</a></div></section></div>
 
 
 
@@ -124,7 +158,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-nvm"><span class="toc-text">1. 安装 nvm</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#macOS-%E5%92%8C-Linux"><span class="toc-text">macOS 和 Linux</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Windows"><span class="toc-text">Windows</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-text">2. 常用命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">3. 使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">注意事项</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
