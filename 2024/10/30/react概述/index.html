@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>原型链继承 - PromptOnce</title>
+  <title>react总结 - PromptOnce</title>
 
   
-    <meta name="description" content="1234567891011121314151617function Parent()  &#123;  this.name &#x3D; &#x27;parent&#x27;&#125;Parent.prototype.getName &#x3D; function () &#123;  return this.name;&#125;function Child() &#123;  this.name &#x3D; &amp;quot">
+    <meta name="description" content="1. 组件（Components） 功能组件：函数形式的组件，返回 JSX。 类组件：通过类定义的组件，适用于较复杂的逻辑，但一般现在推荐使用功能组件。  2. JSX React 使用 JSX 语法，允许你在 JavaScript 中直接书写 HTML。 注意：JSX 需要用 className 代替 HTML 的 class。  3. 状态（State）与属性（Props） Props：父组件">
 <meta property="og:type" content="article">
-<meta property="og:title" content="原型链继承">
-<meta property="og:url" content="https://promptonce.github.io/2024/10/14/%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%BB%A7%E6%89%BF/index.html">
+<meta property="og:title" content="react总结">
+<meta property="og:url" content="https://promptonce.github.io/2024/10/30/react%E6%A6%82%E8%BF%B0/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="1234567891011121314151617function Parent()  &#123;  this.name &#x3D; &#x27;parent&#x27;&#125;Parent.prototype.getName &#x3D; function () &#123;  return this.name;&#125;function Child() &#123;  this.name &#x3D; &amp;quot">
+<meta property="og:description" content="1. 组件（Components） 功能组件：函数形式的组件，返回 JSX。 类组件：通过类定义的组件，适用于较复杂的逻辑，但一般现在推荐使用功能组件。  2. JSX React 使用 JSX 语法，允许你在 JavaScript 中直接书写 HTML。 注意：JSX 需要用 className 代替 HTML 的 class。  3. 状态（State）与属性（Props） Props：父组件">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-14T04:58:43.000Z">
-<meta property="article:modified_time" content="2024-10-14T05:18:47.604Z">
+<meta property="article:published_time" content="2024-10-30T12:24:05.000Z">
+<meta property="article:modified_time" content="2024-10-30T12:26:36.167Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,22 +78,64 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-14T04:58:43.000Z">2024-10-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-14T05:18:47.604Z">2024-10-14</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-30T12:24:05.000Z">2024-10-30</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-30T12:26:36.167Z">2024-10-30</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>原型链继承</span></h1>
+        <h1 class="text title"><span>react总结</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>)  &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&#x27;parent&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">getName</span> = <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">name</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">name</span> = <span class="string">&quot;child&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="title function_">getName</span>());<span class="comment">// &quot;child&quot;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">arr</span> = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//定义子类</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Child</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 子类继承父类，这里是关键，实现原型链继承</span></span><br><span class="line"><span class="title class_">Child</span>.<span class="property"><span class="keyword">prototype</span></span> = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">// 实例化子类</span></span><br><span class="line"><span class="keyword">var</span> child1 = <span class="keyword">new</span> <span class="title class_">Child</span>();</span><br><span class="line"><span class="keyword">var</span> child2 = <span class="keyword">new</span> <span class="title function_">child</span>();</span><br><span class="line"></span><br><span class="line">child1.<span class="property">arr</span>.<span class="title function_">push</span>(<span class="number">4</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child1.<span class="property">arr</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(child2.<span class="property">arr</span>)</span><br></pre></td></tr></table></figure>
-
-<p>原型链继承的一个主要问题是包含引用类型值的原型属性会被所有实例共享。换而言之，如果一个实例改变了该属性，那么其他实例的该属性也会被改变</p>
+  </div><article class="md-text content"><h3 id="1-组件（Components）"><a href="#1-组件（Components）" class="headerlink" title="1. 组件（Components）"></a>1. 组件（Components）</h3><ul>
+<li><strong>功能组件</strong>：函数形式的组件，返回 JSX。</li>
+<li><strong>类组件</strong>：通过类定义的组件，适用于较复杂的逻辑，但一般现在推荐使用功能组件。</li>
+</ul>
+<h3 id="2-JSX"><a href="#2-JSX" class="headerlink" title="2. JSX"></a>2. JSX</h3><ul>
+<li>React 使用 JSX 语法，允许你在 JavaScript 中直接书写 HTML。</li>
+<li>注意：JSX 需要用 <code>className</code> 代替 HTML 的 <code>class</code>。</li>
+</ul>
+<h3 id="3-状态（State）与属性（Props）"><a href="#3-状态（State）与属性（Props）" class="headerlink" title="3. 状态（State）与属性（Props）"></a>3. 状态（State）与属性（Props）</h3><ul>
+<li><strong>Props</strong>：父组件传递给子组件的数据，组件通过 <code>props</code> 接收。</li>
+<li><strong>State</strong>：组件内部的状态，用于控制组件的渲染。</li>
+</ul>
+<h3 id="4-生命周期方法"><a href="#4-生命周期方法" class="headerlink" title="4. 生命周期方法"></a>4. 生命周期方法</h3><ul>
+<li>对于类组件，有一些内置的生命周期方法（如 <code>componentDidMount</code>、<code>componentDidUpdate</code> 等）。</li>
+<li>在功能组件中，可以使用 <code>useEffect</code> Hook 来处理副作用。</li>
+</ul>
+<h3 id="5-Hooks"><a href="#5-Hooks" class="headerlink" title="5. Hooks"></a>5. Hooks</h3><ul>
+<li><strong>useState</strong>：用于管理组件状态。</li>
+<li><strong>useEffect</strong>：用于处理副作用，类似于生命周期方法。</li>
+<li><strong>自定义 Hook</strong>：可以封装逻辑，以便在多个组件中复用。</li>
+</ul>
+<h3 id="6-事件处理"><a href="#6-事件处理" class="headerlink" title="6. 事件处理"></a>6. 事件处理</h3><ul>
+<li>在 React 中，事件处理是通过 CamelCase 命名的，比如 <code>onClick</code>。</li>
+<li>事件处理函数可以直接传递，但要注意 <code>this</code> 的绑定（在类组件中）。</li>
+</ul>
+<h3 id="7-条件渲染与列表渲染"><a href="#7-条件渲染与列表渲染" class="headerlink" title="7. 条件渲染与列表渲染"></a>7. 条件渲染与列表渲染</h3><ul>
+<li>条件渲染可以通过 JavaScript 表达式实现，比如使用三元运算符。</li>
+<li>列表渲染通常使用 <code>map</code> 方法，记得为每个元素提供唯一的 <code>key</code>。</li>
+</ul>
+<h3 id="8-表单处理"><a href="#8-表单处理" class="headerlink" title="8. 表单处理"></a>8. 表单处理</h3><ul>
+<li>在 React 中，表单元素的值通常由组件的 state 控制（受控组件）。</li>
+<li>使用 <code>onChange</code> 事件处理输入变化。</li>
+</ul>
+<h3 id="9-组件间通信"><a href="#9-组件间通信" class="headerlink" title="9. 组件间通信"></a>9. 组件间通信</h3><ul>
+<li>使用 props 进行父子组件通信。</li>
+<li>对于兄弟组件，可以通过提升状态到共同的父组件。</li>
+</ul>
+<h3 id="10-路由"><a href="#10-路由" class="headerlink" title="10. 路由"></a>10. 路由</h3><ul>
+<li>使用 React Router 进行路由管理，常用组件有 <code>BrowserRouter</code>、<code>Route</code> 和 <code>Link</code>。</li>
+</ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>你可以通过构建一个简单的 Todo 应用来实践这些概念。这样可以让你对 React 的结构和思维方式有更深入的理解。</p>
+<p>面试时，除了掌握以上基础概念，还可以关注一些常见的面试问题，例如：</p>
+<ul>
+<li>React 的虚拟 DOM 是什么？</li>
+<li>描述一下 React 的单向数据流。</li>
+<li>在 React 中如何优化性能？</li>
+</ul>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -103,7 +145,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/10/14/JavaScript%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%BB%A7%E6%89%BF/">JavaScript构造函数继承</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/14/%E8%AE%BA%E6%96%87%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E6%80%BB%E7%BB%93/">论文参考文献总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/30/nvm%E6%80%BB%E7%BB%93/">nvm</a></div></section></div>
 
 
 
@@ -113,7 +155,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BB%84%E4%BB%B6%EF%BC%88Components%EF%BC%89"><span class="toc-text">1. 组件（Components）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-JSX"><span class="toc-text">2. JSX</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%8A%B6%E6%80%81%EF%BC%88State%EF%BC%89%E4%B8%8E%E5%B1%9E%E6%80%A7%EF%BC%88Props%EF%BC%89"><span class="toc-text">3. 状态（State）与属性（Props）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E6%96%B9%E6%B3%95"><span class="toc-text">4. 生命周期方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-Hooks"><span class="toc-text">5. Hooks</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">6. 事件处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%E4%B8%8E%E5%88%97%E8%A1%A8%E6%B8%B2%E6%9F%93"><span class="toc-text">7. 条件渲染与列表渲染</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E8%A1%A8%E5%8D%95%E5%A4%84%E7%90%86"><span class="toc-text">8. 表单处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E7%BB%84%E4%BB%B6%E9%97%B4%E9%80%9A%E4%BF%A1"><span class="toc-text">9. 组件间通信</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-%E8%B7%AF%E7%94%B1"><span class="toc-text">10. 路由</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>

@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-10-29T17:08:27.550Z</updated>
+  <updated>2024-10-30T12:26:36.167Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>react总结</title>
+    <link href="https://promptonce.github.io/2024/10/30/react%E6%A6%82%E8%BF%B0/"/>
+    <id>https://promptonce.github.io/2024/10/30/react%E6%A6%82%E8%BF%B0/</id>
+    <published>2024-10-30T12:24:05.000Z</published>
+    <updated>2024-10-30T12:26:36.167Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-组件（Components）"><a href="#1-组件（Components）" class="headerlink" title="1. 组件（Components）"></a>1. 组件（Components）</h3><ul><li><strong>功能组件</strong>：函数形式的组件，返回 JSX。</li><li><strong>类组件</strong>：通过类定义的组件，适用于较复杂的逻辑，但一般现在推荐使用功能组件。</li></ul><h3 id="2-JSX"><a href="#2-JSX" class="headerlink" title="2. JSX"></a>2. JSX</h3><ul><li>React 使用 JSX 语法，允许你在 JavaScript 中直接书写 HTML。</li><li>注意：JSX 需要用 <code>className</code> 代替 HTML 的 <code>class</code>。</li></ul><h3 id="3-状态（State）与属性（Props）"><a href="#3-状态（State）与属性（Props）" class="headerlink" title="3. 状态（State）与属性（Props）"></a>3. 状态（State）与属性（Props）</h3><ul><li><strong>Props</strong>：父组件传递给子组件的数据，组件通过 <code>props</code> 接收。</li><li><strong>State</strong>：组件内部的状态，用于控制组件的渲染。</li></ul><h3 id="4-生命周期方法"><a href="#4-生命周期方法" class="headerlink" title="4. 生命周期方法"></a>4. 生命周期方法</h3><ul><li>对于类组件，有一些内置的生命周期方法（如 <code>componentDidMount</code>、<code>componentDidUpdate</code> 等）。</li><li>在功能组件中，可以使用 <code>useEffect</code> Hook 来处理副作用。</li></ul><h3 id="5-Hooks"><a href="#5-Hooks" class="headerlink" title="5. Hooks"></a>5. Hooks</h3><ul><li><strong>useState</strong>：用于管理组件状态。</li><li><strong>useEffect</strong>：用于处理副作用，类似于生命周期方法。</li><li><strong>自定义 Hook</strong>：可以封装逻辑，以便在多个组件中复用。</li></ul><h3 id="6-事件处理"><a href="#6-事件处理" class="headerlink" title="6. 事件处理"></a>6. 事件处理</h3><ul><li>在 React 中，事件处理是通过 CamelCase 命名的，比如 <code>onClick</code>。</li><li>事件处理函数可以直接传递，但要注意 <code>this</code> 的绑定（在类组件中）。</li></ul><h3 id="7-条件渲染与列表渲染"><a href="#7-条件渲染与列表渲染" class="headerlink" title="7. 条件渲染与列表渲染"></a>7. 条件渲染与列表渲染</h3><ul><li>条件渲染可以通过 JavaScript 表达式实现，比如使用三元运算符。</li><li>列表渲染通常使用 <code>map</code> 方法，记得为每个元素提供唯一的 <code>key</code>。</li></ul><h3 id="8-表单处理"><a href="#8-表单处理" class="headerlink" title="8. 表单处理"></a>8. 表单处理</h3><ul><li>在 React 中，表单元素的值通常由组件的 state 控制（受控组件）。</li><li>使用 <code>onChange</code> 事件处理输入变化。</li></ul><h3 id="9-组件间通信"><a href="#9-组件间通信" class="headerlink" title="9. 组件间通信"></a>9. 组件间通信</h3><ul><li>使用 props 进行父子组件通信。</li><li>对于兄弟组件，可以通过提升状态到共同的父组件。</li></ul><h3 id="10-路由"><a href="#10-路由" class="headerlink" title="10. 路由"></a>10. 路由</h3><ul><li>使用 React Router 进行路由管理，常用组件有 <code>BrowserRouter</code>、<code>Route</code> 和 <code>Link</code>。</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>你可以通过构建一个简单的 Todo 应用来实践这些概念。这样可以让你对 React 的结构和思维方式有更深入的理解。</p><p>面试时，除了掌握以上基础概念，还可以关注一些常见的面试问题，例如：</p><ul><li>React 的虚拟 DOM 是什么？</li><li>描述一下 React 的单向数据流。</li><li>在 React 中如何优化性能？</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;1-组件（Components）&quot;&gt;&lt;a href=&quot;#1-组件（Components）&quot; class=&quot;headerlink&quot; title=&quot;1. 组件（Components）&quot;&gt;&lt;/a&gt;1. 组件（Components）&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;stron</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>nvm</title>
@@ -400,26 +421,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>显示绑定、隐式绑定、new绑定的优点</title>
-    <link href="https://promptonce.github.io/2024/10/15/%E6%98%BE%E7%A4%BA%E7%BB%91%E5%AE%9A%E3%80%81%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A%E3%80%81new%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BC%98%E7%82%B9/"/>
-    <id>https://promptonce.github.io/2024/10/15/%E6%98%BE%E7%A4%BA%E7%BB%91%E5%AE%9A%E3%80%81%E9%9A%90%E5%BC%8F%E7%BB%91%E5%AE%9A%E3%80%81new%E7%BB%91%E5%AE%9A%E7%9A%84%E4%BC%98%E7%82%B9/</id>
-    <published>2024-10-15T15:53:02.000Z</published>
-    <updated>2024-10-15T16:09:45.746Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj1&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj2&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 隐式绑定</span></span><br><span class="line">obj1.<span class="title function_">foo</span>(); <span class="comment">// obj1</span></span><br><span class="line">obj2.<span class="title function_">foo</span>(); <span class="comment">// obj2</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 隐式绑定和显式绑定</span></span><br><span class="line">obj1.<span class="property">foo</span>.<span class="title function_">call</span>(obj2); <span class="comment">//obj2, 说明显式绑定优先级更高</span></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
