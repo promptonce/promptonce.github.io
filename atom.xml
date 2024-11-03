@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-11-03T02:07:08.952Z</updated>
+  <updated>2024-11-03T02:33:17.114Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从计算机线程中学习到的6个工作道理</title>
+    <link href="https://promptonce.github.io/2024/11/03/%E4%BB%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BA%BF%E7%A8%8B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E5%88%B0%E7%9A%846%E4%B8%AA%E5%B7%A5%E4%BD%9C%E9%81%93%E7%90%86/"/>
+    <id>https://promptonce.github.io/2024/11/03/%E4%BB%8E%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BA%BF%E7%A8%8B%E4%B8%AD%E5%AD%A6%E4%B9%A0%E5%88%B0%E7%9A%846%E4%B8%AA%E5%B7%A5%E4%BD%9C%E9%81%93%E7%90%86/</id>
+    <published>2024-11-03T02:33:17.000Z</published>
+    <updated>2024-11-03T02:33:17.114Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>快速更新失效域名证书方法</title>
@@ -402,27 +415,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>双指针</title>
-    <link href="https://promptonce.github.io/2024/10/16/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    <id>https://promptonce.github.io/2024/10/16/%E5%8F%8C%E6%8C%87%E9%92%88/</id>
-    <published>2024-10-16T06:48:09.000Z</published>
-    <updated>2024-10-16T07:12:25.248Z</updated>
-    
-    <content type="html"><![CDATA[<p>有序并不是双指针使用的必要前提，但在某些情况下，<strong>有序数组</strong>确实可以帮助我们充分发挥双指针的优势，特别是在减少搜索空间和提高效率方面。双指针是一种灵活的算法技巧，可以根据具体场景应用于有序或无序的场景。下面将详细讨论。</p><h3 id="1-有序数组中的双指针"><a href="#1-有序数组中的双指针" class="headerlink" title="1. 有序数组中的双指针"></a>1. <strong>有序数组中的双指针</strong></h3><p>在有序数组或序列中使用双指针，可以利用排序的特性来快速定位解。这类问题通常依赖于数据的有序性来实现更高效的算法。例如，前面提到的 <strong>“Two Sum II”</strong> 问题，因为数组是有序的，双指针可以通过移动指针快速缩小搜索范围。如果数组是无序的，那么双指针这种方式在查找和筛选时会失去优势。</p><ul><li><strong>例子</strong>：<ul><li><strong>查找两数之和问题</strong>：利用双指针，从两端向中间靠拢，根据和与目标值的比较，决定移动哪一个指针。</li></ul></li></ul><h3 id="2-无序数组中的双指针"><a href="#2-无序数组中的双指针" class="headerlink" title="2. 无序数组中的双指针"></a>2. <strong>无序数组中的双指针</strong></h3><p>虽然有序数组能让双指针更高效，但双指针同样可以在<strong>无序数组</strong>中使用。常见的应用场景包括处理<strong>特定条件的子数组</strong>、<strong>滑动窗口问题</strong>、<strong>快慢指针遍历链表</strong>等。这些问题不依赖有序性，而是基于特定的逻辑条件来移动指针。</p><ul><li><strong>例子</strong>：<ul><li><strong>快慢指针（Floyd’s Tortoise and Hare Algorithm）</strong>：该算法常用于检测链表中的环，并且链表不需要有序。一个指针每次走一步（慢指针），另一个指针每次走两步（快指针），最终两个指针会相遇。</li><li><strong>滑动窗口</strong>：在处理动态长度的子数组问题时，双指针可以用来动态调整窗口的大小，维护窗口的边界。</li></ul></li></ul><h3 id="3-滑动窗口问题"><a href="#3-滑动窗口问题" class="headerlink" title="3. 滑动窗口问题"></a>3. <strong>滑动窗口问题</strong></h3><p>滑动窗口（Sliding Window）是一类经典的双指针应用，通常用于处理<strong>无序数组</strong>或字符串。在这些问题中，一个指针（左指针）固定窗口的起点，另一个指针（右指针）扩展窗口或收缩窗口，直到满足某个条件。</p><ul><li><strong>例子</strong>：<ul><li><strong>最长子数组问题</strong>：寻找一个数组中满足某些条件的最长子数组。双指针可以用来动态调整子数组的起始和结束位置，以优化解的查找。</li></ul></li></ul><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>双指针并不依赖数据有序与否，而是依赖问题的具体要求和性质。在有序数组中，双指针通常可以更加高效地解决问题，因为排序提供了一个明确的规则（例如大小关系）来指导指针的移动；在无序数组或其他数据结构中，双指针也可以用于解决子数组、链表问题等。主要的前提是问题能够通过调整两个位置来逐步缩小搜索范围或满足特定条件。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;有序并不是双指针使用的必要前提，但在某些情况下，&lt;strong&gt;有序数组&lt;/strong&gt;确实可以帮助我们充分发挥双指针的优势，特别是在减少搜索空间和提高效率方面。双指针是一种灵活的算法技巧，可以根据具体场景应用于有序或无序的场景。下面将详细讨论。&lt;/p&gt;
-&lt;h3 id=&quot;</summary>
       
     
     
