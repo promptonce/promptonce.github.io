@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-11-03T03:23:10.637Z</updated>
+  <updated>2024-11-03T12:21:27.508Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MMSegmentation进阶指南-数据流</title>
+    <link href="https://promptonce.github.io/2024/11/03/MMSegmentation%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97-%E6%95%B0%E6%8D%AE%E6%B5%81/"/>
+    <id>https://promptonce.github.io/2024/11/03/MMSegmentation%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97-%E6%95%B0%E6%8D%AE%E6%B5%81/</id>
+    <published>2024-11-03T12:13:47.000Z</published>
+    <updated>2024-11-03T12:21:27.508Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2024/11/03/MMSegmentation%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97-%E6%95%B0%E6%8D%AE%E6%B5%81/199228350-5f80699e-7fd2-4b4c-ac32-0b16b1922c2e.png" class="" title="199228350-5f80699e-7fd2-4b4c-ac32-0b16b1922c2e.png"><p>Runner 相当于 MMEngine 中的“集成器”。它覆盖了框架的所有方面，并肩负着组织和调度几乎所有模块的责任，这意味着各模块之间的数据流也由 Runner 控制。<br>Runner中实现上述不同颜色的传递（TrainLoop、ValLoop 和 TestLoop）<br>MMSegmentation的DataLoader和Pytorch的DataLoader保持一致。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/2024/11/03/MMSegmentation%E8%BF%9B%E9%98%B6%E6%8C%87%E5%8D%97-%E6%95%B0%E6%8D%AE%E6%B5%81/199228350-5f80699e-7fd2-4b4c-ac32-0b16b</summary>
+      
+    
+    
+    
+    
+    <category term="MMSegmentation" scheme="https://promptonce.github.io/tags/MMSegmentation/"/>
+    
+  </entry>
   
   <entry>
     <title>从计算机线程中学习到的6个工作道理</title>
@@ -402,26 +424,6 @@
       
     <summary type="html">&lt;p&gt;引用计数法进行垃圾回收内存泄露的例子&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>this绑定相关面试题</title>
-    <link href="https://promptonce.github.io/2024/10/16/this%E7%BB%91%E5%AE%9A%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
-    <id>https://promptonce.github.io/2024/10/16/this%E7%BB%91%E5%AE%9A%E7%9B%B8%E5%85%B3%E9%9D%A2%E8%AF%95%E9%A2%98/</id>
-    <published>2024-10-16T09:06:22.000Z</published>
-    <updated>2024-10-16T09:23:00.061Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">foo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj1 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj1&quot;</span>,</span><br><span class="line">  <span class="attr">foo</span>: foo,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> obj2 = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;obj2&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">(obj2.<span class="property">foo</span> = obj1.<span class="property">foo</span>)();</span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;全局window&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = &#123;</span><br><span class="line">  <span class="attr">name</span>: <span class="string">&quot;person&quot;</span>,</span><br><span class="line">  <span class="attr">sayName</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">this</span>.<span class="property">name</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">function</span> <span class="title function_">sayName</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> fun = person.<span class="property">sayName</span>;</span><br><span class="line">  <span class="title function_">fun</span>();<span class="comment">// 全局window</span></span><br><span class="line">  person.<span class="title function_">sayName</span>(); <span class="comment">//person</span></span><br><span class="line">  (b = person.<span class="property">sayName</span>)();<span class="comment">// 全局window对象</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">sayName</span>();</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
