@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>windows高效工具列表 - PromptOnce</title>
+  <title>instanceof - PromptOnce</title>
 
   
-    <meta name="description" content="notion sublime text vscode syncthing atom github noi microsoft powertoys bitwarden git microsoft whiteboard">
+    <meta name="description" content="在 JavaScript 中，instanceof 操作符用于检查一个对象是否是某个构造函数的实例。具体来说，它用来判断对象的原型链中是否存在构造函数的 prototype 属性。 instanceof 的实现原理instanceof 操作符的基本原理是基于原型链的逐层查找过程：  对象的 __proto__ 指针：每个对象在创建时会自动关联到某个原型对象，这个原型对象通过对象的 __proto_">
 <meta property="og:type" content="article">
-<meta property="og:title" content="windows高效工具列表">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/09/windows%E9%AB%98%E6%95%88%E5%B7%A5%E5%85%B7%E5%88%97%E8%A1%A8/index.html">
+<meta property="og:title" content="instanceof">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/28/instanceof/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="notion sublime text vscode syncthing atom github noi microsoft powertoys bitwarden git microsoft whiteboard">
+<meta property="og:description" content="在 JavaScript 中，instanceof 操作符用于检查一个对象是否是某个构造函数的实例。具体来说，它用来判断对象的原型链中是否存在构造函数的 prototype 属性。 instanceof 的实现原理instanceof 操作符的基本原理是基于原型链的逐层查找过程：  对象的 __proto__ 指针：每个对象在创建时会自动关联到某个原型对象，这个原型对象通过对象的 __proto_">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-09T14:20:09.000Z">
-<meta property="article:modified_time" content="2024-09-24T06:08:20.755Z">
+<meta property="article:published_time" content="2024-08-28T08:04:07.000Z">
+<meta property="article:modified_time" content="2024-11-05T07:17:05.935Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,29 +78,60 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-09T14:20:09.000Z">2024-09-09</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-24T06:08:20.755Z">2024-09-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:04:07.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-05T07:17:05.935Z">2024-11-05</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>windows高效工具列表</span></h1>
+        <h1 class="text title"><span>instanceof</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><ol>
-<li>notion</li>
-<li>sublime text</li>
-<li>vscode</li>
-<li>syncthing</li>
-<li>atom</li>
-<li>github noi</li>
-<li>microsoft powertoys</li>
-<li>bitwarden</li>
-<li>git</li>
-<li>microsoft whiteboard</li>
+  </div><article class="md-text content"><p>在 JavaScript 中，<code>instanceof</code> 操作符用于检查一个对象是否是某个构造函数的实例。具体来说，它用来判断对象的原型链中是否存在构造函数的 <code>prototype</code> 属性。</p>
+<h3 id="instanceof-的实现原理"><a href="#instanceof-的实现原理" class="headerlink" title="instanceof 的实现原理"></a><code>instanceof</code> 的实现原理</h3><p><code>instanceof</code> 操作符的基本原理是基于原型链的逐层查找过程：</p>
+<ol>
+<li><p><strong>对象的 <code>__proto__</code> 指针</strong>：每个对象在创建时会自动关联到某个原型对象，这个原型对象通过对象的 <code>__proto__</code> 指针来引用。</p>
+</li>
+<li><p><strong>构造函数的 <code>prototype</code> 属性</strong>：每个构造函数（如 <code>Array</code>、<code>Object</code>）都有一个 <code>prototype</code> 属性，指向一个原型对象。这个原型对象包含了所有实例共享的属性和方法。</p>
+</li>
+<li><p><strong>原型链查找</strong>：<code>instanceof</code> 会从目标对象的 <code>__proto__</code> 开始，沿着原型链一级一级查找，看是否能够找到构造函数的 <code>prototype</code> 属性所指向的那个原型对象。</p>
+</li>
+<li><p><strong>返回结果</strong>：如果在原型链中找到构造函数的 <code>prototype</code> 属性，<code>instanceof</code> 返回 <code>true</code>，否则返回 <code>false</code>。</p>
+</li>
 </ol>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Person</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> john = <span class="keyword">new</span> <span class="title class_">Person</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(john <span class="keyword">instanceof</span> <span class="title class_">Person</span>); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(john <span class="keyword">instanceof</span> <span class="title class_">Object</span>); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中：</p>
+<ul>
+<li><code>Person</code> 是一个构造函数，它的 <code>prototype</code> 属性指向 <code>&#123;&#125;</code>（一个空的对象）。</li>
+<li><code>john</code> 是通过 <code>Person</code> 构造函数创建的实例。</li>
+<li><code>john</code> 的 <code>__proto__</code> 指针指向 <code>Person.prototype</code>。</li>
+<li><code>john instanceof Person</code> 会沿着 <code>john.__proto__</code> 查找，发现它指向 <code>Person.prototype</code>，所以返回 <code>true</code>。</li>
+<li>因为 <code>Person.prototype</code> 的原型是 <code>Object.prototype</code>，所以 <code>john instanceof Object</code> 也返回 <code>true</code>。</li>
+</ul>
+<h3 id="instanceof-的内部实现过程"><a href="#instanceof-的内部实现过程" class="headerlink" title="instanceof 的内部实现过程"></a><code>instanceof</code> 的内部实现过程</h3><p>假设我们要判断 <code>object instanceof Constructor</code>：</p>
+<ol>
+<li>取得 <code>object</code> 的原型，赋值给一个变量 <code>proto</code>，即 <code>proto = object.__proto__</code>。</li>
+<li>取得 <code>Constructor</code> 的 <code>prototype</code> 属性，赋值给 <code>prototype</code>。</li>
+<li>循环检查 <code>proto</code> 是否严格等于 <code>prototype</code>。<ul>
+<li>如果相等，则返回 <code>true</code>。</li>
+<li>如果 <code>proto</code> 为 <code>null</code>，说明到达原型链的顶端，还未找到，返回 <code>false</code>。</li>
+<li>否则，继续沿着原型链查找，更新 <code>proto = proto.__proto__</code>。</li>
+</ul>
+</li>
+</ol>
+<h3 id="实现一个简单的-instanceof"><a href="#实现一个简单的-instanceof" class="headerlink" title="实现一个简单的 instanceof"></a>实现一个简单的 <code>instanceof</code></h3><p>我们可以用 JavaScript 模拟实现 <code>instanceof</code> 的基本逻辑：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">myInstanceof</span>(<span class="params">object, constructor</span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> proto = object.<span class="property">__proto__</span>;</span><br><span class="line">    <span class="keyword">const</span> prototype = constructor.<span class="property"><span class="keyword">prototype</span></span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (proto) &#123;</span><br><span class="line">        <span class="keyword">if</span> (proto === prototype) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        proto = proto.<span class="property">__proto__</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(john, <span class="title class_">Person</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(john, <span class="title class_">Object</span>)); <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">myInstanceof</span>(john, <span class="title class_">Array</span>));  <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="特殊情况"><a href="#特殊情况" class="headerlink" title="特殊情况"></a>特殊情况</h3><ol>
+<li><strong>原始类型</strong>：对于 <code>null</code> 和 <code>undefined</code>，<code>instanceof</code> 无法使用，因为它们没有原型链，会直接返回 <code>false</code>。</li>
+<li><strong>自定义类型继承</strong>：如果构造函数的 <code>prototype</code> 被重新赋值为其他对象，实例也会相应受到影响，<code>instanceof</code> 结果会发生变化。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Animal</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="keyword">const</span> dog = <span class="keyword">new</span> <span class="title class_">Animal</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(dog <span class="keyword">instanceof</span> <span class="title class_">Animal</span>); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="title class_">Animal</span>.<span class="property"><span class="keyword">prototype</span></span> = &#123;&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(dog <span class="keyword">instanceof</span> <span class="title class_">Animal</span>); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p><code>instanceof</code> 的原理在于通过原型链逐层查找，将对象的 <code>__proto__</code> 与构造函数的 <code>prototype</code> 进行比对。因此，<code>instanceof</code> 能准确判断对象和构造函数的继承关系，只要 <code>prototype</code> 没有被修改。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -110,7 +141,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/10/%E8%AE%A2%E5%8D%95%E7%BD%91%E7%AB%99%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%E5%BC%80%E5%8F%91%E5%9B%9E%E9%A1%BE/">订单网站团队协作开发回顾</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/09/OJ%E5%9C%A8%E7%BA%BF%E7%BC%96%E7%A8%8B%E5%B8%B8%E8%A7%81%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E7%BB%83%E4%B9%A0%E5%9C%BA%E6%80%BB%E7%BB%93/">OJ在线编程常见输入输出练习场总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/28/%E4%B8%8D%E5%90%8C%E7%AD%89%E5%8F%B7%E7%9A%84%E5%8C%BA%E5%88%AB/">不同等号的区别</a></div></section></div>
 
 
 
@@ -120,7 +151,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#instanceof-%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86"><span class="toc-text">instanceof 的实现原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B"><span class="toc-text">代码示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#instanceof-%E7%9A%84%E5%86%85%E9%83%A8%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B"><span class="toc-text">instanceof 的内部实现过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84-instanceof"><span class="toc-text">实现一个简单的 instanceof</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%89%B9%E6%AE%8A%E6%83%85%E5%86%B5"><span class="toc-text">特殊情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-text">小结</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
