@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://promptonce.github.io/2024/08/28/ES6%E6%96%B0%E5%A2%9E%E7%9A%84%E6%95%B0%E7%BB%84%E6%96%B9%E6%B3%95/</loc>
+    
+    <lastmod>2024-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://promptonce.github.io/2024/08/16/%E4%BB%8EAI%E7%BC%96%E7%A8%8B%E8%AE%A4%E7%9F%A5AI/</loc>
     
     <lastmod>2024-11-05</lastmod>
