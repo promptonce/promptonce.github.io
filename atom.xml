@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-11-08T07:46:56.991Z</updated>
+  <updated>2024-11-10T09:59:21.126Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue,typescript项目打包报错</title>
+    <link href="https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/"/>
+    <id>https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/</id>
+    <published>2024-11-10T09:58:03.000Z</published>
+    <updated>2024-11-10T09:59:21.126Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x2F;&#x2F; @ts-ignore：无法被执行的代码的错误</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&amp;#x2F;&amp;#x2F; @ts-ignore：无法被执行的代码的错误&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>工作汇报总结</title>
@@ -411,26 +432,6 @@
       
     <summary type="html">&lt;p&gt;nginx是一个高效的静态内容 Web 服务器，同时也是反向代理服务器，擅长处理静态资源、负载均衡和反向代理功能。&lt;/p&gt;
 &lt;h2 id=&quot;vue发布的网站非根域名刷新404的错误&quot;&gt;&lt;a href=&quot;#vue发布的网站非根域名刷新404的错误&quot; class=&quot;header</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 标记清除法总结</title>
-    <link href="https://promptonce.github.io/2024/10/17/JavaScript-%E6%A0%87%E8%AE%B0%E6%B8%85%E9%99%A4%E6%B3%95%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/10/17/JavaScript-%E6%A0%87%E8%AE%B0%E6%B8%85%E9%99%A4%E6%B3%95%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-17T15:48:35.000Z</published>
-    <updated>2024-10-17T16:22:47.720Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> globalVariable = &#123;</span><br><span class="line"><span class="attr">name</span>: <span class="string">&quot;I&#x27;m a global variable&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>) &#123;</span><br><span class="line"><span class="keyword">var</span> xiaoming = <span class="string">&quot;codereasy&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">fun</span>();</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">globalVariable</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">window</span>.<span class="property">xiaoming</span>);</span><br><span class="line"><span class="comment">//(1) &#123;name: &quot;I&#x27;m a global variable&quot;&#125;</span></span><br><span class="line"><span class="comment">//undefined</span></span><br></pre></td></tr></table></figure><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 全局变量可以被视为根， 因此他们是可达的</span></span><br><span class="line"><span class="keyword">let</span> globalVariable = &#123;</span><br><span class="line"><span class="attr">name</span>: <span class="string">&quot;I&#x27;m a global variable&quot;</span>,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数的参数和内部变量也是可达的</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">someFunction</span>(<span class="params">someArgument</span>) &#123;</span><br><span class="line"><span class="keyword">let</span> functionVariable = &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;I&#x27;m a variable inside of a function&quot;</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(someArgument, functionVariable)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">someFunction</span>(globalVariable);</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> objectA = &#123;</span><br><span class="line"><span class="attr">objectProperty</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;I&#x27;m a property of an object&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(objectA.<span class="property">objectProperty</span>);</span><br><span class="line"><span class="comment">// (1) &#123;name: &quot;I&#x27;m a global variable&quot;&#125;  </span></span><br><span class="line"><span class="comment">// (1) &#123;name: &quot;I&#x27;m a variable inside of a f...&#125;</span></span><br></pre></td></tr></table></figure><p>优点：标记清除法解决了循环依赖的问题<br>缺点：标记清除法会出现内存碎片</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
       
     
     
