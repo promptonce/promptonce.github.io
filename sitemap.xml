@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://promptonce.github.io/2024/08/28/dom-onclick%E5%92%8Cdom-addEventListener-%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    
+    <lastmod>2024-11-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://promptonce.github.io/2024/11/11/leetcode-141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/</loc>
     
     <lastmod>2024-11-11</lastmod>
