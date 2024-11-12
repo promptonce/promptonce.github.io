@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-11-11T06:28:29.693Z</updated>
+  <updated>2024-11-12T07:18:34.989Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>什么是 HTTP 请求中的 Origin 头？如何在特殊场景下处理它？</title>
+    <link href="https://promptonce.github.io/2024/11/12/%E4%BB%80%E4%B9%88%E6%98%AF-HTTP-%E8%AF%B7%E6%B1%82%E4%B8%AD%E7%9A%84-Origin-%E5%A4%B4%EF%BC%9F%E5%A6%82%E4%BD%95%E5%9C%A8%E7%89%B9%E6%AE%8A%E5%9C%BA%E6%99%AF%E4%B8%8B%E5%A4%84%E7%90%86%E5%AE%83%EF%BC%9F/"/>
+    <id>https://promptonce.github.io/2024/11/12/%E4%BB%80%E4%B9%88%E6%98%AF-HTTP-%E8%AF%B7%E6%B1%82%E4%B8%AD%E7%9A%84-Origin-%E5%A4%B4%EF%BC%9F%E5%A6%82%E4%BD%95%E5%9C%A8%E7%89%B9%E6%AE%8A%E5%9C%BA%E6%99%AF%E4%B8%8B%E5%A4%84%E7%90%86%E5%AE%83%EF%BC%9F/</id>
+    <published>2024-11-12T07:17:52.000Z</published>
+    <updated>2024-11-12T07:18:34.989Z</updated>
+    
+    <content type="html"><![CDATA[<p>在 Web 开发中，跨域请求（Cross-Origin Requests）常常让开发者头疼，而 <code>Origin</code> 头是跨域资源共享（CORS）机制中必不可少的组成部分。本文将详细介绍 <code>Origin</code> 头的作用、为什么它与用户的 IP 不同，以及如何在特定场景下实现“不携带 <code>Origin</code> 头”的请求。</p><hr><h3 id="什么是-Origin-头？"><a href="#什么是-Origin-头？" class="headerlink" title="什么是 Origin 头？"></a>什么是 <code>Origin</code> 头？</h3><p><code>Origin</code> 头是浏览器在发起 HTTP 请求时自动添加的，用于标识请求的来源。这一头部信息由协议（如 <code>https</code>）、域名（如 <code>example.com</code>）和端口组成。它的主要作用是帮助服务器判断请求的来源是否被允许访问资源，是浏览器实现<strong>同源策略</strong>和<strong>CORS</strong>的关键部分。</p><p>例如，当你在浏览器中打开 <code>https://example.com</code> 并访问 <code>https://api.example.com</code> 时，请求的 <code>Origin</code> 头可能会显示为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Origin: https://example.com</span><br></pre></td></tr></table></figure><p>通过这个头部，服务器可以知道该请求来源于 <code>https://example.com</code>，并决定是否允许该跨域请求访问资源。</p><hr><h3 id="Origin-头-vs-用户-IP"><a href="#Origin-头-vs-用户-IP" class="headerlink" title="Origin 头 vs. 用户 IP"></a><code>Origin</code> 头 vs. 用户 IP</h3><p>很多人容易混淆 <code>Origin</code> 头和用户的 IP 地址。虽然请求确实是从用户的电脑发出的，但 <code>Origin</code> 头和用户 IP 是两个完全不同的概念：</p><ol><li><p><strong><code>Origin</code> 头表示网页来源</strong>：<code>Origin</code> 头标识的是网页的来源域（例如 <code>https://example.com</code>），而不是用户设备的地址。它主要用于同源策略的安全判断，帮助服务器控制跨域请求。</p></li><li><p><strong>用户 IP 表示设备的网络位置</strong>：用户的 IP 地址则是用户设备在网络中的地址，与物理位置和网络连接有关，用于路由传输。IP 不包含网页来源的信息，因此服务器无法依赖 IP 来判断请求是从哪个网页发起的。</p></li></ol><h3 id="为什么需要-Origin-头？"><a href="#为什么需要-Origin-头？" class="headerlink" title="为什么需要 Origin 头？"></a>为什么需要 <code>Origin</code> 头？</h3><p>浏览器的同源策略（Same-Origin Policy）规定，网页脚本只能访问与其来源相同的资源，<code>Origin</code> 头正是这一机制的组成部分。通过 <code>Origin</code> 头，服务器能够明确请求来源，并决定是否允许跨域访问。这在防止跨站请求伪造（CSRF）等安全攻击上非常有效。</p><hr><h3 id="如何实现不携带-Origin-头的请求？"><a href="#如何实现不携带-Origin-头的请求？" class="headerlink" title="如何实现不携带 Origin 头的请求？"></a>如何实现不携带 <code>Origin</code> 头的请求？</h3><p>在一些特殊场景中，可能需要发送不带 <code>Origin</code> 头的 HTTP 请求，跳过浏览器的同源策略检查。以下几种方法可以实现这一效果，但需谨慎使用，以免引入安全风险。</p><h4 id="1-使用非浏览器客户端发送请求"><a href="#1-使用非浏览器客户端发送请求" class="headerlink" title="1. 使用非浏览器客户端发送请求"></a>1. 使用非浏览器客户端发送请求</h4><p>浏览器会自动添加 <code>Origin</code> 头，但在使用非浏览器的 HTTP 客户端（如 Python 的 <code>requests</code> 库、Node.js 的 <code>http</code> 模块、cURL）时，可以手动控制请求头部，不携带 <code>Origin</code> 头。例如：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://example.com/api&#x27;</span>, headers=&#123;&#125;)  <span class="comment"># 不携带 Origin 头</span></span><br></pre></td></tr></table></figure><p>这种方法适用于后端环境或自定义客户端应用，但不适合浏览器环境。</p><h4 id="2-使用代理服务器"><a href="#2-使用代理服务器" class="headerlink" title="2. 使用代理服务器"></a>2. 使用代理服务器</h4><p>如果需要从浏览器中发起不带 <code>Origin</code> 头的请求，可以设置一个代理服务器。通过代理转发请求，浏览器只会与代理通信，而代理则在将请求发送到目标服务器时省略 <code>Origin</code> 头。</p><p><strong>示例：NGINX 配置</strong></p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">location</span> /proxy/ &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> https://example.com/api;</span><br><span class="line">    <span class="attribute">proxy_hide_header</span> Origin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>此方法允许浏览器请求先发送到代理服务器，由代理移除 <code>Origin</code> 后转发到目标服务器。</p><h4 id="3-利用-JSONP（仅限-GET-请求）"><a href="#3-利用-JSONP（仅限-GET-请求）" class="headerlink" title="3. 利用 JSONP（仅限 GET 请求）"></a>3. 利用 JSONP（仅限 GET 请求）</h4><p>在一些跨域 GET 请求中，可以通过 JSONP（JSON with Padding）技术绕过同源策略。JSONP 利用 <code>&lt;script&gt;</code> 标签加载目标资源，不需要 <code>Origin</code> 头，但只能用于 GET 请求，且要求目标服务器支持 JSONP。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://example.com/api?callback=myCallbackFunction&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">myCallbackFunction</span>(<span class="params">data</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="4-服务器端控制-CORS-配置"><a href="#4-服务器端控制-CORS-配置" class="headerlink" title="4. 服务器端控制 CORS 配置"></a>4. 服务器端控制 CORS 配置</h4><p>如果你拥有服务器的控制权限，并希望允许不带 <code>Origin</code> 头的请求，可以调整服务器的 CORS 配置。不过，这种方法依赖服务器端控制，并不是绕过 <code>Origin</code> 的方式。</p><hr><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p><code>Origin</code> 头是 HTTP 和浏览器安全机制的重要组成部分，用于识别请求来源，确保跨域请求的安全性。在特定场景下，可以通过使用非浏览器客户端、代理服务器、JSONP 等方法实现不携带 <code>Origin</code> 头的请求。不过，需要谨慎使用这些方法，避免绕过浏览器的安全策略带来的潜在风险。</p><p>跨域和安全控制始终是 Web 开发中的重点，理解 <code>Origin</code> 头的作用、区别它和用户 IP，将有助于更好地配置和管理跨域资源共享（CORS）。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在 Web 开发中，跨域请求（Cross-Origin Requests）常常让开发者头疼，而 &lt;code&gt;Origin&lt;/code&gt; 头是跨域资源共享（CORS）机制中必不可少的组成部分。本文将详细介绍 &lt;code&gt;Origin&lt;/code&gt; 头的作用、为什么它与用户的 </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Vue 项目中的代码注释规范：提升可读性与可维护性</title>
@@ -410,27 +430,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>开源项目配置到服务器总结</title>
-    <link href="https://promptonce.github.io/2024/10/23/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/10/23/%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E5%88%B0%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%BB%E7%BB%93/</id>
-    <published>2024-10-23T04:58:46.000Z</published>
-    <updated>2024-10-23T05:01:20.618Z</updated>
-    
-    <content type="html"><![CDATA[<p>在本地设备打包好所有依赖，通过服务器连接工具上传整个安装包，相当于执行离线安装。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在本地设备打包好所有依赖，通过服务器连接工具上传整个安装包，相当于执行离线安装。&lt;/p&gt;
-</summary>
       
     
     
