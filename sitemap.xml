@@ -1946,15 +1946,6 @@
   </url>
   
   <url>
-    <loc>https://promptonce.github.io/2024/06/30/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</loc>
-    
-    <lastmod>2024-06-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://promptonce.github.io/2024/09/19/hello-world/</loc>
     
     <lastmod>2024-06-30</lastmod>
@@ -2009,13 +2000,6 @@
   
   <url>
     <loc>https://promptonce.github.io/tags/%E8%AF%AD%E4%B9%89%E5%88%86%E5%89%B2/</loc>
-    <lastmod>2024-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://promptonce.github.io/tags/%E5%8E%9F%E5%88%9B/</loc>
     <lastmod>2024-11-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -2204,12 +2188,5 @@
   </url>
   
 
-  
-  <url>
-    <loc>https://promptonce.github.io/categories/Java/</loc>
-    <lastmod>2024-11-23</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
