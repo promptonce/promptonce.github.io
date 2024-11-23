@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-11-23T14:52:59.598Z</updated>
+  <updated>2024-11-23T15:54:59.226Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://promptonce.github.io/2024/11/23/%E5%A6%82%E4%BD%95%E5%B9%B3%E8%A1%A1%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8EPrompt%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E7%9A%84%E6%8F%90%E5%8D%87%EF%BC%9F/"/>
     <id>https://promptonce.github.io/2024/11/23/%E5%A6%82%E4%BD%95%E5%B9%B3%E8%A1%A1%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E4%B8%8EPrompt%E5%B7%A5%E7%A8%8B%E8%83%BD%E5%8A%9B%E7%9A%84%E6%8F%90%E5%8D%87%EF%BC%9F/</id>
     <published>2024-11-23T14:51:41.000Z</published>
-    <updated>2024-11-23T14:52:59.598Z</updated>
+    <updated>2024-11-23T15:54:59.226Z</updated>
     
     <content type="html"><![CDATA[<p>在AI技术蓬勃发展的今天，程序员和开发者不仅需要扎实的算法基础，还需要掌握有效与AI模型交互的Prompt设计能力。以下是一些平衡这两种技能提升的策略和实践经验：</p><h4 id="1-打牢基础：算法与Prompt的核心知识"><a href="#1-打牢基础：算法与Prompt的核心知识" class="headerlink" title="1. 打牢基础：算法与Prompt的核心知识"></a>1. <strong>打牢基础：算法与Prompt的核心知识</strong></h4><ul><li><strong>算法</strong>：理解数据结构、经典算法（如排序、搜索、动态规划等），培养逻辑思维和问题解决能力。</li><li><strong>Prompt工程</strong>：熟悉AI模型的工作原理，掌握基本的Prompt设计技巧，例如如何精确描述任务、调整模型输出风格等。</li></ul><hr><h4 id="2-实践项目驱动学习"><a href="#2-实践项目驱动学习" class="headerlink" title="2. 实践项目驱动学习"></a>2. <strong>实践项目驱动学习</strong></h4><p>通过实际项目锻炼算法和Prompt能力：</p><ul><li><strong>结合型项目</strong>：选择既需要算法优化又涉及AI模型交互的项目，例如智能推荐系统、对话机器人等。</li><li><strong>实验与迭代</strong>：在项目中设置不同阶段，专注于优化算法性能或改进Prompt设计，逐步提升综合能力。</li></ul><hr><h4 id="3-定期复习与更新知识"><a href="#3-定期复习与更新知识" class="headerlink" title="3. 定期复习与更新知识"></a>3. <strong>定期复习与更新知识</strong></h4><ul><li><strong>算法</strong>：参与LeetCode、HackerRank等平台的编程挑战，保持技能熟练度。</li><li><strong>Prompt优化</strong>：关注AI和NLP领域的新进展，尝试不同模型如GPT、Claude等，探索新的Prompt技巧。</li></ul><hr><h4 id="4-团队合作与角色分配"><a href="#4-团队合作与角色分配" class="headerlink" title="4. 团队合作与角色分配"></a>4. <strong>团队合作与角色分配</strong></h4><p>在团队项目中：</p><ul><li><strong>算法专家</strong>：负责性能优化、数据处理等核心算法任务。</li><li><strong>Prompt设计师</strong>：负责与AI模型交互的任务，如对话设计、文本生成优化。</li><li><strong>跨角色培训</strong>：鼓励团队成员相互学习，增加协作理解。</li></ul><hr><h4 id="5-敏捷学习与小步迭代"><a href="#5-敏捷学习与小步迭代" class="headerlink" title="5. 敏捷学习与小步迭代"></a>5. <strong>敏捷学习与小步迭代</strong></h4><ul><li><strong>短期目标</strong>：设定可衡量的小目标，比如掌握一种算法或设计一个有效Prompt。</li><li><strong>反馈循环</strong>：在实践中收集反馈，优化学习策略，逐步提高技能水平。</li></ul><hr><h4 id="6-保持兴趣与动力"><a href="#6-保持兴趣与动力" class="headerlink" title="6. 保持兴趣与动力"></a>6. <strong>保持兴趣与动力</strong></h4><ul><li><strong>项目驱动</strong>：选择感兴趣的项目领域，通过解决实际问题保持学习动力。</li><li><strong>社区参与</strong>：加入技术社区、参与开源项目、参加Hackathon，获取激励和认可。</li></ul><hr><h4 id="7-应对信息过载"><a href="#7-应对信息过载" class="headerlink" title="7. 应对信息过载"></a>7. <strong>应对信息过载</strong></h4><ul><li><strong>专注主题</strong>：每次学习时聚焦于特定主题，避免分散注意力。</li><li><strong>休息与反思</strong>：合理安排学习与休息时间，定期复盘已学内容。</li></ul>]]></content>
     
@@ -34,6 +34,10 @@
     
     
     
+    
+    <category term="算法" scheme="https://promptonce.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="prompt" scheme="https://promptonce.github.io/tags/prompt/"/>
     
   </entry>
   
@@ -65,7 +69,7 @@
     <link href="https://promptonce.github.io/2024/11/17/%E5%8D%8E%E4%B8%BA%E4%BA%91Flexus-L%E5%AE%9E%E4%BE%8B%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91ip%E8%AE%BF%E9%97%AE/"/>
     <id>https://promptonce.github.io/2024/11/17/%E5%8D%8E%E4%B8%BA%E4%BA%91Flexus-L%E5%AE%9E%E4%BE%8B%E6%97%A0%E6%B3%95%E9%80%9A%E8%BF%87%E5%85%AC%E7%BD%91ip%E8%AE%BF%E9%97%AE/</id>
     <published>2024-11-17T13:00:52.000Z</published>
-    <updated>2024-11-17T15:04:48.270Z</updated>
+    <updated>2024-11-23T15:47:48.057Z</updated>
     
     <content type="html"><![CDATA[<p>端口放行配置错了安全组然后服务器又绑定了另一个未未配置放行端口的安全组。</p>]]></content>
     
@@ -78,6 +82,8 @@
     
     
     
+    
+    <category term="运维" scheme="https://promptonce.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
     
   </entry>
   
@@ -119,7 +125,7 @@
     <link href="https://promptonce.github.io/2024/11/12/%E4%BB%80%E4%B9%88%E6%98%AF-HTTP-%E8%AF%B7%E6%B1%82%E4%B8%AD%E7%9A%84-Origin-%E5%A4%B4%EF%BC%9F%E5%A6%82%E4%BD%95%E5%9C%A8%E7%89%B9%E6%AE%8A%E5%9C%BA%E6%99%AF%E4%B8%8B%E5%A4%84%E7%90%86%E5%AE%83%EF%BC%9F/"/>
     <id>https://promptonce.github.io/2024/11/12/%E4%BB%80%E4%B9%88%E6%98%AF-HTTP-%E8%AF%B7%E6%B1%82%E4%B8%AD%E7%9A%84-Origin-%E5%A4%B4%EF%BC%9F%E5%A6%82%E4%BD%95%E5%9C%A8%E7%89%B9%E6%AE%8A%E5%9C%BA%E6%99%AF%E4%B8%8B%E5%A4%84%E7%90%86%E5%AE%83%EF%BC%9F/</id>
     <published>2024-11-12T07:17:52.000Z</published>
-    <updated>2024-11-12T07:18:34.989Z</updated>
+    <updated>2024-11-23T15:56:28.748Z</updated>
     
     <content type="html"><![CDATA[<p>在 Web 开发中，跨域请求（Cross-Origin Requests）常常让开发者头疼，而 <code>Origin</code> 头是跨域资源共享（CORS）机制中必不可少的组成部分。本文将详细介绍 <code>Origin</code> 头的作用、为什么它与用户的 IP 不同，以及如何在特定场景下实现“不携带 <code>Origin</code> 头”的请求。</p><hr><h3 id="什么是-Origin-头？"><a href="#什么是-Origin-头？" class="headerlink" title="什么是 Origin 头？"></a>什么是 <code>Origin</code> 头？</h3><p><code>Origin</code> 头是浏览器在发起 HTTP 请求时自动添加的，用于标识请求的来源。这一头部信息由协议（如 <code>https</code>）、域名（如 <code>example.com</code>）和端口组成。它的主要作用是帮助服务器判断请求的来源是否被允许访问资源，是浏览器实现<strong>同源策略</strong>和<strong>CORS</strong>的关键部分。</p><p>例如，当你在浏览器中打开 <code>https://example.com</code> 并访问 <code>https://api.example.com</code> 时，请求的 <code>Origin</code> 头可能会显示为：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Origin: https://example.com</span><br></pre></td></tr></table></figure><p>通过这个头部，服务器可以知道该请求来源于 <code>https://example.com</code>，并决定是否允许该跨域请求访问资源。</p><hr><h3 id="Origin-头-vs-用户-IP"><a href="#Origin-头-vs-用户-IP" class="headerlink" title="Origin 头 vs. 用户 IP"></a><code>Origin</code> 头 vs. 用户 IP</h3><p>很多人容易混淆 <code>Origin</code> 头和用户的 IP 地址。虽然请求确实是从用户的电脑发出的，但 <code>Origin</code> 头和用户 IP 是两个完全不同的概念：</p><ol><li><p><strong><code>Origin</code> 头表示网页来源</strong>：<code>Origin</code> 头标识的是网页的来源域（例如 <code>https://example.com</code>），而不是用户设备的地址。它主要用于同源策略的安全判断，帮助服务器控制跨域请求。</p></li><li><p><strong>用户 IP 表示设备的网络位置</strong>：用户的 IP 地址则是用户设备在网络中的地址，与物理位置和网络连接有关，用于路由传输。IP 不包含网页来源的信息，因此服务器无法依赖 IP 来判断请求是从哪个网页发起的。</p></li></ol><h3 id="为什么需要-Origin-头？"><a href="#为什么需要-Origin-头？" class="headerlink" title="为什么需要 Origin 头？"></a>为什么需要 <code>Origin</code> 头？</h3><p>浏览器的同源策略（Same-Origin Policy）规定，网页脚本只能访问与其来源相同的资源，<code>Origin</code> 头正是这一机制的组成部分。通过 <code>Origin</code> 头，服务器能够明确请求来源，并决定是否允许跨域访问。这在防止跨站请求伪造（CSRF）等安全攻击上非常有效。</p><hr><h3 id="如何实现不携带-Origin-头的请求？"><a href="#如何实现不携带-Origin-头的请求？" class="headerlink" title="如何实现不携带 Origin 头的请求？"></a>如何实现不携带 <code>Origin</code> 头的请求？</h3><p>在一些特殊场景中，可能需要发送不带 <code>Origin</code> 头的 HTTP 请求，跳过浏览器的同源策略检查。以下几种方法可以实现这一效果，但需谨慎使用，以免引入安全风险。</p><h4 id="1-使用非浏览器客户端发送请求"><a href="#1-使用非浏览器客户端发送请求" class="headerlink" title="1. 使用非浏览器客户端发送请求"></a>1. 使用非浏览器客户端发送请求</h4><p>浏览器会自动添加 <code>Origin</code> 头，但在使用非浏览器的 HTTP 客户端（如 Python 的 <code>requests</code> 库、Node.js 的 <code>http</code> 模块、cURL）时，可以手动控制请求头部，不携带 <code>Origin</code> 头。例如：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"></span><br><span class="line">response = requests.get(<span class="string">&#x27;https://example.com/api&#x27;</span>, headers=&#123;&#125;)  <span class="comment"># 不携带 Origin 头</span></span><br></pre></td></tr></table></figure><p>这种方法适用于后端环境或自定义客户端应用，但不适合浏览器环境。</p><h4 id="2-使用代理服务器"><a href="#2-使用代理服务器" class="headerlink" title="2. 使用代理服务器"></a>2. 使用代理服务器</h4><p>如果需要从浏览器中发起不带 <code>Origin</code> 头的请求，可以设置一个代理服务器。通过代理转发请求，浏览器只会与代理通信，而代理则在将请求发送到目标服务器时省略 <code>Origin</code> 头。</p><p><strong>示例：NGINX 配置</strong></p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">location</span> /proxy/ &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span> https://example.com/api;</span><br><span class="line">    <span class="attribute">proxy_hide_header</span> Origin;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>此方法允许浏览器请求先发送到代理服务器，由代理移除 <code>Origin</code> 后转发到目标服务器。</p><h4 id="3-利用-JSONP（仅限-GET-请求）"><a href="#3-利用-JSONP（仅限-GET-请求）" class="headerlink" title="3. 利用 JSONP（仅限 GET 请求）"></a>3. 利用 JSONP（仅限 GET 请求）</h4><p>在一些跨域 GET 请求中，可以通过 JSONP（JSON with Padding）技术绕过同源策略。JSONP 利用 <code>&lt;script&gt;</code> 标签加载目标资源，不需要 <code>Origin</code> 头，但只能用于 GET 请求，且要求目标服务器支持 JSONP。</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;https://example.com/api?callback=myCallbackFunction&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">function</span> <span class="title function_">myCallbackFunction</span>(<span class="params">data</span>) &#123;</span></span><br><span class="line"><span class="language-javascript">        <span class="variable language_">console</span>.<span class="title function_">log</span>(data);</span></span><br><span class="line"><span class="language-javascript">    &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure><h4 id="4-服务器端控制-CORS-配置"><a href="#4-服务器端控制-CORS-配置" class="headerlink" title="4. 服务器端控制 CORS 配置"></a>4. 服务器端控制 CORS 配置</h4><p>如果你拥有服务器的控制权限，并希望允许不带 <code>Origin</code> 头的请求，可以调整服务器的 CORS 配置。不过，这种方法依赖服务器端控制，并不是绕过 <code>Origin</code> 的方式。</p><hr><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><p><code>Origin</code> 头是 HTTP 和浏览器安全机制的重要组成部分，用于识别请求来源，确保跨域请求的安全性。在特定场景下，可以通过使用非浏览器客户端、代理服务器、JSONP 等方法实现不携带 <code>Origin</code> 头的请求。不过，需要谨慎使用这些方法，避免绕过浏览器的安全策略带来的潜在风险。</p><p>跨域和安全控制始终是 Web 开发中的重点，理解 <code>Origin</code> 头的作用、区别它和用户 IP，将有助于更好地配置和管理跨域资源共享（CORS）。</p>]]></content>
     
@@ -131,6 +137,10 @@
     
     
     
+    
+    <category term="前端开发" scheme="https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="计算机网络与通信" scheme="https://promptonce.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%B8%8E%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
@@ -204,7 +214,7 @@
     <link href="https://promptonce.github.io/2024/11/08/%E5%B7%A5%E4%BD%9C%E6%B1%87%E6%8A%A5%E6%80%BB%E7%BB%93/"/>
     <id>https://promptonce.github.io/2024/11/08/%E5%B7%A5%E4%BD%9C%E6%B1%87%E6%8A%A5%E6%80%BB%E7%BB%93/</id>
     <published>2024-11-08T07:44:58.000Z</published>
-    <updated>2024-11-08T07:46:56.991Z</updated>
+    <updated>2024-11-23T15:45:53.728Z</updated>
     
     <content type="html"><![CDATA[<p>计算制作PPT和开会的产出比</p>]]></content>
     
@@ -217,6 +227,8 @@
     
     
     
+    
+    <category term="软件项目复盘" scheme="https://promptonce.github.io/tags/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98/"/>
     
   </entry>
   
@@ -420,7 +432,7 @@
     <link href="https://promptonce.github.io/2024/10/25/%E4%BB%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E8%A7%86%E8%A7%92%E7%9C%8B%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3/"/>
     <id>https://promptonce.github.io/2024/10/25/%E4%BB%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E8%A7%86%E8%A7%92%E7%9C%8B%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3/</id>
     <published>2024-10-24T17:13:24.000Z</published>
-    <updated>2024-10-24T17:38:12.040Z</updated>
+    <updated>2024-11-23T15:42:34.161Z</updated>
     
     <content type="html"><![CDATA[<p>比如中序遍历左中右（适用于一棵仅有三个节点的小二叉树和由无数小的二叉树构成的大二叉树，区别在与小二叉树的子树是一个节点（最小的树），大二叉树的是一棵较大的树，都是符合二叉树的定义）</p><p>二叉树是一个抽象的概念，不要被名字误导，二叉树存储的信息包括二叉树的节点值和节点与节点之间的关系，理解了这层逻辑，叫二叉啥都无所谓。</p><p>中序遍历就是对二叉树中存储的信息进行读取的一种方式。读取的原则是先读取左子树的信息，再读取根节点的信息，再读取右子树的信息，这个简称逻辑A（如果子树中还有更小的子树-左子树或右子树, 根节点就是自身，不存在多态现象，根节点起连接节点关系的作用，这个子树中也执行同样的逻辑A，那么就可以将整棵树的信息按照中序遍历这种信息提取方式进行读取），其他遍历顺序同理。</p>]]></content>
     
