@@ -1,3 +1,4 @@
+https://promptonce.github.io/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/
 https://promptonce.github.io/2024/12/01/%E5%A4%A7%E5%B0%8F%E9%A1%B6%E5%A0%86%E6%80%BB%E7%BB%93/
 https://promptonce.github.io/2024/12/01/nextjs%E6%80%BB%E7%BB%93/
 https://promptonce.github.io/2024/11/24/itopmap%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%A4%8D%E7%9B%98/
@@ -216,7 +217,6 @@ https://promptonce.github.io/2024/08/23/MMSegmentation%E4%BB%8E0-x%E8%BF%81%E7%A
 https://promptonce.github.io/2024/08/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%9E%E8%B7%B5%E5%88%86%E6%9E%90/
 https://promptonce.github.io/2024/08/17/%E5%B7%A5%E5%8C%A0%E7%B2%BE%E7%A5%9E/
 https://promptonce.github.io/2024/08/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%B2%89%E6%B7%80/
-https://promptonce.github.io/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/
 https://promptonce.github.io/2024/08/12/%E7%BF%81%E6%81%BAJava%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/
 https://promptonce.github.io/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/
 https://promptonce.github.io/2024/09/19/hello-world/
