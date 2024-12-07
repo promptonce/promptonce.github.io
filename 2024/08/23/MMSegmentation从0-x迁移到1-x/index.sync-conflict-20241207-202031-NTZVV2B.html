@@ -1,0 +1,832 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0" theme-name="Stellar" theme-version="1.29.0">
+  
+  <meta name="generator" content="Hexo 7.2.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  
+  <title>MMSegmentation从0.x迁移到1.x - PromptOnce</title>
+
+  
+    <meta name="description" content="New dependencies MMSegmentation 1.x 依赖于一些新的软件包，建议准备一个新的干净环境,然后根据安装教程重新安装。 手动安装以下软件包。   MMEngine：MMEngine 是 OpenMMLab 2.0 架构的核心，我们将许多与计算机视觉无关的内容从 MMCV 拆分到 MMEngine 中。  MMCV：OpenMMLab 的计算机视觉包。这不是一个新的依赖，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MMSegmentation从0.x迁移到1.x">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/23/MMSegmentation%E4%BB%8E0-x%E8%BF%81%E7%A7%BB%E5%88%B01-x/index.html">
+<meta property="og:site_name" content="PromptOnce">
+<meta property="og:description" content="New dependencies MMSegmentation 1.x 依赖于一些新的软件包，建议准备一个新的干净环境,然后根据安装教程重新安装。 手动安装以下软件包。   MMEngine：MMEngine 是 OpenMMLab 2.0 架构的核心，我们将许多与计算机视觉无关的内容从 MMCV 拆分到 MMEngine 中。  MMCV：OpenMMLab 的计算机视觉包。这不是一个新的依赖，">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-08-23T07:03:02.000Z">
+<meta property="article:modified_time" content="2024-08-23T07:05:37.632Z">
+<meta property="article:author" content="penggan">
+<meta property="article:tag" content="MMSegmentation">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="MMSegmentation">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="PromptOnce" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.0">
+
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"><span class="title">python面向对象总结</span></a><a class="item title" href="/2024/12/01/%E5%A4%A7%E5%B0%8F%E9%A1%B6%E5%A0%86%E6%80%BB%E7%BB%93/"><span class="title">大小顶堆总结</span></a><a class="item title" href="/2024/12/01/nextjs%E6%80%BB%E7%BB%93/"><span class="title">nextjs总结</span></a><a class="item title" href="/2024/11/24/itopmap%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%A4%8D%E7%9B%98/"><span class="title">itopmap系统开发复盘</span></a><a class="item title" href="/2024/11/26/%E5%9C%A8VPN%E7%BD%91%E7%BB%9C%E4%B8%8B%E9%85%8D%E7%BD%AEGit%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3git_clone%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/"><span class="title">如何在 VPN 网络下配置 Git 代理解决 `git clone` 失败的问题</span></a><a class="item title" href="/2024/08/16/%E4%BB%8EAI%E7%BC%96%E7%A8%8B%E8%AE%A4%E7%9F%A5AI/"><span class="title">从AI编程认知AI</span></a><a class="item title" href="/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/"><span class="title">flex布局总结</span></a><a class="item title" href="/2024/08/10/pytorch%E4%B8%AD%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"><span class="title">pytorch中相关概念</span></a><a class="item title" href="/2024/10/30/react%E6%A6%82%E8%BF%B0/"><span class="title">react总结</span></a><a class="item title" href="/2024/08/28/SPA%E9%A6%96%E5%B1%8F%E4%BC%98%E5%8C%96/"><span class="title">SPA首屏优化</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-23T07:03:02.000Z">2024-08-23</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-23T07:05:37.632Z">2024-08-23</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>MMSegmentation从0.x迁移到1.x</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h2 id="New-dependencies"><a href="#New-dependencies" class="headerlink" title="New dependencies"></a>New dependencies</h2><ol>
+<li>MMSegmentation 1.x 依赖于一些新的软件包，建议准备一个新的干净环境,然后根据<a target="_blank" rel="noopener" href="https://mmsegmentation.readthedocs.io/zh-cn/latest/get_started.html">安装教程</a>重新安装。</li>
+<li>手动安装以下软件包。</li>
+</ol>
+<ul>
+<li><p>MMEngine：MMEngine 是 OpenMMLab 2.0 架构的核心，我们将许多与计算机视觉无关的内容从 MMCV 拆分到 MMEngine 中。</p>
+</li>
+<li><p>MMCV：OpenMMLab 的计算机视觉包。这不是一个新的依赖，但您需要将其升级到 2.0.0 或以上的版本。</p>
+</li>
+<li><p>MMClassification（可选）：OpenMMLab 的图像分类工具箱和基准。这不是一个新的依赖，但您需要将其升级到 1.0.0rc6 版本。</p>
+</li>
+<li><p>MMDetection(可选): OpenMMLab 的目标检测工具箱和基准。这不是一个新的依赖，但您需要将其升级到 3.0.0 或以上的版本。</p>
+</li>
+</ul>
+<h2 id="Train-launch"><a href="#Train-launch" class="headerlink" title="Train launch"></a>Train launch</h2><p>The <strong>main improvement</strong> of OpenMMLab 2.0 is releasing <strong>MMEngine</strong> which <strong>provides universal and powerful runner</strong> for <strong>unified interfaces</strong> to launch training jobs.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Original</th>
+<th>New</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Loading pre-trained checkpoint</td>
+<td><code>--load_from=$CHECKPOINT</code></td>
+<td><code>--cfg-options load_from=$CHECKPOINT</code></td>
+<td>将load_from放到cfg-options下</td>
+</tr>
+<tr>
+<td>Resuming Train from specific checkpoint</td>
+<td><code>--resume-from=$CHECKPOINT</code></td>
+<td><code>--resume=$CHECKPOINT</code></td>
+<td>resume-from简化为resume</td>
+</tr>
+<tr>
+<td>Resuming Train from the latest checkpoint</td>
+<td><code>--auto-resume</code></td>
+<td><code>--resume=&#39;auto&#39;</code></td>
+<td>–auto-resume默认为true修改为可以有多个resume的值的变量</td>
+</tr>
+<tr>
+<td>Whether not to evaluate the checkpoint during training</td>
+<td><code>--no-validate</code></td>
+<td><code>--cfg-options val_cfg=None val_dataloader=None val_evaluator=None</code></td>
+<td>–no-validate默认为true修改为val_cfg, val_dataloader,val_evaluator这几个有多个值的变量</td>
+</tr>
+<tr>
+<td>Training device assignment</td>
+<td><code>--gpu-id=$DEVICE_ID</code></td>
+<td><code>-</code></td>
+<td>删掉了可以指定gpu-id的配置</td>
+</tr>
+<tr>
+<td>Whether or not set different seeds for different ranks</td>
+<td><code>--diff-seed</code></td>
+<td><code>--cfg-options randomness.diff_rank_seed=True</code></td>
+<td>将diff-seed放到cfg-options下</td>
+</tr>
+<tr>
+<td>Whether to set deterministic options for CUDNN backend</td>
+<td><code>--deterministic</code></td>
+<td><code>--cfg-options randomness.deterministic=True</code></td>
+<td>将deterministic放到cfg-options下</td>
+</tr>
+</tbody></table>
+<h2 id="Test-launch"><a href="#Test-launch" class="headerlink" title="Test launch"></a>Test launch</h2><p>Here’s the provided information formatted into a Markdown table:</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>0.x</th>
+<th>1.x</th>
+<th>Conclusion</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Evaluation metrics</td>
+<td><code>--eval mIoU</code></td>
+<td><code>--cfg-options test_evaluator.type=IoUMetric</code></td>
+<td>–eval 修改为–cfg-options mIou修改为有多个值的test_evaluator.type</td>
+</tr>
+<tr>
+<td>Whether to use test time augmentation</td>
+<td><code>--aug-test</code></td>
+<td><code>--tta</code></td>
+<td>aug-test修改为tta</td>
+</tr>
+<tr>
+<td>Whether save the output results without perform evaluation</td>
+<td><code>--format-only</code></td>
+<td><code>--cfg-options test_evaluator.format_only=True</code></td>
+<td>–format-only修改为–cfg-options，默认值为true修改为有多个值的test_evaluator.format_only</td>
+</tr>
+</tbody></table>
+<h2 id="Configuration-file"><a href="#Configuration-file" class="headerlink" title="Configuration file"></a>Configuration file</h2><h3 id="Model-settings"><a href="#Model-settings" class="headerlink" title="Model settings"></a>Model settings</h3><p>No changes in model.backbone, model.neck, model.decode_head and model.losses fields.<br>model.backbone, model.neck, model.decode_head and model.losses和MMSeg0.x相同  </p>
+<p>Add model.data_preprocessor field to configure the DataPreProcessor, including:</p>
+<p>相对于MMSeg0.x添加了model.data_preprocessor 字段</p>
+<ul>
+<li><p>mean (Sequence, optional): The pixel mean of R, G, B channels. Defaults to None.</p>
+</li>
+<li><p>std (Sequence, optional): The pixel standard deviation of R, G, B channels. Defaults to None.</p>
+</li>
+<li><p>size (Sequence, optional): Fixed padding size.</p>
+</li>
+<li><p>size_divisor (int, optional): The divisor of padded size.</p>
+</li>
+<li><p>seg_pad_val (float, optional): Padding value of segmentation map. Default: 255.</p>
+</li>
+<li><p>padding_mode (str): Type of padding. Default: ‘constant’.</p>
+</li>
+<li><p>constant: pads with a constant value, this value is specified with pad_val.</p>
+</li>
+<li><p>bgr_to_rgb (bool): whether to convert image from BGR to RGB.Defaults to False.</p>
+</li>
+<li><p>rgb_to_bgr (bool): whether to convert image from RGB to BGR. Defaults to False.</p>
+</li>
+</ul>
+<h3 id="Dataset-settings"><a href="#Dataset-settings" class="headerlink" title="Dataset settings"></a>Dataset settings</h3><p>Changes in data:</p>
+<p>The original data field is split to train_dataloader, val_dataloader and test_dataloader. This allows us to configure them in fine-grained. For example, you can specify different sampler and batch size during training and test. The samples_per_gpu is renamed to batch_size. The workers_per_gpu is renamed to num_workers.</p>
+<p>data字段拆分为train_dataloader, val_dataloader, test_dataloader三个字段，可以在训练集，测试集分别指定不同的sampler和batch_size, samples_per_gpu重命名为batch_size， workers_per_gpu重命名为num_workers</p>
+<ul>
+<li>Original</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">data = <span class="built_in">dict</span>(</span><br><span class="line">    samples_per_gpu=<span class="number">4</span>,</span><br><span class="line">    workers_per_gpu=<span class="number">4</span>,</span><br><span class="line">    train=<span class="built_in">dict</span>(...),</span><br><span class="line">    val=<span class="built_in">dict</span>(...),</span><br><span class="line">    test=<span class="built_in">dict</span>(...),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>New</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">train_dataloader = <span class="built_in">dict</span>(</span><br><span class="line">    batch_size=<span class="number">4</span>,</span><br><span class="line">    num_workers=<span class="number">4</span>,</span><br><span class="line">    dataset=<span class="built_in">dict</span>(...),</span><br><span class="line">    sampler=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;DefaultSampler&#x27;</span>, shuffle=<span class="literal">True</span>)  <span class="comment"># necessary</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">val_dataloader = <span class="built_in">dict</span>(</span><br><span class="line">    batch_size=<span class="number">4</span>,</span><br><span class="line">    num_workers=<span class="number">4</span>,</span><br><span class="line">    dataset=<span class="built_in">dict</span>(...),</span><br><span class="line">    sampler=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;DefaultSampler&#x27;</span>, shuffle=<span class="literal">False</span>)  <span class="comment"># necessary</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">test_dataloader = val_dataloader</span><br></pre></td></tr></table></figure>
+
+<p>Changes in pipeline:  </p>
+<ul>
+<li><p>The original formatting transforms ToTensor、ImageToTensor、Collect are combined as PackSegInputs. 将ToTensor, ImageToTensor, Collect组合为一个字段PackSegInputs.</p>
+</li>
+<li><p>We don’t recommend to do Normalize and Pad in the dataset pipeline. Please remove it from pipelines and set it in the data_preprocessor field. Normalize和Pad修改为在data_preprocessor中设置</p>
+</li>
+<li><p>The original Resize in MMSeg 1.x has been changed to RandomResize and the input arguments img_scale is renamed to scale, and the default value of keep_ratio is modified to False. Resize修改为RandomResize，不知道这两种Resize方式是否相同，img_scale重命名为scale,功能应该是相同的，keep_ration的默认值修改为False.</p>
+</li>
+<li><p>The original test_pipeline combines single-scale test and multi-scale test together, in MMSeg 1.x we separate it into test_pipeline and tta_pipeline.</p>
+</li>
+</ul>
+<p>train_pipeline:</p>
+<ul>
+<li>Original</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">train_pipeline = [</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadImageFromFile&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadAnnotations&#x27;</span>, reduce_zero_label=<span class="literal">True</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Resize&#x27;</span>, img_scale=(<span class="number">2560</span>, <span class="number">640</span>), ratio_range=(<span class="number">0.5</span>, <span class="number">2.0</span>)),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomCrop&#x27;</span>, crop_size=crop_size, cat_max_ratio=<span class="number">0.75</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomFlip&#x27;</span>, prob=<span class="number">0.5</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;PhotoMetricDistortion&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Normalize&#x27;</span>, **img_norm_cfg),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Pad&#x27;</span>, size=crop_size, pad_val=<span class="number">0</span>, seg_pad_val=<span class="number">255</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;DefaultFormatBundle&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Collect&#x27;</span>, keys=[<span class="string">&#x27;img&#x27;</span>, <span class="string">&#x27;gt_semantic_seg&#x27;</span>]),</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>new:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">train_pipeline = [</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadImageFromFile&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadAnnotations&#x27;</span>, reduce_zero_label=<span class="literal">True</span>),</span><br><span class="line">    <span class="built_in">dict</span>(</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&#x27;RandomResize&#x27;</span>,</span><br><span class="line">        scale=(<span class="number">2560</span>, <span class="number">640</span>),</span><br><span class="line">        ratio_range=(<span class="number">0.5</span>, <span class="number">2.0</span>),</span><br><span class="line">        keep_ratio=<span class="literal">True</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomCrop&#x27;</span>, crop_size=crop_size, cat_max_ratio=<span class="number">0.75</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomFlip&#x27;</span>, prob=<span class="number">0.5</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;PhotoMetricDistortion&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;PackSegInputs&#x27;</span>)</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>test_pipeline:</p>
+<ul>
+<li>Original:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">test_pipeline = [</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadImageFromFile&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&#x27;MultiScaleFlipAug&#x27;</span>,</span><br><span class="line">        img_scale=(<span class="number">2560</span>, <span class="number">640</span>),</span><br><span class="line">        <span class="comment"># img_ratios=[0.5, 0.75, 1.0, 1.25, 1.5, 1.75],</span></span><br><span class="line">        flip=<span class="literal">False</span>,</span><br><span class="line">        transforms=[</span><br><span class="line">            <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Resize&#x27;</span>, keep_ratio=<span class="literal">True</span>),</span><br><span class="line">            <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomFlip&#x27;</span>),</span><br><span class="line">            <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Normalize&#x27;</span>, **img_norm_cfg),</span><br><span class="line">            <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;ImageToTensor&#x27;</span>, keys=[<span class="string">&#x27;img&#x27;</span>]),</span><br><span class="line">            <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Collect&#x27;</span>, keys=[<span class="string">&#x27;img&#x27;</span>]),</span><br><span class="line">        ])</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>New</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">test_pipeline = [</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadImageFromFile&#x27;</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Resize&#x27;</span>, scale=(<span class="number">2560</span>, <span class="number">640</span>), keep_ratio=<span class="literal">True</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadAnnotations&#x27;</span>, reduce_zero_label=<span class="literal">True</span>),</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;PackSegInputs&#x27;</span>)</span><br><span class="line">]</span><br><span class="line">img_ratios = [<span class="number">0.5</span>, <span class="number">0.75</span>, <span class="number">1.0</span>, <span class="number">1.25</span>, <span class="number">1.5</span>, <span class="number">1.75</span>]</span><br><span class="line">tta_pipeline = [</span><br><span class="line">    <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadImageFromFile&#x27;</span>, backend_args=<span class="literal">None</span>),</span><br><span class="line">    <span class="built_in">dict</span>(</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&#x27;TestTimeAug&#x27;</span>,</span><br><span class="line">        transforms=[</span><br><span class="line">            [</span><br><span class="line">                <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;Resize&#x27;</span>, scale_factor=r, keep_ratio=<span class="literal">True</span>)</span><br><span class="line">                <span class="keyword">for</span> r <span class="keyword">in</span> img_ratios</span><br><span class="line">            ],</span><br><span class="line">            [</span><br><span class="line">                <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomFlip&#x27;</span>, prob=<span class="number">0.</span>, direction=<span class="string">&#x27;horizontal&#x27;</span>),</span><br><span class="line">                <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;RandomFlip&#x27;</span>, prob=<span class="number">1.</span>, direction=<span class="string">&#x27;horizontal&#x27;</span>)</span><br><span class="line">            ], [<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoadAnnotations&#x27;</span>)], [<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;PackSegInputs&#x27;</span>)]</span><br><span class="line">        ])</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>将transfor从test_pipeline中拎出来放到tta_pipeline(Test Time Augmentation Pipeline，用于提高模型预测性能的模块。这个模块通过对输入图像进行一系列的变换和增强，然后将这些变换后的图像输入到模型中，最后将这些预测结果进行融合，以得到最终的预测结果。这样做可以有效地提高模型的鲁棒性和准确性。）中。</p>
+<p>  Changes in evaluation:</p>
+<ul>
+<li><p>The evaluation field is split to val_evaluator and test_evaluator. And it won’t support interval and save_best arguments. The interval is moved to train_cfg.val_interval, and the save_best is moved to default_hooks.checkpoint.save_best. pre_eval has been removed.单一的evaluation拆分为val_evaluator和test_evaluator同时删除了interval和save_best参数，interval放到了train_cfg.val_interval下，save_best放到了default_hooks.checkpoint.save_best下，删掉了pre_eval</p>
+</li>
+<li><p>‘mIoU’ has been changed to ‘IoUMetric’.</p>
+</li>
+</ul>
+<p>Original：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evaluation = <span class="built_in">dict</span>(interval=<span class="number">2000</span>, metric=<span class="string">&#x27;mIoU&#x27;</span>, pre_eval=<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p>New:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">val_evaluator = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;IoUMetric&#x27;</span>, iou_metrics=[<span class="string">&#x27;mIoU&#x27;</span>])</span><br><span class="line">test_evaluator = val_evaluator</span><br></pre></td></tr></table></figure>
+
+<h3 id="Optimizer-and-Schedule-settings"><a href="#Optimizer-and-Schedule-settings" class="headerlink" title="Optimizer and Schedule settings"></a>Optimizer and Schedule settings</h3><p>Changes in optimizer and optimizer_config:</p>
+<ul>
+<li><p>Now we use optim_wrapper field to specify all configuration about the optimization process. And the optimizer is a sub field of optim_wrapper now.将optimizer封装到optim_wrapper下。</p>
+</li>
+<li><p>paramwise_cfg is also a sub field of optim_wrapper, instead of optimizer.原本在optimizer下的optim_wrapper移动到了paramwise_cfg下。</p>
+</li>
+<li><p>optimizer_config is removed now, and all configurations of it are moved to optim_wrapper. 删除了optimizer_config。</p>
+</li>
+</ul>
+<p>grad_clip is renamed to clip_grad. grad_clip重命名为clip_grad。</p>
+<p>Original</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">optimizer = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;AdamW&#x27;</span>, lr=<span class="number">0.0001</span>, weight_decay=<span class="number">0.0005</span>)</span><br><span class="line">optimizer_config = <span class="built_in">dict</span>(grad_clip=<span class="built_in">dict</span>(max_norm=<span class="number">1</span>, norm_type=<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>New</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">optim_wrapper = <span class="built_in">dict</span>(</span><br><span class="line">    <span class="built_in">type</span>=<span class="string">&#x27;OptimWrapper&#x27;</span>,</span><br><span class="line">    optimizer=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;AdamW&#x27;</span>, lr=<span class="number">0.0001</span>, weight_decay=<span class="number">0.0005</span>),</span><br><span class="line">    clip_grad=<span class="built_in">dict</span>(max_norm=<span class="number">1</span>, norm_type=<span class="number">2</span>))</span><br></pre></td></tr></table></figure>
+
+<p>Changes in lr_config:</p>
+<ul>
+<li><p>The lr_config field is removed and we use new param_scheduler to replace it. 用param_scheduler替换掉了lr_config, 不知道内部是否做了修改</p>
+</li>
+<li><p>The warmup related arguments are removed, since we use schedulers combination to implement this functionality. 删除了warmup相关的参数，改用schedulers combination实现对应的功能。</p>
+</li>
+</ul>
+<p>The new schedulers combination mechanism is very flexible, and you can use it to design many kinds of learning rate &#x2F; momentum curves. See the tutorial for more details. 新的schedulers combination可以实现多种learning rate &#x2F; momentum curves。</p>
+<p>Original：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">lr_config = <span class="built_in">dict</span>(</span><br><span class="line">    policy=<span class="string">&#x27;poly&#x27;</span>,</span><br><span class="line">    warmup=<span class="string">&#x27;linear&#x27;</span>,</span><br><span class="line">    warmup_iters=<span class="number">1500</span>,</span><br><span class="line">    warmup_ratio=<span class="number">1e-6</span>,</span><br><span class="line">    power=<span class="number">1.0</span>,</span><br><span class="line">    min_lr=<span class="number">0.0</span>,</span><br><span class="line">    by_epoch=<span class="literal">False</span>)</span><br></pre></td></tr></table></figure>
+
+<p>New:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">param_scheduler = [</span><br><span class="line">    <span class="built_in">dict</span>(</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&#x27;LinearLR&#x27;</span>, start_factor=<span class="number">1e-6</span>, by_epoch=<span class="literal">False</span>, begin=<span class="number">0</span>, end=<span class="number">1500</span>),</span><br><span class="line">    <span class="built_in">dict</span>(</span><br><span class="line">        <span class="built_in">type</span>=<span class="string">&#x27;PolyLR&#x27;</span>,</span><br><span class="line">        power=<span class="number">1.0</span>,</span><br><span class="line">        begin=<span class="number">1500</span>,</span><br><span class="line">        end=<span class="number">160000</span>,</span><br><span class="line">        eta_min=<span class="number">0.0</span>,</span><br><span class="line">        by_epoch=<span class="literal">False</span>,</span><br><span class="line">    )</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+<p>Changes in runner:</p>
+<p>Most configuration in the original runner field is moved to train_cfg, val_cfg and test_cfg, which configure the loop in training, validation and test.大部分原来的runner字段被移动到了train_cfg，val_cfg和test_cfg中</p>
+<p>Original：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">runner = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;IterBasedRunner&#x27;</span>, max_iters=<span class="number">20000</span>)</span><br></pre></td></tr></table></figure>
+
+<p>New:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The `val_interval` is the original `evaluation.interval`.</span></span><br><span class="line">train_cfg = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;IterBasedTrainLoop&#x27;</span>, max_iters=<span class="number">20000</span>, val_interval=<span class="number">2000</span>)</span><br><span class="line">val_cfg = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;ValLoop&#x27;</span>) <span class="comment"># Use the default validation loop.</span></span><br><span class="line">test_cfg = <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;TestLoop&#x27;</span>) <span class="comment"># Use the default test loop.</span></span><br></pre></td></tr></table></figure>
+
+<p>In fact, in OpenMMLab 2.0, we introduced Loop to control the behaviors in training, validation and test. The functionalities of Runner are also changed. You can find more details of <a target="_blank" rel="noopener" href="https://github.com/open-mmlab/mmengine/blob/main/docs/en/design/runner.md">runner tutorial</a> in <a target="_blank" rel="noopener" href="https://github.com/open-mmlab/mmengine/">MMEngine</a>.</p>
+<h3 id="Runtime-settings"><a href="#Runtime-settings" class="headerlink" title="Runtime settings"></a>Runtime settings</h3><p>Changes in checkpoint_config and log_config:</p>
+<p>The checkpoint_config are moved to default_hooks.checkpoint and the log_config are moved to default_hooks.logger. And we move many hooks settings from the script code to the default_hooks field in the runtime configuration. checkpoint_config被移动到了default_hooks.checkpoint， log_config 被移动到了 default_hooks.logger，从script code移动了很多hooks settings到runtime configuration中的default_hooks。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">default_hooks = <span class="built_in">dict</span>(</span><br><span class="line">    <span class="comment"># record the time of every iterations.</span></span><br><span class="line">    timer=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;IterTimerHook&#x27;</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># print log every 50 iterations.</span></span><br><span class="line">    logger=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoggerHook&#x27;</span>, interval=<span class="number">50</span>, log_metric_by_epoch=<span class="literal">False</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># enable the parameter scheduler.</span></span><br><span class="line">    param_scheduler=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;ParamSchedulerHook&#x27;</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># save checkpoint every 2000 iterations.</span></span><br><span class="line">    checkpoint=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;CheckpointHook&#x27;</span>, by_epoch=<span class="literal">False</span>, interval=<span class="number">2000</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># set sampler seed in distributed environment.</span></span><br><span class="line">    sampler_seed=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;DistSamplerSeedHook&#x27;</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># validation results visualization.</span></span><br><span class="line">    visualization=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;SegVisualizationHook&#x27;</span>))</span><br></pre></td></tr></table></figure>
+
+<p>In addition, we split the original logger to logger and visualizer. The logger is used to record information and the visualizer is used to show the logger in different backends, like terminal and TensorBoard. 将original logger划分为logger和visualizer. logger用于记录信息， visualizer被用于以不同的后端显示logger（terminal和TensorBoard）</p>
+<p>Original：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">log_config = <span class="built_in">dict</span>(</span><br><span class="line">    interval=<span class="number">100</span>,</span><br><span class="line">    hooks=[</span><br><span class="line">        <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;TextLoggerHook&#x27;</span>),</span><br><span class="line">        <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;TensorboardLoggerHook&#x27;</span>),</span><br><span class="line">    ])</span><br></pre></td></tr></table></figure>
+
+<p>New:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">default_hooks = <span class="built_in">dict</span>(</span><br><span class="line">    ...</span><br><span class="line">    logger=<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LoggerHook&#x27;</span>, interval=<span class="number">100</span>),</span><br><span class="line">)</span><br><span class="line">vis_backends = [<span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;LocalVisBackend&#x27;</span>),</span><br><span class="line">                <span class="built_in">dict</span>(<span class="built_in">type</span>=<span class="string">&#x27;TensorboardVisBackend&#x27;</span>)]</span><br><span class="line">visualizer = <span class="built_in">dict</span>(</span><br><span class="line">    <span class="built_in">type</span>=<span class="string">&#x27;SegLocalVisualizer&#x27;</span>, vis_backends=vis_backends, name=<span class="string">&#x27;visualizer&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Changes in load_from and resume_from:</p>
+<p>The resume_from is removed. And we use resume and load_from to replace it. 删除了resume_from，使用resume和load_from替代，不知道是否需要修改代码以适配。</p>
+<ul>
+<li><p>If resume&#x3D;True and load_from is not None, resume training from the checkpoint in load_from.</p>
+</li>
+<li><p>If resume&#x3D;True and load_from is None, try to resume from the latest checkpoint in the work directory.</p>
+</li>
+<li><p>If resume&#x3D;False and load_from is not None, only load the checkpoint, not resume training.</p>
+</li>
+<li><p>If resume&#x3D;False and load_from is None, do not load nor resume.</p>
+</li>
+</ul>
+<p>Changes in dist_params: The dist_params field is a sub field of env_cfg now. And there are some new configurations in the env_cfg.</p>
+<p>Changes in dist_params: The dist_params field is a sub field of env_cfg now. And there are some new configurations in the env_cfg. dist_params作为一个子字段放到了env_cfg下。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">env_cfg = <span class="built_in">dict</span>(</span><br><span class="line">    <span class="comment"># whether to enable cudnn benchmark</span></span><br><span class="line">    cudnn_benchmark=<span class="literal">False</span>,</span><br><span class="line"></span><br><span class="line">    <span class="comment"># set multi process parameters</span></span><br><span class="line">    mp_cfg=<span class="built_in">dict</span>(mp_start_method=<span class="string">&#x27;fork&#x27;</span>, opencv_num_threads=<span class="number">0</span>),</span><br><span class="line"></span><br><span class="line">    <span class="comment"># set distributed parameters</span></span><br><span class="line">    dist_cfg=<span class="built_in">dict</span>(backend=<span class="string">&#x27;nccl&#x27;</span>),</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>Changes in workflow: workflow related functionalities are removed. workflow相关的功能被删除。</p>
+<p>New field visualizer: The visualizer is a new design in OpenMMLab 2.0 architecture. We use a visualizer instance in the runner to handle results &amp; log visualization and save to different backends. See the <a target="_blank" rel="noopener" href="https://mmsegmentation.readthedocs.io/en/latest/user_guides/visualization.html">visualization tutorial</a> for more details. visualizer在OpenMMLab2.0中是一个新设计。</p>
+<p>New field default_scope: The start point to search module for all registries. The default_scope in MMSegmentation is mmseg. See <a target="_blank" rel="noopener" href="https://github.com/open-mmlab/mmengine/blob/main/docs/en/advanced_tutorials/registry.md">the registry tutorial</a> for more details. default_scope是一个新加的字段 在MMSegmentation中default_scope是mmseg。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/23/MMSegmentation%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5-%E6%A8%A1%E5%9E%8B/">MMSegmentation基本概念-模型</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/22/JavaScript/">JavaScript</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#New-dependencies"><span class="toc-text">New dependencies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Train-launch"><span class="toc-text">Train launch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Test-launch"><span class="toc-text">Test launch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Configuration-file"><span class="toc-text">Configuration file</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Model-settings"><span class="toc-text">Model settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Dataset-settings"><span class="toc-text">Dataset settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Optimizer-and-Schedule-settings"><span class="toc-text">Optimizer and Schedule settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Runtime-settings"><span class="toc-text">Runtime settings</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.min.js`,
+    marked: `https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.0" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.bootcdn.net/ajax/libs/flying-pages/2.1.2/flying-pages.min.js"></script><script defer src="https://cdn.bootcdn.net/ajax/libs/vanilla-lazyload/17.8.4/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.min.css`,
+    js: `https://cdn.bootcdn.net/ajax/libs/fancyapps-ui/5.0.22/fancybox/fancybox.umd.min.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
