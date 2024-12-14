@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2024-12-14T11:21:59.091Z</updated>
+  <updated>2024-12-14T14:47:00.720Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>关于技术学习、代码细节和技术崇拜的讨论</title>
+    <link href="https://promptonce.github.io/2024/12/14/%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E3%80%81%E4%BB%A3%E7%A0%81%E7%BB%86%E8%8A%82%E5%92%8C%E6%8A%80%E6%9C%AF%E5%B4%87%E6%8B%9C%E7%9A%84%E8%AE%A8%E8%AE%BA/"/>
+    <id>https://promptonce.github.io/2024/12/14/%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E3%80%81%E4%BB%A3%E7%A0%81%E7%BB%86%E8%8A%82%E5%92%8C%E6%8A%80%E6%9C%AF%E5%B4%87%E6%8B%9C%E7%9A%84%E8%AE%A8%E8%AE%BA/</id>
+    <published>2024-12-14T14:46:25.000Z</published>
+    <updated>2024-12-14T14:47:00.720Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="1-为什么有人学编程时总想看懂每一个细节？"><a href="#1-为什么有人学编程时总想看懂每一个细节？" class="headerlink" title="1. 为什么有人学编程时总想看懂每一个细节？"></a><strong>1. 为什么有人学编程时总想看懂每一个细节？</strong></h4><ul><li><strong>求知欲驱动</strong>：对新知识的强烈好奇心，希望了解代码中每一个细节的意义。  </li><li><strong>害怕遗漏关键逻辑</strong>：担心忽略某些细节会导致对整体理解出错。  </li><li><strong>缺乏全局观</strong>：经验不足的人容易陷入“细节陷阱”，难以从整体上把握代码。  </li><li><strong>快速提升能力</strong>：认为通过细致研究可以学到更多编程技巧和知识点。  </li><li><strong>责任感驱动</strong>：在工作场景中，维护代码的人需要确保完全理解细节以避免问题。  </li><li><strong>编程风格学习</strong>：通过阅读他人代码学习最佳实践和设计模式。  </li><li><strong>完美主义倾向</strong>：追求对代码的“完全理解”，即使是用不到的部分也不放过。  </li><li><strong>缺乏代码阅读技巧</strong>：不会抓重点，导致逐行阅读，效率低下。</li></ul><p><strong>解决建议</strong>：  </p><ul><li>先理解代码整体逻辑，再逐步深入。  </li><li>带着问题阅读，避免逐行分析。  </li><li>通过实践自然理解细节，抓大放小，提高效率。</li></ul><hr><h4 id="2-技术“盲目崇拜”的现象和原因"><a href="#2-技术“盲目崇拜”的现象和原因" class="headerlink" title="2. 技术“盲目崇拜”的现象和原因"></a><strong>2. 技术“盲目崇拜”的现象和原因</strong></h4><ul><li><strong>社会宣传影响</strong>：新闻媒体长期将计算机技术与“高薪”“前沿”挂钩，塑造了技术“高人一等”的形象。  </li><li><strong>技术神秘化</strong>：编程在外行人眼中显得复杂，增加了技术的神秘感。  </li><li><strong>即时成就感</strong>：编程提供了快速反馈的成就感，让人更容易沉浸其中。  </li><li><strong>行业地位</strong>：技术被认为是推动社会发展的核心力量，进一步放大了其光环。</li></ul><hr><h4 id="3-GPT等AI工具对技术价值的影响"><a href="#3-GPT等AI工具对技术价值的影响" class="headerlink" title="3. GPT等AI工具对技术价值的影响"></a><strong>3. GPT等AI工具对技术价值的影响</strong></h4><ul><li><strong>降低技术门槛</strong>：AI工具让很多过去复杂的任务变得简单，降低了编程的稀缺性。  </li><li><strong>重新定义技术价值</strong>：从“能写代码”转向“能用技术解决实际问题”。  </li><li><strong>削弱技术光环</strong>：AI工具帮助人们理解技术细节，减少了技术的神秘感。  </li><li><strong>推动跨领域融合</strong>：技术与其他学科（艺术、教育、医学等）的结合可能成为新的价值增长点。</li></ul><hr><h4 id="4-技术溢出价值的变化"><a href="#4-技术溢出价值的变化" class="headerlink" title="4. 技术溢出价值的变化"></a><strong>4. 技术溢出价值的变化</strong></h4><ul><li><strong>基础性地位不变</strong>：技术仍是推动社会进步的核心，但溢出价值可能会降低。  </li><li><strong>从稀缺资源到普遍工具</strong>：编程技能普及后，其高薪光环可能被削弱。  </li><li><strong>创造新价值</strong>：未来的重点可能是技术与领域知识的结合，而非单纯的技术实现。</li></ul><hr><h4 id="5-技术崇拜是否会回归理性？"><a href="#5-技术崇拜是否会回归理性？" class="headerlink" title="5. 技术崇拜是否会回归理性？"></a><strong>5. 技术崇拜是否会回归理性？</strong></h4><ul><li><strong>从“工具崇拜”到“问题导向”</strong>：技术将更多被视为解决问题的手段，而非目标。  </li><li><strong>技术人的重新定位</strong>：技术工作者的价值将更多体现在创造力和跨领域合作上。  </li><li><strong>教育方式的转变</strong>：编程教育可能从“教写代码”转向“教逻辑思维”和“教工具使用”。</li></ul><hr><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul><li>对代码细节的关注源于好奇心、责任感和学习方式，但需要平衡全局与细节以提高效率。  </li><li>技术的“盲目崇拜”是社会环境和心理因素的产物，但AI工具（如GPT）正逐步去神秘化，降低技术门槛。  </li><li>技术的溢出价值在降低，但其基础地位和跨领域的潜力仍然重要。  </li><li>未来，人们对技术的态度可能更加理性，重视<strong>问题解决能力</strong>和<strong>跨领域创新</strong>。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h4 id=&quot;1-为什么有人学编程时总想看懂每一个细节？&quot;&gt;&lt;a href=&quot;#1-为什么有人学编程时总想看懂每一个细节？&quot; class=&quot;headerlink&quot; title=&quot;1. 为什么有人学编程时总想看懂每一个细节？&quot;&gt;&lt;/a&gt;&lt;strong&gt;1. 为什么有人学编程时总想</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>一个符合审美的系统美化对前端程序员的重要性</title>
@@ -412,31 +432,6 @@
     <category term="leetcode" scheme="https://promptonce.github.io/tags/leetcode/"/>
     
     <category term="算法" scheme="https://promptonce.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue,typescript项目打包报错</title>
-    <link href="https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/"/>
-    <id>https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/</id>
-    <published>2024-11-10T09:58:03.000Z</published>
-    <updated>2024-11-23T16:09:10.286Z</updated>
-    
-    <content type="html"><![CDATA[<p>&#x2F;&#x2F; @ts-ignore：无法被执行的代码的错误</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&amp;#x2F;&amp;#x2F; @ts-ignore：无法被执行的代码的错误&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="前端开发" scheme="https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="Vue" scheme="https://promptonce.github.io/tags/Vue/"/>
     
   </entry>
   

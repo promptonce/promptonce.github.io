@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>如何在 VPN 网络下配置 Git 代理解决 `git clone` 失败的问题 - PromptOnce</title>
+  <title>关于技术学习、代码细节和技术崇拜的讨论 - PromptOnce</title>
 
   
-    <meta name="description" content="在 VPN 环境下，有时你可能会遇到 Git 命令（如 git clone）无法正常工作的问题，通常这是由于网络配置问题或者 Git 无法正确通过代理服务器访问远程仓库。本文将介绍如何配置 Git 代理来解决这个问题。 1. 为什么会遇到 Git Clone 失败的问题？在使用 VPN 时，网络流量会被加密并通过代理服务器转发。这意味着 Git 可能无法直接访问 GitHub、GitLab 或其他">
+    <meta name="description" content="1. 为什么有人学编程时总想看懂每一个细节？ 求知欲驱动：对新知识的强烈好奇心，希望了解代码中每一个细节的意义。   害怕遗漏关键逻辑：担心忽略某些细节会导致对整体理解出错。   缺乏全局观：经验不足的人容易陷入“细节陷阱”，难以从整体上把握代码。   快速提升能力：认为通过细致研究可以学到更多编程技巧和知识点。   责任感驱动：在工作场景中，维护代码的人需要确保完全理解细节以避免问题。   编程">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何在 VPN 网络下配置 Git 代理解决 &#96;git clone&#96; 失败的问题">
-<meta property="og:url" content="https://promptonce.github.io/2024/11/26/%E5%9C%A8VPN%E7%BD%91%E7%BB%9C%E4%B8%8B%E9%85%8D%E7%BD%AEGit%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3git_clone%E5%A4%B1%E8%B4%A5%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="关于技术学习、代码细节和技术崇拜的讨论">
+<meta property="og:url" content="https://promptonce.github.io/2024/12/14/%E5%85%B3%E4%BA%8E%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E3%80%81%E4%BB%A3%E7%A0%81%E7%BB%86%E8%8A%82%E5%92%8C%E6%8A%80%E6%9C%AF%E5%B4%87%E6%8B%9C%E7%9A%84%E8%AE%A8%E8%AE%BA/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="在 VPN 环境下，有时你可能会遇到 Git 命令（如 git clone）无法正常工作的问题，通常这是由于网络配置问题或者 Git 无法正确通过代理服务器访问远程仓库。本文将介绍如何配置 Git 代理来解决这个问题。 1. 为什么会遇到 Git Clone 失败的问题？在使用 VPN 时，网络流量会被加密并通过代理服务器转发。这意味着 Git 可能无法直接访问 GitHub、GitLab 或其他">
+<meta property="og:description" content="1. 为什么有人学编程时总想看懂每一个细节？ 求知欲驱动：对新知识的强烈好奇心，希望了解代码中每一个细节的意义。   害怕遗漏关键逻辑：担心忽略某些细节会导致对整体理解出错。   缺乏全局观：经验不足的人容易陷入“细节陷阱”，难以从整体上把握代码。   快速提升能力：认为通过细致研究可以学到更多编程技巧和知识点。   责任感驱动：在工作场景中，维护代码的人需要确保完全理解细节以避免问题。   编程">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-26T08:42:27.000Z">
-<meta property="article:modified_time" content="2024-11-26T08:46:50.886Z">
+<meta property="article:published_time" content="2024-12-14T14:46:25.000Z">
+<meta property="article:modified_time" content="2024-12-14T14:47:00.720Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,54 +78,66 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-26T08:42:27.000Z">2024-11-26</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-26T08:46:50.886Z">2024-11-26</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-12-14T14:46:25.000Z">2024-12-14</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-12-14T14:47:00.720Z">2024-12-14</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>如何在 VPN 网络下配置 Git 代理解决 `git clone` 失败的问题</span></h1>
+        <h1 class="text title"><span>关于技术学习、代码细节和技术崇拜的讨论</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>在 VPN 环境下，有时你可能会遇到 Git 命令（如 <code>git clone</code>）无法正常工作的问题，通常这是由于网络配置问题或者 Git 无法正确通过代理服务器访问远程仓库。本文将介绍如何配置 Git 代理来解决这个问题。</p>
-<h3 id="1-为什么会遇到-Git-Clone-失败的问题？"><a href="#1-为什么会遇到-Git-Clone-失败的问题？" class="headerlink" title="1. 为什么会遇到 Git Clone 失败的问题？"></a>1. 为什么会遇到 Git Clone 失败的问题？</h3><p>在使用 VPN 时，网络流量会被加密并通过代理服务器转发。这意味着 Git 可能无法直接访问 GitHub、GitLab 或其他 Git 仓库，特别是在 VPN 网络下。如果你没有正确配置代理，Git 就无法与远程仓库建立连接，导致 <code>git clone</code> 等命令失败。</p>
-<h3 id="2-配置-Git-代理"><a href="#2-配置-Git-代理" class="headerlink" title="2. 配置 Git 代理"></a>2. 配置 Git 代理</h3><p>要解决这个问题，你需要告诉 Git 如何通过代理服务器来访问远程仓库。你可以通过配置 HTTP 或 HTTPS 代理来实现。</p>
-<h4 id="2-1-配置本地代理（127-0-0-1）"><a href="#2-1-配置本地代理（127-0-0-1）" class="headerlink" title="2.1 配置本地代理（127.0.0.1）"></a>2.1 配置本地代理（127.0.0.1）</h4><p>假设你的代理服务器运行在本地（<code>127.0.0.1</code>），端口号为 <code>1080</code>（这常见于 SOCKS 代理），你可以通过以下命令为 Git 配置代理：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<p>在上面的命令中，<code>127.0.0.1</code> 是代理服务器的地址，<code>1080</code> 是代理端口号。如果你使用的是其他端口号，请相应地修改。</p>
-<h4 id="2-2-配置代理时需要认证"><a href="#2-2-配置代理时需要认证" class="headerlink" title="2.2 配置代理时需要认证"></a>2.2 配置代理时需要认证</h4><p>如果你的代理服务器需要身份验证，你可以在代理 URL 中指定用户名和密码。格式如下：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http://username:password@127.0.0.1:1080</span><br><span class="line">git config --global https.proxy https://username:password@127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<p>将 <code>username</code> 和 <code>password</code> 替换为你的代理认证信息。</p>
-<h3 id="3-使用-SOCKS-代理"><a href="#3-使用-SOCKS-代理" class="headerlink" title="3. 使用 SOCKS 代理"></a>3. 使用 SOCKS 代理</h3><p>如果你的 VPN 软件提供的是 SOCKS 代理（通常是通过 <code>127.0.0.1:1080</code> 或类似的端口），Git 本身并不直接支持 SOCKS 代理，但你仍然可以通过一些工具间接实现这一点。</p>
-<h4 id="3-1-使用-tsocks-工具"><a href="#3-1-使用-tsocks-工具" class="headerlink" title="3.1 使用 tsocks 工具"></a>3.1 使用 <code>tsocks</code> 工具</h4><p><code>tsocks</code> 是一个可以让不支持 SOCKS 代理的程序通过 SOCKS 代理进行网络访问的工具。你可以安装并配置 <code>tsocks</code>，然后在 <code>tsocks</code> 环境下执行 Git 命令。具体步骤如下：</p>
-<ol>
-<li><p>安装 <code>tsocks</code>：</p>
-<p>在 Linux 上，使用以下命令安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install tsocks  <span class="comment"># 对于 Debian/Ubuntu 系统</span></span><br><span class="line">sudo yum install tsocks  <span class="comment"># 对于 CentOS/RHEL 系统</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>配置 <code>tsocks</code>：</p>
-<p>编辑 <code>tsocks</code> 配置文件 <code>/etc/tsocks.conf</code>，将其中的 <code>server</code> 和 <code>server_port</code> 配置为你的 SOCKS 代理地址（通常是 <code>127.0.0.1</code> 和端口 <code>1080</code>）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">server = 127.0.0.1</span><br><span class="line">server_port = 1080</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>使用 <code>tsocks</code> 执行 Git 命令：</p>
-<p>例如，执行 <code>git clone</code>：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsocks git <span class="built_in">clone</span> https://github.com/username/repository.git</span><br></pre></td></tr></table></figure></li>
-</ol>
-<p>这样，Git 就会通过 SOCKS 代理进行操作。</p>
-<h4 id="3-2-使用-proxifier（Windows）"><a href="#3-2-使用-proxifier（Windows）" class="headerlink" title="3.2 使用 proxifier（Windows）"></a>3.2 使用 <code>proxifier</code>（Windows）</h4><p>如果你使用的是 Windows 系统，可以使用工具如 <code>Proxifier</code>，它可以强制任何程序（包括 Git）通过 SOCKS 代理进行网络连接。</p>
-<h3 id="4-禁用-SSL-验证（可选）"><a href="#4-禁用-SSL-验证（可选）" class="headerlink" title="4. 禁用 SSL 验证（可选）"></a>4. 禁用 SSL 验证（可选）</h3><p>有时，VPN 连接可能会导致 SSL 证书问题。如果你确定网络安全没有问题，并且希望绕过 SSL 验证，可以暂时禁用 Git 的 SSL 验证：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.sslVerify <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-<p>注意，禁用 SSL 验证会降低安全性，建议只在完全信任的网络环境下使用。</p>
-<h3 id="5-调试-Git-代理配置"><a href="#5-调试-Git-代理配置" class="headerlink" title="5. 调试 Git 代理配置"></a>5. 调试 Git 代理配置</h3><p>如果问题仍然存在，Git 提供了调试选项来帮助你查找问题。你可以使用 <code>GIT_TRACE</code> 和 <code>GIT_CURL_VERBOSE</code> 环境变量，输出更多调试信息：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_TRACE=1 GIT_CURL_VERBOSE=1 git <span class="built_in">clone</span> https://github.com/username/repository.git</span><br></pre></td></tr></table></figure>
-
-<p>这将显示详细的请求日志，帮助你了解 Git 连接失败的原因。</p>
-<h3 id="6-结语"><a href="#6-结语" class="headerlink" title="6. 结语"></a>6. 结语</h3><p>通过配置 Git 代理，你可以解决在 VPN 网络下使用 Git 时遇到的 <code>git clone</code> 失败问题。无论是通过 HTTP、HTTPS 代理，还是通过 SOCKS 代理，正确的配置都能帮助你顺利完成代码的克隆、推送和拉取操作。如果你遇到任何问题，可以通过调试命令获取更多信息，帮助定位问题根源。</p>
+  </div><article class="md-text content"><h4 id="1-为什么有人学编程时总想看懂每一个细节？"><a href="#1-为什么有人学编程时总想看懂每一个细节？" class="headerlink" title="1. 为什么有人学编程时总想看懂每一个细节？"></a><strong>1. 为什么有人学编程时总想看懂每一个细节？</strong></h4><ul>
+<li><strong>求知欲驱动</strong>：对新知识的强烈好奇心，希望了解代码中每一个细节的意义。  </li>
+<li><strong>害怕遗漏关键逻辑</strong>：担心忽略某些细节会导致对整体理解出错。  </li>
+<li><strong>缺乏全局观</strong>：经验不足的人容易陷入“细节陷阱”，难以从整体上把握代码。  </li>
+<li><strong>快速提升能力</strong>：认为通过细致研究可以学到更多编程技巧和知识点。  </li>
+<li><strong>责任感驱动</strong>：在工作场景中，维护代码的人需要确保完全理解细节以避免问题。  </li>
+<li><strong>编程风格学习</strong>：通过阅读他人代码学习最佳实践和设计模式。  </li>
+<li><strong>完美主义倾向</strong>：追求对代码的“完全理解”，即使是用不到的部分也不放过。  </li>
+<li><strong>缺乏代码阅读技巧</strong>：不会抓重点，导致逐行阅读，效率低下。</li>
+</ul>
+<p><strong>解决建议</strong>：  </p>
+<ul>
+<li>先理解代码整体逻辑，再逐步深入。  </li>
+<li>带着问题阅读，避免逐行分析。  </li>
+<li>通过实践自然理解细节，抓大放小，提高效率。</li>
+</ul>
+<hr>
+<h4 id="2-技术“盲目崇拜”的现象和原因"><a href="#2-技术“盲目崇拜”的现象和原因" class="headerlink" title="2. 技术“盲目崇拜”的现象和原因"></a><strong>2. 技术“盲目崇拜”的现象和原因</strong></h4><ul>
+<li><strong>社会宣传影响</strong>：新闻媒体长期将计算机技术与“高薪”“前沿”挂钩，塑造了技术“高人一等”的形象。  </li>
+<li><strong>技术神秘化</strong>：编程在外行人眼中显得复杂，增加了技术的神秘感。  </li>
+<li><strong>即时成就感</strong>：编程提供了快速反馈的成就感，让人更容易沉浸其中。  </li>
+<li><strong>行业地位</strong>：技术被认为是推动社会发展的核心力量，进一步放大了其光环。</li>
+</ul>
+<hr>
+<h4 id="3-GPT等AI工具对技术价值的影响"><a href="#3-GPT等AI工具对技术价值的影响" class="headerlink" title="3. GPT等AI工具对技术价值的影响"></a><strong>3. GPT等AI工具对技术价值的影响</strong></h4><ul>
+<li><strong>降低技术门槛</strong>：AI工具让很多过去复杂的任务变得简单，降低了编程的稀缺性。  </li>
+<li><strong>重新定义技术价值</strong>：从“能写代码”转向“能用技术解决实际问题”。  </li>
+<li><strong>削弱技术光环</strong>：AI工具帮助人们理解技术细节，减少了技术的神秘感。  </li>
+<li><strong>推动跨领域融合</strong>：技术与其他学科（艺术、教育、医学等）的结合可能成为新的价值增长点。</li>
+</ul>
+<hr>
+<h4 id="4-技术溢出价值的变化"><a href="#4-技术溢出价值的变化" class="headerlink" title="4. 技术溢出价值的变化"></a><strong>4. 技术溢出价值的变化</strong></h4><ul>
+<li><strong>基础性地位不变</strong>：技术仍是推动社会进步的核心，但溢出价值可能会降低。  </li>
+<li><strong>从稀缺资源到普遍工具</strong>：编程技能普及后，其高薪光环可能被削弱。  </li>
+<li><strong>创造新价值</strong>：未来的重点可能是技术与领域知识的结合，而非单纯的技术实现。</li>
+</ul>
+<hr>
+<h4 id="5-技术崇拜是否会回归理性？"><a href="#5-技术崇拜是否会回归理性？" class="headerlink" title="5. 技术崇拜是否会回归理性？"></a><strong>5. 技术崇拜是否会回归理性？</strong></h4><ul>
+<li><strong>从“工具崇拜”到“问题导向”</strong>：技术将更多被视为解决问题的手段，而非目标。  </li>
+<li><strong>技术人的重新定位</strong>：技术工作者的价值将更多体现在创造力和跨领域合作上。  </li>
+<li><strong>教育方式的转变</strong>：编程教育可能从“教写代码”转向“教逻辑思维”和“教工具使用”。</li>
+</ul>
+<hr>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a><strong>总结</strong></h3><ul>
+<li>对代码细节的关注源于好奇心、责任感和学习方式，但需要平衡全局与细节以提高效率。  </li>
+<li>技术的“盲目崇拜”是社会环境和心理因素的产物，但AI工具（如GPT）正逐步去神秘化，降低技术门槛。  </li>
+<li>技术的溢出价值在降低，但其基础地位和跨领域的潜力仍然重要。  </li>
+<li>未来，人们对技术的态度可能更加理性，重视<strong>问题解决能力</strong>和<strong>跨领域创新</strong>。</li>
+</ul>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -135,7 +147,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/12/01/nextjs%E6%80%BB%E7%BB%93/">nextjs总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/">flex布局总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/12/14/%E4%B8%80%E4%B8%AA%E7%AC%A6%E5%90%88%E5%AE%A1%E7%BE%8E%E7%9A%84%E7%B3%BB%E7%BB%9F%E7%BE%8E%E5%8C%96%E5%AF%B9%E5%89%8D%E7%AB%AF%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7/">一个符合审美的系统美化对前端程序员的重要性</a></div></section></div>
 
 
 
@@ -149,7 +161,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BC%9A%E9%81%87%E5%88%B0-Git-Clone-%E5%A4%B1%E8%B4%A5%E7%9A%84%E9%97%AE%E9%A2%98%EF%BC%9F"><span class="toc-text">1. 为什么会遇到 Git Clone 失败的问题？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE-Git-%E4%BB%A3%E7%90%86"><span class="toc-text">2. 配置 Git 代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E4%BB%A3%E7%90%86%EF%BC%88127-0-0-1%EF%BC%89"><span class="toc-text">2.1 配置本地代理（127.0.0.1）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E9%85%8D%E7%BD%AE%E4%BB%A3%E7%90%86%E6%97%B6%E9%9C%80%E8%A6%81%E8%AE%A4%E8%AF%81"><span class="toc-text">2.2 配置代理时需要认证</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-SOCKS-%E4%BB%A3%E7%90%86"><span class="toc-text">3. 使用 SOCKS 代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E4%BD%BF%E7%94%A8-tsocks-%E5%B7%A5%E5%85%B7"><span class="toc-text">3.1 使用 tsocks 工具</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E4%BD%BF%E7%94%A8-proxifier%EF%BC%88Windows%EF%BC%89"><span class="toc-text">3.2 使用 proxifier（Windows）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%A6%81%E7%94%A8-SSL-%E9%AA%8C%E8%AF%81%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="toc-text">4. 禁用 SSL 验证（可选）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%B0%83%E8%AF%95-Git-%E4%BB%A3%E7%90%86%E9%85%8D%E7%BD%AE"><span class="toc-text">5. 调试 Git 代理配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%BB%93%E8%AF%AD"><span class="toc-text">6. 结语</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%89%E4%BA%BA%E5%AD%A6%E7%BC%96%E7%A8%8B%E6%97%B6%E6%80%BB%E6%83%B3%E7%9C%8B%E6%87%82%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%BB%86%E8%8A%82%EF%BC%9F"><span class="toc-text">1. 为什么有人学编程时总想看懂每一个细节？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%8A%80%E6%9C%AF%E2%80%9C%E7%9B%B2%E7%9B%AE%E5%B4%87%E6%8B%9C%E2%80%9D%E7%9A%84%E7%8E%B0%E8%B1%A1%E5%92%8C%E5%8E%9F%E5%9B%A0"><span class="toc-text">2. 技术“盲目崇拜”的现象和原因</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-GPT%E7%AD%89AI%E5%B7%A5%E5%85%B7%E5%AF%B9%E6%8A%80%E6%9C%AF%E4%BB%B7%E5%80%BC%E7%9A%84%E5%BD%B1%E5%93%8D"><span class="toc-text">3. GPT等AI工具对技术价值的影响</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%8A%80%E6%9C%AF%E6%BA%A2%E5%87%BA%E4%BB%B7%E5%80%BC%E7%9A%84%E5%8F%98%E5%8C%96"><span class="toc-text">4. 技术溢出价值的变化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E6%8A%80%E6%9C%AF%E5%B4%87%E6%8B%9C%E6%98%AF%E5%90%A6%E4%BC%9A%E5%9B%9E%E5%BD%92%E7%90%86%E6%80%A7%EF%BC%9F"><span class="toc-text">5. 技术崇拜是否会回归理性？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
