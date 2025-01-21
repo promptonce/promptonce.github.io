@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-01-21T05:19:33.921Z</updated>
+  <updated>2025-01-21T05:51:55.220Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue中slot总结</title>
+    <link href="https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/</id>
+    <published>2025-01-21T05:50:26.000Z</published>
+    <updated>2025-01-21T05:51:55.220Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png" class="" title="vue中slot总结">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png&quot; class=&quot;&quot; title=&quot;vue中slot总结&quot;&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>hexo博客中插入图片语法</title>
@@ -401,26 +422,6 @@
       
     <summary type="html">&lt;p&gt;乒乓球不仅是一项让人挥汗如雨的运动，更是一种有效提升大脑敏锐性和反应能力的方式。作为一项需要高度专注、快速决策和身体协调的运动，乒乓球对大脑的锻炼效果得到了科学研究和实践的支持。本文将从神经科学、运动特点以及实际效果三个方面，探讨乒乓球如何帮助提升大脑的敏锐性。&lt;/p&gt;
 &lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>程序员如何像神经网络一样高效学习：GPT 工具的使用与思考</title>
-    <link href="https://promptonce.github.io/2024/12/15/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%83%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%80%E6%A0%B7%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9AGPT-%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%80%9D%E8%80%83/"/>
-    <id>https://promptonce.github.io/2024/12/15/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%A6%82%E4%BD%95%E5%83%8F%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%80%E6%A0%B7%E9%AB%98%E6%95%88%E5%AD%A6%E4%B9%A0%EF%BC%9AGPT-%E5%B7%A5%E5%85%B7%E7%9A%84%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%80%9D%E8%80%83/</id>
-    <published>2024-12-15T05:21:49.000Z</published>
-    <updated>2024-12-15T05:23:00.619Z</updated>
-    
-    <content type="html"><![CDATA[<p>在 GPT 等生成式 AI 工具的加持下，程序员的工作效率得到了前所未有的提升。从代码生成到调试优化，再到技术学习，GPT 似乎可以成为编程路上的“全能助手”。然而，正如神经网络需要通过残差学习避免退化，程序员在使用 GPT 时，也需要找到合适的方式，将工具的增益与自身能力结合，确保效率提升的同时避免能力退化。</p><p>本文将探讨如何像神经网络一样，在 GPT 的辅助下高效学习与成长。</p><hr><h3 id="GPT-提高程序员效率的方式"><a href="#GPT-提高程序员效率的方式" class="headerlink" title="GPT 提高程序员效率的方式"></a><strong>GPT 提高程序员效率的方式</strong></h3><ol><li><p><strong>快速代码生成与优化</strong><br>GPT 可以生成高质量代码片段，帮助程序员减少重复性工作，如实现算法模板、创建框架配置文件或优化已有代码。</p></li><li><p><strong>实时技术支持</strong><br>在开发中遇到技术难题时，GPT 能提供解决方案或学习资源，减少搜索文档的时间。</p></li><li><p><strong>文档与注释生成</strong><br>GPT 可自动生成注释或 API 文档，帮助程序员更快地整理代码逻辑。</p></li><li><p><strong>辅助调试与错误排查</strong><br>通过分析错误日志和上下文，GPT 能提供可能的修复方案，加速调试过程。</p></li><li><p><strong>促进学习与创新</strong><br>程序员可以借助 GPT 学习新技术、尝试新方法，快速掌握新的编程语言或框架。</p></li></ol><hr><h3 id="问题：认识不足导致效率不升反降"><a href="#问题：认识不足导致效率不升反降" class="headerlink" title="问题：认识不足导致效率不升反降"></a><strong>问题：认识不足导致效率不升反降</strong></h3><p>尽管 GPT 是强大的工具，但错误的使用方式可能带来以下问题：</p><ol><li><p><strong>过度依赖，忽视基础能力</strong><br>如果程序员完全依赖 GPT，而不主动理解生成代码的逻辑，可能导致基础能力退化。</p></li><li><p><strong>需求描述不清晰</strong><br>GPT 的输出质量取决于输入的清晰度。如果程序员无法准确描述需求，生成的结果可能偏离预期。</p></li><li><p><strong>忽视验证与调试</strong><br>直接使用 GPT 生成的代码而不验证，可能引入潜在的错误或性能问题。</p></li><li><p><strong>误解工具局限性</strong><br>GPT 的知识来源于训练数据，对于特定领域的深度问题可能会出错。如果程序员不了解这些局限性，可能误用工具。</p></li><li><p><strong>团队协作问题</strong><br>过度依赖 GPT 独立完成任务，可能降低与团队协作的能力。</p></li></ol><hr><h3 id="解决方案：像神经网络一样学习"><a href="#解决方案：像神经网络一样学习" class="headerlink" title="解决方案：像神经网络一样学习"></a><strong>解决方案：像神经网络一样学习</strong></h3><p>为了让程序员在使用 GPT 时既提升效率，又确保能力不退化，可以借鉴神经网络的残差学习机制，采取以下策略：</p><hr><h4 id="1-保留核心能力：基础技能是“原始信号”"><a href="#1-保留核心能力：基础技能是“原始信号”" class="headerlink" title="1. 保留核心能力：基础技能是“原始信号”"></a><strong>1. 保留核心能力：基础技能是“原始信号”</strong></h4><p>神经网络通过残差连接保留原始特征，程序员也应确保基础能力不被替代。</p><ul><li><strong>主动练习基础知识</strong><br>经常练习算法、数据结构、设计模式等核心技能，确保基础能力扎实。  </li><li><strong>分析与反思</strong><br>使用 GPT 提供的代码后，主动分析其逻辑，理解解决方案的优缺点。  </li><li><strong>独立完成部分任务</strong><br>在简单场景中，尝试独立完成任务，减少对工具的依赖。</li></ul><hr><h4 id="2-持续反馈学习：像梯度更新一样成长"><a href="#2-持续反馈学习：像梯度更新一样成长" class="headerlink" title="2. 持续反馈学习：像梯度更新一样成长"></a><strong>2. 持续反馈学习：像梯度更新一样成长</strong></h4><p>神经网络通过梯度下降不断优化模型，程序员也需要通过反馈不断提升能力。</p><ul><li><strong>记录与复盘</strong><br>每次使用 GPT 后，记录解决过程，定期复盘学习到的知识点。  </li><li><strong>错误驱动学习</strong><br>如果 GPT 提供了错误代码，主动分析问题，理解错误的来源与解决方法。  </li><li><strong>知识迁移</strong><br>将 GPT 的优质解决方案转化为自己的知识储备，例如整理为笔记或模板。</li></ul><hr><h4 id="3-正则化使用：避免过度依赖"><a href="#3-正则化使用：避免过度依赖" class="headerlink" title="3. 正则化使用：避免过度依赖"></a><strong>3. 正则化使用：避免过度依赖</strong></h4><p>正则化防止神经网络过拟合，程序员也需要避免对 GPT 的过度依赖。</p><ul><li><strong>限制使用场景</strong><br>对 GPT 的使用设定规则，例如复杂问题或重复性任务时才使用，基础问题优先自己解决。  </li><li><strong>脱离工具练习</strong><br>定期设置“无工具日”，完全依靠自己的能力解决问题。  </li><li><strong>团队协作</strong><br>在团队讨论中，优先分享个人思路，再结合 GPT 的辅助建议。</li></ul><hr><h4 id="4-拓展能力：模拟多任务学习"><a href="#4-拓展能力：模拟多任务学习" class="headerlink" title="4. 拓展能力：模拟多任务学习"></a><strong>4. 拓展能力：模拟多任务学习</strong></h4><p>多任务学习增强了神经网络的泛化能力，程序员也应通过多领域学习提高技术广度。</p><ul><li><strong>跨领域学习</strong><br>利用 GPT 学习不同领域的技术（如前端、后端、AI），提升综合能力。  </li><li><strong>挑战高难度任务</strong><br>主动选择具有挑战性的任务，保持学习的动力。  </li><li><strong>真实场景应用</strong><br>在项目中应用 GPT 生成的代码，并尝试扩展功能或优化性能。</li></ul><hr><h4 id="5-保持批判性思维：认识工具的局限性"><a href="#5-保持批判性思维：认识工具的局限性" class="headerlink" title="5. 保持批判性思维：认识工具的局限性"></a><strong>5. 保持批判性思维：认识工具的局限性</strong></h4><p>神经网络的残差路径需要人为设计，程序员也需要清楚工具的优势与不足。</p><ul><li><strong>深刻理解 GPT 的原理</strong><br>学习 GPT 的生成逻辑和局限性，避免盲目信任。  </li><li><strong>验证与优化</strong><br>对 GPT 的输出进行验证，确保代码的正确性和性能。  </li><li><strong>辅助而非决策</strong><br>将 GPT 作为辅助工具，最终决策依赖程序员的判断。</li></ul><hr><h3 id="总结：让工具成为增益，而非替代"><a href="#总结：让工具成为增益，而非替代" class="headerlink" title="总结：让工具成为增益，而非替代"></a><strong>总结：让工具成为增益，而非替代</strong></h3><p>像神经网络的残差学习一样，程序员在使用 GPT 时，应该通过保留核心能力、持续反馈学习、限制工具依赖、拓展技术广度以及保持批判性思维，将 GPT 的增益与自身能力结合起来。</p><p>在 AI 工具日益普及的今天，程序员的核心竞争力不仅在于能高效使用工具，更在于能通过工具不断成长。只有将工具转化为学习和成长的助力，程序员才能在技术浪潮中立于不败之地。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在 GPT 等生成式 AI 工具的加持下，程序员的工作效率得到了前所未有的提升。从代码生成到调试优化，再到技术学习，GPT 似乎可以成为编程路上的“全能助手”。然而，正如神经网络需要通过残差学习避免退化，程序员在使用 GPT 时，也需要找到合适的方式，将工具的增益与自身能力</summary>
       
     
     
