@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-01-22T13:12:39.607Z</updated>
+  <updated>2025-01-24T12:46:08.368Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue组件通信</title>
+    <link href="https://promptonce.github.io/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
+    <id>https://promptonce.github.io/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</id>
+    <published>2025-01-24T12:44:33.000Z</published>
+    <updated>2025-01-24T12:46:08.368Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vue组件需要通信的几个原因：</p><ol><li><strong>数据共享</strong>：在一个应用中，不同组件可能需要访问相同的数据。例如，一个购物车组件可能需要访问商品列表组件中的商品数据。</li><li><strong>状态管理</strong>：随着应用的增长，状态管理变得复杂。组件之间可能需要共享状态，如用户登录状态、应用配置等。</li><li><strong>事件传递</strong>：组件可能需要通知其他组件某些事件的发生，例如用户点击按钮、数据更新完成等。</li><li><strong>解耦</strong>：良好的组件设计应该是低耦合的，这意味着它们应该是相互独立的。组件间通信机制可以帮助实现这一点，使得组件可以独立开发和测试。</li><li><strong>重用性</strong>：通过定义良好的通信接口，组件可以更容易地在不同的上下文中重用。</li></ol><p>以下是一些区分父子组件的方法：</p><ol><li><strong>模板中的使用关系</strong>：<ul><li>父组件：在父组件的模板中，你可以看到子组件的标签 <code>&lt;ChildComponent /&gt;</code>。</li><li>子组件：子组件是在父组件的模板中被调用的，它不知道父组件的具体实现。</li></ul></li><li><strong>组件定义</strong>：<ul><li>父组件：通常会在一个较大的视图中定义，它可能包含多个子组件。</li><li>子组件：通常是为了重用而创建的，它可能被多个父组件使用。</li></ul></li><li><strong>数据传递</strong>：<ul><li>父组件：通过<code>props</code>向子组件传递数据。</li><li>子组件：可以通过<code>props</code>接收来自父组件的数据。</li></ul></li><li><strong>事件通信</strong>：<ul><li>父组件：可以监听子组件发出的事件。</li><li>子组件：可以通过<code>$emit</code>方法触发事件，通知父组件某些事情发生了。</li></ul></li><li><strong>组件生命周期</strong>：<ul><li>父组件：在创建和挂载时，会先于子组件。</li><li>子组件：在父组件的<code>mounted</code>生命周期钩子之后，子组件才会被挂载。</li></ul></li><li><strong>组件实例关系</strong>：<ul><li>父组件：可以通过<code>this.$children</code>访问所有子组件的实例。</li><li>子组件：可以通过<code>this.$parent</code>访问父组件的实例。</li></ul></li></ol><p><code>props</code>和<code>events</code>是组件通信的两种主要机制，它们分别用于父组件向子组件传递数据和子组件向父组件发送消息。下面是它们的区别：</p><h3 id="Props（属性）"><a href="#Props（属性）" class="headerlink" title="Props（属性）"></a>Props（属性）</h3><p><strong>Props</strong> 是父组件向子组件传递数据的方式。Props 是子组件的属性，允许父组件将数据传递给子组件。</p><ul><li><p><strong>用途</strong>：用于数据传递，通常用于配置子组件的初始状态或传递静态数据。</p></li><li><p><strong>方向</strong>：单向数据流，从父组件流向子组件。</p></li><li><p><strong>数据类型</strong>：可以是任何类型的数据，包括数字、字符串、对象、数组、函数等。</p></li><li><p>特点：</p><ul><li>子组件通过定义<code>props</code>选项来声明它期望从父组件接收的数据。</li><li>父组件在模板中通过属性的方式将数据传递给子组件。</li><li>子组件不能直接修改<code>props</code>，这是Vue.js的单一数据流原则的一部分。</li></ul></li></ul><h3 id="Events（事件）"><a href="#Events（事件）" class="headerlink" title="Events（事件）"></a>Events（事件）</h3><p><strong>Events</strong> 是子组件向父组件发送消息的方式。在Vue.js中，通常使用<code>$emit</code>方法来触发事件。</p><ul><li><p><strong>用途</strong>：用于通知父组件某些事件的发生，例如用户操作、数据更新等。</p></li><li><p><strong>方向</strong>：从子组件向父组件传递消息。</p></li><li><p><strong>数据类型</strong>：通常是字符串，表示事件的名称。</p></li><li><p>特点：</p><ul><li>子组件可以在需要时通过<code>$emit</code>方法触发事件，并将数据作为参数传递给父组件。</li><li>父组件可以在模板中通过<code>v-on</code>指令监听子组件触发的事件，并执行相应的操作。</li><li>事件可以携带任意数据作为参数，父组件可以在事件处理函数中接收这些数据。</li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Vue组件需要通信的几个原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;数据共享&lt;/strong&gt;：在一个应用中，不同组件可能需要访问相同的数据。例如，一个购物车组件可能需要访问商品列表组件中的商品数据。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;状态管理&lt;/strong&gt;：随着</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>理解深度学习中的过拟合</title>
@@ -400,28 +423,6 @@
       
     <summary type="html">&lt;p&gt;在软件开发的世界里，一个产品的好坏往往不是非黑即白的。作为程序员，我们需要具备综合思维，全面地分析软件产品的优点和缺点。这不仅有助于我们更好地理解产品，还能指导我们如何改进和优化。本文将探讨为什么这种思维方式至关重要，以及我们可以从哪些方面进行分析。&lt;/p&gt;
 &lt;h2 id=</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>云服务器（Windows Server）与本地PC（Windows）的对比：程序员视角</title>
-    <link href="https://promptonce.github.io/2024/12/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Windows-Server%EF%BC%89%E4%B8%8E%E6%9C%AC%E5%9C%B0PC%EF%BC%88Windows%EF%BC%89%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%86%E8%A7%92/"/>
-    <id>https://promptonce.github.io/2024/12/15/%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8%EF%BC%88Windows-Server%EF%BC%89%E4%B8%8E%E6%9C%AC%E5%9C%B0PC%EF%BC%88Windows%EF%BC%89%E7%9A%84%E5%AF%B9%E6%AF%94%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E8%A7%86%E8%A7%92/</id>
-    <published>2024-12-15T06:14:46.000Z</published>
-    <updated>2024-12-15T06:15:38.490Z</updated>
-    
-    <content type="html"><![CDATA[<p>在现代软件开发和部署中，云服务器和本地PC是两种重要的计算资源，它们在特性、用途和配置上各有不同。为了帮助程序员更好地理解两者之间的关系，本文从操作系统、硬件资源、网络特性、管理方式以及典型使用场景等方面进行详细对比。</p><hr><h3 id="1-操作系统对比"><a href="#1-操作系统对比" class="headerlink" title="1. 操作系统对比"></a>1. <strong>操作系统对比</strong></h3><table><thead><tr><th><strong>特性</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>目标用户</strong></td><td>面向企业、开发者，支持高并发、高负载应用运行。</td><td>面向个人和办公用户，设计为通用操作系统。</td></tr><tr><td><strong>优化方向</strong></td><td>优化后台服务性能，如Web服务器、数据库运行。</td><td>优化桌面体验，如图形界面、娱乐和日常办公。</td></tr><tr><td><strong>功能特性</strong></td><td>强调服务端功能：IIS、远程桌面服务、域控制器等。</td><td>强调用户端功能：多媒体支持、应用兼容性等。</td></tr><tr><td><strong>License</strong></td><td>按核心数、用户数等收费，适合企业级部署。</td><td>通常按设备或个人用户授权，价格较低。</td></tr></tbody></table><p><strong>总结</strong>：Windows Server更关注后台服务和企业需求，而Windows PC则专注于用户体验和日常操作。</p><hr><h3 id="2-硬件资源对比"><a href="#2-硬件资源对比" class="headerlink" title="2. 硬件资源对比"></a>2. <strong>硬件资源对比</strong></h3><table><thead><tr><th><strong>特性</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>硬件配置</strong></td><td>可按需选择CPU、内存、存储等，弹性扩展。</td><td>固定硬件配置，扩展性受物理限制。</td></tr><tr><td><strong>性能</strong></td><td>通常使用高性能硬件，支持企业级负载。</td><td>性能受限于本地硬件，适合个人和小型任务。</td></tr><tr><td><strong>存储</strong></td><td>支持分布式存储、高速SSD、备份和快照功能。</td><td>主要依赖本地硬盘，扩展需要外接设备。</td></tr><tr><td><strong>成本</strong></td><td>按使用量计费，灵活但长期成本可能较高。</td><td>一次性购置成本，后续运行几乎无额外费用。</td></tr></tbody></table><p><strong>总结</strong>：云服务器在资源灵活性和性能上更具优势，而本地PC适合需要长期固定性能的任务。</p><hr><h3 id="3-网络特性对比"><a href="#3-网络特性对比" class="headerlink" title="3. 网络特性对比"></a>3. <strong>网络特性对比</strong></h3><table><thead><tr><th><strong>特性</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>网络带宽</strong></td><td>高带宽，支持大规模并发访问。</td><td>依赖本地网络，通常为家庭或办公级别带宽。</td></tr><tr><td><strong>IP地址</strong></td><td>提供公网IP，可直接访问。</td><td>通常使用局域网IP，公网访问需要端口映射或动态域名。</td></tr><tr><td><strong>延迟</strong></td><td>更适合全球访问，延迟低。</td><td>适合本地操作，网络延迟视ISP而定。</td></tr><tr><td><strong>安全性</strong></td><td>依赖防火墙、VPN等保护，默认暴露在公网。</td><td>通常较安全，主要依赖路由器防火墙。</td></tr></tbody></table><p><strong>总结</strong>：云服务器更适合需要全球访问或高带宽的任务，而本地PC在安全性和低延迟的本地操作上更具优势。</p><hr><h3 id="4-管理方式对比"><a href="#4-管理方式对比" class="headerlink" title="4. 管理方式对比"></a>4. <strong>管理方式对比</strong></h3><table><thead><tr><th><strong>特性</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>访问方式</strong></td><td>主要通过远程桌面（RDP）、SSH等管理。</td><td>直接物理访问，或通过远程桌面管理。</td></tr><tr><td><strong>维护</strong></td><td>云服务商负责硬件维护，用户仅需管理系统。</td><td>用户需自行维护硬件和系统。</td></tr><tr><td><strong>监控</strong></td><td>提供丰富的监控工具，如Azure Monitor、CloudWatch。</td><td>需借助第三方工具监控性能。</td></tr><tr><td><strong>自动化</strong></td><td>支持自动化部署（如CI&#x2F;CD）、弹性伸缩等。</td><td>自动化程度较低，需额外配置。</td></tr></tbody></table><p><strong>总结</strong>：云服务器在管理和自动化方面有更多工具支持，而本地PC的管理更直接。</p><hr><h3 id="5-典型使用场景对比"><a href="#5-典型使用场景对比" class="headerlink" title="5. 典型使用场景对比"></a>5. <strong>典型使用场景对比</strong></h3><table><thead><tr><th><strong>场景</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>Web开发与部署</strong></td><td>部署生产环境，支持高并发。</td><td>开发和测试环境，性能有限。</td></tr><tr><td><strong>数据存储与备份</strong></td><td>企业级存储和备份，支持容灾恢复。</td><td>本地存储，备份需手动或使用外部设备。</td></tr><tr><td><strong>多用户协作</strong></td><td>支持多用户远程访问，资源隔离性强。</td><td>主要适合单用户操作，多用户需额外配置权限。</td></tr><tr><td><strong>成本敏感任务</strong></td><td>短期任务成本低，长期使用可能昂贵。</td><td>长期使用成本低，扩展性差。</td></tr></tbody></table><hr><h3 id="6-两者关系与互补性"><a href="#6-两者关系与互补性" class="headerlink" title="6. 两者关系与互补性"></a>6. <strong>两者关系与互补性</strong></h3><p>云服务器和本地PC并不是对立的，而是互补的关系。通常，程序员会选择以下方式结合两者的优势：</p><ul><li><strong>开发与测试</strong>：在本地PC完成代码开发和初步测试。</li><li><strong>部署与生产</strong>：将最终版本部署到云服务器，利用其高性能和高可用性支持用户访问。</li><li><strong>远程访问</strong>：通过本地PC远程连接云服务器，管理和调试线上环境。</li><li><strong>资源优化</strong>：将高性能任务放在云端，低成本任务在本地运行。</li></ul><hr><h3 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. <strong>总结</strong></h3><table><thead><tr><th><strong>对比维度</strong></th><th><strong>云服务器（Windows Server）</strong></th><th><strong>本地PC（Windows）</strong></th></tr></thead><tbody><tr><td><strong>灵活性</strong></td><td>高，可动态调整资源。</td><td>低，硬件固定。</td></tr><tr><td><strong>成本</strong></td><td>按需计费，适合短期任务。</td><td>一次性投资，适合长期使用。</td></tr><tr><td><strong>管理</strong></td><td>专业化管理，自动化工具多。</td><td>简单直接，适合个人使用。</td></tr><tr><td><strong>性能</strong></td><td>高性能，支持大规模并发。</td><td>适合单机任务，性能受限于硬件。</td></tr></tbody></table><p>选择云服务器还是本地PC，取决于具体的项目需求和预算。通过合理利用两者的优势，程序员可以在开发效率和成本之间找到最佳平衡。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在现代软件开发和部署中，云服务器和本地PC是两种重要的计算资源，它们在特性、用途和配置上各有不同。为了帮助程序员更好地理解两者之间的关系，本文从操作系统、硬件资源、网络特性、管理方式以及典型使用场景等方面进行详细对比。&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&quot;1-操作系统对比&quot;&gt;</summary>
       
     
     
