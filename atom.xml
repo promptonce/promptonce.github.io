@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-01-24T12:55:14.055Z</updated>
+  <updated>2025-01-25T14:51:41.141Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sharedchat会话管理工具总结</title>
+    <link href="https://promptonce.github.io/2025/01/25/sharedchat%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/01/25/sharedchat%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/</id>
+    <published>2025-01-25T14:48:42.000Z</published>
+    <updated>2025-01-25T14:51:41.141Z</updated>
+    
+    <content type="html"><![CDATA[<p>由技术变化产生的新需求，基于L站sharedchat的拓展，技术没有太高门槛，成熟的技术团队要么不愿意做要么没有看到技术变革产生的新用户群体。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;由技术变化产生的新需求，基于L站sharedchat的拓展，技术没有太高门槛，成熟的技术团队要么不愿意做要么没有看到技术变革产生的新用户群体。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何在软件开发中平衡时间与文档效益成本</title>
@@ -402,28 +423,6 @@
       
       
     <summary type="html">&lt;p&gt;在深度学习中，&lt;strong&gt;特征图（Feature Map）&lt;/strong&gt; 和 &lt;strong&gt;注意力图（Attention Map）&lt;/strong&gt; 是两个常见且重要的概念，尤其是在卷积神经网络（CNN）和注意力机制（如 Transformer）中。虽然它们经常出</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>用少数高效指标快速验证开发工作的正确性</title>
-    <link href="https://promptonce.github.io/2024/12/16/%E7%94%A8%E5%B0%91%E6%95%B0%E9%AB%98%E6%95%88%E6%8C%87%E6%A0%87%E5%BF%AB%E9%80%9F%E9%AA%8C%E8%AF%81%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7/"/>
-    <id>https://promptonce.github.io/2024/12/16/%E7%94%A8%E5%B0%91%E6%95%B0%E9%AB%98%E6%95%88%E6%8C%87%E6%A0%87%E5%BF%AB%E9%80%9F%E9%AA%8C%E8%AF%81%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E7%9A%84%E6%AD%A3%E7%A1%AE%E6%80%A7/</id>
-    <published>2024-12-16T15:23:12.000Z</published>
-    <updated>2024-12-16T15:25:58.251Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h3><ol><li>开发过程中，验证工作是不可或缺的一环。</li><li>验证方法的效率和准确性直接影响开发周期和质量。</li><li>本文将分享如何通过选择少数关键指标快速验证工作成果，降低犯错率。</li></ol><hr><h3 id="为什么选择少数指标？"><a href="#为什么选择少数指标？" class="headerlink" title="为什么选择少数指标？"></a><strong>为什么选择少数指标？</strong></h3><ol><li><strong>节省时间</strong>：在项目开发中，时间往往是最宝贵的资源。过多的验证步骤会拖慢开发进度。</li><li><strong>提升精度</strong>：少数指标可以避免“指标过载”，专注于关键问题，提升验证结果的可信度。</li><li><strong>降低犯错率</strong>：简化的验证流程更容易重复和自动化，减少人为操作失误。</li></ol><hr><h3 id="如何选择关键指标？"><a href="#如何选择关键指标？" class="headerlink" title="如何选择关键指标？"></a><strong>如何选择关键指标？</strong></h3><ol><li><p><strong>目标导向</strong>：</p><ul><li>确定工作成果的核心目标。</li><li>例如：在图像分割任务中，核心目标可能是分割精度，而非计算速度。</li></ul></li><li><p><strong>衡量效果的敏感性</strong>：</p><ul><li>选择对问题变化敏感的指标。</li><li>例如：在分类问题中，<code>F1-score</code>比单纯的准确率更能反映模型性能。</li></ul></li><li><p><strong>成本与可操作性</strong>：</p><ul><li>考虑获取指标的成本，选择计算成本低、实现简单的指标。</li><li>例如：在开发Web应用时，使用页面加载时间和API响应时间作为初步验证指标。</li></ul></li><li><p><strong>可重复性</strong>：</p><ul><li>确保选择的指标可以在不同环境下重复验证。</li><li>例如：通过单元测试验证函数输出。</li></ul></li></ol><hr><h3 id="实践中的案例分享"><a href="#实践中的案例分享" class="headerlink" title="实践中的案例分享"></a><strong>实践中的案例分享</strong></h3><h4 id="案例-1：图像分割任务"><a href="#案例-1：图像分割任务" class="headerlink" title="案例 1：图像分割任务"></a><strong>案例 1：图像分割任务</strong></h4><ul><li><strong>常见验证指标</strong>：像素级准确率、IoU（交并比）、F1-score。</li><li><strong>快速验证的关键指标</strong>：IoU（Intersection over Union）。<ul><li>理由：IoU对模型预测区域与真实区域的重叠情况非常敏感，能快速发现问题。</li><li>实践方法：随机抽取几张测试集图片，计算IoU。</li></ul></li></ul><h4 id="案例-2：Web应用性能优化"><a href="#案例-2：Web应用性能优化" class="headerlink" title="案例 2：Web应用性能优化"></a><strong>案例 2：Web应用性能优化</strong></h4><ul><li><strong>常见验证指标</strong>：页面加载时间、API响应时间、内存占用、用户留存率。</li><li><strong>快速验证的关键指标</strong>：页面加载时间。<ul><li>理由：页面加载时间直接影响用户体验，是性能优化的核心指标。</li><li>实践方法：使用浏览器开发者工具或性能监控工具如Lighthouse。</li></ul></li></ul><h4 id="案例-3：算法优化"><a href="#案例-3：算法优化" class="headerlink" title="案例 3：算法优化"></a><strong>案例 3：算法优化</strong></h4><ul><li><strong>常见验证指标</strong>：算法复杂度、运行时间、内存占用。</li><li><strong>快速验证的关键指标</strong>：运行时间。<ul><li>理由：运行时间是优化效果最直观的体现。</li><li>实践方法：对比优化前后的运行时间，观察变化趋势。</li></ul></li></ul><hr><h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h3><ol><li><strong>指标间的平衡</strong>：少数指标虽然高效，但不能忽略其他潜在问题。</li><li><strong>动态调整</strong>：开发阶段不同，验证重点也会变化。例如，初期关注正确性，后期关注性能。</li><li><strong>自动化验证</strong>：尽量将验证流程自动化，减少人为干预。</li></ol><hr><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a><strong>结论</strong></h3><ol><li>通过选择少数高效指标，可以快速验证开发工作的正确性。</li><li>这一方法不仅节省时间，还能提高开发效率和成果质量。</li><li>希望本文的方法论和案例分享能为您的开发工作提供借鉴。</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;&lt;strong&gt;引言&lt;/strong&gt;&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;开发过程中，验证工作是不可或缺的一环。&lt;/li&gt;
-&lt;li&gt;验证方法的效率和准确性直接影响开发周</summary>
       
     
     
