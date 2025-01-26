@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-01-25T14:51:41.141Z</updated>
+  <updated>2025-01-26T03:04:02.926Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript ACM模式</title>
+    <link href="https://promptonce.github.io/2025/01/26/JavaScript-ACM%E6%A8%A1%E5%BC%8F/"/>
+    <id>https://promptonce.github.io/2025/01/26/JavaScript-ACM%E6%A8%A1%E5%BC%8F/</id>
+    <published>2025-01-26T02:55:29.000Z</published>
+    <updated>2025-01-26T03:04:02.926Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> readline = <span class="built_in">require</span>(<span class="string">&#x27;readline&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> rl = readline.<span class="title function_">createInterface</span>(&#123;</span><br><span class="line">    <span class="attr">input</span>: process.<span class="property">stdin</span>,</span><br><span class="line">    <span class="attr">output</span>: process.<span class="property">stdout</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">processInput</span>(<span class="params"></span>) &#123;</span><br><span class="line">    rl.<span class="title function_">on</span>(<span class="string">&#x27;line&#x27;</span>, <span class="function">(<span class="params">input</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">//const [a,b] = input.split(&#x27; &#x27;).map(Number);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//const sum = a + b;</span></span><br><span class="line">        <span class="comment">//console.log(sum);</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">processInput</span>();</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>sharedchat会话管理工具总结</title>
@@ -403,26 +423,6 @@
       
     <summary type="html">&lt;p&gt;在Vue 3的组合式API中，我们经常需要管理组件的状态。但仅仅暴露状态变量是不够的，为了实现更复杂的交互逻辑，我们还需要暴露操作这些状态的方法。本文将详细探讨如何在组合式API中优雅地管理状态与方法。&lt;/p&gt;
 &lt;h2 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; c</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习中的特征图与注意力图：全面解析与对比</title>
-    <link href="https://promptonce.github.io/2024/12/21/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E7%89%B9%E5%BE%81%E5%9B%BE%E4%B8%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%9B%BE%EF%BC%9A%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AF%B9%E6%AF%94/"/>
-    <id>https://promptonce.github.io/2024/12/21/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%AD%E7%9A%84%E7%89%B9%E5%BE%81%E5%9B%BE%E4%B8%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E5%9B%BE%EF%BC%9A%E5%85%A8%E9%9D%A2%E8%A7%A3%E6%9E%90%E4%B8%8E%E5%AF%B9%E6%AF%94/</id>
-    <published>2024-12-21T06:13:25.000Z</published>
-    <updated>2024-12-21T06:16:40.240Z</updated>
-    
-    <content type="html"><![CDATA[<p>在深度学习中，<strong>特征图（Feature Map）</strong> 和 <strong>注意力图（Attention Map）</strong> 是两个常见且重要的概念，尤其是在卷积神经网络（CNN）和注意力机制（如 Transformer）中。虽然它们经常出现在各种任务中，但两者的本质、生成方式和用途却有着很大的区别。这篇博客将带你全面解析这两个概念，并通过简单的语言和实例，帮助你理解它们的核心差异。</p><hr><h2 id="一、什么是特征图？"><a href="#一、什么是特征图？" class="headerlink" title="一、什么是特征图？"></a>一、什么是特征图？</h2><p><strong>特征图</strong>是深度学习，尤其是卷积神经网络（CNN）中的关键概念。它是通过卷积操作提取输入数据（如图像）的特征后得到的中间结果。</p><h3 id="特征图的本质："><a href="#特征图的本质：" class="headerlink" title="特征图的本质："></a>特征图的本质：</h3><ol><li><p><strong>提取特征：</strong><br>特征图可以看作是输入数据的某些模式或特征的表示。比如，一张图像通过卷积核后，特征图可能捕捉到边缘、纹理或更复杂的模式。</p></li><li><p><strong>数据的压缩版本：</strong><br>特征图将输入数据从高维空间压缩为更紧凑的表示，保留重要信息，去掉冗余内容。</p></li><li><p><strong>分层特征：</strong>  </p><ul><li>浅层特征图：提取简单的低级特征（例如边缘、颜色）。</li><li>深层特征图：提取复杂的高级特征（例如物体的形状、语义信息）。</li></ul></li></ol><h3 id="举个例子："><a href="#举个例子：" class="headerlink" title="举个例子："></a>举个例子：</h3><p>在图像分类任务中，假设我们要区分猫和狗：  </p><ul><li>浅层特征图可能会提取出毛发的纹理。</li><li>深层特征图可能会识别出耳朵或尾巴的形状。</li></ul><h3 id="特征图的生成方式："><a href="#特征图的生成方式：" class="headerlink" title="特征图的生成方式："></a>特征图的生成方式：</h3><p>特征图是卷积操作的结果，其计算公式为：<br><strong>特征图 &#x3D; 卷积核 * 输入数据 + 偏置</strong><br>这里的卷积核是模型通过训练学习到的参数，用于对输入数据进行特定特征的提取。</p><hr><h2 id="二、什么是注意力图？"><a href="#二、什么是注意力图？" class="headerlink" title="二、什么是注意力图？"></a>二、什么是注意力图？</h2><p><strong>注意力图</strong>则是深度学习中另一种常见的工具，尤其在解释模型行为和注意力机制的任务中。它用来表示模型在做决策时，关注了输入数据的哪些部分。</p><h3 id="注意力图的本质："><a href="#注意力图的本质：" class="headerlink" title="注意力图的本质："></a>注意力图的本质：</h3><ol><li><p><strong>关注重点：</strong><br>注意力图直观地反映了模型在任务中“看重”的区域或部分。比如，在一个图像分类任务中，注意力图可能显示模型更关注猫的脸，而不是背景。</p></li><li><p><strong>解释模型：</strong><br>注意力图常用于可视化和解释模型的行为，帮助我们理解模型在决策时是基于哪些信息。</p></li><li><p><strong>引导模型：</strong><br>在某些任务中，注意力图还可以引导模型更关注关键区域，提升模型性能。</p></li></ol><h3 id="举个例子：-1"><a href="#举个例子：-1" class="headerlink" title="举个例子："></a>举个例子：</h3><p>仍以猫狗分类任务为例：  </p><ul><li>注意力图可能显示，模型在判断“猫”时，主要关注了图片中猫的脸部，而忽略了背景的草地。</li></ul><h3 id="注意力图的生成方式："><a href="#注意力图的生成方式：" class="headerlink" title="注意力图的生成方式："></a>注意力图的生成方式：</h3><p>注意力图通常通过注意力机制（如 Transformer 的 Self-Attention）或结合梯度信息（如 Grad-CAM）生成。其具体计算方式因模型而异，但核心思想是：<strong>根据输入数据的特定权重分布，计算出各部分对模型最终决策的贡献程度</strong>。</p><hr><h2 id="三、特征图与注意力图的区别"><a href="#三、特征图与注意力图的区别" class="headerlink" title="三、特征图与注意力图的区别"></a>三、特征图与注意力图的区别</h2><p>虽然特征图和注意力图都与深度学习模型的数据处理密切相关，但它们的本质和用途却有很大不同。以下从多个角度对两者进行对比。</p><h3 id="1-说白了，两者的区别："><a href="#1-说白了，两者的区别：" class="headerlink" title="1. 说白了，两者的区别："></a>1. <strong>说白了，两者的区别：</strong></h3><ul><li><strong>特征图</strong>说白了就是模型“看到了什么”。它是输入数据经过卷积操作后提取的特征，是模型用来完成任务的“原料”。</li><li><strong>注意力图</strong>说白了就是模型“看重了什么”。它显示了模型在决策过程中关注的重点区域，是模型工作的“关注点”。</li></ul><h3 id="2-生成方式："><a href="#2-生成方式：" class="headerlink" title="2. 生成方式："></a>2. <strong>生成方式：</strong></h3><ul><li><p><strong>特征图：</strong><br>通过卷积核与输入数据计算得到，是模型的中间计算结果。<br>公式：<strong>特征图 &#x3D; 卷积核 * 输入数据 + 偏置</strong></p></li><li><p><strong>注意力图：</strong><br>通常通过注意力机制或结合梯度信息生成，反映模型对输入数据各部分的重要性。</p></li></ul><h3 id="3-表现形式："><a href="#3-表现形式：" class="headerlink" title="3. 表现形式："></a>3. <strong>表现形式：</strong></h3><ul><li><p><strong>特征图：</strong><br>是一组二维或三维矩阵，表示输入数据的特征表示，数值反映了特定位置的特征强度。需要进一步可视化才能直观理解。</p></li><li><p><strong>注意力图：</strong><br>是一个直观的热力图，显示模型对输入数据不同区域的关注程度。值越高的区域，模型越关注。</p></li></ul><h3 id="4-功能和用途："><a href="#4-功能和用途：" class="headerlink" title="4. 功能和用途："></a>4. <strong>功能和用途：</strong></h3><ul><li><p><strong>特征图：</strong>  </p><ul><li>提取输入数据的特征，供后续网络层使用。</li><li>用于特征提取、模式表示，是模型的核心计算结果。</li></ul></li><li><p><strong>注意力图：</strong>  </p><ul><li>可视化模型行为，帮助解释模型决策。</li><li>在部分任务中引导模型更关注核心区域。</li></ul></li></ul><h3 id="5-应用场景："><a href="#5-应用场景：" class="headerlink" title="5. 应用场景："></a>5. <strong>应用场景：</strong></h3><table><thead><tr><th><strong>特征图</strong></th><th><strong>注意力图</strong></th></tr></thead><tbody><tr><td>图像分类：提取浅层和深层特征</td><td>可视化模型对分类任务的关注区域</td></tr><tr><td>目标检测：生成候选区域，提取目标特征</td><td>引导模型更关注目标区域</td></tr><tr><td>风格迁移：匹配内容和风格图像的特征</td><td>不常用于风格迁移</td></tr><tr><td>自然语言处理：不直接使用</td><td>表示词与词之间的相关性</td></tr></tbody></table><hr><h2 id="四、特征图和注意力图的关系"><a href="#四、特征图和注意力图的关系" class="headerlink" title="四、特征图和注意力图的关系"></a>四、特征图和注意力图的关系</h2><h3 id="1-功能上的互补性："><a href="#1-功能上的互补性：" class="headerlink" title="1. 功能上的互补性："></a>1. <strong>功能上的互补性：</strong></h3><ul><li>特征图是模型提取的核心特征，是模型工作的“基础材料”。</li><li>注意力图则是对模型行为的直观反映，是分析模型是否正确利用特征图的重要工具。</li></ul><h3 id="2-结合使用的可能性："><a href="#2-结合使用的可能性：" class="headerlink" title="2. 结合使用的可能性："></a>2. <strong>结合使用的可能性：</strong></h3><p>在深度学习任务中，特征图和注意力图可以结合使用。例如，通过注意力图分析模型是否正确聚焦在特征图中的关键信息。</p><hr><h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><h3 id="特征图："><a href="#特征图：" class="headerlink" title="特征图："></a><strong>特征图</strong>：</h3><ul><li>是深度学习模型处理数据时提取出来的特征表示，是模型理解输入数据的核心中间结果。</li><li>它更像是“原料”，供模型进一步处理。</li></ul><h3 id="注意力图："><a href="#注意力图：" class="headerlink" title="注意力图："></a><strong>注意力图</strong>：</h3><ul><li>是模型在决策过程中关注区域的可视化表示，帮助我们理解模型的行为。</li><li>它更像是“放大镜”，告诉我们模型的关注重点。</li></ul><p>两者虽然有很大的区别，但它们在深度学习中都扮演着重要角色。特征图是模型运行的基础，而注意力图则是分析和优化模型的重要工具。理解两者的本质和区别，不仅能帮助我们更好地调试模型，还能让我们从更高的层面理解深度学习的运行机制。</p><hr><p><strong>你可以这样记住它们：</strong><br>特征图是“看到了什么”，注意力图是“看重了什么”。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在深度学习中，&lt;strong&gt;特征图（Feature Map）&lt;/strong&gt; 和 &lt;strong&gt;注意力图（Attention Map）&lt;/strong&gt; 是两个常见且重要的概念，尤其是在卷积神经网络（CNN）和注意力机制（如 Transformer）中。虽然它们经常出</summary>
       
     
     
