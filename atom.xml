@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-01-26T03:04:02.926Z</updated>
+  <updated>2025-01-30T13:35:27.920Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cursor使用技巧总结</title>
+    <link href="https://promptonce.github.io/2025/01/30/cursor%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/01/30/cursor%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</id>
+    <published>2025-01-30T13:21:45.000Z</published>
+    <updated>2025-01-30T13:35:27.920Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/19886296883">https://zhuanlan.zhihu.com/p/19886296883</a></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/19886296883&quot;&gt;https://zhuanlan.zhihu.com/p/19886296883&lt;/a&gt;&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="AI工具效率提升" scheme="https://promptonce.github.io/tags/AI%E5%B7%A5%E5%85%B7%E6%95%88%E7%8E%87%E6%8F%90%E5%8D%87/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript ACM模式</title>
@@ -403,27 +426,6 @@
       
       
     <summary type="html">&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;在Vue3中，响应式系统是框架的核心特性之一。其中，&lt;code&gt;ref&lt;/code&gt;和&lt;code&gt;reactive&lt;/code&gt;是两个最基础</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vue 3组合式API中的状态与方法管理：不仅仅是属性</title>
-    <link href="https://promptonce.github.io/2024/12/21/Vue-3%E7%BB%84%E5%90%88%E5%BC%8FAPI%E4%B8%AD%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E6%96%B9%E6%B3%95%E7%AE%A1%E7%90%86%EF%BC%9A%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%B1%9E%E6%80%A7/"/>
-    <id>https://promptonce.github.io/2024/12/21/Vue-3%E7%BB%84%E5%90%88%E5%BC%8FAPI%E4%B8%AD%E7%9A%84%E7%8A%B6%E6%80%81%E4%B8%8E%E6%96%B9%E6%B3%95%E7%AE%A1%E7%90%86%EF%BC%9A%E4%B8%8D%E4%BB%85%E4%BB%85%E6%98%AF%E5%B1%9E%E6%80%A7/</id>
-    <published>2024-12-21T14:02:46.000Z</published>
-    <updated>2024-12-21T14:03:45.250Z</updated>
-    
-    <content type="html"><![CDATA[<p>在Vue 3的组合式API中，我们经常需要管理组件的状态。但仅仅暴露状态变量是不够的，为了实现更复杂的交互逻辑，我们还需要暴露操作这些状态的方法。本文将详细探讨如何在组合式API中优雅地管理状态与方法。</p><h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><p>在组合式API中，我们使用<code>ref</code>来创建响应式状态：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure><p>但是，如果我们只是简单地暴露这个状态变量，组件的功能会非常受限。为了实现更丰富的交互，我们需要同时暴露操作这个状态的方法。</p><h2 id="完整示例"><a href="#完整示例" class="headerlink" title="完整示例"></a>完整示例</h2><p>让我们看一个完整的计数器组件示例：</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title function_">setup</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 状态声明</span></span><br><span class="line">    <span class="keyword">const</span> count = <span class="title function_">ref</span>(<span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 方法声明</span></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">increment</span>(<span class="params"></span>) &#123;</span><br><span class="line">      count.<span class="property">value</span>++</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">decrement</span>(<span class="params"></span>) &#123;</span><br><span class="line">      count.<span class="property">value</span>--</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="title function_">reset</span>(<span class="params"></span>) &#123;</span><br><span class="line">      count.<span class="property">value</span> = <span class="number">0</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 同时暴露状态和方法</span></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      count,</span><br><span class="line">      increment,</span><br><span class="line">      decrement,</span><br><span class="line">      reset</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>模板中的使用：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;decrement&quot;</span>&gt;</span>-<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;increment&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">&quot;reset&quot;</span>&gt;</span>重置<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure><h2 id="为什么要这样做？"><a href="#为什么要这样做？" class="headerlink" title="为什么要这样做？"></a>为什么要这样做？</h2><ol><li><p><strong>封装性</strong>：将状态变更的逻辑封装在方法中，而不是直接在模板中修改状态，这样可以保持代码的清晰和可维护性。</p></li><li><p><strong>复用性</strong>：这些方法可以在组件的不同地方重用，甚至可以被其他组件调用。</p></li><li><p><strong>可测试性</strong>：独立的方法更容易进行单元测试。</p></li><li><p><strong>可扩展性</strong>：当需要在状态变更时添加额外逻辑（如日志记录、验证等），只需要修改相应的方法即可。</p></li></ol><h2 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h2><ol><li><p><strong>命名清晰</strong>：方法名应该清晰地表达其功能，比如<code>increment</code>、<code>decrement</code>、<code>reset</code>等。</p></li><li><p><strong>单一职责</strong>：每个方法应该只负责一个具体的功能。</p></li><li><p><strong>状态验证</strong>：在方法中可以添加必要的状态验证逻辑：</p></li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">increment</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (count.<span class="property">value</span> &lt; maxValue) &#123;</span><br><span class="line">    count.<span class="property">value</span>++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><ol start="4"><li><strong>错误处理</strong>：适当添加错误处理逻辑：</li></ol><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">updateCount</span>(<span class="params">newValue</span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    count.<span class="property">value</span> = <span class="title class_">Number</span>(newValue)</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Invalid value:&#x27;</span>, error)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>在Vue 3的组合式API中，正确管理状态和方法的关系是构建可维护组件的关键。通过同时暴露状态和操作方法，我们可以构建出更加健壮和灵活的组件。这种模式不仅提高了代码的可维护性，也为组件的扩展提供了更大的空间。</p><p>记住：好的组件设计不仅要考虑数据的存储，更要考虑数据的操作方式。通过合理的封装和抽象，我们可以构建出更加优雅和可维护的Vue应用。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在Vue 3的组合式API中，我们经常需要管理组件的状态。但仅仅暴露状态变量是不够的，为了实现更复杂的交互逻辑，我们还需要暴露操作这些状态的方法。本文将详细探讨如何在组合式API中优雅地管理状态与方法。&lt;/p&gt;
-&lt;h2 id=&quot;基础概念&quot;&gt;&lt;a href=&quot;#基础概念&quot; c</summary>
       
     
     
