@@ -43,15 +43,15 @@
     <link href="https://promptonce.github.io/2025/01/30/cursor%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/"/>
     <id>https://promptonce.github.io/2025/01/30/cursor%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/</id>
     <published>2025-01-30T13:21:45.000Z</published>
-    <updated>2025-01-30T13:35:27.920Z</updated>
+    <updated>2025-02-01T10:09:25.336Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/19886296883">https://zhuanlan.zhihu.com/p/19886296883</a></p>]]></content>
+    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/19886296883">https://zhuanlan.zhihu.com/p/19886296883</a></p><h3 id="AI编程的三条重要经验：如何更高效地使用-Cursor"><a href="#AI编程的三条重要经验：如何更高效地使用-Cursor" class="headerlink" title="AI编程的三条重要经验：如何更高效地使用 Cursor"></a>AI编程的三条重要经验：如何更高效地使用 Cursor</h3><p>在使用 Cursor 进行编程以及帮助群友解答问题的过程中，我总结出了三条关键经验，希望能帮助大家更好地利用 AI 提升编程效率。  </p><h3 id="现象分析"><a href="#现象分析" class="headerlink" title="现象分析"></a>现象分析</h3><p>在分享经验之前，我们先来看两个常见的现象：  </p><ol><li><p><strong>AI 的输出是有限的</strong><br>如果在一次对话中提出了过多的需求，AI 可能只能满足其中一部分，甚至有时一个都无法实现。  </p></li><li><p><strong>AI 可能会陷入死循环</strong><br>有些情况下，AI 可能会反复输出错误的代码，无论怎么修改都无法正确实现。这往往是因为上下文信息干扰了 AI 的判断，或者 AI 在服务端缓存了相似的提示词，导致多次命中同一片段，形成循环。</p></li></ol><h3 id="三条关键经验"><a href="#三条关键经验" class="headerlink" title="三条关键经验"></a>三条关键经验</h3><p>基于上述现象，我总结了三条经验，帮助大家更高效地使用 Cursor 进行 AI 编程。  </p><h4 id="1-小型项目适合-AI-处理，但要避免一次性提出过多需求"><a href="#1-小型项目适合-AI-处理，但要避免一次性提出过多需求" class="headerlink" title="1. 小型项目适合 AI 处理，但要避免一次性提出过多需求"></a>1. 小型项目适合 AI 处理，但要避免一次性提出过多需求</h4><p>AI 在开发 <strong>静态网站、小程序、Python 脚本</strong> 等小型项目时，能够显著提高效率，不论是零基础用户还是经验丰富的程序员，都可以借助 AI 事半功倍。  </p><p><strong>但要注意：</strong>  </p><ul><li><strong>避免在一个提示词中提出过多需求</strong>，否则 AI 可能无法完全满足要求。  </li><li><strong>一次提出一个需求，逐步解决问题</strong>，再继续下一个优化点。</li></ul><p>有些人认为，一个强大的提示词可以让 AI 直接完成整个项目，实际上这种方式的体验往往很差。过分依赖 AI 一步到位，反而会走弯路。  </p><h4 id="2-复杂项目需要拆解，逐步优化"><a href="#2-复杂项目需要拆解，逐步优化" class="headerlink" title="2. 复杂项目需要拆解，逐步优化"></a>2. 复杂项目需要拆解，逐步优化</h4><p>目前的 AI 仍然难以处理 <strong>复杂项目中各部分代码的逻辑关系</strong>，这需要我们人为地拆分任务，逐步优化。  </p><p><strong>建议：</strong>  </p><ul><li><strong>先梳理项目结构</strong>，确保 AI 能理解各个模块之间的关系。  </li><li><strong>让 AI 只处理某个小模块</strong>，这样它往往能提供比人类更优的方案。  </li><li><strong>修复 Bug 是 AI 最擅长的</strong>，我们可以借助它快速调试代码。</li></ul><p>如果是为一个复杂项目进行 <strong>二次开发</strong>，AI 可能很难一开始就掌握整个项目的逻辑。此时，先让 AI 了解项目结构，再逐步优化某些功能，会更加高效。  </p><h4 id="3-复杂项目仍然需要一定的编程基础"><a href="#3-复杂项目仍然需要一定的编程基础" class="headerlink" title="3. 复杂项目仍然需要一定的编程基础"></a>3. 复杂项目仍然需要一定的编程基础</h4><p>如果你完全没有编程经验，AI 可以帮助你完成一些简单项目，比如自动化脚本、小工具等。但是对于 <strong>复杂项目</strong>，如果你无法精准指出问题所在，单纯依赖 AI 让它自行解决，可能会耗费大量时间和精力。  </p><p><strong>所以，想要在 AI 辅助下开发更复杂的项目，你至少需要具备以下能力：</strong>  </p><ul><li>能够 <strong>读懂 AI 生成的代码</strong>，理解它的逻辑。  </li><li>能够 <strong>明确定位 Bug</strong>，描述代码问题，而不是仅仅说“程序运行不对”。</li></ul><p>简单来说，<strong>5 分钟编写一个小应用只是你入门 AI 编程的第一步</strong>，如果想做更复杂的项目，仍然需要掌握一些基础的编程知识。  </p><h3 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h3><p>AI 编程最重要的不是各种技巧，而是<strong>如何与 AI 更好地协作、沟通</strong>。只有通过不断实践，从完成第一个“垃圾”应用开始，才能真正找到 AI 编程的感觉，提升开发效率。  </p><p>与 AI 并肩作战，让编程变得更高效！ 🚀</p>]]></content>
     
     
       
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://zhuanlan.zhihu.com/p/19886296883&quot;&gt;https://zhuanlan.zhihu.com/p/19886296883&lt;/a&gt;&lt;/p&gt;
-</summary>
+&lt;h3 id=&quot;AI编程的三条重要经验：如何更高效地使用-Cursor&quot;&gt;</summary>
       
     
     
