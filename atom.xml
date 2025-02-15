@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-02-15T11:02:05.320Z</updated>
+  <updated>2025-02-15T12:11:00.252Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解图像分割中的 Logits：从抽象到具体</title>
+    <link href="https://promptonce.github.io/2025/02/15/%E7%90%86%E8%A7%A3%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E4%B8%AD%E7%9A%84-Logits%EF%BC%9A%E4%BB%8E%E6%8A%BD%E8%B1%A1%E5%88%B0%E5%85%B7%E4%BD%93/"/>
+    <id>https://promptonce.github.io/2025/02/15/%E7%90%86%E8%A7%A3%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E4%B8%AD%E7%9A%84-Logits%EF%BC%9A%E4%BB%8E%E6%8A%BD%E8%B1%A1%E5%88%B0%E5%85%B7%E4%BD%93/</id>
+    <published>2025-02-15T12:08:42.000Z</published>
+    <updated>2025-02-15T12:11:00.252Z</updated>
+    
+    <content type="html"><![CDATA[<p>在计算机视觉的深度学习应用中，特别是在图像分割领域，有一个概念经常让初学者感到困惑—— segmentation logits（分割 logits）。本文旨在从基础概念出发，逐步揭开这个看似抽象的概念的神秘面纱。</p><h2 id="什么是-Logits？"><a href="#什么是-Logits？" class="headerlink" title="什么是 Logits？"></a>什么是 Logits？</h2><p>在深入了解 segmentation logits 之前，我们需要先理解基本的 logits 概念。</p><p>在神经网络中，logits 是模型的原始输出，它们是在应用激活函数（如 softmax 或 sigmoid）之前的值。这些值可以是任意实数：正数、负数或零，没有特定的范围限制。正是这种不受限的特性，使得 logits 在深度学习的计算过程中具有特殊的地位。</p><h2 id="Segmentation-Logits-详解"><a href="#Segmentation-Logits-详解" class="headerlink" title="Segmentation Logits 详解"></a>Segmentation Logits 详解</h2><p>在图像分割任务中，模型需要预测图像中每个像素所属的类别。segmentation logits 就是模型对每个像素所输出的原始”得分”，表示该像素属于各个可能类别的倾向性。</p><h3 id="形状与结构"><a href="#形状与结构" class="headerlink" title="形状与结构"></a>形状与结构</h3><p>在典型的分割网络架构中，segmentation logits 的形状通常是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[batch_size, height, width, num_classes]</span><br></pre></td></tr></table></figure><p>或者在某些框架中可能是：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[batch_size, num_classes, height, width]</span><br></pre></td></tr></table></figure><p>这意味着对于图像中的每个像素位置，模型都会输出 <code>num_classes</code> 个数值，代表该像素属于各个类别的原始得分。</p><h3 id="实例说明"><a href="#实例说明" class="headerlink" title="实例说明"></a>实例说明</h3><p>假设我们在进行一个3类分割任务（背景、人、车），对于图像中某个特定像素，模型可能输出如下 logits：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[2.5, 0.8, -1.2]</span><br></pre></td></tr></table></figure><p>这些数值本身并不直接表示概率，而是需要通过 softmax 函数转换：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">softmax([2.5, 0.8, -1.2]) ≈ [0.77, 0.14, 0.09]</span><br></pre></td></tr></table></figure><p>转换后的结果表明，该像素有约77%的概率属于背景类，14%的概率属于人类，9%的概率属于车类。</p><h2 id="为什么使用-Logits-而非直接使用概率？"><a href="#为什么使用-Logits-而非直接使用概率？" class="headerlink" title="为什么使用 Logits 而非直接使用概率？"></a>为什么使用 Logits 而非直接使用概率？</h2><p>在实际应用中，我们通常会将 logits 转换为概率来理解和使用。那么，为什么不直接使用概率输出呢？这里有几个重要原因：</p><h3 id="1-数值稳定性"><a href="#1-数值稳定性" class="headerlink" title="1. 数值稳定性"></a>1. 数值稳定性</h3><p>在计算损失函数（尤其是交叉熵损失）时，直接使用 logits 通常更加数值稳定。这是因为 softmax 函数在处理极大或极小的输入值时可能导致数值溢出或下溢。</p><h3 id="2-梯度特性"><a href="#2-梯度特性" class="headerlink" title="2. 梯度特性"></a>2. 梯度特性</h3><p>在反向传播过程中，logits 的梯度通常具有更好的特性。当使用 softmax 和交叉熵损失时，如果直接从概率开始计算，可能会遇到梯度消失的问题。</p><h3 id="3-灵活性"><a href="#3-灵活性" class="headerlink" title="3. 灵活性"></a>3. 灵活性</h3><p>保留 logits 允许我们更灵活地调整模型的输出。例如，我们可以通过调整 softmax 的温度参数来控制概率分布的”锐利度”：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">softmax_with_temperature</span>(<span class="params">logits, temperature</span>):</span><br><span class="line">    <span class="keyword">return</span> softmax(logits / temperature)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 温度越低，分布越集中于最高置信度的类别</span></span><br><span class="line"><span class="comment"># 温度越高，分布越均匀</span></span><br></pre></td></tr></table></figure><h2 id="从-Logits-到最终分割结果"><a href="#从-Logits-到最终分割结果" class="headerlink" title="从 Logits 到最终分割结果"></a>从 Logits 到最终分割结果</h2><p>在实际的图像分割流程中，我们通常会经历以下步骤：</p><ol><li>获取模型输出的 segmentation logits</li><li>应用 softmax&#x2F;sigmoid 函数将 logits 转换为概率</li><li>对每个像素取概率最高的类别（argmax）</li><li>基于预测的类别生成最终的分割掩码（mask）</li></ol><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 伪代码示例</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">process_segmentation_output</span>(<span class="params">logits</span>):</span><br><span class="line">    <span class="comment"># 假设 logits 形状为 [batch_size, height, width, num_classes]</span></span><br><span class="line">    probabilities = softmax(logits, axis=-<span class="number">1</span>)</span><br><span class="line">    predicted_classes = np.argmax(probabilities, axis=-<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 可选：生成 one-hot 编码的掩码</span></span><br><span class="line">    segmentation_mask = to_one_hot(predicted_classes, num_classes)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> probabilities, predicted_classes, segmentation_mask</span><br></pre></td></tr></table></figure><h2 id="为什么感觉抽象？"><a href="#为什么感觉抽象？" class="headerlink" title="为什么感觉抽象？"></a>为什么感觉抽象？</h2><p>Segmentation logits 之所以对许多人来说感觉抽象，主要有以下几个原因：</p><ol><li><p><strong>中间状态</strong>：Logits 是模型的中间输出，而我们通常更关注最终的分割结果。</p></li><li><p><strong>非直观的数值范围</strong>：与概率（0到1之间）不同，logits 可以是任意实数，难以直观理解。</p></li><li><p><strong>可视化困难</strong>：直接可视化 logits 通常没有明显的视觉意义，需要特殊处理才能有效展示。</p></li></ol><h2 id="实用技巧与注意事项"><a href="#实用技巧与注意事项" class="headerlink" title="实用技巧与注意事项"></a>实用技巧与注意事项</h2><p>在处理 segmentation logits 时，有一些实用技巧可以帮助我们更好地理解和使用它们：</p><h3 id="1-可视化技巧"><a href="#1-可视化技巧" class="headerlink" title="1. 可视化技巧"></a>1. 可视化技巧</h3><p>可以使用以下方法可视化 logits：</p><ul><li>对每个类别的 logits 单独可视化（使用热力图）</li><li>可视化 argmax 结果（类别预测）</li><li>可视化转换后的概率分布</li></ul><h3 id="2-调试建议"><a href="#2-调试建议" class="headerlink" title="2. 调试建议"></a>2. 调试建议</h3><ul><li>检查 logits 的数值范围，极端的数值可能表明模型训练不稳定</li><li>验证 logits 经过 softmax 后的概率和为1</li><li>观察不同类别的 logits 分布情况</li></ul><h3 id="3-常见陷阱"><a href="#3-常见陷阱" class="headerlink" title="3. 常见陷阱"></a>3. 常见陷阱</h3><ul><li>不要直接比较不同模型或不同运行的 logits 值，它们的比例可能不同</li><li>注意 logits 可能需要特定的后处理（如特定的阈值）才能获得最佳结果</li><li>在多类别问题中，使用 softmax；在二类或多标签问题中，使用 sigmoid</li></ul><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>理解 segmentation logits 是掌握图像分割技术的重要一步。虽然初看起来较为抽象，但通过本文的解析，希望读者能够更清晰地理解这一概念，并在实际应用中灵活运用。</p><p>无论是调试模型、改进算法，还是深入理解分割网络的工作原理，对 segmentation logits 的深入理解都将大有裨益。</p><hr><p>如果您对本文有任何问题或建议，欢迎在评论区留言交流！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;在计算机视觉的深度学习应用中，特别是在图像分割领域，有一个概念经常让初学者感到困惑—— segmentation logits（分割 logits）。本文旨在从基础概念出发，逐步揭开这个看似抽象的概念的神秘面纱。&lt;/p&gt;
+&lt;h2 id=&quot;什么是-Logits？&quot;&gt;&lt;a hr</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>VS Code 调试工具：掌握这些按钮，让 Python 代码调试更高效</title>
@@ -408,26 +429,6 @@
       
     <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/props%E4%BC%A0%E5%80%BC.png&quot; class=&quot;&quot; title=&quot;props传值&quot;&gt; 
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件开发中的业务理解与技术实现：从开发人员到架构师的思维转变</title>
-    <link href="https://promptonce.github.io/2025/01/17/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E4%B8%9A%E5%8A%A1%E7%90%86%E8%A7%A3%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%EF%BC%9A%E4%BB%8E%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%88%B0%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E5%8F%98/"/>
-    <id>https://promptonce.github.io/2025/01/17/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%AD%E7%9A%84%E4%B8%9A%E5%8A%A1%E7%90%86%E8%A7%A3%E4%B8%8E%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%EF%BC%9A%E4%BB%8E%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%88%B0%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9A%84%E6%80%9D%E7%BB%B4%E8%BD%AC%E5%8F%98/</id>
-    <published>2025-01-17T13:29:52.000Z</published>
-    <updated>2025-01-17T13:31:16.669Z</updated>
-    
-    <content type="html"><![CDATA[<p>在软件开发的过程中，很多时候我们习惯性地将注意力集中在技术上，尤其是对于普通开发人员而言，技术能力的提升常常是日常工作的重要目标。然而，若从长远发展和项目成功的角度来看，业务理解与技术的结合才是推动软件项目顺利进展的关键。本文将深入探讨如何在开发过程中既理解业务，又结合架构师的思维来实现高效的软件开发。</p><h4 id="1-业务驱动软件开发"><a href="#1-业务驱动软件开发" class="headerlink" title="1. 业务驱动软件开发"></a>1. 业务驱动软件开发</h4><p>软件开发的最终目的是服务于业务需求，解决实际问题。在许多情况下，开发人员容易陷入纯技术的思维框架中，而忽视了业务本身的需求与逻辑。实际上，理解和解决业务问题是软件开发的首要任务。无论开发的系统是面向用户的应用程序，还是企业内部的工具，最终的设计和实现都应该是基于业务需求来进行的。</p><p>一个典型的误区是，开发人员仅仅关注技术上的“能不能做”，而忽略了“应该做什么”的问题。比如，在开发过程中，我们会面临很多选择：使用何种技术栈、如何设计架构、如何拆分功能模块等。这时，单纯的技术判断往往会忽视了项目的业务目标。只有深入理解业务需求，才能做出合理的技术决策，保证技术架构与业务目标的一致性。</p><h4 id="2-将架构师思维融入业务理解"><a href="#2-将架构师思维融入业务理解" class="headerlink" title="2. 将架构师思维融入业务理解"></a>2. 将架构师思维融入业务理解</h4><p>虽然普通开发人员和架构师的角色有所不同，但在工作中我们可以从架构师的角度思考问题，这对推动软件项目进展极为重要。架构师不仅要理解技术，还要能够从全局角度审视业务和技术的结合。对于普通开发人员来说，学习架构师的思维方式有助于提升整体问题的解决能力。</p><p>架构师思维的核心是系统性思考，即从整体上把握业务需求并将其转化为技术方案。普通开发人员如果能够从这个角度思考，会对代码的设计、模块间的交互、系统的可扩展性、可维护性等方面有更深的理解。这不仅能提升开发效率，减少后期的重构，还能避免技术债务的累积。</p><p>例如，假设你在开发一个客户管理系统，业务需求涉及多个部门的协同工作。架构师可能会提出将系统分为多个微服务，按需提供不同的数据访问层和业务处理模块。对于开发人员来说，了解这个架构设计背后的业务逻辑和需求，会让你在具体实现时更加清楚每个模块的职责，避免过度设计或者实现的功能与业务目标不符。</p><h4 id="3-技术栈与业务需求的结合"><a href="#3-技术栈与业务需求的结合" class="headerlink" title="3. 技术栈与业务需求的结合"></a>3. 技术栈与业务需求的结合</h4><p>每个开发人员都有自己擅长的技术栈，这为日常开发提供了便利。然而，单纯依赖某个技术栈可能会限制解决问题的思路。业务需求的变化常常要求开发人员灵活运用技术，而不是固守某一技术栈。通过深入理解业务需求，开发人员可以选择最适合的技术解决方案。</p><p>举个例子，假如你正在开发一个大数据处理系统，业务需求可能是需要对大量用户行为数据进行实时分析。如果你对大数据领域有所了解，可能会想到使用分布式计算框架，如Apache Spark。然而，如果你不了解业务需求背后的数据分析目的，可能会选择一些不适合的技术，导致项目进度延误或者系统性能不佳。</p><p>因此，技术栈的选择应与业务需求紧密结合。每个技术决策都应考虑到业务目标，选择最适合的工具来实现需求，而不仅仅是使用自己熟悉的技术。</p><h4 id="4-长期影响：从开发人员到架构师的成长"><a href="#4-长期影响：从开发人员到架构师的成长" class="headerlink" title="4. 长期影响：从开发人员到架构师的成长"></a>4. 长期影响：从开发人员到架构师的成长</h4><p>理解业务、结合架构师思维、灵活应用技术栈，这些不仅能帮助你在当前项目中解决问题，更能为你的职业生涯带来积极影响。开发人员在项目中积累了对业务的深入理解，能更好地与产品经理、设计师等非技术人员沟通协作，从而提升团队的整体效能。与此同时，这也为你晋升为架构师打下了基础。</p><p>架构师不仅需要技术能力，还需要深入理解业务，能够将复杂的业务需求转化为可执行的技术方案。对于开发人员来说，逐渐将业务理解与技术实践相结合，可以培养出面向全局的视野，这有助于提升系统设计能力、问题解决能力和跨团队协作能力。</p><h4 id="5-结语"><a href="#5-结语" class="headerlink" title="5. 结语"></a>5. 结语</h4><p>总结来说，软件开发的成功不仅仅依赖于技术的实现，更多的是通过深刻理解业务需求来指导技术决策。普通开发人员通过结合架构师的思维方式，能够更好地与业务需求对接，在技术上做出合理的选择，并为团队和项目的成功贡献力量。从业务需求出发，结合架构师的系统思维，将极大地推动软件项目的进展，并帮助你在职业发展中走得更远。</p><p>在未来的开发过程中，我们不仅要提升技术能力，更要通过深度理解业务需求，培养架构师的思维方式，真正做到技术与业务的有机结合，为企业创造更大的价值。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在软件开发的过程中，很多时候我们习惯性地将注意力集中在技术上，尤其是对于普通开发人员而言，技术能力的提升常常是日常工作的重要目标。然而，若从长远发展和项目成功的角度来看，业务理解与技术的结合才是推动软件项目顺利进展的关键。本文将深入探讨如何在开发过程中既理解业务，又结合架构</summary>
       
     
     
