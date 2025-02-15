@@ -17,27 +17,24 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>css提高性能的方法 - PromptOnce</title>
+  <title>理解 pip install -v -e 与普通 pip install 的核心区别 - PromptOnce</title>
 
   
-    <meta name="description" content="压缩 CSS 文件：减少文件大小，去掉不必要的空格和注释，这样文件体积更小，加载速度更快。 移除未使用的样式：很多时候，写了样式没用上，导致 CSS 文件臃肿，清理掉没用的部分，减少体积。 合并和分割 CSS 文件：合并多个 CSS 文件减少 HTTP 请求；也可以按需加载，只在需要时加载特定页面的样式。 简化选择器：选择器不要太复杂，层级太深会增加计算负担，影响性能。尽量用类选择器，少用通配符">
+    <meta name="description" content="在 Python 开发中，pip 是管理依赖的核心工具。但你是否遇到过以下困惑？    为什么修改本地代码后，需要重新 pip install 才能生效？   如何实时调试自己开发的 Python 包？   安装失败时如何查看详细日志？  本文将深入对比 pip install -v -e 和普通 pip install 的区别，帮助你高效管理 Python 项目。  一、普通 pip insta">
 <meta property="og:type" content="article">
-<meta property="og:title" content="css提高性能的方法">
-<meta property="og:url" content="https://promptonce.github.io/2024/10/07/css%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/index.html">
+<meta property="og:title" content="理解 pip install -v -e 与普通 pip install 的核心区别">
+<meta property="og:url" content="https://promptonce.github.io/2025/02/15/%E7%90%86%E8%A7%A3-pip-install-v-e-%E4%B8%8E%E6%99%AE%E9%80%9A-pip-install-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="压缩 CSS 文件：减少文件大小，去掉不必要的空格和注释，这样文件体积更小，加载速度更快。 移除未使用的样式：很多时候，写了样式没用上，导致 CSS 文件臃肿，清理掉没用的部分，减少体积。 合并和分割 CSS 文件：合并多个 CSS 文件减少 HTTP 请求；也可以按需加载，只在需要时加载特定页面的样式。 简化选择器：选择器不要太复杂，层级太深会增加计算负担，影响性能。尽量用类选择器，少用通配符">
+<meta property="og:description" content="在 Python 开发中，pip 是管理依赖的核心工具。但你是否遇到过以下困惑？    为什么修改本地代码后，需要重新 pip install 才能生效？   如何实时调试自己开发的 Python 包？   安装失败时如何查看详细日志？  本文将深入对比 pip install -v -e 和普通 pip install 的区别，帮助你高效管理 Python 项目。  一、普通 pip insta">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-07T07:00:37.000Z">
-<meta property="article:modified_time" content="2024-11-23T16:06:55.300Z">
+<meta property="article:published_time" content="2025-02-15T14:22:29.000Z">
+<meta property="article:modified_time" content="2025-02-15T14:23:52.693Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="前端开发">
-<meta property="article:tag" content="性能优化">
-<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="前端开发,性能优化,CSS">
+  
 
   <!-- feed -->
   
@@ -81,29 +78,155 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-07T07:00:37.000Z">2024-10-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T16:06:55.300Z">2024-11-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-02-15T14:22:29.000Z">2025-02-15</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-02-15T14:23:52.693Z">2025-02-15</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>css提高性能的方法</span></h1>
+        <h1 class="text title"><span>理解 pip install -v -e 与普通 pip install 的核心区别</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><ol>
-<li><strong>压缩 CSS 文件</strong>：减少文件大小，去掉不必要的空格和注释，这样文件体积更小，加载速度更快。</li>
-<li><strong>移除未使用的样式</strong>：很多时候，写了样式没用上，导致 CSS 文件臃肿，清理掉没用的部分，减少体积。</li>
-<li><strong>合并和分割 CSS 文件</strong>：合并多个 CSS 文件减少 HTTP 请求；也可以按需加载，只在需要时加载特定页面的样式。</li>
-<li><strong>简化选择器</strong>：选择器不要太复杂，层级太深会增加计算负担，影响性能。尽量用类选择器，少用通配符和属性选择器。</li>
-<li><strong>避免 @import</strong>：<code>@import</code> 导入 CSS 会增加额外请求，加载速度慢。尽量用 <code>&lt;link&gt;</code> 直接引入外部文件。</li>
-<li><strong>减少重绘和回流</strong>：避免频繁使用会引起回流的属性，比如 <code>width</code>、<code>height</code>，动画时多用 <code>transform</code> 和 <code>opacity</code> 这种对性能影响小的属性。</li>
-<li><strong>优化字体加载</strong>：Web 字体加载会影响页面渲染速度，尽量少用字体，设置 <code>font-display: swap</code>，让文字先显示，再加载字体。</li>
-<li><strong>使用关键 CSS</strong>：首屏显示的 CSS 放在 <code>&lt;head&gt;</code> 里，确保页面先渲染出来，剩下的样式可以延迟加载。</li>
-<li><strong>使用现代布局方式</strong>：像 CSS Grid 和 Flexbox 这些布局方式，比传统的 float 布局性能更好、代码更简洁。</li>
-<li><strong>利用 CSS 变量</strong>：减少重复定义，提高代码的可维护性和简洁性。</li>
+  </div><article class="md-text content"><p>在 Python 开发中，<code>pip</code> 是管理依赖的核心工具。但你是否遇到过以下困惑？  </p>
+<ul>
+<li>为什么修改本地代码后，需要重新 <code>pip install</code> 才能生效？  </li>
+<li>如何实时调试自己开发的 Python 包？  </li>
+<li>安装失败时如何查看详细日志？</li>
+</ul>
+<p>本文将深入对比 <code>pip install -v -e</code> 和普通 <code>pip install</code> 的区别，帮助你高效管理 Python 项目。</p>
+<hr>
+<h2 id="一、普通-pip-install：生产环境的默认选择"><a href="#一、普通-pip-install：生产环境的默认选择" class="headerlink" title="一、普通 pip install：生产环境的默认选择"></a>一、普通 <code>pip install</code>：生产环境的默认选择</h2><h3 id="功能特性"><a href="#功能特性" class="headerlink" title="功能特性"></a>功能特性</h3><ul>
+<li><strong>安装位置</strong><br>将包下载并<strong>复制到 Python 的 <code>site-packages</code> 目录</strong>，例如：  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/local/lib/python3.9/site-packages/requests</span><br></pre></td></tr></table></figure></li>
+<li><strong>代码行为</strong><br>安装的是<strong>静态文件</strong>（如 <code>.whl</code> 或 <code>.egg</code>），修改源码后必须重新安装才能生效。</li>
+<li><strong>适用场景</strong><br>安装第三方稳定库（如 <code>requests</code>、<code>numpy</code>）到生产环境。</li>
+</ul>
+<h3 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install requests  <span class="comment"># 从 PyPI 安装最新稳定版</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="二、pip-install-v-e：开发者的利器"><a href="#二、pip-install-v-e：开发者的利器" class="headerlink" title="二、pip install -v -e：开发者的利器"></a>二、<code>pip install -v -e</code>：开发者的利器</h2><p>这是两个选项的组合：  </p>
+<ul>
+<li><strong><code>-v</code> (Verbose 模式)<strong>：打印</strong>详细安装日志</strong>，用于调试。  </li>
+<li><strong><code>-e</code> (Editable 模式)<strong>：以“可编辑”模式安装，</strong>直接链接到本地源码</strong>。</li>
+</ul>
+<h3 id="核心区别"><a href="#核心区别" class="headerlink" title="核心区别"></a>核心区别</h3><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>普通 <code>pip install</code></th>
+<th><code>pip install -e</code></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>安装位置</strong></td>
+<td><code>site-packages</code> 静态文件</td>
+<td>通过符号链接指向源码目录</td>
+</tr>
+<tr>
+<td><strong>代码修改生效</strong></td>
+<td>需重新安装</td>
+<td>实时生效</td>
+</tr>
+<tr>
+<td><strong>适用场景</strong></td>
+<td>生产环境</td>
+<td>本地开发、调试</td>
+</tr>
+<tr>
+<td><strong>依赖文件</strong></td>
+<td>无需特殊配置</td>
+<td>需 <code>setup.py</code> 或 <code>pyproject.toml</code></td>
+</tr>
+</tbody></table>
+<hr>
+<h3 id="Editable-模式（-e）详解"><a href="#Editable-模式（-e）详解" class="headerlink" title="Editable 模式（-e）详解"></a>Editable 模式（<code>-e</code>）详解</h3><h4 id="1-作用原理"><a href="#1-作用原理" class="headerlink" title="1. 作用原理"></a>1. 作用原理</h4><ul>
+<li>在 <code>site-packages</code> 中生成一个 <strong><code>.egg-link</code> 文件</strong>，指向本地项目目录（而非复制代码）。  </li>
+<li>Python 解释器运行时，会直接读取链接的源码。</li>
+</ul>
+<h4 id="2-使用条件"><a href="#2-使用条件" class="headerlink" title="2. 使用条件"></a>2. 使用条件</h4><p>项目目录需包含包配置（二者至少其一）：  </p>
+<ul>
+<li><code>setup.py</code>（传统方式）  </li>
+<li><code>pyproject.toml</code>（PEP 621 现代标准）</li>
+</ul>
+<h4 id="3-典型用法"><a href="#3-典型用法" class="headerlink" title="3. 典型用法"></a>3. 典型用法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 进入项目根目录（包含 setup.py）</span></span><br><span class="line"><span class="built_in">cd</span> /path/to/my_package</span><br><span class="line">pip install -e .  <span class="comment"># 安装当前目录为可编辑模式</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. 验证安装</h4><p>检查 <code>site-packages</code> 目录，会发现一个 <code>.egg-link</code> 文件：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> /path/to/site-packages/my_package.egg-link</span><br><span class="line"><span class="comment"># 输出内容示例：/Users/me/dev/my_package</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="Verbose-模式（-v）详解"><a href="#Verbose-模式（-v）详解" class="headerlink" title="Verbose 模式（-v）详解"></a>Verbose 模式（<code>-v</code>）详解</h3><h4 id="1-作用"><a href="#1-作用" class="headerlink" title="1. 作用"></a>1. 作用</h4><p>显示安装过程的<strong>完整日志</strong>，包括：  </p>
+<ul>
+<li>依赖解析步骤  </li>
+<li>文件下载与解压  </li>
+<li>编译过程（如 C 扩展）</li>
+</ul>
+<h4 id="2-使用场景"><a href="#2-使用场景" class="headerlink" title="2. 使用场景"></a>2. 使用场景</h4><ul>
+<li>调试安装失败（如版本冲突、缺失依赖）  </li>
+<li>查看隐式安装的依赖项</li>
+</ul>
+<h4 id="3-示例输出"><a href="#3-示例输出" class="headerlink" title="3. 示例输出"></a>3. 示例输出</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Using pip 23.1.2 from /usr/local/lib/python3.9/site-packages/pip (python 3.9)</span><br><span class="line">Processing /path/to/my_package</span><br><span class="line">  Running <span class="built_in">command</span> python setup.py egg_info</span><br><span class="line">  ...</span><br><span class="line">Successfully installed my_package-0.1.0</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、何时使用哪种模式？"><a href="#三、何时使用哪种模式？" class="headerlink" title="三、何时使用哪种模式？"></a>三、何时使用哪种模式？</h2><h3 id="1-使用普通-pip-install-的情况"><a href="#1-使用普通-pip-install-的情况" class="headerlink" title="1. 使用普通 pip install 的情况"></a>1. 使用普通 <code>pip install</code> 的情况</h3><ul>
+<li>部署生产环境  </li>
+<li>安装不需要修改的第三方库  </li>
+<li>需要明确的版本控制（如 <code>pip install package==1.4.0</code>）</li>
+</ul>
+<h3 id="2-使用-pip-install-e-的情况"><a href="#2-使用-pip-install-e-的情况" class="headerlink" title="2. 使用 pip install -e 的情况"></a>2. 使用 <code>pip install -e</code> 的情况</h3><ul>
+<li><strong>开发自己的 Python 包</strong><br>修改代码后立即测试，无需重复安装。</li>
+<li><strong>协作开发</strong><br>在 <code>requirements.txt</code> 中指定本地路径或 Git 仓库：  <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-e git+https://github.com/user/repo.git#egg=package</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="3-使用-v-的情况"><a href="#3-使用-v-的情况" class="headerlink" title="3. 使用 -v 的情况"></a>3. 使用 <code>-v</code> 的情况</h3><ul>
+<li>安装过程报错时查看详细原因  </li>
+<li>分析依赖树和安装流程</li>
+</ul>
+<hr>
+<h2 id="四、实战示例"><a href="#四、实战示例" class="headerlink" title="四、实战示例"></a>四、实战示例</h2><h3 id="场景：开发一个本地工具包"><a href="#场景：开发一个本地工具包" class="headerlink" title="场景：开发一个本地工具包"></a>场景：开发一个本地工具包</h3><ol>
+<li><p>项目结构  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_tools/</span><br><span class="line">├── setup.py</span><br><span class="line">└── my_tools/</span><br><span class="line">    └── __init__.py</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装为可编辑模式  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> my_tools</span><br><span class="line">pip install -e .  <span class="comment"># 生成 .egg-link 文件</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改代码实时生效<br>直接编辑 <code>my_tools/__init__.py</code>，调用处无需重新安装。</p>
+</li>
 </ol>
+<hr>
+<h2 id="五、注意事项"><a href="#五、注意事项" class="headerlink" title="五、注意事项"></a>五、注意事项</h2><ul>
+<li><p><strong>符号链接的兼容性</strong><br>Windows 系统可能需要启用开发者模式以支持符号链接。</p>
+</li>
+<li><p><strong>依赖更新</strong><br>如果修改了 <code>setup.py</code> 中的依赖声明，需重新运行 <code>pip install -e .</code>。</p>
+</li>
+<li><p><strong>版本冲突</strong><br>可编辑模式安装的包可能覆盖 <code>site-packages</code> 中的正式版本，建议使用虚拟环境（如 <code>venv</code> 或 <code>conda</code>）。</p>
+</li>
+</ul>
+<hr>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>核心价值</th>
+<th>一句话建议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>pip install</code></td>
+<td>安装静态依赖到生产环境</td>
+<td>“正式部署就用它”</td>
+</tr>
+<tr>
+<td><code>pip install -e</code></td>
+<td>开发模式，实时生效代码修改</td>
+<td>“本地开发必备”</td>
+</tr>
+<tr>
+<td><code>pip install -v</code></td>
+<td>输出详细日志辅助调试</td>
+<td>“遇到报错先加 -v”</td>
+</tr>
+</tbody></table>
+<p>掌握这些技巧后，你可以更高效地管理 Python 项目，轻松应对开发与部署的不同需求！</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -113,7 +236,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/10/07/JS%E4%B8%AD%E5%88%A4%E6%96%AD%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E5%BC%8F%E6%9C%89%E5%93%AA%E4%BA%9B/">JS中判断数组的方式有哪些?</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/07/%E7%BC%93%E5%AD%98%E6%80%BB%E7%BB%93/">缓存总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/02/15/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9B%BE%E5%83%8F%E5%88%86%E5%89%B2%E4%B8%AD%E7%9A%84%E7%BC%96%E7%A0%81%E5%99%A8-%E8%A7%A3%E7%A0%81%E5%99%A8%E6%95%B0%E6%8D%AE%E6%B5%81%E8%A7%A3%E6%9E%90/">深度学习图像分割中的编码器-解码器数据流解析</a></div></section></div>
 
 
 
@@ -123,7 +246,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%99%AE%E9%80%9A-pip-install%EF%BC%9A%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E7%9A%84%E9%BB%98%E8%AE%A4%E9%80%89%E6%8B%A9"><span class="toc-text">一、普通 pip install：生产环境的默认选择</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%9F%E8%83%BD%E7%89%B9%E6%80%A7"><span class="toc-text">功能特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-text">示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81pip-install-v-e%EF%BC%9A%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E5%88%A9%E5%99%A8"><span class="toc-text">二、pip install -v -e：开发者的利器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB"><span class="toc-text">核心区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Editable-%E6%A8%A1%E5%BC%8F%EF%BC%88-e%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="toc-text">Editable 模式（-e）详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8%E5%8E%9F%E7%90%86"><span class="toc-text">1. 作用原理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6"><span class="toc-text">2. 使用条件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%85%B8%E5%9E%8B%E7%94%A8%E6%B3%95"><span class="toc-text">3. 典型用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-text">4. 验证安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verbose-%E6%A8%A1%E5%BC%8F%EF%BC%88-v%EF%BC%89%E8%AF%A6%E8%A7%A3"><span class="toc-text">Verbose 模式（-v）详解</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BD%9C%E7%94%A8"><span class="toc-text">1. 作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">2. 使用场景</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E7%A4%BA%E4%BE%8B%E8%BE%93%E5%87%BA"><span class="toc-text">3. 示例输出</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%BD%95%E6%97%B6%E4%BD%BF%E7%94%A8%E5%93%AA%E7%A7%8D%E6%A8%A1%E5%BC%8F%EF%BC%9F"><span class="toc-text">三、何时使用哪种模式？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E6%99%AE%E9%80%9A-pip-install-%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">1. 使用普通 pip install 的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-pip-install-e-%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">2. 使用 pip install -e 的情况</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-v-%E7%9A%84%E6%83%85%E5%86%B5"><span class="toc-text">3. 使用 -v 的情况</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%AE%9E%E6%88%98%E7%A4%BA%E4%BE%8B"><span class="toc-text">四、实战示例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9C%BA%E6%99%AF%EF%BC%9A%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E6%9C%AC%E5%9C%B0%E5%B7%A5%E5%85%B7%E5%8C%85"><span class="toc-text">场景：开发一个本地工具包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">五、注意事项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
