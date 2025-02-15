@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-02-14T14:07:02.248Z</updated>
+  <updated>2025-02-15T11:02:05.320Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code 调试工具：掌握这些按钮，让 Python 代码调试更高效</title>
+    <link href="https://promptonce.github.io/2025/02/15/VS-Code-%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E6%8C%89%E9%92%AE%EF%BC%8C%E8%AE%A9-Python-%E4%BB%A3%E7%A0%81%E8%B0%83%E8%AF%95%E6%9B%B4%E9%AB%98%E6%95%88/"/>
+    <id>https://promptonce.github.io/2025/02/15/VS-Code-%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%EF%BC%9A%E6%8E%8C%E6%8F%A1%E8%BF%99%E4%BA%9B%E6%8C%89%E9%92%AE%EF%BC%8C%E8%AE%A9-Python-%E4%BB%A3%E7%A0%81%E8%B0%83%E8%AF%95%E6%9B%B4%E9%AB%98%E6%95%88/</id>
+    <published>2025-02-15T11:00:44.000Z</published>
+    <updated>2025-02-15T11:02:05.320Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h2><p>在软件开发过程中，调试是一项不可避免的任务。作为开发者，我们花费大量时间来查找和修复代码中的错误。而 Visual Studio Code (VS Code) 作为当今最流行的代码编辑器之一，提供了强大的调试功能，可以大大提高我们的工作效率。本文将详细介绍 VS Code 调试工具栏的核心按钮及其功能，特别是在 Python 开发中如何灵活运用这些工具。</p><h2 id="VS-Code-调试工具栏的核心按钮"><a href="#VS-Code-调试工具栏的核心按钮" class="headerlink" title="VS Code 调试工具栏的核心按钮"></a>VS Code 调试工具栏的核心按钮</h2><h3 id="1-▶-继续-运行-Continue"><a href="#1-▶-继续-运行-Continue" class="headerlink" title="1. ▶ 继续 &#x2F; 运行 (Continue)"></a>1. ▶ 继续 &#x2F; 运行 (Continue)</h3><p>这是最基本的调试控制按钮。当你的程序在断点处暂停时，点击此按钮会让程序继续执行，直到遇到下一个断点或程序结束。</p><p><strong>使用场景</strong>：当你只关心特定断点处的状态，而不需要关注中间过程时，这个按钮非常有用。例如，你可能在函数开始和结束处设置断点，然后使用”继续”来直接查看最终结果。</p><h3 id="2-↩-步入-Step-Into"><a href="#2-↩-步入-Step-Into" class="headerlink" title="2. ↩ 步入 &#x2F; Step Into"></a>2. ↩ 步入 &#x2F; Step Into</h3><p>这个按钮允许你逐行执行代码。更重要的是，如果当前行包含函数调用，它会带你进入该函数内部，让你可以逐行检查函数的执行过程。</p><p><strong>使用场景</strong>：当你怀疑某个函数可能存在问题，需要详细检查其内部执行流程时，”步入”是最佳选择。例如，如果一个计算函数返回了错误结果，你可以步入该函数查看每一步的计算过程。</p><h3 id="3-⤓-步过-Step-Over"><a href="#3-⤓-步过-Step-Over" class="headerlink" title="3. ⤓ 步过 &#x2F; Step Over"></a>3. ⤓ 步过 &#x2F; Step Over</h3><p>与”步入”类似，”步过”也是逐行执行代码，但有一个关键区别：当遇到函数调用时，它不会进入函数内部，而是将整个函数视为一个单一步骤，执行完毕后停在下一行。</p><p><strong>使用场景</strong>：当你确信某个函数工作正常，不需要查看其内部细节时，使用”步过”可以节省时间。例如，如果你正在调试的问题与内置函数或库函数无关，你可以直接步过这些调用。</p><h3 id="4-↥-步出-Step-Out"><a href="#4-↥-步出-Step-Out" class="headerlink" title="4. ↥ 步出 &#x2F; Step Out"></a>4. ↥ 步出 &#x2F; Step Out</h3><p>当你已经进入一个函数，但现在想快速完成剩余部分并返回到调用点时，”步出”按钮非常有用。它会执行当前函数的剩余部分，然后在函数返回后的下一行暂停。</p><p><strong>使用场景</strong>：当你已经在函数内部找到了需要的信息，不需要继续逐行检查时，可以使用”步出”快速返回上一级。这在检查复杂的嵌套函数调用时特别有帮助。</p><h3 id="5-↺-重新启动-Restart"><a href="#5-↺-重新启动-Restart" class="headerlink" title="5. ↺ 重新启动 &#x2F; Restart"></a>5. ↺ 重新启动 &#x2F; Restart</h3><p>有时你可能需要从头开始调试过程，特别是当你修改了代码或想要验证完整流程时。点击”重新启动”按钮会终止当前会话并立即启动一个新的调试会话。</p><p><strong>使用场景</strong>：当你在调试过程中修改了代码，或者想要在不同的初始条件下测试程序时，重新启动是必要的步骤。</p><h3 id="6-🟥-停止-Stop"><a href="#6-🟥-停止-Stop" class="headerlink" title="6. 🟥 停止 &#x2F; Stop"></a>6. 🟥 停止 &#x2F; Stop</h3><p>当你完成调试或需要中断当前会话时，可以使用”停止”按钮来终止调试过程。</p><p><strong>使用场景</strong>：调试完成后，或者当程序进入无限循环需要强制终止时，点击停止按钮可以立即结束调试会话。</p><h2 id="Python-调试实战技巧"><a href="#Python-调试实战技巧" class="headerlink" title="Python 调试实战技巧"></a>Python 调试实战技巧</h2><p>在 Python 开发中，这些调试按钮可以帮助你解决各种常见问题。以下是一些实用技巧：</p><ol><li><p><strong>断点策略</strong>：在可能出问题的关键位置设置断点，然后使用”继续”按钮快速导航到这些位置。</p></li><li><p><strong>变量检查</strong>：在每一步中，利用 VS Code 的变量窗口观察变量值的变化，特别是在复杂计算或数据转换过程中。</p></li><li><p><strong>条件断点</strong>：对于循环或频繁调用的函数，设置条件断点可以让你只在特定条件满足时停下来，节省大量时间。</p></li><li><p><strong>调用堆栈分析</strong>：使用”步入”和”步出”在不同函数层级之间导航，同时关注调用堆栈窗口来理解程序的执行路径。</p></li></ol><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>熟练掌握 VS Code 的调试工具栏按钮，可以显著提高你的调试效率和代码质量。这些看似简单的按钮背后蕴含着强大的功能，能够帮助你深入理解代码执行流程，快速定位问题所在。无论是初学者还是经验丰富的开发者，都能从这些工具中受益。</p><p>在你的下一个 Python 项目中，尝试综合运用这些调试技巧，你会发现问题解决的速度和准确性都会得到显著提升。调试不再是一项繁重的任务，而是成为理解和改进代码的有力工具。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot; title=&quot;引言&quot;&gt;&lt;/a&gt;引言&lt;/h2&gt;&lt;p&gt;在软件开发过程中，调试是一项不可避免的任务。作为开发者，我们花费大量时间来查找和修复代码中的错误。而 Visual Studio Code </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>使用GDAL重采样TIFF图像：从不同分辨率的图像中获取一致性</title>
@@ -408,26 +428,6 @@
       
       
     <summary type="html">&lt;p&gt;在软件开发的过程中，很多时候我们习惯性地将注意力集中在技术上，尤其是对于普通开发人员而言，技术能力的提升常常是日常工作的重要目标。然而，若从长远发展和项目成功的角度来看，业务理解与技术的结合才是推动软件项目顺利进展的关键。本文将深入探讨如何在开发过程中既理解业务，又结合架构</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript数组引用陷阱</title>
-    <link href="https://promptonce.github.io/2025/01/13/JavaScript%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E9%99%B7%E9%98%B1/"/>
-    <id>https://promptonce.github.io/2025/01/13/JavaScript%E6%95%B0%E7%BB%84%E5%BC%95%E7%94%A8%E9%99%B7%E9%98%B1/</id>
-    <published>2025-01-13T13:38:07.000Z</published>
-    <updated>2025-01-13T13:38:23.415Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="JavaScript数组引用陷阱"><a href="#JavaScript数组引用陷阱" class="headerlink" title="JavaScript数组引用陷阱"></a>JavaScript数组引用陷阱</h1><h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在使用回溯算法时，我们经常需要保存中间结果。看似简单的数组操作可能藏着一个常见陷阱：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = [];</span><br><span class="line"><span class="keyword">let</span> path = [];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 错误示例</span></span><br><span class="line">result.<span class="title function_">push</span>(path);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 正确示例</span></span><br><span class="line">result.<span class="title function_">push</span>(path.<span class="title function_">slice</span>());</span><br></pre></td></tr></table></figure><h2 id="为什么会出错？"><a href="#为什么会出错？" class="headerlink" title="为什么会出错？"></a>为什么会出错？</h2><p>JavaScript中的数组是引用类型。当我们直接将path加入result时：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result.<span class="title function_">push</span>(path)  <span class="comment">// 存储的是引用</span></span><br></pre></td></tr></table></figure><p>这意味着result中的每个元素都指向同一个path数组。当path被修改时，result中所有的记录都会改变。</p><h2 id="实际效果"><a href="#实际效果" class="headerlink" title="实际效果"></a>实际效果</h2><p>假设有这样的回溯过程：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = [<span class="number">1</span>,<span class="number">2</span>]  → result = [[<span class="number">1</span>,<span class="number">2</span>]]</span><br><span class="line">path = [<span class="number">1</span>,<span class="number">3</span>]  → result = [[<span class="number">1</span>,<span class="number">3</span>], [<span class="number">1</span>,<span class="number">3</span>]]    <span class="comment">// 注意第一个组合也变了</span></span><br><span class="line">path = [<span class="number">2</span>,<span class="number">3</span>]  → result = [[<span class="number">2</span>,<span class="number">3</span>], [<span class="number">2</span>,<span class="number">3</span>], [<span class="number">2</span>,<span class="number">3</span>]]  <span class="comment">// 全部变成了相同的值</span></span><br></pre></td></tr></table></figure><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>使用<code>slice()</code>创建数组副本：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">result.<span class="title function_">push</span>(path.<span class="title function_">slice</span>())  <span class="comment">// 存储独立副本</span></span><br></pre></td></tr></table></figure><p>这样每次存储的都是当前path的独立复制，后续对path的修改不会影响已存储的结果。</p><h2 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h2><ul><li>展开运算符：<code>[...path]</code></li><li>Array.from：<code>Array.from(path)</code></li><li>concat：<code>[].concat(path)</code></li></ul><p>关键是要理解：什么时候需要副本，什么时候可以用引用。在需要保存状态的场景中，创建副本是更安全的选择。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;JavaScript数组引用陷阱&quot;&gt;&lt;a href=&quot;#JavaScript数组引用陷阱&quot; class=&quot;headerlink&quot; title=&quot;JavaScript数组引用陷阱&quot;&gt;&lt;/a&gt;JavaScript数组引用陷阱&lt;/h1&gt;&lt;h2 id=&quot;问题描述&quot;&gt;&lt;a </summary>
       
     
     
