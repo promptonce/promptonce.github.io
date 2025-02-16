@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-02-15T14:23:52.693Z</updated>
+  <updated>2025-02-16T03:09:21.295Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>掌握Linux中的tar命令：打包、压缩与归档的终极指南</title>
+    <link href="https://promptonce.github.io/2025/02/16/%E6%8E%8C%E6%8F%A1Linux%E4%B8%AD%E7%9A%84tar%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%89%93%E5%8C%85%E3%80%81%E5%8E%8B%E7%BC%A9%E4%B8%8E%E5%BD%92%E6%A1%A3%E7%9A%84%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/"/>
+    <id>https://promptonce.github.io/2025/02/16/%E6%8E%8C%E6%8F%A1Linux%E4%B8%AD%E7%9A%84tar%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%89%93%E5%8C%85%E3%80%81%E5%8E%8B%E7%BC%A9%E4%B8%8E%E5%BD%92%E6%A1%A3%E7%9A%84%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/</id>
+    <published>2025-02-16T03:08:20.000Z</published>
+    <updated>2025-02-16T03:09:21.295Z</updated>
+    
+    <content type="html"><![CDATA[<hr><h2 id="引言：为什么需要tar？"><a href="#引言：为什么需要tar？" class="headerlink" title="引言：为什么需要tar？"></a>引言：为什么需要tar？</h2><p>在Linux世界中，文件归档和压缩是每个用户必备的技能。无论是备份关键数据、迁移服务器文件，还是批量传输多个文档，<code>tar</code>命令始终是系统管理员和开发者的得力工具。作为Unix哲学的经典实践，这个诞生于1979年的工具通过简单的命令组合，即可实现强大的文件管理功能。</p><hr><h2 id="一、tar命令核心解析"><a href="#一、tar命令核心解析" class="headerlink" title="一、tar命令核心解析"></a>一、tar命令核心解析</h2><h3 id="1-基础语法结构"><a href="#1-基础语法结构" class="headerlink" title="1. 基础语法结构"></a>1. 基础语法结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar [操作模式] [选项] [文件/目录]</span><br></pre></td></tr></table></figure><h3 id="2-关键操作模式"><a href="#2-关键操作模式" class="headerlink" title="2. 关键操作模式"></a>2. 关键操作模式</h3><table><thead><tr><th>模式</th><th>说明</th></tr></thead><tbody><tr><td>-c</td><td>创建新归档文件</td></tr><tr><td>-x</td><td>解压归档文件</td></tr><tr><td>-t</td><td>查看归档内容列表</td></tr><tr><td>-r</td><td>追加文件到归档末尾</td></tr><tr><td>-u</td><td>仅添加更新的文件</td></tr></tbody></table><h3 id="3-常用功能选项"><a href="#3-常用功能选项" class="headerlink" title="3. 常用功能选项"></a>3. 常用功能选项</h3><ul><li><strong>-v</strong>：显示详细处理过程（verbose）</li><li><strong>-f</strong>：指定归档文件名（必须为最后一个选项）</li><li><strong>-C</strong>：指定解压目录（change directory）</li><li><strong>-p</strong>：保留文件权限属性</li><li><strong>–exclude</strong>：排除指定模式的文件</li></ul><hr><h2 id="二、实战场景演示"><a href="#二、实战场景演示" class="headerlink" title="二、实战场景演示"></a>二、实战场景演示</h2><h3 id="1-基础文件打包与解压"><a href="#1-基础文件打包与解压" class="headerlink" title="1. 基础文件打包与解压"></a>1. 基础文件打包与解压</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建归档（保留目录结构）</span></span><br><span class="line">tar -cvf project_backup.tar /home/user/project</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看归档内容</span></span><br><span class="line">tar -tvf project_backup.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压到当前目录</span></span><br><span class="line">tar -xvf project_backup.tar</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解压到指定目录</span></span><br><span class="line">tar -xvf project_backup.tar -C /opt/backups/</span><br></pre></td></tr></table></figure><h3 id="2-智能压缩方案选择"><a href="#2-智能压缩方案选择" class="headerlink" title="2. 智能压缩方案选择"></a>2. 智能压缩方案选择</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Gzip压缩（*.tar.gz）</span></span><br><span class="line">tar -czvf photos.tar.gz /var/www/photos</span><br><span class="line"></span><br><span class="line"><span class="comment"># Bzip2高压缩比（*.tar.bz2）</span></span><br><span class="line">tar -cjvf database.tar.bz2 /data/mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># XZ极致压缩（*.tar.xz）</span></span><br><span class="line">tar -cJvf archive.tar.xz important_docs/</span><br><span class="line"></span><br><span class="line"><span class="comment"># 自动识别解压格式</span></span><br><span class="line">tar -xvf compressed_file.tar.gz</span><br></pre></td></tr></table></figure><h3 id="3-高级管理技巧"><a href="#3-高级管理技巧" class="headerlink" title="3. 高级管理技巧"></a>3. 高级管理技巧</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 增量备份（仅新于timestamp的文件）</span></span><br><span class="line">tar -cvf incremental.tar --newer-mtime=<span class="string">&#x27;2023-01-01&#x27;</span> /data</span><br><span class="line"></span><br><span class="line"><span class="comment"># 排除缓存文件和日志</span></span><br><span class="line">tar --exclude=<span class="string">&#x27;*.tmp&#x27;</span> --exclude=<span class="string">&#x27;*.log&#x27;</span> -czvf clean_backup.tar.gz /app</span><br><span class="line"></span><br><span class="line"><span class="comment"># 分卷压缩（适合大文件传输）</span></span><br><span class="line">tar -czvf - big_file.iso | <span class="built_in">split</span> -b 2G - big_file_part</span><br><span class="line"></span><br><span class="line"><span class="comment"># 远程备份（通过SSH管道）</span></span><br><span class="line">tar -czf - /srv/files | ssh user@backup-server <span class="string">&quot;cat &gt; /backups/remote.tar.gz&quot;</span></span><br></pre></td></tr></table></figure><hr><h2 id="三、典型问题排错指南"><a href="#三、典型问题排错指南" class="headerlink" title="三、典型问题排错指南"></a>三、典型问题排错指南</h2><ol><li><p><strong>权限错误处理</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 保留SELinux上下文</span></span><br><span class="line">tar --selinux -czvf secure_backup.tar.gz /etc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 解决解压后权限丢失</span></span><br><span class="line">tar -pxzvf backup.tar.gz</span><br></pre></td></tr></table></figure></li><li><p><strong>路径控制技巧</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建相对路径归档</span></span><br><span class="line">(<span class="built_in">cd</span> /var/log &amp;&amp; tar -czvf ~/logs_backup.tar.gz apache/ nginx/)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 去除绝对路径前缀</span></span><br><span class="line">tar -czvf safe_backup.tar.gz -C /etc/nginx sites-available/</span><br></pre></td></tr></table></figure></li><li><p><strong>空间不足预警</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 预估归档大小</span></span><br><span class="line">tar -czf - /target_dir | <span class="built_in">wc</span> -c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 检查磁盘剩余空间</span></span><br><span class="line"><span class="built_in">df</span> -h /destination_mount</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="四、效率优化建议"><a href="#四、效率优化建议" class="headerlink" title="四、效率优化建议"></a>四、效率优化建议</h2><ol><li><p><strong>压缩算法选择指南</strong></p><ul><li>gzip：快速压缩（默认-6压缩级别）</li><li>bzip2：高压缩率但较慢</li><li>xz：最高压缩率（适合网络传输）</li><li>zstd：新一代快速算法（需安装）</li></ul></li><li><p><strong>并行压缩加速</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用pigz多线程压缩（兼容gzip）</span></span><br><span class="line">tar -cvf - big_dir | pigz -9 -p 8 &gt; archive.tar.gz</span><br></pre></td></tr></table></figure></li><li><p><strong>加密敏感数据</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用GPG加密归档</span></span><br><span class="line">tar -czvf - secret_files | gpg -c &gt; backup.tar.gz.gpg</span><br></pre></td></tr></table></figure></li></ol><hr><h2 id="结语：成为tar高手的关键"><a href="#结语：成为tar高手的关键" class="headerlink" title="结语：成为tar高手的关键"></a>结语：成为tar高手的关键</h2><p>通过本文的30多个实用示例，您已经掌握了tar命令的核心用法。要真正精通这个工具，还需要：</p><ol><li>熟记常用选项组合（如<code>-cvzf</code>&#x2F;<code>-xzvf</code>）</li><li>理解不同压缩算法的适用场景</li><li>在脚本中合理使用tar进行自动化操作</li><li>定期使用<code>--verify</code>验证重要归档的完整性</li></ol><p>下次当您需要处理文件归档时，不妨尝试本文介绍的高级技巧。这个看似古老的工具，配合现代压缩算法，依然能在SSD时代大放异彩。</p><p><strong>小挑战</strong>：尝试用tar命令打包时实时显示进度条（提示：使用pv工具）</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;hr&gt;
+&lt;h2 id=&quot;引言：为什么需要tar？&quot;&gt;&lt;a href=&quot;#引言：为什么需要tar？&quot; class=&quot;headerlink&quot; title=&quot;引言：为什么需要tar？&quot;&gt;&lt;/a&gt;引言：为什么需要tar？&lt;/h2&gt;&lt;p&gt;在Linux世界中，文件归档和压缩是每个用户必备的</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>理解 pip install -v -e 与普通 pip install 的核心区别</title>
@@ -410,27 +431,6 @@
       
     <summary type="html">&lt;p&gt;在深度学习和机器学习中，过拟合是一个常见且重要的问题。尤其对于研究人员和工程师来说，理解过拟合的成因以及如何防止它，是实现模型泛化能力的关键。本篇文章将从基本概念出发，帮助你理解什么是过拟合，以及如何有效应对这一问题。&lt;/p&gt;
 &lt;h2 id=&quot;什么是过拟合？&quot;&gt;&lt;a hre</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue中slot总结</title>
-    <link href="https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/</id>
-    <published>2025-01-21T05:50:26.000Z</published>
-    <updated>2025-01-21T05:51:55.220Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png" class="" title="vue中slot总结">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png&quot; class=&quot;&quot; title=&quot;vue中slot总结&quot;&gt;
-</summary>
       
     
     
