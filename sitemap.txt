@@ -1,3 +1,4 @@
+https://promptonce.github.io/2024/08/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%B2%89%E6%B7%80/
 https://promptonce.github.io/2025/02/16/%E6%8E%8C%E6%8F%A1Linux%E4%B8%AD%E7%9A%84tar%E5%91%BD%E4%BB%A4%EF%BC%9A%E6%89%93%E5%8C%85%E3%80%81%E5%8E%8B%E7%BC%A9%E4%B8%8E%E5%BD%92%E6%A1%A3%E7%9A%84%E7%BB%88%E6%9E%81%E6%8C%87%E5%8D%97/
 https://promptonce.github.io/2025/02/15/%E7%90%86%E8%A7%A3-pip-install-v-e-%E4%B8%8E%E6%99%AE%E9%80%9A-pip-install-%E7%9A%84%E6%A0%B8%E5%BF%83%E5%8C%BA%E5%88%AB/
 https://promptonce.github.io/2024/08/31/conda/
@@ -16,7 +17,6 @@ https://promptonce.github.io/2025/02/07/AI-%E9%99%8D%E4%BD%8E%E7%BC%96%E7%A8%8B%
 https://promptonce.github.io/2025/02/05/Conda-vs-Pip%EF%BC%9APython-%E5%8C%85%E7%AE%A1%E7%90%86%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E9%80%89%E6%8B%A9/
 https://promptonce.github.io/2025/01/30/cursor%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%E6%80%BB%E7%BB%93/
 https://promptonce.github.io/2025/02/01/Git-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E8%AF%A6%E8%A7%A3%EF%BC%9A-gitconfig-%E4%B8%8E-git-credentials-%E7%9A%84%E5%8C%BA%E5%88%AB/
-https://promptonce.github.io/2024/08/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%B2%89%E6%B7%80/
 https://promptonce.github.io/2025/01/13/%E4%BB%A3%E7%A0%81%E8%AE%BE%E8%AE%A1%E4%B8%AD%E7%9A%84%E9%80%9A%E7%94%A8%E6%80%A7%E4%B8%8E%E7%89%B9%E6%AE%8A%E6%80%A7%E6%80%9D%E8%80%83/
 https://promptonce.github.io/2025/01/26/JavaScript-ACM%E6%A8%A1%E5%BC%8F/
 https://promptonce.github.io/2025/01/25/sharedchat%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/
