@@ -28,7 +28,7 @@
 <meta property="og:description" content="在 JavaScript 中，数据类型可以分为两大类：原始数据类型（Primitive Types） 和 引用数据类型（Reference Types）。以下是具体分类：  1. 原始数据类型（Primitive Types）原始数据类型是不可变的（immutable），直接存储值。包括以下 7 种：  Number    表示数字，包括整数和浮点数。   例如：42, 3.14, NaN（非数字">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-03-09T09:11:16.000Z">
-<meta property="article:modified_time" content="2025-03-09T09:28:19.949Z">
+<meta property="article:modified_time" content="2025-03-09T09:52:43.680Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,7 +78,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-03-09T09:11:16.000Z">2025-03-09</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-09T09:28:19.949Z">2025-03-09</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-03-09T09:11:16.000Z">2025-03-09</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-09T09:52:43.680Z">2025-03-09</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -182,6 +182,32 @@
 <li><strong>引用数据类型</strong>：<code>Object</code>, <code>Array</code>, <code>Function</code>, <code>Date</code>, <code>RegExp</code>, <code>Map</code>, <code>Set</code> 等。</li>
 </ul>
 <p>JavaScript 是一种动态类型语言，变量的数据类型可以在运行时改变。</p>
+<h3 id="JavaScript-原始数据类型的不可变性总结"><a href="#JavaScript-原始数据类型的不可变性总结" class="headerlink" title="JavaScript 原始数据类型的不可变性总结"></a><strong>JavaScript 原始数据类型的不可变性总结</strong></h3><h4 id="1-什么是不可变性？"><a href="#1-什么是不可变性？" class="headerlink" title="1. 什么是不可变性？"></a><strong>1. 什么是不可变性？</strong></h4><ul>
+<li><strong>原始数据类型的值是不可变的</strong>：它们的值本身不能被修改。任何操作都会返回一个新的值，而不是修改原始值。</li>
+<li><strong>变量可以重新赋值</strong>：变量是一个存储值的容器，它可以指向不同的值，但不会修改原始值。</li>
+</ul>
+<h4 id="2-例子说明"><a href="#2-例子说明" class="headerlink" title="2. 例子说明"></a><strong>2. 例子说明</strong></h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = <span class="number">1</span>; <span class="comment">// a 存储的是原始值 1</span></span><br><span class="line">a = <span class="number">2</span>;     <span class="comment">// a 被重新赋值为原始值 2</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>1</code> 和 <code>2</code> 是独立的原始值，<code>1</code> 没有被修改，只是 <code>a</code> 指向了新的值。</li>
+</ul>
+<h4 id="3-对比引用数据类型"><a href="#3-对比引用数据类型" class="headerlink" title="3. 对比引用数据类型"></a><strong>3. 对比引用数据类型</strong></h4><ul>
+<li><strong>引用数据类型是可变的</strong>：它们的值可以被修改。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> obj = &#123; <span class="attr">name</span>: <span class="string">&quot;Alice&quot;</span> &#125;;</span><br><span class="line">obj.<span class="property">name</span> = <span class="string">&quot;Bob&quot;</span>; <span class="comment">// 修改了对象的值</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="4-原始数据类型的不可变性示例"><a href="#4-原始数据类型的不可变性示例" class="headerlink" title="4. 原始数据类型的不可变性示例"></a><strong>4. 原始数据类型的不可变性示例</strong></h4><ul>
+<li><strong>字符串的不可变性</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> str = <span class="string">&quot;hello&quot;</span>;</span><br><span class="line">str[<span class="number">0</span>] = <span class="string">&quot;H&quot;</span>; <span class="comment">// 尝试修改字符串的第一个字符</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str); <span class="comment">// 输出 &quot;hello&quot;，字符串未被修改</span></span><br></pre></td></tr></table></figure></li>
+<li><strong>数字的不可变性</strong><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> num = <span class="number">1</span>;</span><br><span class="line">num = num + <span class="number">1</span>; <span class="comment">// 返回一个新的值 2，而不是修改 1</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="5-为什么原始数据类型是不可变的？"><a href="#5-为什么原始数据类型是不可变的？" class="headerlink" title="5. 为什么原始数据类型是不可变的？"></a><strong>5. 为什么原始数据类型是不可变的？</strong></h4><ul>
+<li><strong>性能优化</strong>：原始数据类型的不可变性使得它们可以被高效地存储和比较。</li>
+<li><strong>安全性</strong>：不可变性避免了意外的修改，使代码更加可预测。</li>
+<li><strong>简化设计</strong>：不可变性简化了语言的设计和实现。</li>
+</ul>
+<h4 id="6-总结"><a href="#6-总结" class="headerlink" title="6. 总结"></a><strong>6. 总结</strong></h4><ul>
+<li><strong>原始数据类型的值是不可变的</strong>：它们的值本身不能被修改。</li>
+<li><strong>变量可以重新赋值</strong>：变量可以指向不同的值，但不会修改原始值。</li>
+<li><strong>引用数据类型是可变的</strong>：它们的值可以被修改。</li>
+</ul>
+<p>通过理解原始数据类型的不可变性，可以更好地掌握 JavaScript 的基本特性，并编写更高效、可预测的代码。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -205,7 +231,7 @@
 
 
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88Primitive-Types%EF%BC%89"><span class="toc-text">1. 原始数据类型（Primitive Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88Reference-Types%EF%BC%89"><span class="toc-text">2. 引用数据类型（Reference Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol></div><div class="widget-footer">
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88Primitive-Types%EF%BC%89"><span class="toc-text">1. 原始数据类型（Primitive Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%EF%BC%88Reference-Types%EF%BC%89"><span class="toc-text">2. 引用数据类型（Reference Types）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JavaScript-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7%E6%80%BB%E7%BB%93"><span class="toc-text">JavaScript 原始数据类型的不可变性总结</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7%EF%BC%9F"><span class="toc-text">1. 什么是不可变性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E4%BE%8B%E5%AD%90%E8%AF%B4%E6%98%8E"><span class="toc-text">2. 例子说明</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AF%B9%E6%AF%94%E5%BC%95%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">3. 对比引用数据类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%80%A7%E7%A4%BA%E4%BE%8B"><span class="toc-text">4. 原始数据类型的不可变性示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E4%B8%BA%E4%BB%80%E4%B9%88%E5%8E%9F%E5%A7%8B%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84%EF%BC%9F"><span class="toc-text">5. 为什么原始数据类型是不可变的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E6%80%BB%E7%BB%93"><span class="toc-text">6. 总结</span></a></li></ol></li></ol></div><div class="widget-footer">
 
 <a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
 </div></aside><div class='float-panel blur'>
