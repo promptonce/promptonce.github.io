@@ -20,21 +20,22 @@
   <title>原型和原型链 - PromptOnce</title>
 
   
-    <meta name="description" content="以下是关于 JavaScript 原型和原型链的清晰梳理及补充说明：  一、核心概念1. 构造函数与 prototype 任何函数都可以作为构造函数（通过 new 调用），此时该函数的 prototype 属性会作为实例的原型对象。 prototype 的作用：存储需要被所有实例共享的属性和方法。12345function Parent() &#123;&#125;Parent.prototype">
+    <meta name="description" content="一、核心概念1. 构造函数与 prototype 任何函数都可以作为构造函数（通过 new 调用），此时该函数的 prototype 属性会作为实例的原型对象。 prototype 的作用：存储需要被所有实例共享的属性和方法。12345function Parent() &#123;&#125;Parent.prototype.name &#x3D; &quot;共享属性&quot;;let p1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原型和原型链">
 <meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="以下是关于 JavaScript 原型和原型链的清晰梳理及补充说明：  一、核心概念1. 构造函数与 prototype 任何函数都可以作为构造函数（通过 new 调用），此时该函数的 prototype 属性会作为实例的原型对象。 prototype 的作用：存储需要被所有实例共享的属性和方法。12345function Parent() &#123;&#125;Parent.prototype">
+<meta property="og:description" content="一、核心概念1. 构造函数与 prototype 任何函数都可以作为构造函数（通过 new 调用），此时该函数的 prototype 属性会作为实例的原型对象。 prototype 的作用：存储需要被所有实例共享的属性和方法。12345function Parent() &#123;&#125;Parent.prototype.name &#x3D; &quot;共享属性&quot;;let p1">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/fe-jw/J-Web/posts/2023/JavaScript/%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
 <meta property="article:published_time" content="2024-08-28T08:00:18.000Z">
-<meta property="article:modified_time" content="2025-03-12T14:11:50.481Z">
+<meta property="article:modified_time" content="2025-03-12T14:35:28.470Z">
 <meta property="article:author" content="penggan">
 <meta property="article:tag" content="编程语言">
 <meta property="article:tag" content="JavaScript">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/fe-jw/J-Web/posts/2023/JavaScript/%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
+<meta name="twitter:image" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
   
   
   
@@ -82,7 +83,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-12T14:11:50.481Z">2025-03-12</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-12T14:35:28.470Z">2025-03-12</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -93,8 +94,10 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>以下是关于 JavaScript 原型和原型链的清晰梳理及补充说明：</p>
-<hr>
+  </div><article class="md-text content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.png" class="lazy" title="原型和原型链">
+
+
+
 <h3 id="一、核心概念"><a href="#一、核心概念" class="headerlink" title="一、核心概念"></a>一、核心概念</h3><h4 id="1-构造函数与-prototype"><a href="#1-构造函数与-prototype" class="headerlink" title="1. 构造函数与 prototype"></a>1. 构造函数与 <code>prototype</code></h4><ul>
 <li><strong>任何函数</strong>都可以作为构造函数（通过 <code>new</code> 调用），此时该函数的 <code>prototype</code> 属性会作为实例的原型对象。</li>
 <li><code>prototype</code> 的作用：存储需要被<strong>所有实例共享的属性和方法</strong>。<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">Parent</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line"><span class="title class_">Parent</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">name</span> = <span class="string">&quot;共享属性&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> p1 = <span class="keyword">new</span> <span class="title class_">Parent</span>();</span><br><span class="line">p1.<span class="property">name</span>; <span class="comment">// &quot;共享属性&quot;（来自原型）</span></span><br></pre></td></tr></table></figure></li>
