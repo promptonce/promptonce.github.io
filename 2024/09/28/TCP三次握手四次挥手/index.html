@@ -28,8 +28,9 @@
 <meta property="og:description" content="TCP的三次握手和四次挥手就是为确保数据可靠传输的一种机制。我们来简单讲一下：   三次握手： 第一次握手：客户端发送一个SYN（同步序列编号）包，告诉服务器“我要开始连接，准备好了吗？”。 第二次握手：服务器收到后，回复一个SYN（synchronize）+ACK（Acknowledgment）包，表示“我准备好了，咱们可以开始连接，但你要确认一下”。 第三次握手：客户端收到后，回一个ACK包，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://promptonce.github.io/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png">
+<meta property="og:image" content="https://promptonce.github.io/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/TCP%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png">
 <meta property="article:published_time" content="2024-09-27T16:11:18.000Z">
-<meta property="article:modified_time" content="2025-03-13T08:24:25.830Z">
+<meta property="article:modified_time" content="2025-03-13T08:28:35.565Z">
 <meta property="article:author" content="penggan">
 <meta property="article:tag" content="计算机网络与通信">
 <meta name="twitter:card" content="summary">
@@ -81,7 +82,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-27T16:11:18.000Z">2024-09-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-13T08:24:25.830Z">2025-03-13</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-27T16:11:18.000Z">2024-09-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-13T08:28:35.565Z">2025-03-13</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -101,6 +102,8 @@
 <li><strong>第三次握手</strong>：客户端收到后，回一个ACK包，表示“好的，我确认了，正式连接”。</li>
 </ol>
 <p>这样，三次握手后，双方建立了可靠连接，开始数据传输。</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/TCP%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png" class="lazy" title="TCP四次挥手">
+
 <h3 id="四次挥手："><a href="#四次挥手：" class="headerlink" title="四次挥手："></a>四次挥手：</h3><ol>
 <li><strong>第一次挥手</strong>：客户端发送FIN（finish）包，表示“我不再传数据了，你准备断开吧”。</li>
 <li><strong>第二次挥手</strong>：服务器收到后，回复ACK包，表示“我知道了，但我还有数据要发”。</li>
