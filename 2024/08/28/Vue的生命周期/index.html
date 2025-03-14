@@ -20,19 +20,21 @@
   <title>Vue的生命周期 - PromptOnce</title>
 
   
-    <meta name="description" content="一、各个生命周期的作用 Vue 的生命周期就是 Vue 实例从创建到销毁的过程，包括了它的初始化、渲染、更新、销毁等多个阶段。每个阶段 Vue 都会触发特定的生命周期钩子函数，让开发者有机会在不同的时间点执行代码。 首先在Vue生命周期中有十个阶段： 11、beforeCreate(创建前)  在实例初始化之后，进行数据侦听和事件&#x2F;侦听器的配置之前同步调用。因为data和methods中">
+    <meta name="description" content="一、各个生命周期的作用 Vue 的生命周期就是 Vue 实例从创建到销毁的过程，包括了它的初始化、渲染、更新、销毁等多个阶段。每个阶段 Vue 都会触发特定的生命周期钩子函数，让开发者有机会在不同的时间点执行代码。 首先在Vue生命周期中有十个阶段： 11、beforeCreate(创建前)  在实例初始化之后，进行数据侦听和事件&#x2F;侦听器的配置之前同步调用。因为data和method">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue的生命周期">
 <meta property="og:url" content="https://promptonce.github.io/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="一、各个生命周期的作用 Vue 的生命周期就是 Vue 实例从创建到销毁的过程，包括了它的初始化、渲染、更新、销毁等多个阶段。每个阶段 Vue 都会触发特定的生命周期钩子函数，让开发者有机会在不同的时间点执行代码。 首先在Vue生命周期中有十个阶段： 11、beforeCreate(创建前)  在实例初始化之后，进行数据侦听和事件&#x2F;侦听器的配置之前同步调用。因为data和methods中">
+<meta property="og:description" content="一、各个生命周期的作用 Vue 的生命周期就是 Vue 实例从创建到销毁的过程，包括了它的初始化、渲染、更新、销毁等多个阶段。每个阶段 Vue 都会触发特定的生命周期钩子函数，让开发者有机会在不同的时间点执行代码。 首先在Vue生命周期中有十个阶段： 11、beforeCreate(创建前)  在实例初始化之后，进行数据侦听和事件&#x2F;侦听器的配置之前同步调用。因为data和method">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://promptonce.github.io/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
 <meta property="article:published_time" content="2024-08-28T08:40:32.000Z">
-<meta property="article:modified_time" content="2024-11-23T16:02:33.868Z">
+<meta property="article:modified_time" content="2025-03-14T08:05:21.320Z">
 <meta property="article:author" content="penggan">
 <meta property="article:tag" content="前端开发">
 <meta property="article:tag" content="Vue">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://promptonce.github.io/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png">
   
   
   
@@ -67,7 +69,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"><span class="title">TCP三次握手四次挥手</span></a><a class="item title" href="/2024/08/28/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><span class="title">判断数据类型</span></a><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型和原型链</span></a><a class="item title" href="/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"><span class="title">vue组件通信</span></a><a class="item title" href="/2024/09/27/%E7%90%86%E8%A7%A3JavaScript%E4%B8%ADthis%E7%9A%84%E8%A1%8C%E4%B8%BA-%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"><span class="title">理解JavaScript中this的行为:普通函数vs箭头函数</span></a><a class="item title" href="/2024/08/28/%E4%BA%8B%E4%BB%B6%E6%B5%81/"><span class="title">事件流</span></a><a class="item title" href="/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><span class="title">JavaScript基本类型</span></a><a class="item title" href="/2024/08/28/%E8%BE%93%E5%85%A5URL%E5%9B%9E%E8%BD%A6%E5%90%8E/"><span class="title">输入URL回车后</span></a><a class="item title" href="/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/"><span class="title">行内元素和块级元素</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"><span class="title">Vue的生命周期</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/09/28/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/"><span class="title">TCP三次握手四次挥手</span></a><a class="item title" href="/2024/08/28/%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"><span class="title">判断数据类型</span></a><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型和原型链</span></a><a class="item title" href="/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"><span class="title">vue组件通信</span></a><a class="item title" href="/2024/09/27/%E7%90%86%E8%A7%A3JavaScript%E4%B8%ADthis%E7%9A%84%E8%A1%8C%E4%B8%BA-%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0vs%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0/"><span class="title">理解JavaScript中this的行为:普通函数vs箭头函数</span></a><a class="item title" href="/2024/08/28/%E4%BA%8B%E4%BB%B6%E6%B5%81/"><span class="title">事件流</span></a><a class="item title" href="/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"><span class="title">JavaScript基本类型</span></a><a class="item title" href="/2024/08/28/%E8%BE%93%E5%85%A5URL%E5%9B%9E%E8%BD%A6%E5%90%8E/"><span class="title">输入URL回车后</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -80,7 +82,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:40:32.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T16:02:33.868Z">2024-11-24</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:40:32.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-03-14T08:05:21.320Z">2025-03-14</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -91,7 +93,9 @@
     </div>
     
   </div>
-  </div><article class="md-text content"><p>一、各个生命周期的作用</p>
+  </div><article class="md-text content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/28/Vue%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/Vue%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.png" class="lazy" title="Vue生命周期">
+
+<p>一、各个生命周期的作用</p>
 <p>Vue 的生命周期就是 Vue 实例从创建到销毁的过程，包括了它的初始化、渲染、更新、销毁等多个阶段。每个阶段 Vue 都会触发特定的生命周期钩子函数，让开发者有机会在不同的时间点执行代码。</p>
 <p>首先在Vue生命周期中有十个阶段：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>、<span class="title function_">beforeCreate</span>(创建前)</span><br></pre></td></tr></table></figure>
