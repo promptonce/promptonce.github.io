@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-04-02T03:08:32.789Z</updated>
+  <updated>2025-04-03T01:35:36.120Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI时代的技术新人：如何把自己打造成《狂怒》中的“坦克排长”</title>
+    <link href="https://promptonce.github.io/2025/04/03/AI%E6%97%B6%E4%BB%A3%E7%9A%84%E6%8A%80%E6%9C%AF%E6%96%B0%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E8%87%AA%E5%B7%B1%E6%89%93%E9%80%A0%E6%88%90%E3%80%8A%E7%8B%82%E6%80%92%E3%80%8B%E4%B8%AD%E7%9A%84%E2%80%9C%E5%9D%A6%E5%85%8B%E6%8E%92%E9%95%BF%E2%80%9D/"/>
+    <id>https://promptonce.github.io/2025/04/03/AI%E6%97%B6%E4%BB%A3%E7%9A%84%E6%8A%80%E6%9C%AF%E6%96%B0%E4%BA%BA%EF%BC%9A%E5%A6%82%E4%BD%95%E6%8A%8A%E8%87%AA%E5%B7%B1%E6%89%93%E9%80%A0%E6%88%90%E3%80%8A%E7%8B%82%E6%80%92%E3%80%8B%E4%B8%AD%E7%9A%84%E2%80%9C%E5%9D%A6%E5%85%8B%E6%8E%92%E9%95%BF%E2%80%9D/</id>
+    <published>2025-04-03T01:33:12.000Z</published>
+    <updated>2025-04-03T01:35:36.120Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近重温了2014年的战争电影《狂怒》（Fury），布拉德·皮特饰演的坦克排长“功”（Don “Wardaddy” Collier）让我印象深刻。他带领一群个性迥异的士兵，驾驶“狂怒”号坦克在二战战场上与德军周旋，展现了技术、领导力和决策力的完美结合。联想到如今AI技术飞速发展的时代，我突然觉得，技术新人如果想在职场脱颖而出，或许可以把自己想象成“功”这样的角色——不仅要掌握“坦克”（技术硬实力），还要学会指挥“AI部队”，在复杂环境中找到自己的定位。</p><p>作为一个即将进入技术行业的应届生，我也在思考：AI大环境下，如何把自己打造成这样的“坦克排长”？传统的“八股文”背诵还重要吗？以下是我的一些心得和建议，希望对同样迷茫的你有所启发。</p><h2 id="一、建立“战场视野”：理解AI的全景"><a href="#一、建立“战场视野”：理解AI的全景" class="headerlink" title="一、建立“战场视野”：理解AI的全景"></a>一、建立“战场视野”：理解AI的全景</h2><p>“功”能在战场上之所以游刃有余，是因为他能看清敌我态势。作为技术新人，第一步是建立对AI生态的整体认知：</p><ul><li><strong>AI基础知识</strong>：不需要精通所有算法，但要了解机器学习、自然语言处理、计算机视觉等领域的核心原理和应用场景。</li><li><strong>行业趋势</strong>：多关注AI在你目标领域的落地情况，比如读论文、刷X上的技术讨论，或者看看大厂的AI产品动态。</li><li><strong>工具熟悉</strong>：玩转主流AI工具（TensorFlow、PyTorch）或云平台（AWS、Google Cloud），就像“功”熟悉坦克的每个零件。</li></ul><p>没有全局视野，你就只能当个“士兵”，而无法成为“指挥官”。</p><h2 id="二、培养“指挥能力”：从执行者到决策者"><a href="#二、培养“指挥能力”：从执行者到决策者" class="headerlink" title="二、培养“指挥能力”：从执行者到决策者"></a>二、培养“指挥能力”：从执行者到决策者</h2><p>AI时代，单纯写代码的角色容易被自动化取代。未来的技术人需要像“功”一样，学会协调资源、制定策略：</p><ul><li><strong>项目实战</strong>：参与开源项目或个人作品，练习把AI工具整合起来解决问题。</li><li><strong>问题拆解</strong>：把大目标拆成小任务，判断哪些交给AI，哪些需要自己操刀。</li><li><strong>跨领域能力</strong>：技术之外，学点产品思维和沟通技巧，毕竟“功”不仅会打仗，还会带团队。</li></ul><p>AI是你的“队员”，但它没有情感和直觉，最终的决策权在你手里。</p><h2 id="三、技术硬实力：打造你的“坦克”"><a href="#三、技术硬实力：打造你的“坦克”" class="headerlink" title="三、技术硬实力：打造你的“坦克”"></a>三、技术硬实力：打造你的“坦克”</h2><p>“功”靠坦克作战，你的核心武器是技术能力：</p><ul><li><strong>编程基础</strong>：Python、Java、C++要扎实，AI再强也得靠代码驱动。</li><li><strong>数据能力</strong>：学会数据处理和分析（Pandas、SQL），这是AI的“燃料”。</li><li><strong>动手实践</strong>：多写代码、多调模型，哪怕失败也能积累经验。</li></ul><p>没有硬实力，你的“坦克”就是空壳，上了战场也跑不远。</p><h2 id="四、八股文还需不需要背？"><a href="#四、八股文还需不需要背？" class="headerlink" title="四、八股文还需不需要背？"></a>四、八股文还需不需要背？</h2><p>对于应届生来说，传统的“八股文”（算法题、LeetCode、系统设计）依然是面试敲门砖，但重要性在AI时代有所调整：</p><ul><li><strong>基础仍重要</strong>：大厂面试还会考链表、动态规划、时间复杂度，这些是思维能力的试金石。</li><li><strong>AI化趋势</strong>：一些公司更关注你如何用AI解决问题，比如优化算法或处理大数据，而非手写代码。</li><li><strong>灵活应对</strong>：根据目标公司调整策略——AI初创公司看重实战，大厂则绕不过八股文。</li></ul><p>我的建议是：刷50道LeetCode中等题打底，同时试着用AI工具（比如GitHub Copilot）辅助解题，理解它的逻辑。这样既保基础，又跟上潮流。</p><p>如果解决问题的能力还没有通过AI工具的加持锻炼起来，那么传统八股算法学习法仍然需要学习。</p><h2 id="五、软实力：成为“功”的灵魂"><a href="#五、软实力：成为“功”的灵魂" class="headerlink" title="五、软实力：成为“功”的灵魂"></a>五、软实力：成为“功”的灵魂</h2><p>“功”的魅力不只在技术，还在领导力和韧性，这也是技术新人需要修炼的：</p><ul><li><strong>适应变化</strong>：AI发展快，今天学的可能明天过时，保持学习心态是关键。</li><li><strong>抗压能力</strong>：加班、debug、赶deadline是常态，像“功”面对德军围攻时那样沉着应对。</li><li><strong>讲故事</strong>：面试时，把项目经历讲得像“狂怒”里的战斗故事一样引人入胜，能大大加分。</li></ul><h2 id="具体行动计划"><a href="#具体行动计划" class="headerlink" title="具体行动计划"></a>具体行动计划</h2><ul><li><strong>短期（1-3个月）</strong>：学一门AI入门课（推荐Coursera的Andrew Ng课程），刷50道LeetCode题。</li><li><strong>中期（3-6个月）</strong>：做一个AI小项目（比如文本分类或图像识别），写成博客或放GitHub展示。</li><li><strong>长期（6个月以上）</strong>：找实习或参加比赛（Kaggle、Hackathon），积累实战经验，拓展人脉。</li></ul><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>AI时代不是要取代我们，而是让我们成为“AI排长”。你不需要成为“功”那样的战争英雄，但可以借鉴他的特质：技术过硬、视野开阔、决策果断。八股文是敲门砖，但更重要的是跳出“背书”模式，主动驾驭AI工具，像指挥坦克一样打出一片天。</p><p>未来属于那些能把AI变成“狂怒”号坦克的人。你准备好了吗？</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;最近重温了2014年的战争电影《狂怒》（Fury），布拉德·皮特饰演的坦克排长“功”（Don “Wardaddy” Collier）让我印象深刻。他带领一群个性迥异的士兵，驾驶“狂怒”号坦克在二战战场上与德军周旋，展现了技术、领导力和决策力的完美结合。联想到如今AI技术飞速</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>戴着镣铐跳舞：软件工程师的艺术</title>
@@ -404,19 +424,6 @@
     <summary type="html">&lt;p&gt;伪类是选择器的一种，它用于选择处于特定状态的元素，比如当它们是这一类型的第一个元素时，或者是当鼠标指针悬浮在元素上面的时候。它们表现得会像是你向你的文档的某个部分应用了一个类一样，帮你在你的标记文本中减少多余的类，让你的代码更灵活、更易于维护。&lt;/p&gt;
 &lt;p&gt;a:link,</summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>VSCode Copilot AI提效总结</title>
-    <link href="https://promptonce.github.io/2025/03/08/VSCode-Copilot-AI%E6%8F%90%E6%95%88%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/03/08/VSCode-Copilot-AI%E6%8F%90%E6%95%88%E6%80%BB%E7%BB%93/</id>
-    <published>2025-03-08T15:40:14.000Z</published>
-    <updated>2025-03-08T15:40:14.429Z</updated>
-    
     
     
     
