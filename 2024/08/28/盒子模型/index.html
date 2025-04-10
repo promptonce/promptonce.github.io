@@ -17,24 +17,27 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>JavaScript垃圾回收-引用计数法 - PromptOnce</title>
+  <title>盒子模型 - PromptOnce</title>
 
   
-    <meta name="description" content="引用计数法进行垃圾回收内存泄露的例子 1234567function test() &#123;  let objectA &#x3D; &#123;name: &quot;Object A&quot;&#125;;  let objectB &#x3D; &#123;name: &quot;Object B&quot;&#125;;  objectA.otherObject &#x3D; objectB;  objectB.">
+    <meta name="description" content="盒子模型是css布局的基础，描述了以盒子为单位来布局页面的方式。每个盒子有四个属性：内容，内边距，边框，外边距。内容是最核心的东西，起传达信息的作用，可以理解为最有价值的部分。内边距是内容与边框之间的空白。边框不用说了。外边距当前盒子和旁边盒子的间距。默认情况下盒子的宽度指的是内容的宽度+左右内边距宽度+边框宽度*2，盒子的高度等于内容的高度+上下内边距+上下边框高度。box-sizing取con">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript垃圾回收-引用计数法">
-<meta property="og:url" content="https://promptonce.github.io/2024/10/16/JavaScript%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6-%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0%E6%B3%95/index.html">
+<meta property="og:title" content="盒子模型">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="引用计数法进行垃圾回收内存泄露的例子 1234567function test() &#123;  let objectA &#x3D; &#123;name: &quot;Object A&quot;&#125;;  let objectB &#x3D; &#123;name: &quot;Object B&quot;&#125;;  objectA.otherObject &#x3D; objectB;  objectB.">
+<meta property="og:description" content="盒子模型是css布局的基础，描述了以盒子为单位来布局页面的方式。每个盒子有四个属性：内容，内边距，边框，外边距。内容是最核心的东西，起传达信息的作用，可以理解为最有价值的部分。内边距是内容与边框之间的空白。边框不用说了。外边距当前盒子和旁边盒子的间距。默认情况下盒子的宽度指的是内容的宽度+左右内边距宽度+边框宽度*2，盒子的高度等于内容的高度+上下内边距+上下边框高度。box-sizing取con">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-16T09:34:55.000Z">
-<meta property="article:modified_time" content="2024-10-16T09:37:08.517Z">
+<meta property="article:published_time" content="2024-08-28T06:29:10.000Z">
+<meta property="article:modified_time" content="2025-04-10T12:34:54.778Z">
 <meta property="article:author" content="penggan">
+<meta property="article:tag" content="前端开发">
+<meta property="article:tag" content="UI">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
   
   
   
-  
+  <meta name="keywords" content="前端开发,UI,CSS">
 
   <!-- feed -->
   
@@ -65,7 +68,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2025/04/09/%E9%99%86%E5%A5%87-%E6%88%91%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%96%E7%95%8C%E8%A7%82%E6%9C%89%E6%84%9F-%E8%AE%A4%E7%9F%A5%E6%8F%90%E9%AB%98/"><span class="title">陆奇-我的大模型世界观有感-认知提高</span></a><a class="item title" href="/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/"><span class="title">HTML5新特性</span></a><a class="item title" href="/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/"><span class="title">HTML语义化标签总结</span></a><a class="item title" href="/2024/08/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%B2%89%E6%B7%80/"><span class="title">软件工程师沉淀</span></a><a class="item title" href="/2025/01/21/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/"><span class="title">hexo博客中插入图片语法</span></a><a class="item title" href="/2025/01/26/JavaScript-ACM%E6%A8%A1%E5%BC%8F/"><span class="title">JavaScript ACM模式</span></a><a class="item title" href="/2025/01/25/sharedchat%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/"><span class="title">sharedchat会话管理工具总结</span></a><a class="item title" href="/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/"><span class="title">vue中slot总结</span></a><a class="item title" href="/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/"><span class="title">vue中props传值总结</span></a><a class="item title" href="/2024/10/25/%E4%BB%8E%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E8%A7%86%E8%A7%92%E7%9C%8B%E9%80%92%E5%BD%92%E6%80%9D%E6%83%B3/"><span class="title">从二叉树遍历视角看递归思想</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/%E9%97%AD%E5%8C%85/"><span class="title">闭包</span></a><a class="item title" href="/2024/08/28/%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B/"><span class="title">盒子模型</span></a><a class="item title" href="/2024/08/28/%E8%BE%93%E5%85%A5URL%E5%9B%9E%E8%BD%A6%E5%90%8E/"><span class="title">输入URL回车后</span></a><a class="item title" href="/2025/04/09/%E9%99%86%E5%A5%87-%E6%88%91%E7%9A%84%E5%A4%A7%E6%A8%A1%E5%9E%8B%E4%B8%96%E7%95%8C%E8%A7%82%E6%9C%89%E6%84%9F-%E8%AE%A4%E7%9F%A5%E6%8F%90%E9%AB%98/"><span class="title">陆奇-我的大模型世界观有感-认知提高</span></a><a class="item title" href="/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/"><span class="title">HTML5新特性</span></a><a class="item title" href="/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/"><span class="title">HTML语义化标签总结</span></a><a class="item title" href="/2024/08/15/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88%E6%B2%89%E6%B7%80/"><span class="title">软件工程师沉淀</span></a><a class="item title" href="/2025/01/21/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/"><span class="title">hexo博客中插入图片语法</span></a><a class="item title" href="/2025/01/26/JavaScript-ACM%E6%A8%A1%E5%BC%8F/"><span class="title">JavaScript ACM模式</span></a><a class="item title" href="/2025/01/25/sharedchat%E4%BC%9A%E8%AF%9D%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E6%80%BB%E7%BB%93/"><span class="title">sharedchat会话管理工具总结</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -78,19 +81,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-16T09:34:55.000Z">2024-10-16</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-16T09:37:08.517Z">2024-10-16</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T06:29:10.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-04-10T12:34:54.778Z">2025-04-10</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>JavaScript垃圾回收-引用计数法</span></h1>
+        <h1 class="text title"><span>盒子模型</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>引用计数法进行垃圾回收内存泄露的例子</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">test</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">let</span> objectA = &#123;<span class="attr">name</span>: <span class="string">&quot;Object A&quot;</span>&#125;;</span><br><span class="line">  <span class="keyword">let</span> objectB = &#123;<span class="attr">name</span>: <span class="string">&quot;Object B&quot;</span>&#125;;</span><br><span class="line">  objectA.<span class="property">otherObject</span> = objectB;</span><br><span class="line">  objectB.<span class="property">otherObject</span> = objectA;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">test</span>()</span><br></pre></td></tr></table></figure>
+  </div><article class="md-text content"><p>盒子模型是css布局的基础，描述了以盒子为单位来布局页面的方式。每个盒子有四个属性：内容，内边距，边框，外边距。内容是最核心的东西，起传达信息的作用，可以理解为最有价值的部分。内边距是内容与边框之间的空白。边框不用说了。外边距当前盒子和旁边盒子的间距。默认情况下盒子的宽度指的是内容的宽度+左右内边距宽度+边框宽度*2，盒子的高度等于内容的高度+上下内边距+上下边框高度。box-sizing取content-box时宽度高度只包含内容。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -100,7 +102,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/10/17/flask%E6%80%BB%E7%BB%93/">flask总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/16/JavaScript%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">JavaScript正则表达式</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/28/%E9%97%AD%E5%8C%85/">闭包</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/26/Swin-Transformer%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">Swin-Transformer论文分析</a></div></section></div>
 
 
 
