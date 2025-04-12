@@ -37,6 +37,26 @@
   </entry>
   
   <entry>
+    <title>Webpack 和 Vite：为什么前端开发需要它们？</title>
+    <link href="https://promptonce.github.io/2025/03/28/Webpack-%E5%92%8C-Vite%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%AE%83%E4%BB%AC%EF%BC%9F/"/>
+    <id>https://promptonce.github.io/2025/03/28/Webpack-%E5%92%8C-Vite%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9C%80%E8%A6%81%E5%AE%83%E4%BB%AC%EF%BC%9F/</id>
+    <published>2025-03-28T11:15:32.000Z</published>
+    <updated>2025-04-12T13:36:01.638Z</updated>
+    
+    <content type="html"><![CDATA[<p>我感觉就是浏览器的设计不能完全满足前端开发的需求，比如开发体验更好的SCSS，需要转译为CSS，ts转js，这一步需要构建工具来完成。浏览器需要和服务器建立连接，考虑到网络传输，构建工具将javascript进行压缩和合并到一个文件可以提高浏览器加载速度。有各种类型的浏览器，为了兼容这些浏览器，构建工具充当一个中间层可以适配多个不同的浏览器。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;我感觉就是浏览器的设计不能完全满足前端开发的需求，比如开发体验更好的SCSS，需要转译为CSS，ts转js，这一步需要构建工具来完成。浏览器需要和服务器建立连接，考虑到网络传输，构建工具将javascript进行压缩和合并到一个文件可以提高浏览器加载速度。有各种类型的浏览器</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>HTML5新特性</title>
     <link href="https://promptonce.github.io/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/"/>
     <id>https://promptonce.github.io/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/</id>
@@ -404,27 +424,6 @@
     
     
     <category term="软件项目复盘" scheme="https://promptonce.github.io/tags/%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E5%A4%8D%E7%9B%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>快速更新失效域名证书方法</title>
-    <link href="https://promptonce.github.io/2024/11/03/%E5%BF%AB%E9%80%9F%E6%9B%B4%E6%96%B0%E5%A4%B1%E6%95%88%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6%E6%96%B9%E6%B3%95/"/>
-    <id>https://promptonce.github.io/2024/11/03/%E5%BF%AB%E9%80%9F%E6%9B%B4%E6%96%B0%E5%A4%B1%E6%95%88%E5%9F%9F%E5%90%8D%E8%AF%81%E4%B9%A6%E6%96%B9%E6%B3%95/</id>
-    <published>2024-11-03T02:05:47.000Z</published>
-    <updated>2024-11-03T02:07:08.952Z</updated>
-    
-    <content type="html"><![CDATA[<p>服务器端如果是windows直接登录CA官网进行域名证书的更新替换</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;服务器端如果是windows直接登录CA官网进行域名证书的更新替换&lt;/p&gt;
-</summary>
-      
-    
-    
-    
     
   </entry>
   
