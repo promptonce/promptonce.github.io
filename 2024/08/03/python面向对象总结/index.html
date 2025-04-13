@@ -17,26 +17,24 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>leetcode 141. 环形链表 - PromptOnce</title>
+  <title>python面向对象总结 - PromptOnce</title>
 
   
-    <meta name="description" content="1234567891011121314151617181920212223242526272829&#x2F;** * Definition for singly-linked list. * function ListNode(val) &#123; *     this.val &#x3D; val; *     this.next &#x3D; null; * &#125; *&#x2F;&#x2F;** * @param &#123;Li">
+    <meta name="description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车继承：python中子类会继承父类的方法和">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode 141. 环形链表">
-<meta property="og:url" content="https://promptonce.github.io/2024/11/11/leetcode-141-%E7%8E%AF%E5%BD%A2%E9%93%BE%E8%A1%A8/index.html">
+<meta property="og:title" content="python面向对象总结">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="1234567891011121314151617181920212223242526272829&#x2F;** * Definition for singly-linked list. * function ListNode(val) &#123; *     this.val &#x3D; val; *     this.next &#x3D; null; * &#125; *&#x2F;&#x2F;** * @param &#123;Li">
+<meta property="og:description" content="何为面向对象？类：图纸父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念 对象：根据图纸造出来的车继承：python中子类会继承父类的方法和">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-11-11T05:05:08.000Z">
-<meta property="article:modified_time" content="2024-11-23T15:36:16.336Z">
+<meta property="article:published_time" content="2024-08-03T14:37:40.000Z">
+<meta property="article:modified_time" content="2025-04-13T11:49:13.367Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="leetcode,算法">
+  
 
   <!-- feed -->
   
@@ -80,19 +78,24 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-11-11T05:05:08.000Z">2024-11-11</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T15:36:16.336Z">2024-11-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-03T14:37:40.000Z">2024-08-03</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-04-13T11:49:13.367Z">2025-04-13</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>leetcode 141. 环形链表</span></h1>
+        <h1 class="text title"><span>python面向对象总结</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * function ListNode(val) &#123;</span></span><br><span class="line"><span class="comment"> *     this.val = val;</span></span><br><span class="line"><span class="comment"> *     this.next = null;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">ListNode</span>&#125; <span class="variable">head</span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> hasCycle = <span class="keyword">function</span>(<span class="params">head</span>) &#123;</span><br><span class="line">    <span class="comment">// 0</span></span><br><span class="line">    <span class="keyword">let</span> slow = head;</span><br><span class="line">    <span class="keyword">let</span> fast = head;</span><br><span class="line">    <span class="keyword">let</span> ret = <span class="literal">false</span>;</span><br><span class="line">    <span class="comment">// 1</span></span><br><span class="line">    <span class="keyword">while</span>(fast &amp;&amp; fast.<span class="property">next</span> !== <span class="literal">null</span>)&#123;</span><br><span class="line">        fast = fast.<span class="property">next</span>.<span class="property">next</span></span><br><span class="line">        slow = slow.<span class="property">next</span>;</span><br><span class="line">        <span class="keyword">if</span>(fast === slow)&#123;</span><br><span class="line">            ret = <span class="literal">true</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 2</span></span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>循环中有fast &#x3D; fast.next.next需要判断fast.next不为空容易想到，还需要判断fast不为空，一个是从外部进入循环时的判断，一个是执行了fast &#x3D; fast.next.next后的判断，也可以将fast是否为空的判断写到fast &#x3D; fast.next.next这行之后（如果fast为空则用break跳出循环）</p>
+  </div><article class="md-text content"><h2 id="何为面向对象？"><a href="#何为面向对象？" class="headerlink" title="何为面向对象？"></a>何为面向对象？</h2><h3 id="类：图纸"><a href="#类：图纸" class="headerlink" title="类：图纸"></a>类：图纸</h3><p>父类：可以理解为基础类，这里需要正确理解父类这个名词所包含的等级高的信息，父类中的属性和方法是一个基础<br>子类：从父类中衍生出来的类，具备父类中的基础，可以在父类上做扩展方法，也可以重写父类的方法和属性<br>注意：父类不代表比子类更丰富，子类拓展父类，这里不能通过等级层次去理解，更合理的方法是从进化的角度分析这两个概念</p>
+<h3 id="对象：根据图纸造出来的车"><a href="#对象：根据图纸造出来的车" class="headerlink" title="对象：根据图纸造出来的车"></a>对象：根据图纸造出来的车</h3><h3 id="继承："><a href="#继承：" class="headerlink" title="继承："></a>继承：</h3><p>python中子类会继承父类的方法和属性，包括私有属性和私有方法，但通常不建议使用它们</p>
+<h3 id="封装："><a href="#封装：" class="headerlink" title="封装："></a>封装：</h3><p>主要利用私有属性和私有方法实现封装，好处就是修改这个类的内部方法而不影响使用这个类的代码（比如有更优的算法可以实现排序，那就可以直接替换封装好的类的排序方法而不用改动调用这个类的代码）</p>
+<h3 id="多态："><a href="#多态：" class="headerlink" title="多态："></a>多态：</h3><p>多态允许使用一个单一类型的实体（如变量，函数，接口）来代表多种类型的对象，简单来说，多态就是“一个接口，多种实现”。  </p>
+<h2 id="如何理解多态？"><a href="#如何理解多态？" class="headerlink" title="如何理解多态？"></a>如何理解多态？</h2><p>通过编写处理父类对象的代码，这些代码可以用于所有的子类对象，即通过父类就可以实现（批量&#x2F;统一）管理不同的子类对象，这些子类对象继承父类有多种实现，差不多等于多态的子类对象。</p>
+<h2 id="如何理解对象和类class的关系？"><a href="#如何理解对象和类class的关系？" class="headerlink" title="如何理解对象和类class的关系？"></a>如何理解对象和类class的关系？</h2><p>图纸和图纸造出来的东西的关系，在看项目源代码时，看到class很容易就想是不是这个类里面的代码完成了对应的功能，从最终执行来说，确实是这样，但准确来说这不是面向对象编程(oop)的思想，按照oop来说是这个class构造的对象实现了相关的功能，oop中一切皆是对象，这里我还没有从传统的顺序执行的代码编程中跳出来。</p>
+<p>class就是对多个对象进行如何交互的说明, new一个class的对象后就可以对多个对象进行交互，这些待交互的对象又是通过其它的class创建的，可以一直追溯到计算机的底层原理。(可以结合gcc新版本是用旧版本的gcc编译的)</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -102,7 +105,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/11/13/cross-attention%E6%80%BB%E7%BB%93/">cross attention总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/">vue,typescript项目打包报错</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/">如何读懂大型软件项目源代码?</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/13/self-attention%E6%9C%BA%E5%88%B6/">self attention机制</a></div></section></div>
 
 
 
@@ -112,7 +115,14 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-</aside><div class='float-panel blur'>
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%95%E4%B8%BA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%EF%BC%9F"><span class="toc-text">何为面向对象？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B1%BB%EF%BC%9A%E5%9B%BE%E7%BA%B8"><span class="toc-text">类：图纸</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E8%B1%A1%EF%BC%9A%E6%A0%B9%E6%8D%AE%E5%9B%BE%E7%BA%B8%E9%80%A0%E5%87%BA%E6%9D%A5%E7%9A%84%E8%BD%A6"><span class="toc-text">对象：根据图纸造出来的车</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF%EF%BC%9A"><span class="toc-text">继承：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%EF%BC%9A"><span class="toc-text">封装：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%9A%E6%80%81%EF%BC%9A"><span class="toc-text">多态：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%A4%9A%E6%80%81%EF%BC%9F"><span class="toc-text">如何理解多态？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BBclass%E7%9A%84%E5%85%B3%E7%B3%BB%EF%BC%9F"><span class="toc-text">如何理解对象和类class的关系？</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
