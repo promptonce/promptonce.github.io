@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-04-13T12:03:21.804Z</updated>
+  <updated>2025-04-14T14:17:27.357Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Embeddings和向量数据库</title>
+    <link href="https://promptonce.github.io/2025/04/14/Embeddings%E5%92%8C%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>https://promptonce.github.io/2025/04/14/Embeddings%E5%92%8C%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
+    <published>2025-04-14T14:16:56.000Z</published>
+    <updated>2025-04-14T14:17:27.357Z</updated>
+    
+    <content type="html"><![CDATA[<p>二维向量通过余弦相似度来判断向量是否相关。停用词没有太多意义然后出现频率高。N-gram用多元方法拆分得到特征进行相似度计算做推荐系统。word2vec通过建模当前词和其两侧的值的关系或两侧的词和当前词的关系，利用神经网络的隐藏层来实现压缩特征。cherry studio的知识库功能用到的嵌入模式是用于找相似度的（根据用户的输入找到知识库中相似的文本），然后将这些找到的相似度的文本发送给AI作为上下文。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;二维向量通过余弦相似度来判断向量是否相关。停用词没有太多意义然后出现频率高。N-gram用多元方法拆分得到特征进行相似度计算做推荐系统。word2vec通过建模当前词和其两侧的值的关系或两侧的词和当前词的关系，利用神经网络的隐藏层来实现压缩特征。cherry studio的</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>面向对象和面向过程有何不同?</title>
@@ -396,31 +416,6 @@
     <category term="leetcode" scheme="https://promptonce.github.io/tags/leetcode/"/>
     
     <category term="算法" scheme="https://promptonce.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>vue,typescript项目打包报错</title>
-    <link href="https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/"/>
-    <id>https://promptonce.github.io/2024/11/10/vue-typescript%E9%A1%B9%E7%9B%AE%E6%89%93%E5%8C%85%E6%8A%A5%E9%94%99/</id>
-    <published>2024-11-10T09:58:03.000Z</published>
-    <updated>2024-11-23T16:09:10.286Z</updated>
-    
-    <content type="html"><![CDATA[<p>&#x2F;&#x2F; @ts-ignore：无法被执行的代码的错误</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&amp;#x2F;&amp;#x2F; @ts-ignore：无法被执行的代码的错误&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-    <category term="前端开发" scheme="https://promptonce.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="Vue" scheme="https://promptonce.github.io/tags/Vue/"/>
     
   </entry>
   
