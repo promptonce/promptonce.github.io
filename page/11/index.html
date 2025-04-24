@@ -17,26 +17,20 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>977. 有序数组的平方、59.螺旋矩阵II" - PromptOnce</title>
+  <title>PromptOnce</title>
 
   
-    <meta name="description" content="​977.有序数组的平方 1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。 2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和">
-<meta property="og:type" content="article">
-<meta property="og:title" content="977. 有序数组的平方、59.螺旋矩阵II&quot;">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/04/977-%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E3%80%8159-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/index.html">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="PromptOnce">
+<meta property="og:url" content="https://promptonce.github.io/page/11/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="​977.有序数组的平方 1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。 2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-04T03:16:50.000Z">
-<meta property="article:modified_time" content="2024-11-23T15:37:53.221Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="leetcode,算法">
+  
 
   <!-- feed -->
   
@@ -53,7 +47,7 @@
 </head>
 <body>
 
-<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+<div class="l_body s:aa index tech" id="start" layout="undefined" ><aside class="l_left"><div class="leftbar-container">
 
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
@@ -65,56 +59,24 @@
 <nav class="menu dis-select"></nav>
 </div>
 <div class="widgets">
-
-
 <widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/"><span class="title">行内元素和块级元素</span></a><a class="item title" href="/2024/10/03/DIFF%E7%AE%97%E6%B3%95/"><span class="title">DIFF算法</span></a><a class="item title" href="/2024/08/28/%E4%BA%8B%E4%BB%B6%E6%B5%81/"><span class="title">事件流</span></a><a class="item title" href="/2025/04/22/%E4%B8%80%E7%A7%8D%E5%BF%AB%E9%80%9F%E4%B8%BA%E8%AE%BA%E6%96%87%E6%9F%A5%E6%89%BE%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E7%9A%84%E6%96%B9%E6%B3%95/"><span class="title">一种快速为论文查找参考文献的方法</span></a><a class="item title" href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/"><span class="title">python面向对象总结</span></a><a class="item title" href="/2024/09/22/GPT%E6%97%B6%E4%BB%A3%E7%9A%84%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%9F%E5%AD%98%E4%B9%8B%E9%81%93/"><span class="title">GPT时代的程序员生存之道</span></a><a class="item title" href="/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/"><span class="title">如何读懂大型软件项目源代码?</span></a><a class="item title" href="/2025/04/14/Embeddings%E5%92%8C%E5%90%91%E9%87%8F%E6%95%B0%E6%8D%AE%E5%BA%93/"><span class="title">Embeddings和向量数据库</span></a><a class="item title" href="/2024/08/26/CSS%E9%80%89%E6%8B%A9%E5%99%A8%E4%BC%98%E5%85%88%E7%BA%A7%E6%80%BB%E7%BB%93/"><span class="title">CSS选择器优先级总结</span></a><a class="item title" href="/2025/04/13/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%92%8C%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E6%9C%89%E4%BD%95%E4%B8%8D%E5%90%8C/"><span class="title">面向对象和面向过程有何不同?</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
 
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="undefined" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">PromptOnce</div></a></div></header>
 
 
 
 
-<div class="article banner top">
-  <div class="content">
-    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
-<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:16:50.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T15:37:53.221Z">2024-11-23</time></span></div></div></div>
-    
-    <div class="bottom only-title">
-      
-      <div class="text-area">
-        <h1 class="text title"><span>977. 有序数组的平方、59.螺旋矩阵II"</span></h1>
-        
-      </div>
-    </div>
-    
+<div class="navbar top"><nav class="post"><a class="active" href="/">近期发布</a><a href="/tags">标签</a><a href="/archives">归档</a></nav></div>
+<div class="post-list post"><a class="post-card post" href="/2024/07/01/mmsegmentation%E6%A1%86%E6%9E%B6%E5%8F%AF%E8%A7%86%E5%8C%96%E8%AE%AD%E7%BB%83%E6%8C%87%E6%A0%87/">
+<article class="md-text"><h2 class="post-title">mmsegmentation框架可视化训练指标</h2><div class="excerpt"><p>12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667...</p></div><div class="meta cap"><span class="cap" id="post-meta"><svg style="margin-bottom:2px" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M6.94 2c.416 0 .753.324.753.724v1.46c.668-.012 1.417-.012 2.26-.012h4.015c.842 0 1.591 0 2.259.013v-1.46c0-.4.337-.725.753-.725s.753.324.753.724V4.25c1.445.111 2.394.384 3.09 1.055c.698.67.982 1.582 1.097 2.972L22 9H2v-.724c.116-1.39.4-2.302 1.097-2.972c.697-.67 1.645-.944 3.09-1.055V2.724c0-.4.337-.724.753-.724"/><path fill="currentColor" d="M22 14v-2c0-.839-.004-2.335-.017-3H2.01c-.013.665-.01 2.161-.01 3v2c0 3.771 0 5.657 1.172 6.828C4.343 22 6.228 22 10 22h4c3.77 0 5.656 0 6.828-1.172C22 19.658 22 17.772 22 14" opacity=".5"/><path fill="currentColor" d="M18 17a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m-5 4a1 1 0 1 1-2 0a1 1 0 0 1 2 0m0-4a1 1 0 1 1-2 0a1 1 0 0 1 2 0"/></svg><time datetime="2024-07-01T07:44:22.000Z">2024-07-01</time></span></div></article>
+</a></div>
+
+  <div class='paginator-wrap dis-select'>
+  <a class="extend prev" rel="prev" href="/page/10/"></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="page-number" href="/page/10/">10</a><span class="page-number current">11</span><span class="extend next" rel="next"></span>
   </div>
-  </div><article class="md-text content"><p>​<br>977.有序数组的平方</p>
-<p>1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。</p>
-<p>2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和的大小，较大的值赋值给k指针指向的位置，较大的指对应的指针移动（向右或向左），k指针后移，知道left&gt;right结束。</p>
-<p>3.第一次用暴力解法做，在排序哪里用了冒泡排序，但内层循环本来是遍历的j, 结果用了外层循环的i，导致用例报错。用双指针法在循环结束条件处应该是当left&lt;&#x3D;right继续循环，因为当left&#x3D;right时left或right指向的元素一直没有放到新数组中去，但最后一次需要放进去。</p>
-<p>4.学会了要充分利用题中的条件，比如非递减用双指针就比较好。然后就是边界条件用一个特殊情况去分析是否取等号，这个题学习了近一个小时。</p>
-<p>59.螺旋矩阵II</p>
-<p>1.第一次看到这个题目，不知道这个题如何做，只知道可能要利用下标关系，没有发现这个过程有何规律。</p>
-<p>2.首先是这个规律看得很准，就是将这个过程分解为几圈和中间位置的处理，只有n为奇数时才会有中间位置，中间位置也就是模拟过程的最后一步，转多少圈可以通过n&#x2F;2取整来计算，最关键的还是要定义好循环不变量，比如用左闭右开的原则就要坚持每条边都用左闭右开的原则。每次转完一圈后就更新转圈的起始位置，横纵坐标加1就可以完成，然后在转每一个圈中，左闭右开这个边界通过引入一个offset变量控制，初始值为1, 转完一圈后offset加1。如果是奇数，最后一步还需要将中心位置赋值。</p>
-<p>3.首先没有搞清楚循环的条件是啥，应该是转多少圈，用n&#x2F;2取整获得转的圈数。然后是数组索引的部分，没有想清楚哪里用startX,startY,i,j这些变量，用startX,startY初始化i,j后需要用i,j来定位，i,j是记录着当前位置的信息，startX,startY本身只在转完一圈后再执行+1的操作。</p>
-<p>4.体会到了用好循环不变量的重要性，整个思维过程比较严谨且可控，学习了一个小时左右，第一次真正实现了这种精确的计算机模拟算法。</p>
-
-<div class="article-footer fs14">
-    <section id="license">
-      <div class="header"><span>许可协议</span></div>
-      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div>
-    </section>
-    </div>
-</article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/04/203-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0-707-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8-206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">203.移除链表元素,707.设计链表,206.反转链表</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/04/704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E3%80%8127-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">704. 二分查找、27. 移除元素。</a></div></section></div>
-
-
-
-
 
 
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>

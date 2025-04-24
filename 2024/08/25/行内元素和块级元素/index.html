@@ -17,26 +17,27 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>977. 有序数组的平方、59.螺旋矩阵II" - PromptOnce</title>
+  <title>行内元素和块级元素 - PromptOnce</title>
 
   
-    <meta name="description" content="​977.有序数组的平方 1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。 2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和">
+    <meta name="description" content="行内元素水平排列，块级元素垂直排列。可以通过display属性将行内元素转换为块级元素（display: block）。同时，块级元素也可以转为行内元素，分为两种，一种是利用display: inline将块级元素转为普通行内元素（不可以设置宽高），还有一种是display: inline-block, 将块级元素转为可以设置宽高的行内元素。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="977. 有序数组的平方、59.螺旋矩阵II&quot;">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/04/977-%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E5%B9%B3%E6%96%B9%E3%80%8159-%E8%9E%BA%E6%97%8B%E7%9F%A9%E9%98%B5II/index.html">
+<meta property="og:title" content="行内元素和块级元素">
+<meta property="og:url" content="https://promptonce.github.io/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="​977.有序数组的平方 1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。 2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和">
+<meta property="og:description" content="行内元素水平排列，块级元素垂直排列。可以通过display属性将行内元素转换为块级元素（display: block）。同时，块级元素也可以转为行内元素，分为两种，一种是利用display: inline将块级元素转为普通行内元素（不可以设置宽高），还有一种是display: inline-block, 将块级元素转为可以设置宽高的行内元素。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-04T03:16:50.000Z">
-<meta property="article:modified_time" content="2024-11-23T15:37:53.221Z">
+<meta property="og:image" content="https://promptonce.github.io/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB.png">
+<meta property="article:published_time" content="2024-08-24T16:29:50.000Z">
+<meta property="article:modified_time" content="2025-04-24T15:10:51.969Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="算法">
+<meta property="article:tag" content="前端软件开发">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://promptonce.github.io/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB.png">
   
   
   
-  <meta name="keywords" content="leetcode,算法">
+  <meta name="keywords" content="前端软件开发">
 
   <!-- feed -->
   
@@ -80,27 +81,19 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:16:50.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T15:37:53.221Z">2024-11-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-24T16:29:50.000Z">2024-08-25</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-04-24T15:10:51.969Z">2025-04-24</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>977. 有序数组的平方、59.螺旋矩阵II"</span></h1>
+        <h1 class="text title"><span>行内元素和块级元素</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>​<br>977.有序数组的平方</p>
-<p>1.最先是对题目有点看不懂，为啥会强调非递减，元素平方后负数会变为正数，原有的非递减顺序会改变。最直接想到的是直接数组每个元素求平方然后对数组排序。</p>
-<p>2.非递减这个条件利用的好，较大的数位于数组两端，这就为用双指针解法创造了条件，这个题目没有要求数组原地操作，所以定义left,right指针指向原数组，k指针指向函数返回的新数组，依次比较left,right指向元素平方和的大小，较大的值赋值给k指针指向的位置，较大的指对应的指针移动（向右或向左），k指针后移，知道left&gt;right结束。</p>
-<p>3.第一次用暴力解法做，在排序哪里用了冒泡排序，但内层循环本来是遍历的j, 结果用了外层循环的i，导致用例报错。用双指针法在循环结束条件处应该是当left&lt;&#x3D;right继续循环，因为当left&#x3D;right时left或right指向的元素一直没有放到新数组中去，但最后一次需要放进去。</p>
-<p>4.学会了要充分利用题中的条件，比如非递减用双指针就比较好。然后就是边界条件用一个特殊情况去分析是否取等号，这个题学习了近一个小时。</p>
-<p>59.螺旋矩阵II</p>
-<p>1.第一次看到这个题目，不知道这个题如何做，只知道可能要利用下标关系，没有发现这个过程有何规律。</p>
-<p>2.首先是这个规律看得很准，就是将这个过程分解为几圈和中间位置的处理，只有n为奇数时才会有中间位置，中间位置也就是模拟过程的最后一步，转多少圈可以通过n&#x2F;2取整来计算，最关键的还是要定义好循环不变量，比如用左闭右开的原则就要坚持每条边都用左闭右开的原则。每次转完一圈后就更新转圈的起始位置，横纵坐标加1就可以完成，然后在转每一个圈中，左闭右开这个边界通过引入一个offset变量控制，初始值为1, 转完一圈后offset加1。如果是奇数，最后一步还需要将中心位置赋值。</p>
-<p>3.首先没有搞清楚循环的条件是啥，应该是转多少圈，用n&#x2F;2取整获得转的圈数。然后是数组索引的部分，没有想清楚哪里用startX,startY,i,j这些变量，用startX,startY初始化i,j后需要用i,j来定位，i,j是记录着当前位置的信息，startX,startY本身只在转完一圈后再执行+1的操作。</p>
-<p>4.体会到了用好循环不变量的重要性，整个思维过程比较严谨且可控，学习了一个小时左右，第一次真正实现了这种精确的计算机模拟算法。</p>
+  </div><article class="md-text content"><p>行内元素水平排列，块级元素垂直排列。可以通过display属性将行内元素转换为块级元素（display: block）。同时，块级元素也可以转为行内元素，分为两种，一种是利用display: inline将块级元素转为普通行内元素（不可以设置宽高），还有一种是display: inline-block, 将块级元素转为可以设置宽高的行内元素。</p>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/25/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0%E5%92%8C%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0%E7%9A%84%E5%8C%BA%E5%88%AB.png" class="lazy" title="行内元素和块级元素的区别">
 
 <div class="article-footer fs14">
     <section id="license">
@@ -110,7 +103,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/04/203-%E7%A7%BB%E9%99%A4%E9%93%BE%E8%A1%A8%E5%85%83%E7%B4%A0-707-%E8%AE%BE%E8%AE%A1%E9%93%BE%E8%A1%A8-206-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/">203.移除链表元素,707.设计链表,206.反转链表</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/04/704-%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E3%80%8127-%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/">704. 二分查找、27. 移除元素。</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/26/Swin-Transformer%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">Swin-Transformer论文分析</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/21/%E7%A7%AF%E5%88%86%E5%9B%BE%E5%83%8F%E7%BC%96%E7%A8%8B%E5%AE%9E%E7%8E%B0/">积分图像编程实现</a></div></section></div>
 
 
 
