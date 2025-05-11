@@ -350,6 +350,26 @@
   </entry>
   
   <entry>
+    <title>二叉树的深度与高度</title>
+    <link href="https://promptonce.github.io/2024/12/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%B8%8E%E9%AB%98%E5%BA%A6/"/>
+    <id>https://promptonce.github.io/2024/12/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%B8%8E%E9%AB%98%E5%BA%A6/</id>
+    <published>2024-12-28T07:56:01.000Z</published>
+    <updated>2025-05-11T13:51:36.242Z</updated>
+    
+    <content type="html"><![CDATA[<p>  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>flex布局总结</title>
     <link href="https://promptonce.github.io/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/"/>
     <id>https://promptonce.github.io/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/</id>
@@ -406,26 +426,6 @@
     
     
     <category term="运维" scheme="https://promptonce.github.io/tags/%E8%BF%90%E7%BB%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>openai api调用格式</title>
-    <link href="https://promptonce.github.io/2024/11/16/openai-api%E8%B0%83%E7%94%A8%E6%A0%BC%E5%BC%8F/"/>
-    <id>https://promptonce.github.io/2024/11/16/openai-api%E8%B0%83%E7%94%A8%E6%A0%BC%E5%BC%8F/</id>
-    <published>2024-11-16T10:16:55.000Z</published>
-    <updated>2024-11-17T12:38:31.162Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://platform.openai.com/docs/quickstart?language-preference=python">https://platform.openai.com/docs/quickstart?language-preference=python</a></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://platform.openai.com/docs/quickstart?language-preference=python&quot;&gt;https://platform.openai.com/docs/quickstart?language-pre</summary>
-      
-    
-    
-    
     
   </entry>
   

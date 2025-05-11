@@ -17,26 +17,24 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>454.四数相加II,383.赎金信,15.三数之和,18.四数之和 - PromptOnce</title>
+  <title>二叉树的深度与高度 - PromptOnce</title>
 
   
-    <meta name="description" content="​454.四数相加II  暴力算法。  先两个循环将和放到map中，再两个循环求和查询map，计算总数求和，将一个4层循环复杂度降低了。要查找一个元素是否出现用map, map也是一个hash结构。   3.没啥问题。  用了半个小时左右。  赎金信  没读懂。  和有效字母异位词方法差不多。  没啥问题。   4.用了半个小时左右。  三数之和  1.暴力算法。 2.用hash法去重麻烦，双指针">
+    <meta name="description" content="二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="454.四数相加II,383.赎金信,15.三数之和,18.四数之和">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/04/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II-383-%E8%B5%8E%E9%87%91%E4%BF%A1-15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C-18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
+<meta property="og:title" content="二叉树的深度与高度">
+<meta property="og:url" content="https://promptonce.github.io/2024/12/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%B8%8E%E9%AB%98%E5%BA%A6/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="​454.四数相加II  暴力算法。  先两个循环将和放到map中，再两个循环求和查询map，计算总数求和，将一个4层循环复杂度降低了。要查找一个元素是否出现用map, map也是一个hash结构。   3.没啥问题。  用了半个小时左右。  赎金信  没读懂。  和有效字母异位词方法差不多。  没啥问题。   4.用了半个小时左右。  三数之和  1.暴力算法。 2.用hash法去重麻烦，双指针">
+<meta property="og:description" content="二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-04T03:29:16.000Z">
-<meta property="article:modified_time" content="2024-11-23T15:37:18.582Z">
+<meta property="article:published_time" content="2024-12-28T07:56:01.000Z">
+<meta property="article:modified_time" content="2025-05-11T13:51:36.242Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="leetcode,算法">
+  
 
   <!-- feed -->
   
@@ -80,56 +78,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:29:16.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T15:37:18.582Z">2024-11-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-12-28T07:56:01.000Z">2024-12-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-05-11T13:51:36.242Z">2025-05-11</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>454.四数相加II,383.赎金信,15.三数之和,18.四数之和</span></h1>
+        <h1 class="text title"><span>二叉树的深度与高度</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>​<br>454.四数相加II</p>
-<ol>
-<li><p>暴力算法。</p>
-</li>
-<li><p>先两个循环将和放到map中，再两个循环求和查询map，计算总数求和，将一个4层循环复杂度降低了。要查找一个元素是否出现用map, map也是一个hash结构。</p>
-</li>
-</ol>
-<p>3.没啥问题。</p>
-<ol start="4">
-<li><p>用了半个小时左右。</p>
-</li>
-<li><p>赎金信</p>
-</li>
-<li><p>没读懂。</p>
-</li>
-<li><p>和有效字母异位词方法差不多。</p>
-</li>
-<li><p>没啥问题。</p>
-</li>
-</ol>
-<p>4.用了半个小时左右。</p>
-<ol start="15">
-<li>三数之和</li>
-</ol>
-<p>1.暴力算法。</p>
-<p>2.用hash法去重麻烦，双指针好理解。</p>
-<p>3.快速排序代码不熟悉，最外层循环的边界条件，当left&#x3D;&#x3D;right后left和right要移动(left左移,right右移)，不然会一直循环下去。</p>
-<p>4.用了一个小时左右，快速排序代码不熟悉，最外层循环的边界条件，当left&#x3D;&#x3D;right后left和right要移动(left左移,right右移)，不然会一直循环下去。</p>
-<ol start="18">
-<li><p>四数之和 </p>
-</li>
-<li><p>题目说了是用一个数组，用map也不好处理去重。</p>
-</li>
-<li><p>在双指针上增加一层循环，然后修改对应边界条件，添加去重逻辑，剪枝逻辑。</p>
-</li>
-<li><p>外层循环和内层循环的边界条件，剪枝操作那里为啥是break?</p>
-</li>
-</ol>
-<p>4.用了两个小时左右。</p>
+  </div><article class="md-text content"><p>  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -139,7 +99,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/04/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2-541-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II/">344.反转字符串,541.反转字符串II</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/04/242-%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D-349-%E4%B8%A4%E4%B8%AA%E6%95%B0%E7%BB%84%E7%9A%84%E4%BA%A4%E9%9B%86-202-%E5%BF%AB%E4%B9%90%E6%95%B0-1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">242.有效的字母异位词,349. 两个数组的交集,202.快乐数,1. 两数之和</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2025/01/01/NDVI%E6%80%BB%E7%BB%93/">NDVI总结</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/">flex布局总结</a></div></section></div>
 
 
 
