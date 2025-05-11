@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-11T14:31:58.929Z</updated>
+  <updated>2025-05-11T14:38:29.970Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://promptonce.github.io/2025/05/11/JavaScript%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E5%88%9D%E8%A1%B7/"/>
     <id>https://promptonce.github.io/2025/05/11/JavaScript%E8%AF%AD%E8%A8%80%E8%AE%BE%E8%AE%A1%E5%88%9D%E8%A1%B7/</id>
     <published>2025-05-11T14:23:29.000Z</published>
-    <updated>2025-05-11T14:31:58.929Z</updated>
+    <updated>2025-05-11T14:38:29.970Z</updated>
     
-    <content type="html"><![CDATA[<p>学习JavaScript语言需要有一些思想补丁，这门语言设计时为了追求开发速度所以不是特别严谨，比如定义var变量会做变量提升，在变量定义前打印也不会报错，这在其他语言里是不允许的。定义function A时又会自动创建A.prototype对象，这些无形发生的过程按照其他设计严谨的语言逻辑去理解是不行的，需要加以防范。</p>]]></content>
+    <content type="html"><![CDATA[<p>学习JavaScript语言需要有一些思想补丁，这门语言设计时为了追求开发速度所以不是特别严谨，比如定义var变量会做变量提升，在变量定义前打印也不会报错，这在其他语言里是不允许的。定义function A时又会自动创建A.prototype对象。只要通过new关键字调用，任何函数都可以作为构造函数。这些无形发生的过程按照其他设计严谨的语言逻辑去理解是不行的，需要加以防范。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;学习JavaScript语言需要有一些思想补丁，这门语言设计时为了追求开发速度所以不是特别严谨，比如定义var变量会做变量提升，在变量定义前打印也不会报错，这在其他语言里是不允许的。定义function A时又会自动创建A.prototype对象，这些无形发生的过程按照其他</summary>
+    <summary type="html">&lt;p&gt;学习JavaScript语言需要有一些思想补丁，这门语言设计时为了追求开发速度所以不是特别严谨，比如定义var变量会做变量提升，在变量定义前打印也不会报错，这在其他语言里是不允许的。定义function A时又会自动创建A.prototype对象。只要通过new关键字调用，</summary>
       
     
     
