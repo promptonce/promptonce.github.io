@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-12T07:43:27.528Z</updated>
+  <updated>2025-05-14T05:39:17.189Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>序列化和反序列化</title>
+    <link href="https://promptonce.github.io/2025/05/14/%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
+    <id>https://promptonce.github.io/2025/05/14/%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
+    <published>2025-05-14T05:26:18.000Z</published>
+    <updated>2025-05-14T05:39:17.189Z</updated>
+    
+    <content type="html"><![CDATA[<p>​</p><p>​计算机软件技术是对现实世界的抽象，宇宙间有万物，万物如何交互可以通过软件设计来抽象，受限于物质组合的发展，软件抽象设计也是一个逐步迭代的过程。当前宇宙的发展阶段为计算机基于电磁波这种物质而进行软件设计，两台计算机之间如何传递对象呢，按照OOP的思想，对象虽然位于计算机中，但仍然是一个逻辑上的实体，如何定义对象传输成功了呢？保证具有对象的所有信息就行，即通过序列化后通过HTTP传输，接收方可以通过与发送方互相达成协议，保证接收方能够按照自己的方式正确将序列化的内容进行还原，这是当下物质发展阶段的可以通用的一套方案。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​	&lt;/p&gt;
+&lt;p&gt;​	计算机软件技术是对现实世界的抽象，宇宙间有万物，万物如何交互可以通过软件设计来抽象，受限于物质组合的发展，软件抽象设计也是一个逐步迭代的过程。当前宇宙的发展阶段为计算机基于电磁波这种物质而进行软件设计，两台计算机之间如何传递对象呢，按照OOP的思想，</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>function call设计理念</title>
@@ -403,19 +424,6 @@
       
     <summary type="html">&lt;p&gt;  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量</summary>
       
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>flex布局总结</title>
-    <link href="https://promptonce.github.io/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2024/11/24/flex%E5%B8%83%E5%B1%80%E6%80%BB%E7%BB%93/</id>
-    <published>2024-11-24T05:54:00.000Z</published>
-    <updated>2024-11-24T05:54:00.589Z</updated>
-    
     
     
     
