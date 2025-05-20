@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-14T05:39:17.189Z</updated>
+  <updated>2025-05-20T08:53:06.029Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python面向对象中的抽象方法</title>
+    <link href="https://promptonce.github.io/2025/05/20/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95/"/>
+    <id>https://promptonce.github.io/2025/05/20/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E7%9A%84%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95/</id>
+    <published>2025-05-20T08:33:29.000Z</published>
+    <updated>2025-05-20T08:53:06.029Z</updated>
+    
+    <content type="html"><![CDATA[<p>​让错误能够在编译器运行时就检查出来，不用等到结果报错再改，用规范减少思维负担。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​	让错误能够在编译器运行时就检查出来，不用等到结果报错再改，用规范减少思维负担。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>序列化和反序列化</title>
@@ -403,26 +424,6 @@
       
       
     <summary type="html">&lt;p&gt;NDVI是一种由不同光谱计算而来的指数，具体来说用NIR-RED 比上 NIR + RED, 这个比值可以让植区域尽可能值接近1, 非植被区域的值尽可能小，NDVI可以衡量植被的健康程度，比如寻找农作物的病虫害。生态学家可以用NDVI来检测森林覆盖率变化，遥感专家可以利用N</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>二叉树的深度与高度</title>
-    <link href="https://promptonce.github.io/2024/12/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%B8%8E%E9%AB%98%E5%BA%A6/"/>
-    <id>https://promptonce.github.io/2024/12/28/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%B7%B1%E5%BA%A6%E4%B8%8E%E9%AB%98%E5%BA%A6/</id>
-    <published>2024-12-28T07:56:01.000Z</published>
-    <updated>2025-05-11T13:51:36.242Z</updated>
-    
-    <content type="html"><![CDATA[<p>  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  二叉树的根节点位于最顶部，这和现实中的树是反的，当谈论二叉树的深度时，通常是以根节点为准，看这个节点到根节点有多少条边，当谈论节点的高度时，以叶子节点为基准，看这个节点到叶子节点有多少条边，注意是到最远叶子节点有多少条边，这和深度不一样，节点的深度明确是到根节点的边数量</summary>
       
     
     
