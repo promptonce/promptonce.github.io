@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-21T10:19:26.000Z</updated>
+  <updated>2025-05-22T06:37:40.597Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaScript模块导出和导入</title>
+    <link href="https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/"/>
+    <id>https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/</id>
+    <published>2025-05-22T06:31:52.000Z</published>
+    <updated>2025-05-22T06:37:40.597Z</updated>
+    
+    <content type="html"><![CDATA[<p>  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，可以通过module.exports &#x3D; {xxx}的方式导出，在其他文件中通过require(xxx.js)导入使用，这种方式为开发者实现代码整洁提供了方法。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，可以通过module.exports &amp;#x3D; {xxx}的方式导出，在其他文件中通过requir</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>文本Prompt分段工具</title>
@@ -404,27 +424,6 @@
       
       
     <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue中props传值总结</title>
-    <link href="https://promptonce.github.io/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/</id>
-    <published>2025-01-21T05:15:17.000Z</published>
-    <updated>2025-01-21T05:22:58.224Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/props%E4%BC%A0%E5%80%BC.png" class="" title="props传值"> ]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADprops%E4%BC%A0%E5%80%BC%E6%80%BB%E7%BB%93/props%E4%BC%A0%E5%80%BC.png&quot; class=&quot;&quot; title=&quot;props传值&quot;&gt; 
-</summary>
       
     
     
