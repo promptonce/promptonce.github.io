@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-22T06:54:36.617Z</updated>
+  <updated>2025-05-22T06:59:48.698Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/"/>
     <id>https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/</id>
     <published>2025-05-22T06:31:52.000Z</published>
-    <updated>2025-05-22T06:54:36.617Z</updated>
+    <updated>2025-05-22T06:59:48.698Z</updated>
     
-    <content type="html"><![CDATA[<p>  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过module.exports &#x3D; {xxx}的方式导出，在其他文件中通过require(xxx.js)导入使用，这种方式为开发者实现代码整洁提供了方法。</p>]]></content>
+    <content type="html"><![CDATA[<p>  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，这里所说的数据包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过module.exports &#x3D; {xxx}的方式导出，在其他文件中通过require(xxx.js)导入使用，这种方式为开发者实现代码整洁提供了方法。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过module.e</summary>
+    <summary type="html">&lt;p&gt;  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，这里所说的数据包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过m</summary>
       
     
     
