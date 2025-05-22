@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-22T07:44:29.808Z</updated>
+  <updated>2025-05-22T07:46:55.210Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/"/>
     <id>https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/</id>
     <published>2025-05-22T07:37:51.000Z</published>
-    <updated>2025-05-22T07:44:29.808Z</updated>
+    <updated>2025-05-22T07:46:55.210Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>  通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;pre&gt;&lt;code&gt;通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。
-&lt;/code&gt;&lt;/pre&gt;
+    <summary type="html">&lt;p&gt;  通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。&lt;/p&gt;
 </summary>
       
     
