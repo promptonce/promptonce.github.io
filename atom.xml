@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-22T06:59:48.698Z</updated>
+  <updated>2025-05-22T07:44:29.808Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前后端协同开发</title>
+    <link href="https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/"/>
+    <id>https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/</id>
+    <published>2025-05-22T07:37:51.000Z</published>
+    <updated>2025-05-22T07:44:29.808Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题而不用被复杂的业务逻辑干扰专注度。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript模块导出和导入</title>
@@ -404,26 +426,6 @@
       
     <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png&quot; class=&quot;&quot; title=&quot;vue中slot总结&quot;&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>hexo博客中插入图片语法</title>
-    <link href="https://promptonce.github.io/2025/01/21/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/"/>
-    <id>https://promptonce.github.io/2025/01/21/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E8%AF%AD%E6%B3%95/</id>
-    <published>2025-01-21T05:18:42.000Z</published>
-    <updated>2025-02-15T12:34:13.486Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% asset_img xxx.png xxx %&#125; </span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span c</summary>
       
     
     
