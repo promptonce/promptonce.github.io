@@ -17,26 +17,24 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>344.反转字符串,541.反转字符串II - PromptOnce</title>
+  <title>静态语言和动态语言 - PromptOnce</title>
 
   
-    <meta name="description" content="​344. 反转字符串  感觉需要用到指针，但不知道咋做。  倒序就是一个交换left,right指针对应指针值的过程。  纠结在javascript中能不能用字符串索引（就是当数组用），javascript中不能像数组那样索引元素。  再一次见识到了双指针的力量。用了半个小时左右。  反转字符串 II  读不懂题。  卡哥真牛啊，纸上推一下吧，用小人脑虚拟出来的小计算机测试一下不好想的地方（谁和">
+    <meta name="description" content="对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="344.反转字符串,541.反转字符串II">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/04/344-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2-541-%E5%8F%8D%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2II/index.html">
+<meta property="og:title" content="静态语言和动态语言">
+<meta property="og:url" content="https://promptonce.github.io/2025/05/23/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80%E5%92%8C%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="​344. 反转字符串  感觉需要用到指针，但不知道咋做。  倒序就是一个交换left,right指针对应指针值的过程。  纠结在javascript中能不能用字符串索引（就是当数组用），javascript中不能像数组那样索引元素。  再一次见识到了双指针的力量。用了半个小时左右。  反转字符串 II  读不懂题。  卡哥真牛啊，纸上推一下吧，用小人脑虚拟出来的小计算机测试一下不好想的地方（谁和">
+<meta property="og:description" content="对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-04T03:31:29.000Z">
-<meta property="article:modified_time" content="2024-11-23T15:37:11.827Z">
+<meta property="article:published_time" content="2025-05-23T14:41:06.000Z">
+<meta property="article:modified_time" content="2025-05-23T14:46:16.270Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="leetcode">
-<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="leetcode,算法">
+  
 
   <!-- feed -->
   
@@ -80,37 +78,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-04T03:31:29.000Z">2024-09-04</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-23T15:37:11.827Z">2024-11-23</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-05-23T14:41:06.000Z">2025-05-23</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-05-23T14:46:16.270Z">2025-05-23</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>344.反转字符串,541.反转字符串II</span></h1>
+        <h1 class="text title"><span>静态语言和动态语言</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>​<br>344. 反转字符串</p>
-<ol>
-<li><p>感觉需要用到指针，但不知道咋做。</p>
-</li>
-<li><p>倒序就是一个交换left,right指针对应指针值的过程。</p>
-</li>
-<li><p>纠结在javascript中能不能用字符串索引（就是当数组用），javascript中不能像数组那样索引元素。</p>
-</li>
-<li><p>再一次见识到了双指针的力量。用了半个小时左右。</p>
-</li>
-<li><p>反转字符串 II</p>
-</li>
-<li><p>读不懂题。</p>
-</li>
-<li><p>卡哥真牛啊，纸上推一下吧，用小人脑虚拟出来的小计算机测试一下不好想的地方（谁和计算机比计算能力哟）。</p>
-</li>
-<li><p>（如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样）前半段字符串反转，这句话是遍历到后面才会遇到的，题目中放在了前面，（如果剩余字符少于 k 个，则将剩余字符全部反转），这两句话前面遍历遇到，题目中放在了后面，这个算法其实还是在考reverse函数的实现，（如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样）这本质上就是在计算机试结果。写边界条件确定整个题的循环不变量是啥，严格按照循环变量来写边界条件，出错率低。</p>
-</li>
-</ol>
-<p>4. （如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样）前半段字符串反转，这句话是遍历到后面才会遇到的，题目中放在了前面，（如果剩余字符少于 k 个，则将剩余字符全部反转），这两句话前面遍历遇到，题目中放在了后面，这个算法其实还是在考reverse函数的实现，（如果剩余字符小于 2k 但大于或等于 k 个，则反转前 k 个字符，其余字符保持原样）这本质上就是在计算机试结果。写边界条件确定整个题的循环不变量是啥，严格按照循环变量来写边界条件，出错率低。</p>
+  </div><article class="md-text content"><p>  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -120,7 +99,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/04/151-%E7%BF%BB%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2%E9%87%8C%E7%9A%84%E5%8D%95%E8%AF%8D-%E5%8D%A1%E7%A0%81%E7%BD%91-55-%E5%8F%B3%E6%97%8B%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/">151.翻转字符串里的单词,卡码网:55.右旋转字符串</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/04/454-%E5%9B%9B%E6%95%B0%E7%9B%B8%E5%8A%A0II-383-%E8%B5%8E%E9%87%91%E4%BF%A1-15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C-18-%E5%9B%9B%E6%95%B0%E4%B9%8B%E5%92%8C/">454.四数相加II,383.赎金信,15.三数之和,18.四数之和</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/">前后端协同开发</a></div></section></div>
 
 
 

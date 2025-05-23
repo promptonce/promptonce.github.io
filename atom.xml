@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-22T07:53:47.633Z</updated>
+  <updated>2025-05-23T14:46:16.270Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>静态语言和动态语言</title>
+    <link href="https://promptonce.github.io/2025/05/23/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80%E5%92%8C%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
+    <id>https://promptonce.github.io/2025/05/23/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80%E5%92%8C%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/</id>
+    <published>2025-05-23T14:41:06.000Z</published>
+    <updated>2025-05-23T14:46:16.270Z</updated>
+    
+    <content type="html"><![CDATA[<p>  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前后端协同开发</title>
@@ -403,27 +424,6 @@
     <summary type="html">&lt;img src=&quot;/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1.png&quot; class=&quot;&quot; title=&quot;vue组件通信&quot;&gt;
 
 &lt;p&gt;父组件</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue中slot总结</title>
-    <link href="https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/</id>
-    <published>2025-01-21T05:50:26.000Z</published>
-    <updated>2025-01-21T05:51:55.220Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png" class="" title="vue中slot总结">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/01/21/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93/vue%E4%B8%ADslot%E6%80%BB%E7%BB%93.png&quot; class=&quot;&quot; title=&quot;vue中slot总结&quot;&gt;
-</summary>
       
     
     
