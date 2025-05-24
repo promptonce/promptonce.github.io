@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-23T14:46:16.270Z</updated>
+  <updated>2025-05-24T02:46:41.429Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AutoDL原理</title>
+    <link href="https://promptonce.github.io/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/"/>
+    <id>https://promptonce.github.io/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/</id>
+    <published>2025-05-24T02:44:06.000Z</published>
+    <updated>2025-05-24T02:46:41.429Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/AutoDL%E5%8E%9F%E7%90%86.png" class="" title="AutoDL原理">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/AutoDL%E5%8E%9F%E7%90%86.png&quot; class=&quot;&quot; title=&quot;AutoDL原理&quot;&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>静态语言和动态语言</title>
@@ -402,28 +423,6 @@
       
     <summary type="html">&lt;p&gt;由技术变化产生的新需求，基于L站sharedchat的拓展，技术没有太高门槛，成熟的技术团队要么不愿意做要么没有看到技术变革产生的新用户群体。&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>vue组件通信</title>
-    <link href="https://promptonce.github.io/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/"/>
-    <id>https://promptonce.github.io/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/</id>
-    <published>2025-01-24T12:44:33.000Z</published>
-    <updated>2025-04-11T08:45:05.696Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1.png" class="" title="vue组件通信"><p>父组件向子组件传递值可以用props, 子组件向父组件传值可以用emit。vue2中可以用事件总线技术如eventbus，eventbus适合小型项目。如果是跨层级的组件可以通过provide和inject配合实现数据传递。Vuex和Pinia可以实现组件状态共享。$parent和$children也可以用于通信，但不建议这样做，会提高组件的耦合度。另外，利用作用域插槽也可以实现组件的通信。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/01/24/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1/vue%E7%BB%84%E4%BB%B6%E9%80%9A%E4%BF%A1.png&quot; class=&quot;&quot; title=&quot;vue组件通信&quot;&gt;
-
-&lt;p&gt;父组件</summary>
       
     
     
