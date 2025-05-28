@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-05-27T03:05:54.772Z</updated>
+  <updated>2025-05-28T02:09:33.691Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,15 +21,14 @@
     <link href="https://promptonce.github.io/2025/05/27/redis%E7%9B%B8%E5%AF%B9%E4%BA%8E%E4%BC%A0%E7%BB%9F%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     <id>https://promptonce.github.io/2025/05/27/redis%E7%9B%B8%E5%AF%B9%E4%BA%8E%E4%BC%A0%E7%BB%9F%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
     <published>2025-05-27T03:04:14.000Z</published>
-    <updated>2025-05-27T03:05:54.772Z</updated>
+    <updated>2025-05-28T02:09:33.691Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。</code></pre>]]></content>
+    <content type="html"><![CDATA[<p>  传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;pre&gt;&lt;code&gt;传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。
-&lt;/code&gt;&lt;/pre&gt;
+    <summary type="html">&lt;p&gt;  传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。&lt;/p&gt;
 </summary>
       
     
