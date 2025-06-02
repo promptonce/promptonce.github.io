@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-02T14:07:12.710Z</updated>
+  <updated>2025-06-02T14:10:05.058Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://promptonce.github.io/2025/06/02/Vuex%E7%9A%84%E7%90%86%E8%A7%A3/"/>
     <id>https://promptonce.github.io/2025/06/02/Vuex%E7%9A%84%E7%90%86%E8%A7%A3/</id>
     <published>2025-06-02T13:52:19.000Z</published>
-    <updated>2025-06-02T14:07:12.710Z</updated>
+    <updated>2025-06-02T14:10:05.058Z</updated>
     
-    <content type="html"><![CDATA[<p>  一个Vue应用中包含多个Vue组件，组件与组件之间可能通信关系复杂，这个时候需要Vuex作为中心进行管理，这和家里面的中心储物柜原理相同，1. 可以减小开发成本，避免多层嵌套组件链条中数据修改不好追踪的问题。 2. 通过维护唯一数据源，避免出现数据不一致的问题。3. 将数据处理逻辑集中在一个地方，避免数据处理方法分布在多个method中不好维护。</p>]]></content>
+    <content type="html"><![CDATA[<p>  一个Vue应用中包含多个Vue组件，组件与组件之间可能通信关系复杂，这个时候需要Vuex作为中心进行管理，这和家里面的中心储物柜原理相同，1. 可以减小开发成本，避免多层嵌套组件链条中数据修改不好追踪的问题。 2. 通过维护唯一数据源，避免出现数据不一致的问题。3. 将数据处理逻辑集中在一个地方，避免数据处理方法分布在多个method中不好维护的问题。</p>]]></content>
     
     
       
