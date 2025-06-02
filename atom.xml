@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-02T14:50:22.824Z</updated>
+  <updated>2025-06-02T15:33:29.914Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>并发、并行、异步、同步</title>
+    <link href="https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/"/>
+    <id>https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/</id>
+    <published>2025-06-02T15:29:49.000Z</published>
+    <updated>2025-06-02T15:33:29.914Z</updated>
+    
+    <content type="html"><![CDATA[<p>  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>进程与线程</title>
@@ -403,26 +423,6 @@
       
     <summary type="html">&lt;img src=&quot;/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/HTML5%E6%96%B0%E7%89%B9%E6%80%A7.png&quot; class=&quot;&quot; title=&quot;HTML5新特性&quot;&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML语义化标签总结</title>
-    <link href="https://promptonce.github.io/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/</id>
-    <published>2025-03-11T03:36:47.000Z</published>
-    <updated>2025-03-11T03:41:11.138Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE.png" class="" title="HTML语义化标签">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE.</summary>
       
     
     
