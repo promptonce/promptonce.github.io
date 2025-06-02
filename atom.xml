@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-02T14:10:05.058Z</updated>
+  <updated>2025-06-02T14:50:22.824Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>进程与线程</title>
+    <link href="https://promptonce.github.io/2025/06/02/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/"/>
+    <id>https://promptonce.github.io/2025/06/02/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/</id>
+    <published>2025-06-02T14:42:51.000Z</published>
+    <updated>2025-06-02T14:50:22.824Z</updated>
+    
+    <content type="html"><![CDATA[<p>  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行，这些程序共享同一个数据“文档”，这就时线程高效的原因。 一个进程的多个线程会轮流占用CPU时间。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Vuex的理解</title>
@@ -403,26 +423,6 @@
       
       
     <summary type="html">&lt;img src=&quot;/2025/03/11/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE%E6%80%BB%E7%BB%93/HTML%E8%AF%AD%E4%B9%89%E5%8C%96%E6%A0%87%E7%AD%BE.</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript基本类型</title>
-    <link href="https://promptonce.github.io/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/"/>
-    <id>https://promptonce.github.io/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</id>
-    <published>2025-03-09T09:11:16.000Z</published>
-    <updated>2025-04-11T00:46:32.114Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B.png" class="" title="JavaScript基本类型"><p>Number, String, Null, Undefined, Boolean。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/03/09/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/JavaScript%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B.png&quot; class=&quot;&quot; title=&quot;Jav</summary>
       
     
     

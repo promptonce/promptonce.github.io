@@ -17,18 +17,18 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>简单工厂模式 - PromptOnce</title>
+  <title>进程与线程 - PromptOnce</title>
 
   
-    <meta name="description" content="简单工厂模式（Simple Factory Pattern) ：又称为静态工厂方法 (Static Factory Method) 模式》它属于类创建型模式。在简单工厂模式中，可以根据参数的不同返回不同类的实例。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。">
+    <meta name="description" content="程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行，这些程序共享同一个数据“文档”，这就时线程高效的原因。 一个进程的多个线程会轮流占用CPU时间。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单工厂模式">
-<meta property="og:url" content="https://promptonce.github.io/2024/09/08/%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/index.html">
+<meta property="og:title" content="进程与线程">
+<meta property="og:url" content="https://promptonce.github.io/2025/06/02/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="简单工厂模式（Simple Factory Pattern) ：又称为静态工厂方法 (Static Factory Method) 模式》它属于类创建型模式。在简单工厂模式中，可以根据参数的不同返回不同类的实例。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。">
+<meta property="og:description" content="程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行，这些程序共享同一个数据“文档”，这就时线程高效的原因。 一个进程的多个线程会轮流占用CPU时间。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-09-08T02:22:22.000Z">
-<meta property="article:modified_time" content="2024-09-08T02:25:35.204Z">
+<meta property="article:published_time" content="2025-06-02T14:42:51.000Z">
+<meta property="article:modified_time" content="2025-06-02T14:50:22.824Z">
 <meta property="article:author" content="penggan">
 <meta name="twitter:card" content="summary">
   
@@ -78,18 +78,18 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-09-08T02:22:22.000Z">2024-09-08</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-09-08T02:25:35.204Z">2024-09-08</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-06-02T14:42:51.000Z">2025-06-02</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-02T14:50:22.824Z">2025-06-02</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>简单工厂模式</span></h1>
+        <h1 class="text title"><span>进程与线程</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><p>简单工厂模式（Simple Factory Pattern) ：又称为静态工厂方法 (Static Factory Method) 模式》它属于类创建型模式。在简单工厂模式中，可以根据参数的不同返回不同类的实例。简单工厂模式专门定义一个类来负责创建其他类的实例，被创建的实例通常都具有共同的父类。</p>
+  </div><article class="md-text content"><p>  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行，这些程序共享同一个数据“文档”，这就时线程高效的原因。 一个进程的多个线程会轮流占用CPU时间。</p>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -99,7 +99,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/09/08/passwordtry/">passwordtry</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/09/06/77-%E7%BB%84%E5%90%88-216-%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CIII-17-%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88/">77.组合,216.组合总和III,17.电话号码的字母组合</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/06/02/Vuex%E7%9A%84%E7%90%86%E8%A7%A3/">Vuex的理解</a></div></section></div>
 
 
 
