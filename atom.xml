@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-02T15:33:29.914Z</updated>
+  <updated>2025-06-03T01:14:22.044Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -17,18 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>异步编程的适用场景</title>
+    <link href="https://promptonce.github.io/2025/06/03/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    <id>https://promptonce.github.io/2025/06/03/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
+    <published>2025-06-03T01:13:39.000Z</published>
+    <updated>2025-06-03T01:14:22.044Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>并发、并行、异步、同步</title>
     <link href="https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/"/>
     <id>https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/</id>
     <published>2025-06-02T15:29:49.000Z</published>
-    <updated>2025-06-02T15:33:29.914Z</updated>
+    <updated>2025-06-03T02:06:37.635Z</updated>
     
-    <content type="html"><![CDATA[<p>  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码。</p>]]></content>
+    <content type="html"><![CDATA[<p>  一个人在烧水、洗衣服、玩手机时可以选择做完一件事情后再做另一件事情，即便这样是低效的但也可以抽象为一种cpu的工作方式，站在更高效转换能源的角度，更合理的抽象方式是让CPU在等待一个任务执行完成的间隙切换到其他任务，对于I&#x2F;O密集型和网络请求这类任务来说，优化CPU的工作模式相比于提高这些任务的执行速度更有性价比，感觉计算机技术有点像在物理环境受限的情况下用智慧去走捷径的妥协艺术。<br>  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码</summary>
+    <summary type="html">&lt;p&gt;  一个人在烧水、洗衣服、玩手机时可以选择做完一件事情后再做另一件事情，即便这样是低效的但也可以抽象为一种cpu的工作方式，站在更高效转换能源的角度，更合理的抽象方式是让CPU在等待一个任务执行完成的间隙切换到其他任务，对于I&amp;#x2F;O密集型和网络请求这类任务来说，优化</summary>
       
     
     
@@ -402,27 +415,6 @@
       
       
     <summary type="html">&lt;p&gt;我感觉就是浏览器的设计不能完全满足前端开发的需求，比如开发体验更好的SCSS，需要转译为CSS，ts转js，这一步需要构建工具来完成。浏览器需要和服务器建立连接，考虑到网络传输，构建工具将javascript进行压缩和合并到一个文件可以提高浏览器加载速度。有各种类型的浏览器</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>HTML5新特性</title>
-    <link href="https://promptonce.github.io/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/"/>
-    <id>https://promptonce.github.io/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/</id>
-    <published>2025-03-11T03:51:11.000Z</published>
-    <updated>2025-03-11T03:54:11.407Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/HTML5%E6%96%B0%E7%89%B9%E6%80%A7.png" class="" title="HTML5新特性">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/03/11/HTML5%E6%96%B0%E7%89%B9%E6%80%A7/HTML5%E6%96%B0%E7%89%B9%E6%80%A7.png&quot; class=&quot;&quot; title=&quot;HTML5新特性&quot;&gt;
-</summary>
       
     
     
