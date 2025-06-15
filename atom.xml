@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-09T15:25:41.942Z</updated>
+  <updated>2025-06-15T13:34:14.398Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>cmd和powershell的区别</title>
+    <link href="https://promptonce.github.io/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>https://promptonce.github.io/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2025-06-15T13:33:33.000Z</published>
+    <updated>2025-06-15T13:34:14.398Z</updated>
+    
+    <content type="html"><![CDATA[<p>  powershell在cmd上支持了更多的语法支持。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  powershell在cmd上支持了更多的语法支持。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>显示器亮度对比度护眼调节设置</title>
@@ -400,26 +421,6 @@
       
       
     <summary type="html">&lt;p&gt;学习JavaScript语言需要有一些思想补丁，这门语言设计时为了追求开发速度所以不是特别严谨，比如定义var变量会做变量提升，在变量定义前打印也不会报错，这在其他语言里是不允许的。定义function A时又会自动创建A.prototype对象。只要通过new关键字调用，</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>显示屏护眼环境光照设置</title>
-    <link href="https://promptonce.github.io/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://promptonce.github.io/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/</id>
-    <published>2025-05-07T01:34:59.000Z</published>
-    <updated>2025-06-08T01:20:52.437Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE.png" class="" title="显示屏护眼环境光照设置"><p>核心是防炫光，然后是降低明暗对比。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/%E6%98%BE%E7%A4%BA</summary>
       
     
     
