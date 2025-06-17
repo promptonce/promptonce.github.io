@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-17T15:10:41.598Z</updated>
+  <updated>2025-06-17T15:12:05.555Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>程序员AI辅助编程Prompt的成本核算</title>
-    <link href="https://promptonce.github.io/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8BPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/"/>
-    <id>https://promptonce.github.io/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8BPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/</id>
+    <title>程序员AI辅助编程中Prompt的成本核算</title>
+    <link href="https://promptonce.github.io/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%ADPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/"/>
+    <id>https://promptonce.github.io/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%ADPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/</id>
     <published>2025-06-17T15:04:58.000Z</published>
-    <updated>2025-06-17T15:10:41.598Z</updated>
+    <updated>2025-06-17T15:12:05.555Z</updated>
     
     <content type="html"><![CDATA[<p>  LLM在处理能力范围内的需求时代码键入速度远超人类，即便是地表最优秀的程序员，这好比计算机在计算速度上远超过任何一个数学家一样。在这个前提下将软件开发需求描述清楚是非常有性价比的，当少数文字对应大段业务代码时提效非常明显，当设计架构方面的代码编写上依赖与Agent的能力，在Agent能力范围以内遵循少数文字对应大段业务代码操作时提效非常明显。</p>]]></content>
     
