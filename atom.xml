@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-18T05:29:15.230Z</updated>
+  <updated>2025-06-18T12:50:37.118Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>定义变量和程序实现的关系</title>
+    <link href="https://promptonce.github.io/2025/06/18/%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E5%92%8C%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B3%E7%B3%BB/"/>
+    <id>https://promptonce.github.io/2025/06/18/%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E5%92%8C%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B3%E7%B3%BB/</id>
+    <published>2025-06-18T12:46:35.000Z</published>
+    <updated>2025-06-18T12:50:37.118Z</updated>
+    
+    <content type="html"><![CDATA[<p>  对于算法和应用结合的程序，变量定义说明算法逻辑关系捋清楚了，后面就是为算法服务的工具调用问题。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  对于算法和应用结合的程序，变量定义说明算法逻辑关系捋清楚了，后面就是为算法服务的工具调用问题。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>软件开发的深水区浅水区理论</title>
@@ -401,27 +422,6 @@
       
     <summary type="html">&lt;p&gt;​	让错误能够在编译器运行时就检查出来，不用等到结果报错再改，用规范减少思维负担。&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>序列化和反序列化</title>
-    <link href="https://promptonce.github.io/2025/05/14/%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/"/>
-    <id>https://promptonce.github.io/2025/05/14/%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96/</id>
-    <published>2025-05-14T05:26:18.000Z</published>
-    <updated>2025-05-14T05:39:17.189Z</updated>
-    
-    <content type="html"><![CDATA[<p>​</p><p>​计算机软件技术是对现实世界的抽象，宇宙间有万物，万物如何交互可以通过软件设计来抽象，受限于物质组合的发展，软件抽象设计也是一个逐步迭代的过程。当前宇宙的发展阶段为计算机基于电磁波这种物质而进行软件设计，两台计算机之间如何传递对象呢，按照OOP的思想，对象虽然位于计算机中，但仍然是一个逻辑上的实体，如何定义对象传输成功了呢？保证具有对象的所有信息就行，即通过序列化后通过HTTP传输，接收方可以通过与发送方互相达成协议，保证接收方能够按照自己的方式正确将序列化的内容进行还原，这是当下物质发展阶段的可以通用的一套方案。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;​	&lt;/p&gt;
-&lt;p&gt;​	计算机软件技术是对现实世界的抽象，宇宙间有万物，万物如何交互可以通过软件设计来抽象，受限于物质组合的发展，软件抽象设计也是一个逐步迭代的过程。当前宇宙的发展阶段为计算机基于电磁波这种物质而进行软件设计，两台计算机之间如何传递对象呢，按照OOP的思想，</summary>
       
     
     
