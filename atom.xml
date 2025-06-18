@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-06-17T15:26:07.138Z</updated>
+  <updated>2025-06-18T05:29:15.230Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>软件开发的深水区浅水区理论</title>
+    <link href="https://promptonce.github.io/2025/06/18/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E6%B7%B1%E6%B0%B4%E5%8C%BA%E6%B5%85%E6%B0%B4%E5%8C%BA%E7%90%86%E8%AE%BA/"/>
+    <id>https://promptonce.github.io/2025/06/18/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E6%B7%B1%E6%B0%B4%E5%8C%BA%E6%B5%85%E6%B0%B4%E5%8C%BA%E7%90%86%E8%AE%BA/</id>
+    <published>2025-06-18T03:42:26.000Z</published>
+    <updated>2025-06-18T05:29:15.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>  在浅水区，科学家最早关注的区域，这里理论相对成熟，做开发会非常趁手，在这里应该更多关注虚心学习的态度。在深水区，努力也很重要，但天赋灵感的作用也会凸现。不要轻易将深水区的理论带到浅水区，分清楚自娱自乐和技术创造社会价值的区别。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  在浅水区，科学家最早关注的区域，这里理论相对成熟，做开发会非常趁手，在这里应该更多关注虚心学习的态度。在深水区，努力也很重要，但天赋灵感的作用也会凸现。不要轻易将深水区的理论带到浅水区，分清楚自娱自乐和技术创造社会价值的区别。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>程序员AI辅助编程中Prompt的成本核算</title>
@@ -401,26 +422,6 @@
       
     <summary type="html">&lt;p&gt;​	&lt;/p&gt;
 &lt;p&gt;​	计算机软件技术是对现实世界的抽象，宇宙间有万物，万物如何交互可以通过软件设计来抽象，受限于物质组合的发展，软件抽象设计也是一个逐步迭代的过程。当前宇宙的发展阶段为计算机基于电磁波这种物质而进行软件设计，两台计算机之间如何传递对象呢，按照OOP的思想，</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>function call设计理念</title>
-    <link href="https://promptonce.github.io/2025/05/12/function-call%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/"/>
-    <id>https://promptonce.github.io/2025/05/12/function-call%E8%AE%BE%E8%AE%A1%E7%90%86%E5%BF%B5/</id>
-    <published>2025-05-12T07:34:18.000Z</published>
-    <updated>2025-05-12T07:43:27.528Z</updated>
-    
-    <content type="html"><![CDATA[<p>​程序运行无非就是输入输出，LLM的出现结合Function Call技术可以将程序输入这一步放宽松，用户输入的是自然语言也可以通过LLM转为程序能理解的输入，利用了LLM的自然语言处理能力和推理能力，有了标准化的输入后程序能够执行一些和工具交互的操作，如果调用的工具能否返回结果，那么还可以将调用结果返回给LLM，再利用LLM的NLP和推理能力优化输出。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;​	程序运行无非就是输入输出，LLM的出现结合Function Call技术可以将程序输入这一步放宽松，用户输入的是自然语言也可以通过LLM转为程序能理解的输入，利用了LLM的自然语言处理能力和推理能力，有了标准化的输入后程序能够执行一些和工具交互的操作，如果调用的工具能否</summary>
       
     
     
