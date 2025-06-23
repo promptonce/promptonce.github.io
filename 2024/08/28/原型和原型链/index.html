@@ -20,16 +20,16 @@
   <title>原型和原型链 - PromptOnce</title>
 
   
-    <meta name="description" content="JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._proto_ &#x3D;&amp;#x3D">
+    <meta name="description" content="JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法在所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._proto_ &#x3D;&amp;#x3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="原型和原型链">
 <meta property="og:url" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._proto_ &#x3D;&amp;#x3D">
+<meta property="og:description" content="JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法在所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._proto_ &#x3D;&amp;#x3">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://promptonce.github.io/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.png">
 <meta property="article:published_time" content="2024-08-28T08:00:18.000Z">
-<meta property="article:modified_time" content="2025-06-18T02:33:39.706Z">
+<meta property="article:modified_time" content="2025-06-23T01:10:01.338Z">
 <meta property="article:author" content="penggan">
 <meta property="article:tag" content="编程语言">
 <meta property="article:tag" content="JavaScript">
@@ -69,7 +69,7 @@
 <div class="widgets">
 
 
-<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">箭头函数和普通函数的区别</span></a><a class="item title" href="/2025/06/18/%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E5%92%8C%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B3%E7%B3%BB/"><span class="title">定义变量和程序实现的关系</span></a><a class="item title" href="/2025/06/18/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E6%B7%B1%E6%B0%B4%E5%8C%BA%E6%B5%85%E6%B0%B4%E5%8C%BA%E7%90%86%E8%AE%BA/"><span class="title">软件开发的深水区浅水区理论</span></a><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型和原型链</span></a><a class="item title" href="/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%ADPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/"><span class="title">程序员AI辅助编程中Prompt的成本核算</span></a><a class="item title" href="/2025/06/09/%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BA%AE%E5%BA%A6%E5%AF%B9%E6%AF%94%E5%BA%A6%E6%8A%A4%E7%9C%BC%E8%B0%83%E8%8A%82%E8%AE%BE%E7%BD%AE/"><span class="title">显示器亮度对比度护眼调节设置</span></a><a class="item title" href="/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">cmd和powershell的区别</span></a><a class="item title" href="/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/"><span class="title">显示屏护眼环境光照设置</span></a><a class="item title" href="/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%9C%80%E6%B1%82%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97%E9%97%AE%E9%A2%98/"><span class="title">软件开发需求实现过程中的成本核算问题</span></a><a class="item title" href="/2025/06/04/%E5%A6%82%E4%BD%95%E5%87%8F%E5%B0%91%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E5%B8%A6%E6%9D%A5%E7%9A%84%E4%B8%8D%E9%80%82%E6%84%9F/"><span class="title">如何减少软件开发编程语言切换带来的不适感</span></a></div></widget>
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/"><span class="title">原型和原型链</span></a><a class="item title" href="/2024/08/28/%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%92%8C%E6%99%AE%E9%80%9A%E5%87%BD%E6%95%B0%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">箭头函数和普通函数的区别</span></a><a class="item title" href="/2025/06/18/%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E5%92%8C%E7%A8%8B%E5%BA%8F%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%85%B3%E7%B3%BB/"><span class="title">定义变量和程序实现的关系</span></a><a class="item title" href="/2025/06/18/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%9A%84%E6%B7%B1%E6%B0%B4%E5%8C%BA%E6%B5%85%E6%B0%B4%E5%8C%BA%E7%90%86%E8%AE%BA/"><span class="title">软件开发的深水区浅水区理论</span></a><a class="item title" href="/2025/06/17/%E7%A8%8B%E5%BA%8F%E5%91%98AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%ADPrompt%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97/"><span class="title">程序员AI辅助编程中Prompt的成本核算</span></a><a class="item title" href="/2025/06/09/%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BA%AE%E5%BA%A6%E5%AF%B9%E6%AF%94%E5%BA%A6%E6%8A%A4%E7%9C%BC%E8%B0%83%E8%8A%82%E8%AE%BE%E7%BD%AE/"><span class="title">显示器亮度对比度护眼调节设置</span></a><a class="item title" href="/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/"><span class="title">cmd和powershell的区别</span></a><a class="item title" href="/2025/05/07/%E6%98%BE%E7%A4%BA%E5%B1%8F%E6%8A%A4%E7%9C%BC%E7%8E%AF%E5%A2%83%E5%85%89%E7%85%A7%E8%AE%BE%E7%BD%AE/"><span class="title">显示屏护眼环境光照设置</span></a><a class="item title" href="/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%9C%80%E6%B1%82%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97%E9%97%AE%E9%A2%98/"><span class="title">软件开发需求实现过程中的成本核算问题</span></a><a class="item title" href="/2025/06/04/%E5%A6%82%E4%BD%95%E5%87%8F%E5%B0%91%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80%E5%88%87%E6%8D%A2%E5%B8%A6%E6%9D%A5%E7%9A%84%E4%B8%8D%E9%80%82%E6%84%9F/"><span class="title">如何减少软件开发编程语言切换带来的不适感</span></a></div></widget>
 </div>
 
 </div></aside><div class="l_main" id="main">
@@ -82,7 +82,7 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-18T02:33:39.706Z">2025-06-18</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-28T08:00:18.000Z">2024-08-28</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-06-23T01:10:01.338Z">2025-06-23</time></span></div></div></div>
     
     <div class="bottom only-title">
       
@@ -95,7 +95,7 @@
   </div>
   </div><article class="md-text content"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/2024/08/28/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE/%E5%8E%9F%E5%9E%8B%E5%92%8C%E5%8E%9F%E5%9E%8B%E9%93%BE.png" class="lazy" title="原型和原型链">
 
-<p>JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._<em>proto_</em> &#x3D;&#x3D; A.prototype, 方便确定对象是那个函数实例化出来的。在调用某个对象的属性或函数时，现在对象所对应的构造函数C自身的定义上查找，如果找到就执行，如果没有找到，就去这个对象的__proto__属性上查找，也就是C的prototype上查找, 如果找到了就执行，如果没有找到，因为C.prototype本身也是一个对象，这个对象是由Object创建的，C.prototype._<em>proto_</em> &#x3D;&#x3D; Object.prototype, 所以在Object.prototype上查找，如果找到了就执行，如果还是没有找到同样由于Object.prototype也是一个对象，它也有__proto__属性，其值为null , 所以不可能在查找到值了，直接返回null。</p>
+<p>JavaScript中任何一个函数都可以作为构造函数，只要通过new关键字调用，任何一个函数创建后，JavaScript框架会为这个函数创建一个prototype属性，在这个prototype上定义的属性和方法在所有通过prototype所在的函数创建的对象之间共享，构造函数A实例化出的对象a又会被JavaScript框架创建一个__proto__属性，a._<em>proto_</em> &#x3D;&#x3D; A.prototype, 方便确定对象是那个函数实例化出来的。在调用某个对象的属性或函数时，现在对象所对应的构造函数C自身的定义上查找，如果找到就执行，如果没有找到，就去这个对象的__proto__属性上查找，也就是C的prototype上查找, 如果找到了就执行，如果没有找到，因为C.prototype本身也是一个对象，这个对象是由Object创建的，C.prototype._<em>proto_</em> &#x3D;&#x3D; Object.prototype, 所以在Object.prototype上查找，如果找到了就执行，如果还是没有找到同样由于Object.prototype也是一个对象，它也有__proto__属性，其值为null , 所以不可能在查找到值了，直接返回null。</p>
 
 <div class="article-footer fs14">
     <section id="license">
