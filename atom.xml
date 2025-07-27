@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-07-16T15:32:34.097Z</updated>
+  <updated>2025-07-27T07:44:46.589Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>以具象离散和抽象连续思维来理解程序事件监听</title>
+    <link href="https://promptonce.github.io/2025/07/27/%E4%BB%A5%E5%85%B7%E8%B1%A1%E7%A6%BB%E6%95%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E8%BF%9E%E7%BB%AD%E6%80%9D%E7%BB%B4%E6%9D%A5%E7%90%86%E8%A7%A3%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/"/>
+    <id>https://promptonce.github.io/2025/07/27/%E4%BB%A5%E5%85%B7%E8%B1%A1%E7%A6%BB%E6%95%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E8%BF%9E%E7%BB%AD%E6%80%9D%E7%BB%B4%E6%9D%A5%E7%90%86%E8%A7%A3%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/</id>
+    <published>2025-07-27T07:34:20.000Z</published>
+    <updated>2025-07-27T07:44:46.589Z</updated>
+    
+    <content type="html"><![CDATA[<p>  计算机中的各种资源比如视频、图片、音频，给人的感觉是连续的，但也只是一种虚假的感觉，这是一种优秀的计算机设计抽象实践，这种离散设计与人的信号接收延迟原理相结合。程序的事件监听也是如此，可以知道一定是利用了循环，不断的去检查事件是否触发，这个检查时间可能非常短。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  计算机中的各种资源比如视频、图片、音频，给人的感觉是连续的，但也只是一种虚假的感觉，这是一种优秀的计算机设计抽象实践，这种离散设计与人的信号接收延迟原理相结合。程序的事件监听也是如此，可以知道一定是利用了循环，不断的去检查事件是否触发，这个检查时间可能非常短。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>一个中等的工科生应有的能力</title>
@@ -403,26 +424,6 @@
       
       
     <summary type="html">&lt;p&gt;  通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题，包括前端编写组件收集数据传递到后端，从后端接收数据进行渲染，前端开发人员不用被复杂</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript模块导出和导入</title>
-    <link href="https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/"/>
-    <id>https://promptonce.github.io/2025/05/22/JavaScript%E6%A8%A1%E5%9D%97%E5%AF%BC%E5%87%BA%E5%92%8C%E5%AF%BC%E5%85%A5/</id>
-    <published>2025-05-22T06:31:52.000Z</published>
-    <updated>2025-06-02T13:27:26.988Z</updated>
-    
-    <content type="html"><![CDATA[<p>  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，这里所说的数据包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过module.exports &#x3D; {xxx}的方式导出，在其他文件中通过require(xxx.js)导入使用，这种方式为开发者实现代码整洁提供了方法。<br>  es6中通过export和import实现，一个文件只能有一个export default，对于export default的数据，import时可以不使用{}, 非export default的数据，需要使用{}，这是LLM擅长的东西。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  创建一个js文件，可以直接编写打印arguments变量的代码，这是因为用Node运行这个js文件时，node会对这个文件进行包装。在一个js文件中，如果需要导出数据，这里所说的数据包括函数，在javascript中，函数和数字，字符串等数据类型具有同等地位，可以通过m</summary>
       
     
     
