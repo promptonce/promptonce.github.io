@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-07-27T07:44:46.589Z</updated>
+  <updated>2025-08-06T12:50:31.614Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>编程开发中导入库和封装总结</title>
+    <link href="https://promptonce.github.io/2025/08/06/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%BA%93%E5%92%8C%E5%B0%81%E8%A3%85%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/08/06/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%BA%93%E5%92%8C%E5%B0%81%E8%A3%85%E6%80%BB%E7%BB%93/</id>
+    <published>2025-08-06T12:45:30.000Z</published>
+    <updated>2025-08-06T12:50:31.614Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>之所以能写出看起来优雅的代码是应为库代码在“负重前行”，但想要使用库的能力，需要通过导入的方式建立这种连接。但由于业务的多样性库函数不能端到端地解决问题，需要人类程序员介入来完成最后一公里的开发，这里仍然有一些难点，但更偏上层。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;之所以能写出看起来优雅的代码是应为库代码在“负重前行”，但想要使用库的能力，需要通过导入的方式建立这种连接。但由于业务的多样性库函数不能端到端地解决问题，需要人类程序员介入来完成最后一公里的开发，这里仍然有一些难点，但更偏上层。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>以具象离散和抽象连续思维来理解程序事件监听</title>
@@ -404,26 +426,6 @@
       
     <summary type="html">&lt;p&gt;  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>前后端协同开发</title>
-    <link href="https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/"/>
-    <id>https://promptonce.github.io/2025/05/22/%E5%89%8D%E5%90%8E%E7%AB%AF%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91/</id>
-    <published>2025-05-22T07:37:51.000Z</published>
-    <updated>2025-05-22T07:53:47.633Z</updated>
-    
-    <content type="html"><![CDATA[<p>  通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题，包括前端编写组件收集数据传递到后端，从后端接收数据进行渲染，前端开发人员不用被复杂的业务逻辑干扰专注度。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  通过引入API接口来简化前端的思考负担，将复杂的逻辑往后端迁移，数据库和后端交互最自然也最灵活， 后端不仅仅是具有访问数据库的能力，还具有实现复杂业务逻辑的能力，前端专注于解决可视化问题，包括前端编写组件收集数据传递到后端，从后端接收数据进行渲染，前端开发人员不用被复杂</summary>
       
     
     
