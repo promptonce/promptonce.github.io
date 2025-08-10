@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-10T05:46:52.693Z</updated>
+  <updated>2025-08-10T06:28:10.811Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>向量具有平移不变性</title>
+    <link href="https://promptonce.github.io/2025/08/10/%E5%90%91%E9%87%8F%E5%85%B7%E6%9C%89%E5%B9%B3%E7%A7%BB%E4%B8%8D%E5%8F%98%E6%80%A7/"/>
+    <id>https://promptonce.github.io/2025/08/10/%E5%90%91%E9%87%8F%E5%85%B7%E6%9C%89%E5%B9%B3%E7%A7%BB%E4%B8%8D%E5%8F%98%E6%80%A7/</id>
+    <published>2025-08-10T06:25:10.000Z</published>
+    <updated>2025-08-10T06:28:10.811Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>向量是一个抽象的概念，向量最大的特点是方向性，平移不变性是一个严格的规定，保证了后续向量应用过程中相关逻辑严密。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;向量是一个抽象的概念，向量最大的特点是方向性，平移不变性是一个严格的规定，保证了后续向量应用过程中相关逻辑严密。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>CS50计算机入门总结</title>
@@ -407,27 +429,6 @@
       
       
     <summary type="html">&lt;p&gt;  一个Vue应用中包含多个Vue组件，组件与组件之间可能通信关系复杂，这个时候需要Vuex作为中心进行管理，这和家里面的中心储物柜原理相同，1. 可以减小开发成本，避免多层嵌套组件链条中数据修改不好追踪的问题。 2. 通过维护唯一数据源，避免出现数据不一致的问题。3. 将</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>redis相对于传统磁盘数据库</title>
-    <link href="https://promptonce.github.io/2025/05/27/redis%E7%9B%B8%E5%AF%B9%E4%BA%8E%E4%BC%A0%E7%BB%9F%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>https://promptonce.github.io/2025/05/27/redis%E7%9B%B8%E5%AF%B9%E4%BA%8E%E4%BC%A0%E7%BB%9F%E7%A3%81%E7%9B%98%E6%95%B0%E6%8D%AE%E5%BA%93/</id>
-    <published>2025-05-27T03:04:14.000Z</published>
-    <updated>2025-05-28T02:09:33.691Z</updated>
-    
-    <content type="html"><![CDATA[<p>  传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。&lt;/p&gt;
-</summary>
       
     
     
