@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-10T06:28:10.811Z</updated>
+  <updated>2025-08-10T06:36:51.765Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机图形学中的矩阵乘法之美</title>
+    <link href="https://promptonce.github.io/2025/08/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E4%B9%8B%E7%BE%8E/"/>
+    <id>https://promptonce.github.io/2025/08/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E4%B9%8B%E7%BE%8E/</id>
+    <published>2025-08-10T06:30:29.000Z</published>
+    <updated>2025-08-10T06:36:51.765Z</updated>
+    
+    <content type="html"><![CDATA[<p>  对二维平面中的图形应用多次仿射变换可以合并为一次矩阵乘法。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  对二维平面中的图形应用多次仿射变换可以合并为一次矩阵乘法。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>向量具有平移不变性</title>
@@ -409,26 +430,6 @@
       
       
     <summary type="html">&lt;p&gt;  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Vuex的理解</title>
-    <link href="https://promptonce.github.io/2025/06/02/Vuex%E7%9A%84%E7%90%86%E8%A7%A3/"/>
-    <id>https://promptonce.github.io/2025/06/02/Vuex%E7%9A%84%E7%90%86%E8%A7%A3/</id>
-    <published>2025-06-02T13:52:19.000Z</published>
-    <updated>2025-06-02T14:10:05.058Z</updated>
-    
-    <content type="html"><![CDATA[<p>  一个Vue应用中包含多个Vue组件，组件与组件之间可能通信关系复杂，这个时候需要Vuex作为中心进行管理，这和家里面的中心储物柜原理相同，1. 可以减小开发成本，避免多层嵌套组件链条中数据修改不好追踪的问题。 2. 通过维护唯一数据源，避免出现数据不一致的问题。3. 将数据处理逻辑集中在一个地方，避免数据处理方法分布在多个method中不好维护的问题。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  一个Vue应用中包含多个Vue组件，组件与组件之间可能通信关系复杂，这个时候需要Vuex作为中心进行管理，这和家里面的中心储物柜原理相同，1. 可以减小开发成本，避免多层嵌套组件链条中数据修改不好追踪的问题。 2. 通过维护唯一数据源，避免出现数据不一致的问题。3. 将</summary>
       
     
     
