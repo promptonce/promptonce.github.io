@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-06T12:50:31.614Z</updated>
+  <updated>2025-08-10T05:27:29.679Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>矩阵计算不满足交换律</title>
+    <link href="https://promptonce.github.io/2025/08/10/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E4%B8%8D%E6%BB%A1%E8%B6%B3%E4%BA%A4%E6%8D%A2%E5%BE%8B/"/>
+    <id>https://promptonce.github.io/2025/08/10/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E4%B8%8D%E6%BB%A1%E8%B6%B3%E4%BA%A4%E6%8D%A2%E5%BE%8B/</id>
+    <published>2025-08-10T05:22:08.000Z</published>
+    <updated>2025-08-10T05:27:29.679Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>从计算机图形学的仿射变换可以看出，同样两种变换操作采用不同的执行顺序得到的是两种结果。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;从计算机图形学的仿射变换可以看出，同样两种变换操作采用不同的执行顺序得到的是两种结果。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>编程开发中导入库和封装总结</title>
@@ -404,27 +426,6 @@
       
       
     <summary type="html">&lt;img src=&quot;/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/AutoDL%E5%8E%9F%E7%90%86.png&quot; class=&quot;&quot; title=&quot;AutoDL原理&quot;&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>静态语言和动态语言</title>
-    <link href="https://promptonce.github.io/2025/05/23/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80%E5%92%8C%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/"/>
-    <id>https://promptonce.github.io/2025/05/23/%E9%9D%99%E6%80%81%E8%AF%AD%E8%A8%80%E5%92%8C%E5%8A%A8%E6%80%81%E8%AF%AD%E8%A8%80/</id>
-    <published>2025-05-23T14:41:06.000Z</published>
-    <updated>2025-05-23T14:46:16.270Z</updated>
-    
-    <content type="html"><![CDATA[<p>  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  对于变量定义而言，变量定义后，类型可以改变的语言就是动态语言，类型不能改变的就是静态语言，比如Java是静态语言，JavaScript是动态语言。&lt;/p&gt;
 </summary>
       
     
