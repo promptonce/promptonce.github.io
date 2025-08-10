@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-10T05:27:29.679Z</updated>
+  <updated>2025-08-10T05:46:52.693Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CS50计算机入门总结</title>
+    <link href="https://promptonce.github.io/2025/08/10/CS50%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/08/10/CS50%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E6%80%BB%E7%BB%93/</id>
+    <published>2025-08-10T05:31:44.000Z</published>
+    <updated>2025-08-10T05:46:52.693Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。程序代码是解决问题的步骤说明，人可以通过自然语言写在纸上生成文件让其他人按照其执行，也可也通过编程再编译成二进制让计算机进行执行。程序的核心结构是：输入（数据）-&gt; 计算（函数）-&gt; 输出</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。
+不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。
+程</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>矩阵计算不满足交换律</title>
@@ -405,27 +427,6 @@
       
       
     <summary type="html">&lt;p&gt;  传统sql语句通过中磁盘中读取数据，时间单位为毫秒级，redis在内存中读取数据，时间单位为纳秒级，对于高频读写的数据，用内存数据库redis会极大提高系统处理速度。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>AutoDL原理</title>
-    <link href="https://promptonce.github.io/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/"/>
-    <id>https://promptonce.github.io/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/</id>
-    <published>2025-05-24T02:44:06.000Z</published>
-    <updated>2025-05-24T02:46:41.429Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/AutoDL%E5%8E%9F%E7%90%86.png" class="" title="AutoDL原理">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;img src=&quot;/2025/05/24/AutoDL%E5%8E%9F%E7%90%86/AutoDL%E5%8E%9F%E7%90%86.png&quot; class=&quot;&quot; title=&quot;AutoDL原理&quot;&gt;
 </summary>
       
     

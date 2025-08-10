@@ -17,25 +17,24 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
   <meta name="theme-color" content="#f9fafb">
   
-  <title>如何读懂大型软件项目源代码? - PromptOnce</title>
+  <title>CS50计算机入门总结 - PromptOnce</title>
 
   
-    <meta name="description" content="用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。 运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。 利用好visio这类软件表示更多的逻辑关系。">
+    <meta name="description" content="计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。 不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。 程序代码是解决问题的步骤说明，人可以通过自然语言写在纸上生成文件让其他人按照其执行，也可也通过编程再编译成二进制让计算机进行执行。 程序的核心结">
 <meta property="og:type" content="article">
-<meta property="og:title" content="如何读懂大型软件项目源代码?">
-<meta property="og:url" content="https://promptonce.github.io/2024/08/07/%E5%A6%82%E4%BD%95%E8%AF%BB%E6%87%82%E5%A4%A7%E5%9E%8B%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E6%BA%90%E4%BB%A3%E7%A0%81/index.html">
+<meta property="og:title" content="CS50计算机入门总结">
+<meta property="og:url" content="https://promptonce.github.io/2025/08/10/CS50%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="PromptOnce">
-<meta property="og:description" content="用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。 运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。 利用好visio这类软件表示更多的逻辑关系。">
+<meta property="og:description" content="计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。 不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。 程序代码是解决问题的步骤说明，人可以通过自然语言写在纸上生成文件让其他人按照其执行，也可也通过编程再编译成二进制让计算机进行执行。 程序的核心结">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-08-07T14:33:14.000Z">
-<meta property="article:modified_time" content="2025-04-20T16:14:45.993Z">
+<meta property="article:published_time" content="2025-08-10T05:31:44.000Z">
+<meta property="article:modified_time" content="2025-08-10T05:46:52.693Z">
 <meta property="article:author" content="penggan">
-<meta property="article:tag" content="项目开发经验">
 <meta name="twitter:card" content="summary">
   
   
   
-  <meta name="keywords" content="项目开发经验">
+  
 
   <!-- feed -->
   
@@ -79,34 +78,22 @@
   <div class="content">
     <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
 <span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
-<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-08-07T14:33:14.000Z">2024-08-07</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-04-20T16:14:45.993Z">2025-04-21</time></span></div></div></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2025-08-10T05:31:44.000Z">2025-08-10</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2025-08-10T05:46:52.693Z">2025-08-10</time></span></div></div></div>
     
     <div class="bottom only-title">
       
       <div class="text-area">
-        <h1 class="text title"><span>如何读懂大型软件项目源代码?</span></h1>
+        <h1 class="text title"><span>CS50计算机入门总结</span></h1>
         
       </div>
     </div>
     
   </div>
-  </div><article class="md-text content"><ol>
-<li>用好Notion软件，利用此软件可以按层级关系将零散代码逻辑在脑海中形成一个整体框架，也可以结合xmind等软件更直接地展示代码结构。</li>
-<li>运行软件项目，通过输入输出来给人脑提供关键代码链路的思绪。比如如果项目是用python语言构建的，通过添加print语句实现变量的跟踪。还可以利用代码调试功能，比如断点，逐步执行代码，实时查看变量变化和函数调用情况。</li>
-<li>利用好visio这类软件表示更多的逻辑关系。还可以使用 UML 图（如类图、时序图）来表示系统的静态结构和动态行为，这可以帮助更好地理解面向对象设计。</li>
-<li>分清楚影响理解框架代码的原因是啥，如果是各个小的模块理解错误，那就需要逐个击破来理解整体。在理解小模块时，可以结合单元测试。编写和运行单元测试不仅能验证模块功能，还能帮助理解模块的输入输出和依赖关系。</li>
-<li>对大的目录进行归纳总结，最好是记录在Notion上，记录关键模块、类、函数的作用和关系，以便日后查阅，因为代码较多，后续如果再来看可能忘记了，忘记了就需要再看一遍，相当于思维不集中会影响效率，有些时候可能总结的内容（也就是压缩过的内容）就足以理解了</li>
-<li>需要高度集中，最好进入心流状态，最好用一整段时间去理解，下次理解相当于需要再从代码和文档中找到当时的理解水平。</li>
-<li>IDE的全局关键字检索功能很有用，比如vscode可以显示所有包含指定关键字的文件引用，可以帮助构建代码框架逻辑。VSCode甚至系统都要将其视为软件的一部分，任何能够辅助代码理解的设计都可以用上，软件项目开发者设计项目时参考了面向对象设计规范，同样分析别人写的代码也可以采用面向对象的方法对代码进行简化。越是优秀的代码越可以通过面向对象的方法进行简化。除了 VSCode，还可以使用更专业的代码搜索工具，如 Sourcegraph 或 Opengrok，支持跨项目搜索和代码导航。</li>
-<li>面向对象思维，通过对象，模块，组件来构建系统的认识。可以学习设计模式（Design Patterns），如《设计模式：可复用面向对象软件的基础》一书中提到的23种经典设计模式，帮助理解和应用面向对象思想。</li>
-<li>明确改动哪些地方对系统运行有影响，哪些地方改动对系统没有影响及如何在系统上增加功能，如何在增加功能的同时不破坏原有系统的优良设计，如何重构原来系统中不合理的逻辑设计。在进行代码改动前，可以使用代码覆盖率工具（如 Coverage.py）和静态代码分析工具（如 SonarQube），评估改动的潜在影响和风险。</li>
-<li>阅读官方文档，理解开发者的设计思路。还可以查阅社区文档、技术博客和开发者论坛，获取更多实战经验和最佳实践。</li>
-<li>算法能力的学习，大型软件项目一般开发人员水平较高，用到了大量数据结构与算法的思想，如果算法能力不足再看到相关代码实现会觉得理解不足或觉得这些算法是框架本身的创新。建议系统学习算法与数据结构，可以参考《算法导论》（CLRS）这本书，并在 LeetCode、HackerRank 等平台上实践。</li>
-<li>如果能问原开发者还是要先问，理解框架的目的就是应用框架，如何快速的掌握一个框架的能力是追求的目标，然后再谈框架的进阶理解，否则进阶学习也是低效的。在问原开发者时，可以提前准备好问题，并尝试提出一些自己的理解和解决方案，展示你的思考过程，往往能得到更有针对性的指导。</li>
-</ol>
-<p>不要排斥打开编辑器看项目源码，就和新手程序员不会看报错信息一样，因为其中包含着指引，这是大量项目经验才能养成这种习惯，如果想要快速迭代技术能力，需要学会去延伸。</p>
-<p>程序员的理解能力很重要。对任何能够通过编译器器检查的代码先要有基本的尊重，如果想站在别人的代码基础上提高开发效率，必须要理解别人的代码，这期间可以反思哪些代码质量不高，可以如何改进，程序员是一种特殊的用户，适当抱着看看用户是如何想的思维进行代码理解工作。对于本来就优秀的代码，要能够像看报错信息那样有耐心的理解。</p>
-<h2 id="为啥会有软件框架？"><a href="#为啥会有软件框架？" class="headerlink" title="为啥会有软件框架？"></a>为啥会有软件框架？</h2><p>框架就是将框架所设定的业务相关的部分做成接口提供给用户，和业务不相关但必要的做成基础能力简化用户的劳动。</p>
+  </div><article class="md-text content"><pre><code>计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。
+不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。
+程序代码是解决问题的步骤说明，人可以通过自然语言写在纸上生成文件让其他人按照其执行，也可也通过编程再编译成二进制让计算机进行执行。
+程序的核心结构是：输入（数据）-&gt; 计算（函数）-&gt; 输出
+</code></pre>
 
 <div class="article-footer fs14">
     <section id="license">
@@ -116,7 +103,7 @@
     </section>
     </div>
 </article>
-<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/08/12/%E7%BF%81%E6%81%BAJava%E8%AF%AD%E8%A8%80%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%AD%A6%E4%B9%A0%E5%BF%83%E5%BE%97/">翁恺Java语言程序设计学习心得</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/08/03/python%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E6%80%BB%E7%BB%93/">python面向对象总结</a></div></section></div>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2025/08/10/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E4%B8%8D%E6%BB%A1%E8%B6%B3%E4%BA%A4%E6%8D%A2%E5%BE%8B/">矩阵计算不满足交换律</a></div></section></div>
 
 
 
@@ -126,14 +113,7 @@
 <footer class="page-footer footnote"><hr><div class="text"><p>本站由 <a href="/">penggan</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.0">Stellar 1.29.0</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
-
-
-
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E5%95%A5%E4%BC%9A%E6%9C%89%E8%BD%AF%E4%BB%B6%E6%A1%86%E6%9E%B6%EF%BC%9F"><span class="toc-text">为啥会有软件框架？</span></a></li></ol></div><div class="widget-footer">
-
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
+</aside><div class='float-panel blur'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
   </button>
