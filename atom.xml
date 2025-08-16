@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-10T06:36:51.765Z</updated>
+  <updated>2025-08-16T09:35:54.021Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从工科科学论对初级前端开发祛魅</title>
+    <link href="https://promptonce.github.io/2025/08/16/%E4%BB%8E%E5%B7%A5%E7%A7%91%E7%A7%91%E5%AD%A6%E8%AE%BA%E5%AF%B9%E5%88%9D%E7%BA%A7%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%A5%9B%E9%AD%85/"/>
+    <id>https://promptonce.github.io/2025/08/16/%E4%BB%8E%E5%B7%A5%E7%A7%91%E7%A7%91%E5%AD%A6%E8%AE%BA%E5%AF%B9%E5%88%9D%E7%BA%A7%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E7%A5%9B%E9%AD%85/</id>
+    <published>2025-08-16T09:31:50.000Z</published>
+    <updated>2025-08-16T09:35:54.021Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>就实现客户需求而言，前端开发加速交付效率首先依赖于对框架、库的记忆其次才是推演，且此特征相对于初级后端开发更为明显。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;就实现客户需求而言，前端开发加速交付效率首先依赖于对框架、库的记忆其次才是推演，且此特征相对于初级后端开发更为明显。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计算机图形学中的矩阵乘法之美</title>
@@ -410,26 +432,6 @@
       
       
     <summary type="html">&lt;p&gt;  一个人在烧水、洗衣服、玩手机时可以选择做完一件事情后再做另一件事情，即便这样是低效的但也可以抽象为一种cpu的工作方式，站在更高效转换能源的角度，更合理的抽象方式是让CPU在等待一个任务执行完成的间隙切换到其他任务，对于I&amp;#x2F;O密集型和网络请求这类任务来说，优化</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>进程与线程</title>
-    <link href="https://promptonce.github.io/2025/06/02/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/"/>
-    <id>https://promptonce.github.io/2025/06/02/%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B/</id>
-    <published>2025-06-02T14:42:51.000Z</published>
-    <updated>2025-06-02T14:50:22.824Z</updated>
-    
-    <content type="html"><![CDATA[<p>  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行，这些程序共享同一个数据“文档”，这就时线程高效的原因。 一个进程的多个线程会轮流占用CPU时间。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  程序代码存放在硬盘中，这和菜谱存放在柜子中道理相同，程序代码需要执行时，将代码读入到内存中，可以将一段代码读入多份到内存中，也就创建了多个进程，一个进程中为啥还要有“子进程”线程呢？比如文档编辑软件中，处理键盘回车换行的程序和页面渲染程序、保存文档到硬盘的程序都需要执行</summary>
       
     
     
