@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-16T09:35:54.021Z</updated>
+  <updated>2025-08-16T12:38:14.109Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI辅助编程下项目学习的原则</title>
+    <link href="https://promptonce.github.io/2025/08/16/AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8E%9F%E5%88%99/"/>
+    <id>https://promptonce.github.io/2025/08/16/AI%E8%BE%85%E5%8A%A9%E7%BC%96%E7%A8%8B%E4%B8%8B%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0%E7%9A%84%E5%8E%9F%E5%88%99/</id>
+    <published>2025-08-16T12:35:00.000Z</published>
+    <updated>2025-08-16T12:38:14.109Z</updated>
+    
+    <content type="html"><![CDATA[<p>  不要让AI成为开发团队的Leader, 在项目产品预期不明的情况下始终保证技术判断力的提升反而会让AI和程序员的协作效率更高。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  不要让AI成为开发团队的Leader, 在项目产品预期不明的情况下始终保证技术判断力的提升反而会让AI和程序员的协作效率更高。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>从工科科学论对初级前端开发祛魅</title>
@@ -412,26 +433,6 @@
       
       
     <summary type="html">&lt;p&gt;  同步编程是一种不考虑特殊情况的开发模式，其假设是所有任务执行的速度非常快，但实际中I&amp;#x2F;O密集型任务和网络请求任务耗时较长，异步编程就像一个补丁用于解决这个问题，为什么不能统一呢？这和想统一宇宙中的几大力一样，经典力学在量子维度失效，这样就要去否定经典力学的价值</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>并发、并行、异步、同步</title>
-    <link href="https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/"/>
-    <id>https://promptonce.github.io/2025/06/02/%E5%B9%B6%E5%8F%91%E3%80%81%E5%B9%B6%E8%A1%8C%E3%80%81%E5%BC%82%E6%AD%A5%E3%80%81%E5%90%8C%E6%AD%A5/</id>
-    <published>2025-06-02T15:29:49.000Z</published>
-    <updated>2025-06-03T02:06:37.635Z</updated>
-    
-    <content type="html"><![CDATA[<p>  一个人在烧水、洗衣服、玩手机时可以选择做完一件事情后再做另一件事情，即便这样是低效的但也可以抽象为一种cpu的工作方式，站在更高效转换能源的角度，更合理的抽象方式是让CPU在等待一个任务执行完成的间隙切换到其他任务，对于I&#x2F;O密集型和网络请求这类任务来说，优化CPU的工作模式相比于提高这些任务的执行速度更有性价比，感觉计算机技术有点像在物理环境受限的情况下用智慧去走捷径的妥协艺术。<br>  并发是指单核CPU轮流执行线程。并行指多核CPU不同核处理不同线程，做到真正的并行。同步是一种开发模式，后面的代码必须等前面的代码执行完成后才能执行。同步也是一种开发模式，后面的代码可以不用等前面的代码执行完成才开始执行，当数据返回时，通过回调函数的方式再执行前面的代码。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  一个人在烧水、洗衣服、玩手机时可以选择做完一件事情后再做另一件事情，即便这样是低效的但也可以抽象为一种cpu的工作方式，站在更高效转换能源的角度，更合理的抽象方式是让CPU在等待一个任务执行完成的间隙切换到其他任务，对于I&amp;#x2F;O密集型和网络请求这类任务来说，优化</summary>
       
     
     
