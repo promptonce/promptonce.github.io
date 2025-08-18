@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-16T12:38:14.109Z</updated>
+  <updated>2025-08-18T00:16:00.832Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数学在科研和工程中的作用</title>
+    <link href="https://promptonce.github.io/2025/08/18/%E6%95%B0%E5%AD%A6%E5%9C%A8%E7%A7%91%E7%A0%94%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
+    <id>https://promptonce.github.io/2025/08/18/%E6%95%B0%E5%AD%A6%E5%9C%A8%E7%A7%91%E7%A0%94%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/</id>
+    <published>2025-08-18T00:05:45.000Z</published>
+    <updated>2025-08-18T00:16:00.832Z</updated>
+    
+    <content type="html"><![CDATA[<p>  数学提供了一个理想的空间可以提升思维工具的能力，其中取得的成果会为未来的工程和研究提供有力的辅助、甚至是关键。    </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  数学提供了一个理想的空间可以提升思维工具的能力，其中取得的成果会为未来的工程和研究提供有力的辅助、甚至是关键。
+    &lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>AI辅助编程下项目学习的原则</title>
@@ -413,26 +435,6 @@
       
     <summary type="html">&lt;p&gt;  JavaScript的并发是基于单线程的，单线程实现并发并不一定是不好的，单线程中资源共享较好，从源头上避免了多线程之间的一些问题。&lt;/p&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>异步编程的适用场景</title>
-    <link href="https://promptonce.github.io/2025/06/03/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
-    <id>https://promptonce.github.io/2025/06/03/%E5%BC%82%E6%AD%A5%E7%BC%96%E7%A8%8B%E7%9A%84%E9%80%82%E7%94%A8%E5%9C%BA%E6%99%AF/</id>
-    <published>2025-06-03T01:13:39.000Z</published>
-    <updated>2025-06-03T02:19:36.064Z</updated>
-    
-    <content type="html"><![CDATA[<p>  同步编程是一种不考虑特殊情况的开发模式，其假设是所有任务执行的速度非常快，但实际中I&#x2F;O密集型任务和网络请求任务耗时较长，异步编程就像一个补丁用于解决这个问题，为什么不能统一呢？这和想统一宇宙中的几大力一样，经典力学在量子维度失效，这样就要去否定经典力学的价值吗？经典力学同样能解决一些社会中的问题，这个世界上没有绝对的完美，只有相对的完美，如果你觉得有绝对的完美，那么想一想蒙蔽你的到底是啥。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  同步编程是一种不考虑特殊情况的开发模式，其假设是所有任务执行的速度非常快，但实际中I&amp;#x2F;O密集型任务和网络请求任务耗时较长，异步编程就像一个补丁用于解决这个问题，为什么不能统一呢？这和想统一宇宙中的几大力一样，经典力学在量子维度失效，这样就要去否定经典力学的价值</summary>
       
     
     
