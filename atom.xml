@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-20T23:39:00.774Z</updated>
+  <updated>2025-08-21T00:20:05.040Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从箭头函数分析技术演进的动力</title>
+    <link href="https://promptonce.github.io/2025/08/21/%E4%BB%8E%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B%E7%9A%84%E5%8A%A8%E5%8A%9B/"/>
+    <id>https://promptonce.github.io/2025/08/21/%E4%BB%8E%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B%E7%9A%84%E5%8A%A8%E5%8A%9B/</id>
+    <published>2025-08-21T00:10:32.000Z</published>
+    <updated>2025-08-21T00:20:05.040Z</updated>
+    
+    <content type="html"><![CDATA[<p>  技术发展是多点同时进行的，其繁荣程度和地球上的植被差不多，植被演进的核心动力是光合作用，而技术演进的核心动力是满足人类的需求，就箭头函数来说，其为程序员更好的创造出满足人类需求的工具带来了便利，站在创造者的角度去看待这种由懒而产生的需求，这种懒不是纯粹的缺乏动力。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  技术发展是多点同时进行的，其繁荣程度和地球上的植被差不多，植被演进的核心动力是光合作用，而技术演进的核心动力是满足人类的需求，就箭头函数来说，其为程序员更好的创造出满足人类需求的工具带来了便利，站在创造者的角度去看待这种由懒而产生的需求，这种懒不是纯粹的缺乏动力。&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JavaScript程序员和Python程序员技术对比</title>
@@ -413,27 +433,6 @@
       
       
     <summary type="html">&lt;p&gt;  不同编程语言本质上是不同编程语言作者对物理规律，更具体来说是计算机技术的设计方式不同，包含了原作者对技术转换能源的理解，但这些编程语言设计都有一些通用的理念，这个是在切换编程语言后可以利用这些通用的东西来减少语言切换的阻尼感。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件开发中如何开发新需求</title>
-    <link href="https://promptonce.github.io/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%AD%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E6%96%B0%E9%9C%80%E6%B1%82/"/>
-    <id>https://promptonce.github.io/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%B8%AD%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E6%96%B0%E9%9C%80%E6%B1%82/</id>
-    <published>2025-06-04T15:29:56.000Z</published>
-    <updated>2025-06-04T15:32:18.186Z</updated>
-    
-    <content type="html"><![CDATA[<p>  保证各个代码系统处于开发者模式启动中，对于前后端分离的系统，前端开发环境需要启动起来，后端服务器要远程登录上，因为随时可能添加测试代码测试需求实现过程中的问题。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  保证各个代码系统处于开发者模式启动中，对于前后端分离的系统，前端开发环境需要启动起来，后端服务器要远程登录上，因为随时可能添加测试代码测试需求实现过程中的问题。&lt;/p&gt;
 </summary>
       
     
