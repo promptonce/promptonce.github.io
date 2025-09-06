@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-08-24T04:08:23.030Z</updated>
+  <updated>2025-09-06T00:54:01.803Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对API的理解</title>
+    <link href="https://promptonce.github.io/2025/09/06/%E5%AF%B9API%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>https://promptonce.github.io/2025/09/06/%E5%AF%B9API%E7%9A%84%E7%90%86%E8%A7%A3/</id>
+    <published>2025-09-06T00:43:28.000Z</published>
+    <updated>2025-09-06T00:54:01.803Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>API是应用程序编程接口，按照技术经济学理论，API是不断动态进化的，API进化的敌人就是任何试图将技术封闭且不能促进经济发展的的人或团体。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;API是应用程序编程接口，按照技术经济学理论，API是不断动态进化的，API进化的敌人就是任何试图将技术封闭且不能促进经济发展的的人或团体。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>前端技术品味观</title>
@@ -409,27 +431,6 @@
       
       
     <summary type="html">&lt;p&gt;  调成眼睛舒服的效果。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>软件开发需求实现过程中的成本核算问题</title>
-    <link href="https://promptonce.github.io/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%9C%80%E6%B1%82%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97%E9%97%AE%E9%A2%98/"/>
-    <id>https://promptonce.github.io/2025/06/04/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%9C%80%E6%B1%82%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B%E4%B8%AD%E7%9A%84%E6%88%90%E6%9C%AC%E6%A0%B8%E7%AE%97%E9%97%AE%E9%A2%98/</id>
-    <published>2025-06-04T15:46:32.000Z</published>
-    <updated>2025-06-04T15:50:01.521Z</updated>
-    
-    <content type="html"><![CDATA[<p>  不是仅通过大脑中的仿真来核算，需要结合真实环境来核算，比如程序运行和调试必要的时间，这些时间和同步代码执行的时间可能差了几个数量级。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  不是仅通过大脑中的仿真来核算，需要结合真实环境来核算，比如程序运行和调试必要的时间，这些时间和同步代码执行的时间可能差了几个数量级。&lt;/p&gt;
 </summary>
       
     
