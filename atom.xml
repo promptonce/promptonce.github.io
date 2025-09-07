@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-06T00:54:01.803Z</updated>
+  <updated>2025-09-07T02:10:34.851Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对Notion这款软件的理解</title>
+    <link href="https://promptonce.github.io/2025/09/07/%E5%AF%B9Notion%E8%BF%99%E6%AC%BE%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>https://promptonce.github.io/2025/09/07/%E5%AF%B9Notion%E8%BF%99%E6%AC%BE%E8%BD%AF%E4%BB%B6%E7%9A%84%E7%90%86%E8%A7%A3/</id>
+    <published>2025-09-07T02:03:14.000Z</published>
+    <updated>2025-09-07T02:10:34.851Z</updated>
+    
+    <content type="html"><![CDATA[<p>  Notion翻译为中文为概念，仅通过中文翻译来理解这款软件并不准确，更准确的定义应该是外挂知识库，其为人脑的补充，人脑可以存储各种知识和信息，这款软件的发展方向也是能够储存各种知识和信息。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  Notion翻译为中文为概念，仅通过中文翻译来理解这款软件并不准确，更准确的定义应该是外挂知识库，其为人脑的补充，人脑可以存储各种知识和信息，这款软件的发展方向也是能够储存各种知识和信息。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>对API的理解</title>
@@ -410,27 +431,6 @@
       
       
     <summary type="html">&lt;p&gt;  powershell在cmd上支持了更多的语法支持。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>显示器亮度对比度护眼调节设置</title>
-    <link href="https://promptonce.github.io/2025/06/09/%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BA%AE%E5%BA%A6%E5%AF%B9%E6%AF%94%E5%BA%A6%E6%8A%A4%E7%9C%BC%E8%B0%83%E8%8A%82%E8%AE%BE%E7%BD%AE/"/>
-    <id>https://promptonce.github.io/2025/06/09/%E6%98%BE%E7%A4%BA%E5%99%A8%E4%BA%AE%E5%BA%A6%E5%AF%B9%E6%AF%94%E5%BA%A6%E6%8A%A4%E7%9C%BC%E8%B0%83%E8%8A%82%E8%AE%BE%E7%BD%AE/</id>
-    <published>2025-06-09T15:25:05.000Z</published>
-    <updated>2025-06-17T13:43:50.470Z</updated>
-    
-    <content type="html"><![CDATA[<p>  调成眼睛舒服的效果。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  调成眼睛舒服的效果。&lt;/p&gt;
 </summary>
       
     
