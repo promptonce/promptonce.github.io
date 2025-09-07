@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-07T02:10:34.851Z</updated>
+  <updated>2025-09-07T08:04:38.148Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么计算机模拟是有效的？</title>
+    <link href="https://promptonce.github.io/2025/09/07/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A8%A1%E6%8B%9F%E6%98%AF%E6%9C%89%E6%95%88%E7%9A%84%EF%BC%9F/"/>
+    <id>https://promptonce.github.io/2025/09/07/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%A8%A1%E6%8B%9F%E6%98%AF%E6%9C%89%E6%95%88%E7%9A%84%EF%BC%9F/</id>
+    <published>2025-09-07T07:59:14.000Z</published>
+    <updated>2025-09-07T08:04:38.148Z</updated>
+    
+    <content type="html"><![CDATA[<p>  数学是从对物理视角的观察和分析总结出来的，其可以用来描述物理现象，计算机也是依据物理定律造出来的，计算机可以进行数学计算进而能被用来分析物理世界。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  数学是从对物理视角的观察和分析总结出来的，其可以用来描述物理现象，计算机也是依据物理定律造出来的，计算机可以进行数学计算进而能被用来分析物理世界。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>对Notion这款软件的理解</title>
@@ -411,27 +432,6 @@
       
       
     <summary type="html">&lt;p&gt;  LLM在处理能力范围内的需求时代码键入速度远超人类，即便是地表最优秀的程序员，这好比计算机在计算速度上远超过任何一个数学家一样。在这个前提下将软件开发需求描述清楚是非常有性价比的，当少数文字对应大段业务代码时提效非常明显，当设计架构方面的代码编写上依赖于Agent的能力</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>cmd和powershell的区别</title>
-    <link href="https://promptonce.github.io/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>https://promptonce.github.io/2025/06/15/cmd%E5%92%8Cpowershell%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
-    <published>2025-06-15T13:33:33.000Z</published>
-    <updated>2025-06-15T13:34:14.398Z</updated>
-    
-    <content type="html"><![CDATA[<p>  powershell在cmd上支持了更多的语法支持。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  powershell在cmd上支持了更多的语法支持。&lt;/p&gt;
-</summary>
       
     
     
