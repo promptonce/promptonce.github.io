@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-21T08:06:22.752Z</updated>
+  <updated>2025-09-21T08:19:07.294Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>itopmap系统中后端开发工作总结</title>
+    <link href="https://promptonce.github.io/2025/09/21/itopmap%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/09/21/itopmap%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</id>
+    <published>2025-09-21T08:12:03.000Z</published>
+    <updated>2025-09-21T08:19:07.294Z</updated>
+    
+    <content type="html"><![CDATA[<p>  部署Casdoor服务器，配置应用及登录回调地址，在Casdoor管理页面配置微信第三方登录相关参数。</p><p>  部署server.itopmap.com flask后端程序，编写Markdown文件接口，理解Casdoor用户相关源码并开发修改用户信息接口。</p><p>  部署Geoserver并发布地理影像数据。  </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  部署Casdoor服务器，配置应用及登录回调地址，在Casdoor管理页面配置微信第三方登录相关参数。&lt;/p&gt;
+&lt;p&gt;  部署server.itopmap.com flask后端程序，编写Markdown文件接口，理解Casdoor用户相关源码并开发修改用户信息接口。&lt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>itopmap系统中前端开发工作总结</title>
@@ -405,28 +426,6 @@
       
       
     <summary type="html">&lt;pre&gt;&lt;code&gt;从计算机图形学的仿射变换可以看出，同样两种变换操作采用不同的执行顺序得到的是两种结果。
-&lt;/code&gt;&lt;/pre&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>编程开发中导入库和封装总结</title>
-    <link href="https://promptonce.github.io/2025/08/06/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%BA%93%E5%92%8C%E5%B0%81%E8%A3%85%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/08/06/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E4%B8%AD%E5%AF%BC%E5%85%A5%E5%BA%93%E5%92%8C%E5%B0%81%E8%A3%85%E6%80%BB%E7%BB%93/</id>
-    <published>2025-08-06T12:45:30.000Z</published>
-    <updated>2025-08-06T12:50:31.614Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>之所以能写出看起来优雅的代码是应为库代码在“负重前行”，但想要使用库的能力，需要通过导入的方式建立这种连接。但由于业务的多样性库函数不能端到端地解决问题，需要人类程序员介入来完成最后一公里的开发，这里仍然有一些难点，但更偏上层。</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;pre&gt;&lt;code&gt;之所以能写出看起来优雅的代码是应为库代码在“负重前行”，但想要使用库的能力，需要通过导入的方式建立这种连接。但由于业务的多样性库函数不能端到端地解决问题，需要人类程序员介入来完成最后一公里的开发，这里仍然有一些难点，但更偏上层。
 &lt;/code&gt;&lt;/pre&gt;
 </summary>
       
