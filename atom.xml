@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-08T13:35:10.157Z</updated>
+  <updated>2025-09-21T08:06:22.752Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>itopmap系统中前端开发工作总结</title>
+    <link href="https://promptonce.github.io/2025/09/21/itopmap%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/"/>
+    <id>https://promptonce.github.io/2025/09/21/itopmap%E7%B3%BB%E7%BB%9F%E4%B8%AD%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/</id>
+    <published>2025-09-21T07:55:34.000Z</published>
+    <updated>2025-09-21T08:06:22.752Z</updated>
+    
+    <content type="html"><![CDATA[<p>  在Web页面上基于Vue+OpenlayerJS添加了一个地图，基于OpenlayerJS中Controls API和Vuetify v-btn添加了地图矢量绘制按钮（开始绘制，撤销绘制，清除绘制），基于CSS实现了地图界面的UI设计，基于JavaScript实现了地图矢量绘制按钮的业务功能。</p><p>  基于第三方库为Web集成了客服插件。</p><p>  基于Casdoor SDK在前端系统对接了后端的SSO服务器，基于JavaScript和Vue完成SSO服务器回传的数据展示功能。</p><p>  基于Vue-i18n为前端系统集成了多语言支持。</p><p>  基于JavaScript WMS和WMTS协议、Vue在为前端系统提供渲染Geoserver瓦片数据渲染组件（支持卷帘查看图层）。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  在Web页面上基于Vue+OpenlayerJS添加了一个地图，基于OpenlayerJS中Controls API和Vuetify v-btn添加了地图矢量绘制按钮（开始绘制，撤销绘制，清除绘制），基于CSS实现了地图界面的UI设计，基于JavaScript实现了地图</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>基于API开发的程序员创新的特点</title>
@@ -408,27 +428,6 @@
       
     <summary type="html">&lt;pre&gt;&lt;code&gt;之所以能写出看起来优雅的代码是应为库代码在“负重前行”，但想要使用库的能力，需要通过导入的方式建立这种连接。但由于业务的多样性库函数不能端到端地解决问题，需要人类程序员介入来完成最后一公里的开发，这里仍然有一些难点，但更偏上层。
 &lt;/code&gt;&lt;/pre&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>以具象离散和抽象连续思维来理解程序事件监听</title>
-    <link href="https://promptonce.github.io/2025/07/27/%E4%BB%A5%E5%85%B7%E8%B1%A1%E7%A6%BB%E6%95%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E8%BF%9E%E7%BB%AD%E6%80%9D%E7%BB%B4%E6%9D%A5%E7%90%86%E8%A7%A3%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/"/>
-    <id>https://promptonce.github.io/2025/07/27/%E4%BB%A5%E5%85%B7%E8%B1%A1%E7%A6%BB%E6%95%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E8%BF%9E%E7%BB%AD%E6%80%9D%E7%BB%B4%E6%9D%A5%E7%90%86%E8%A7%A3%E7%A8%8B%E5%BA%8F%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC/</id>
-    <published>2025-07-27T07:34:20.000Z</published>
-    <updated>2025-07-27T07:44:46.589Z</updated>
-    
-    <content type="html"><![CDATA[<p>  计算机中的各种资源比如视频、图片、音频，给人的感觉是连续的，但也只是一种虚假的感觉，这是一种优秀的计算机设计抽象实践，这种离散设计与人的信号接收延迟原理相结合。程序的事件监听也是如此，可以知道一定是利用了循环，不断的去检查事件是否触发，这个检查时间可能非常短。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  计算机中的各种资源比如视频、图片、音频，给人的感觉是连续的，但也只是一种虚假的感觉，这是一种优秀的计算机设计抽象实践，这种离散设计与人的信号接收延迟原理相结合。程序的事件监听也是如此，可以知道一定是利用了循环，不断的去检查事件是否触发，这个检查时间可能非常短。&lt;/p&gt;
 </summary>
       
     
