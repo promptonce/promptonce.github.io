@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-21T08:19:07.294Z</updated>
+  <updated>2025-09-24T15:30:30.351Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>工程领域软件开发领域标准化所产生的力的分析</title>
+    <link href="https://promptonce.github.io/2025/09/24/%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%A2%86%E5%9F%9F%E6%A0%87%E5%87%86%E5%8C%96%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%E5%8A%9B%E7%9A%84%E5%88%86%E6%9E%90/"/>
+    <id>https://promptonce.github.io/2025/09/24/%E5%B7%A5%E7%A8%8B%E9%A2%86%E5%9F%9F%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%A2%86%E5%9F%9F%E6%A0%87%E5%87%86%E5%8C%96%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%E5%8A%9B%E7%9A%84%E5%88%86%E6%9E%90/</id>
+    <published>2025-09-24T15:10:38.000Z</published>
+    <updated>2025-09-24T15:30:30.351Z</updated>
+    
+    <content type="html"><![CDATA[<p>  首先你是宇宙中的一份子，受熵增定律的支配，系统会自然朝向熵增。软件开发人员通过标准化进行减熵，使系统还处于一个低能耗的状态，低能耗意味着让正反馈循环更容易建立，因为其成本变低，正循环的建立整体来说更能实现高效转换能源的目的。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  首先你是宇宙中的一份子，受熵增定律的支配，系统会自然朝向熵增。软件开发人员通过标准化进行减熵，使系统还处于一个低能耗的状态，低能耗意味着让正反馈循环更容易建立，因为其成本变低，正循环的建立整体来说更能实现高效转换能源的目的。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>itopmap系统中后端开发工作总结</title>
@@ -406,28 +427,6 @@
       
       
     <summary type="html">&lt;p&gt;  计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。&lt;br&gt;  不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。人类创</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>矩阵计算不满足交换律</title>
-    <link href="https://promptonce.github.io/2025/08/10/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E4%B8%8D%E6%BB%A1%E8%B6%B3%E4%BA%A4%E6%8D%A2%E5%BE%8B/"/>
-    <id>https://promptonce.github.io/2025/08/10/%E7%9F%A9%E9%98%B5%E8%AE%A1%E7%AE%97%E4%B8%8D%E6%BB%A1%E8%B6%B3%E4%BA%A4%E6%8D%A2%E5%BE%8B/</id>
-    <published>2025-08-10T05:22:08.000Z</published>
-    <updated>2025-08-10T05:27:29.679Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>从计算机图形学的仿射变换可以看出，同样两种变换操作采用不同的执行顺序得到的是两种结果。</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;pre&gt;&lt;code&gt;从计算机图形学的仿射变换可以看出，同样两种变换操作采用不同的执行顺序得到的是两种结果。
-&lt;/code&gt;&lt;/pre&gt;
-</summary>
       
     
     
