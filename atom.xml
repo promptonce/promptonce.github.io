@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-24T15:30:30.351Z</updated>
+  <updated>2025-09-28T17:22:38.775Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>认知偏差的产生条件</title>
+    <link href="https://promptonce.github.io/2025/09/29/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE%E7%9A%84%E4%BA%A7%E7%94%9F%E6%9D%A1%E4%BB%B6/"/>
+    <id>https://promptonce.github.io/2025/09/29/%E8%AE%A4%E7%9F%A5%E5%81%8F%E5%B7%AE%E7%9A%84%E4%BA%A7%E7%94%9F%E6%9D%A1%E4%BB%B6/</id>
+    <published>2025-09-28T17:18:44.000Z</published>
+    <updated>2025-09-28T17:22:38.775Z</updated>
+    
+    <content type="html"><![CDATA[<p>​记忆内容与不通用的推演的打包和误以为通用的接收且不加推演。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;​	记忆内容与不通用的推演的打包和误以为通用的接收且不加推演。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>工程领域软件开发领域标准化所产生的力的分析</title>
@@ -407,26 +428,6 @@
     <summary type="html">&lt;pre&gt;&lt;code&gt;向量是一个抽象的概念，向量最大的特点是方向性，平移不变性是一个严格的规定，保证了后续向量应用过程中相关逻辑严密。
 &lt;/code&gt;&lt;/pre&gt;
 </summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>CS50计算机入门总结</title>
-    <link href="https://promptonce.github.io/2025/08/10/CS50%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E6%80%BB%E7%BB%93/"/>
-    <id>https://promptonce.github.io/2025/08/10/CS50%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%E6%80%BB%E7%BB%93/</id>
-    <published>2025-08-10T05:31:44.000Z</published>
-    <updated>2025-08-21T16:23:41.121Z</updated>
-    
-    <content type="html"><![CDATA[<p>  计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。<br>  不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。人类创造出了计算机，人类不要盲目采用计算机的运作方式而幻想达到理想中的高效；推演，需要知晓物理机制的限制，非要模拟计算机运行也需要在人脑思考辅助工具都不可用才采用，这样才符合程序员入门经济学准则。<br>  程序代码是解决问题的步骤说明，人可以通过自然语言写在纸上生成文件让其他人按照其执行，也可也通过编程再编译成二进制让计算机进行执行。<br>  程序的核心结构是：输入（数据）-&gt; 计算（函数）-&gt; 输出</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  计算机只能处理0和1,这是它理解世界的方式，整个计算机知识体系是基于这一点构建起来的。&lt;br&gt;  不管是二进制还是十进制，都是一种计算方式，两种进制都可以用来进行计算，人擅长用十进制计算，计算机擅长用二进制进行计算，之所以不同对象采用不同的进制和底层物理机制相关。人类创</summary>
       
     
     
