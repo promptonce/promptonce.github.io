@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-09-28T17:22:38.775Z</updated>
+  <updated>2025-10-11T00:05:18.616Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML和CSS的不同</title>
+    <link href="https://promptonce.github.io/2025/10/11/HTML%E5%92%8CCSS%E7%9A%84%E4%B8%8D%E5%90%8C/"/>
+    <id>https://promptonce.github.io/2025/10/11/HTML%E5%92%8CCSS%E7%9A%84%E4%B8%8D%E5%90%8C/</id>
+    <published>2025-10-11T00:04:26.000Z</published>
+    <updated>2025-10-11T00:05:18.616Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>HTML定义了信息的结构，CSS定义了信息的呈现方式。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;HTML定义了信息的结构，CSS定义了信息的呈现方式。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>认知偏差的产生条件</title>
@@ -405,28 +427,6 @@
       
       
     <summary type="html">&lt;p&gt;  对二维平面中的图形应用多次仿射变换可以合并为一次矩阵乘法。&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>向量具有平移不变性</title>
-    <link href="https://promptonce.github.io/2025/08/10/%E5%90%91%E9%87%8F%E5%85%B7%E6%9C%89%E5%B9%B3%E7%A7%BB%E4%B8%8D%E5%8F%98%E6%80%A7/"/>
-    <id>https://promptonce.github.io/2025/08/10/%E5%90%91%E9%87%8F%E5%85%B7%E6%9C%89%E5%B9%B3%E7%A7%BB%E4%B8%8D%E5%8F%98%E6%80%A7/</id>
-    <published>2025-08-10T06:25:10.000Z</published>
-    <updated>2025-08-10T06:28:10.811Z</updated>
-    
-    <content type="html"><![CDATA[<pre><code>向量是一个抽象的概念，向量最大的特点是方向性，平移不变性是一个严格的规定，保证了后续向量应用过程中相关逻辑严密。</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;pre&gt;&lt;code&gt;向量是一个抽象的概念，向量最大的特点是方向性，平移不变性是一个严格的规定，保证了后续向量应用过程中相关逻辑严密。
-&lt;/code&gt;&lt;/pre&gt;
 </summary>
       
     
