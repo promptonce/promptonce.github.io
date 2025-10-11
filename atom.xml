@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-10-11T00:05:18.616Z</updated>
+  <updated>2025-10-11T00:08:29.172Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>程序员的技术沟通艺术</title>
+    <link href="https://promptonce.github.io/2025/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E8%89%BA%E6%9C%AF/"/>
+    <id>https://promptonce.github.io/2025/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E6%8A%80%E6%9C%AF%E6%B2%9F%E9%80%9A%E8%89%BA%E6%9C%AF/</id>
+    <published>2025-10-11T00:07:35.000Z</published>
+    <updated>2025-10-11T00:08:29.172Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>一种好的消化方式是不在开始就放弃质疑。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;一种好的消化方式是不在开始就放弃质疑。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>HTML和CSS的不同</title>
@@ -406,27 +428,6 @@
       
     <summary type="html">&lt;pre&gt;&lt;code&gt;就实现客户需求而言，前端开发加速交付效率首先依赖于对框架、库的记忆其次才是推演，且此特征相对于初级后端开发更为明显。
 &lt;/code&gt;&lt;/pre&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>计算机图形学中的矩阵乘法之美</title>
-    <link href="https://promptonce.github.io/2025/08/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E4%B9%8B%E7%BE%8E/"/>
-    <id>https://promptonce.github.io/2025/08/10/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6%E4%B8%AD%E7%9A%84%E7%9F%A9%E9%98%B5%E4%B9%98%E6%B3%95%E4%B9%8B%E7%BE%8E/</id>
-    <published>2025-08-10T06:30:29.000Z</published>
-    <updated>2025-08-10T06:36:51.765Z</updated>
-    
-    <content type="html"><![CDATA[<p>  对二维平面中的图形应用多次仿射变换可以合并为一次矩阵乘法。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  对二维平面中的图形应用多次仿射变换可以合并为一次矩阵乘法。&lt;/p&gt;
 </summary>
       
     
