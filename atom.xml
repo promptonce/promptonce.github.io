@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-10-30T20:54:21.776Z</updated>
+  <updated>2025-11-29T12:06:25.962Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何阅读文档及如何分辨技术文档好坏？</title>
+    <link href="https://promptonce.github.io/2025/11/29/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%8F%8A%E5%A6%82%E4%BD%95%E5%88%86%E8%BE%A8%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%A5%BD%E5%9D%8F%EF%BC%9F/"/>
+    <id>https://promptonce.github.io/2025/11/29/%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%8F%8A%E5%A6%82%E4%BD%95%E5%88%86%E8%BE%A8%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3%E5%A5%BD%E5%9D%8F%EF%BC%9F/</id>
+    <published>2025-11-29T12:05:09.000Z</published>
+    <updated>2025-11-29T12:06:25.962Z</updated>
+    
+    <content type="html"><![CDATA[<pre><code>一个好的技术文档编写出发动机是如何让别人即便喝醉了也能最大程度看懂。</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;pre&gt;&lt;code&gt;一个好的技术文档编写出发动机是如何让别人即便喝醉了也能最大程度看懂。
+&lt;/code&gt;&lt;/pre&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>运动是绝对的</title>
@@ -328,16 +350,15 @@
     <link href="https://promptonce.github.io/2025/09/06/%E5%AF%B9API%E7%9A%84%E7%90%86%E8%A7%A3/"/>
     <id>https://promptonce.github.io/2025/09/06/%E5%AF%B9API%E7%9A%84%E7%90%86%E8%A7%A3/</id>
     <published>2025-09-06T00:43:28.000Z</published>
-    <updated>2025-09-06T00:54:01.803Z</updated>
+    <updated>2025-11-29T12:01:04.779Z</updated>
     
-    <content type="html"><![CDATA[<pre><code>API是应用程序编程接口，按照技术经济学理论，API是不断动态进化的，API进化的敌人就是任何试图将技术封闭且不能促进经济发展的的人或团体。</code></pre>]]></content>
+    <content type="html"><![CDATA[<pre><code>API是应用程序编程接口，按照技术经济学理论，API是不断动态进化的，API进化的敌人就是任何试图将技术封闭且不能促进经济发展的的人或团体。API抽象的动因是为了让自己在下次想出去玩又有新的开发工作必须要做，提高效率自然会设计API，本来是为了自己方便，但程序是可分发的，别人也能用。</code></pre>]]></content>
     
     
       
       
     <summary type="html">&lt;pre&gt;&lt;code&gt;API是应用程序编程接口，按照技术经济学理论，API是不断动态进化的，API进化的敌人就是任何试图将技术封闭且不能促进经济发展的的人或团体。
-&lt;/code&gt;&lt;/pre&gt;
-</summary>
+API抽象的动因是为了让自己在下次想出去玩又有新的开发工作必须要做，提高效率自然会设计API，本来是为了自己方便，但</summary>
       
     
     
@@ -398,28 +419,6 @@
       
       
     <summary type="html">&lt;p&gt;  npm —&amp;gt; pip&lt;br&gt;  package.json —&amp;gt; requirements.txt&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数学在科研和工程中的作用</title>
-    <link href="https://promptonce.github.io/2025/08/18/%E6%95%B0%E5%AD%A6%E5%9C%A8%E7%A7%91%E7%A0%94%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/"/>
-    <id>https://promptonce.github.io/2025/08/18/%E6%95%B0%E5%AD%A6%E5%9C%A8%E7%A7%91%E7%A0%94%E5%92%8C%E5%B7%A5%E7%A8%8B%E4%B8%AD%E7%9A%84%E4%BD%9C%E7%94%A8/</id>
-    <published>2025-08-18T00:05:45.000Z</published>
-    <updated>2025-08-18T00:16:00.832Z</updated>
-    
-    <content type="html"><![CDATA[<p>  数学提供了一个理想的空间可以提升思维工具的能力，其中取得的成果会为未来的工程和研究提供有力的辅助、甚至是关键。    </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  数学提供了一个理想的空间可以提升思维工具的能力，其中取得的成果会为未来的工程和研究提供有力的辅助、甚至是关键。
-    &lt;/p&gt;
 </summary>
       
     
