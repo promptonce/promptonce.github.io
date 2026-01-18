@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2026-01-18T05:55:00.897Z</updated>
+  <updated>2026-01-18T07:27:13.168Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个好的技术框架是让别人要出去玩的时候接到任务都能快速完成</title>
+    <link href="https://promptonce.github.io/2026/01/18/%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6%E6%98%AF%E8%AE%A9%E5%88%AB%E4%BA%BA%E8%A6%81%E5%87%BA%E5%8E%BB%E7%8E%A9%E7%9A%84%E6%97%B6%E5%80%99%E6%8E%A5%E5%88%B0%E4%BB%BB%E5%8A%A1%E9%83%BD%E8%83%BD%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90/"/>
+    <id>https://promptonce.github.io/2026/01/18/%E4%B8%80%E4%B8%AA%E5%A5%BD%E7%9A%84%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6%E6%98%AF%E8%AE%A9%E5%88%AB%E4%BA%BA%E8%A6%81%E5%87%BA%E5%8E%BB%E7%8E%A9%E7%9A%84%E6%97%B6%E5%80%99%E6%8E%A5%E5%88%B0%E4%BB%BB%E5%8A%A1%E9%83%BD%E8%83%BD%E5%BF%AB%E9%80%9F%E5%AE%8C%E6%88%90/</id>
+    <published>2026-01-18T07:27:13.000Z</published>
+    <updated>2026-01-18T07:27:13.168Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>技术认知-没有不透风的强</title>
@@ -392,26 +405,6 @@ API抽象的动因是为了让自己在下次想出去玩又有新的开发工�
       
       
     <summary type="html">&lt;pre&gt;&lt;code&gt;为前端技术奠基的这帮人压根就不是前端开发人员做的，而且这些人在设计的时候看重的不是其逻辑的完备性，由于其只是一门服务性的技术，导致其演化的多种多样，类似于建筑楼房和装修的关系，装修的风格千变万化。对待前端技术框架，注意框架开发者的表述，如果是确定性表述，说明</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>从箭头函数分析技术演进的动力</title>
-    <link href="https://promptonce.github.io/2025/08/21/%E4%BB%8E%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B%E7%9A%84%E5%8A%A8%E5%8A%9B/"/>
-    <id>https://promptonce.github.io/2025/08/21/%E4%BB%8E%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0%E5%88%86%E6%9E%90%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B%E7%9A%84%E5%8A%A8%E5%8A%9B/</id>
-    <published>2025-08-21T00:10:32.000Z</published>
-    <updated>2025-08-21T00:20:05.040Z</updated>
-    
-    <content type="html"><![CDATA[<p>  技术发展是多点同时进行的，其繁荣程度和地球上的植被差不多，植被演进的核心动力是光合作用，而技术演进的核心动力是满足人类的需求，就箭头函数来说，其为程序员更好的创造出满足人类需求的工具带来了便利，站在创造者的角度去看待这种由懒而产生的需求，这种懒不是纯粹的缺乏动力。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  技术发展是多点同时进行的，其繁荣程度和地球上的植被差不多，植被演进的核心动力是光合作用，而技术演进的核心动力是满足人类的需求，就箭头函数来说，其为程序员更好的创造出满足人类需求的工具带来了便利，站在创造者的角度去看待这种由懒而产生的需求，这种懒不是纯粹的缺乏动力。&lt;/p</summary>
       
     
     
