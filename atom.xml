@@ -6,7 +6,7 @@
   <link href="https://promptonce.github.io/atom.xml" rel="self"/>
   
   <link href="https://promptonce.github.io/"/>
-  <updated>2025-11-29T12:06:25.962Z</updated>
+  <updated>2026-01-18T05:55:00.897Z</updated>
   <id>https://promptonce.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术认知-没有不透风的强</title>
+    <link href="https://promptonce.github.io/2026/01/18/%E6%8A%80%E6%9C%AF%E8%AE%A4%E7%9F%A5-%E6%B2%A1%E6%9C%89%E4%B8%8D%E9%80%8F%E9%A3%8E%E7%9A%84%E5%BC%BA/"/>
+    <id>https://promptonce.github.io/2026/01/18/%E6%8A%80%E6%9C%AF%E8%AE%A4%E7%9F%A5-%E6%B2%A1%E6%9C%89%E4%B8%8D%E9%80%8F%E9%A3%8E%E7%9A%84%E5%BC%BA/</id>
+    <published>2026-01-18T05:55:00.000Z</published>
+    <updated>2026-01-18T05:55:00.897Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>如何阅读文档及如何分辨技术文档好坏？</title>
@@ -399,27 +412,6 @@ API抽象的动因是为了让自己在下次想出去玩又有新的开发工�
       
       
     <summary type="html">&lt;p&gt;  技术发展是多点同时进行的，其繁荣程度和地球上的植被差不多，植被演进的核心动力是光合作用，而技术演进的核心动力是满足人类的需求，就箭头函数来说，其为程序员更好的创造出满足人类需求的工具带来了便利，站在创造者的角度去看待这种由懒而产生的需求，这种懒不是纯粹的缺乏动力。&lt;/p</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript程序员和Python程序员技术对比</title>
-    <link href="https://promptonce.github.io/2025/08/21/JavaScript%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8CPython%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94/"/>
-    <id>https://promptonce.github.io/2025/08/21/JavaScript%E7%A8%8B%E5%BA%8F%E5%91%98%E5%92%8CPython%E7%A8%8B%E5%BA%8F%E5%91%98%E6%8A%80%E6%9C%AF%E5%AF%B9%E6%AF%94/</id>
-    <published>2025-08-20T23:27:49.000Z</published>
-    <updated>2025-08-20T23:39:00.774Z</updated>
-    
-    <content type="html"><![CDATA[<p>  npm —&gt; pip<br>  package.json —&gt; requirements.txt</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;  npm —&amp;gt; pip&lt;br&gt;  package.json —&amp;gt; requirements.txt&lt;/p&gt;
-</summary>
       
     
     
